@@ -1,5 +1,7 @@
 # Repository Structure (OAK Standard)
 
+## NOTE: the Directory Structure for APIs is still under development and will evolve into a structure described (WIP) in STAGING-STRUCTURE.md
+
 This document describes the standardized directory structure for an Open Agentic Knowledge (OAK) repository. This repository follows this standard to organize its API specifications and workflows.
 
 ## Overview
