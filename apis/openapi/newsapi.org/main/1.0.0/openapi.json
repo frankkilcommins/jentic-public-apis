@@ -177,16 +177,6 @@
         "description": "Returns live top and breaking headlines for a country, category, or source",
         "parameters": [
           {
-            "name": "country",
-            "in": "query",
-            "description": "2-letter ISO 3166-1 country code",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "enum": ["us"]
-            }
-          },
-          {
             "name": "category",
             "in": "query",
             "description": "Category to get headlines for",
@@ -241,6 +231,18 @@
             "schema": {
               "type": "integer",
               "default": 1
+            }
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "description": "2-letter ISO 3166-1 country code",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "us"
+              ]
             }
           }
         ],

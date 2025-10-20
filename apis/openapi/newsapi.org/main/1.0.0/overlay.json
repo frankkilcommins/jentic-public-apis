@@ -1,0 +1,33 @@
+{
+  "overlay": "1.0.0",
+  "info": {
+    "title": "NewsAPI /top-headlines country parameter requirement",
+    "version": "1.0.0",
+    "description": "Marks the 'country' query parameter as required for the /top-headlines endpoint."
+  },
+  "actions": [
+    {
+      "target": "$.paths['/top-headlines'].get.parameters[?@.name=='country']",
+      "description": "Remove country parameter to replace with required version",
+      "remove": true
+    },
+    {
+      "target": "$.paths['/top-headlines'].get",
+      "description": "Add country parameter as required",
+      "update": {
+        "parameters": [
+          {
+            "name": "country",
+            "in": "query",
+            "description": "2-letter ISO 3166-1 country code",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["us"]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
