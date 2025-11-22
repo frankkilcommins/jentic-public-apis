@@ -57,9 +57,6 @@ This repository follows the OAK (Open Agentic Knowledge) Standard, which defines
 
 For detailed information, please refer to the [OAK Standard documentation](STRUCTURE.md).
 
-
-## Acknowledgments
-
 ## Acknowledgments
 
 The Jentic Public APIs project is built upon the foundation of open standards and community contributions. We extend our sincere gratitude to:
