@@ -7,23 +7,38 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'apikey' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 3",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 3,
+      "paths": [
+        [
+          "paths",
+          "/content.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -34,14 +49,1193 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./content.json.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 64",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 64
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "api-key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 0",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 78",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 78
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 6",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 6,
+      "paths": [
+        [
+          "paths",
+          "/content.json"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 87",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 87,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "servers",
+          1
+        ],
+        [
+          "paths",
+          "/content.json"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "copyright"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "num_results"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "results"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "status"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "copyright"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "num_results"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "results"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "status"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "copyright"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "num_results"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "results"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "abstract"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "blog_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "byline"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "des_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "des_facet",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "geo_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "geo_facet",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "headline"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "item_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "kicker"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "material_type_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "caption"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "copyright"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "format"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "height"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "subtype"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "width"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "org_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "per_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "per_facet",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "published_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls",
+          "items",
+          "properties",
+          "suggested_link_text"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls",
+          "items",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "section"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "short_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "source"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "subsection"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "thumbnail_standard"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "updated_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 14",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 14,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "responses",
+          "200"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 7",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -50,27 +1244,440 @@
         "paths",
         "/content.json",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "results",
+        "items"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 7,
+      "paths": []
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 2,
+        "character": 9
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 9,
+        "character": 122
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./content/{source}/{section}.json.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Info object must have \"contact\" object. [path: info]",
+    "severity": 2,
+    "code": "info-contact",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 13,
+        "character": 13
+      },
+      "end": {
+        "line": 13,
+        "character": 49
+      }
+    },
+    "message": "Servers MUST be https and no other protocol is allowed. [path: servers.0.url]",
+    "severity": 2,
+    "code": "hosts-https-only-oas3",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 10
+      },
+      "end": {
+        "line": 226,
+        "character": 49
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 21,
+        "character": 12
+      },
+      "end": {
+        "line": 59,
+        "character": 49
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./content.json.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 21,
+        "character": 12
+      },
+      "end": {
+        "line": 59,
+        "character": 49
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./content.json.get]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 21,
+        "character": 12
+      },
+      "end": {
+        "line": 59,
+        "character": 49
+      }
+    },
+    "message": "Operation must have \"operationId\". [path: paths./content.json.get]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 21,
+        "character": 12
+      },
+      "end": {
+        "line": 59,
+        "character": 49
+      }
+    },
+    "message": "Operation must have non-empty \"tags\" array. [path: paths./content.json.get]",
+    "severity": 2,
+    "code": "operation-tags",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 23,
+        "character": 10
+      },
+      "end": {
+        "line": 29,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./content.json.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 42,
+        "character": 34
+      },
+      "end": {
+        "line": 43,
+        "character": 39
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./content.json.get.responses.200.content.application/json.schema.properties.num_results]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "num_results"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 42,
+        "character": 34
+      },
+      "end": {
+        "line": 43,
+        "character": 39
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./content.json.get.responses.200.content.application/json.schema.properties.num_results]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "num_results"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 65,
+        "character": 12
+      },
+      "end": {
+        "line": 139,
+        "character": 49
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./content/{source}/{section}.json.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 65,
+        "character": 12
+      },
+      "end": {
+        "line": 139,
+        "character": 49
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./content/{source}/{section}.json.get]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 65,
+        "character": 12
+      },
+      "end": {
+        "line": 139,
+        "character": 49
+      }
+    },
+    "message": "Operation must have \"operationId\". [path: paths./content/{source}/{section}.json.get]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 65,
+        "character": 12
+      },
+      "end": {
+        "line": 139,
+        "character": 49
+      }
+    },
+    "message": "Operation must have non-empty \"tags\" array. [path: paths./content/{source}/{section}.json.get]",
+    "severity": 2,
+    "code": "operation-tags",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 67,
+        "character": 10
+      },
+      "end": {
+        "line": 80,
+        "character": 37
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./content/{source}/{section}.json.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -79,27 +1686,300 @@
         "paths",
         "/content/{source}/{section}.json",
         "get",
-        "summary"
+        "parameters",
+        "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 82,
+        "character": 10
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 90,
+        "character": 37
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./content/{source}/{section}/{time-period}.json.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Parameters must include examples; missing 1 [path: paths./content/{source}/{section}.json.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 92,
+        "character": 10
+      },
+      "end": {
+        "line": 99,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./content/{source}/{section}.json.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 102,
+        "character": 10
+      },
+      "end": {
+        "line": 109,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./content/{source}/{section}.json.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 122,
+        "character": 34
+      },
+      "end": {
+        "line": 123,
+        "character": 39
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./content/{source}/{section}.json.get.responses.200.content.application/json.schema.properties.num_results]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "num_results"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 122,
+        "character": 34
+      },
+      "end": {
+        "line": 123,
+        "character": 39
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./content/{source}/{section}.json.get.responses.200.content.application/json.schema.properties.num_results]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "num_results"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 145,
+        "character": 12
+      },
+      "end": {
+        "line": 226,
+        "character": 49
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./content/{source}/{section}/{time-period}.json.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 145,
+        "character": 12
+      },
+      "end": {
+        "line": 226,
+        "character": 49
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./content/{source}/{section}/{time-period}.json.get]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 145,
+        "character": 12
+      },
+      "end": {
+        "line": 226,
+        "character": 49
+      }
+    },
+    "message": "Operation must have \"operationId\". [path: paths./content/{source}/{section}/{time-period}.json.get]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 145,
+        "character": 12
+      },
+      "end": {
+        "line": 226,
+        "character": 49
+      }
+    },
+    "message": "Operation must have non-empty \"tags\" array. [path: paths./content/{source}/{section}/{time-period}.json.get]",
+    "severity": 2,
+    "code": "operation-tags",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 147,
+        "character": 10
+      },
+      "end": {
+        "line": 158,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./content/{source}/{section}/{time-period}.json.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -108,9 +1988,332 @@
         "paths",
         "/content/{source}/{section}/{time-period}.json",
         "get",
-        "summary"
+        "parameters",
+        "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 161,
+        "character": 10
+      },
+      "end": {
+        "line": 167,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./content/{source}/{section}/{time-period}.json.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 170,
+        "character": 10
+      },
+      "end": {
+        "line": 176,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./content/{source}/{section}/{time-period}.json.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 179,
+        "character": 10
+      },
+      "end": {
+        "line": 186,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./content/{source}/{section}/{time-period}.json.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 189,
+        "character": 10
+      },
+      "end": {
+        "line": 196,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./content/{source}/{section}/{time-period}.json.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 209,
+        "character": 34
+      },
+      "end": {
+        "line": 210,
+        "character": 39
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./content/{source}/{section}/{time-period}.json.get.responses.200.content.application/json.schema.properties.num_results]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "num_results"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 209,
+        "character": 34
+      },
+      "end": {
+        "line": 210,
+        "character": 39
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./content/{source}/{section}/{time-period}.json.get.responses.200.content.application/json.schema.properties.num_results]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "num_results"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 284,
+        "character": 25
+      },
+      "end": {
+        "line": 285,
+        "character": 35
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Article.properties.multimedia.items.properties.height]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "height"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 284,
+        "character": 25
+      },
+      "end": {
+        "line": 285,
+        "character": 35
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Article.properties.multimedia.items.properties.height]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "height"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 296,
+        "character": 24
+      },
+      "end": {
+        "line": 297,
+        "character": 35
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Article.properties.multimedia.items.properties.width]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "width"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 296,
+        "character": 24
+      },
+      "end": {
+        "line": 297,
+        "character": 35
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Article.properties.multimedia.items.properties.width]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "width"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -136,7 +2339,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -165,7 +2368,36 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./content.json.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content.json",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -194,7 +2426,7 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -223,7 +2455,36 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./content/{source}/{section}.json.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}.json",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -252,7 +2513,7 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -281,7 +2542,36 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./content/{source}/{section}/{time-period}.json.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/content/{source}/{section}/{time-period}.json",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -310,51 +2600,25 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 2,
-        "character": 9
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 9,
-        "character": 122
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Info object must have \"contact\" object. [path: info]",
+    "message": "Operation 'get_/content.json' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_input_details, missing_output_details, poor_ai_interpretability. Operation has no summary or description, making it impossible for AI agents to understand its purpose. Added action-oriented summary explaining it retrieves latest articles, and comprehensive description covering what data is returned, that it provides a news stream, and authentication requirements.",
     "severity": 2,
-    "code": "info-contact",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 21,
-        "character": 12
-      },
-      "end": {
-        "line": 59,
-        "character": 49
-      }
-    },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./content.json.get]",
-    "severity": 2,
-    "code": "operation-description",
-    "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -364,81 +2628,55 @@
         "/content.json",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 21,
-        "character": 12
-      },
-      "end": {
-        "line": 59,
-        "character": 49
-      }
-    },
-    "message": "Operation must have \"operationId\". [path: paths./content.json.get]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/content.json",
-        "get"
+      "target": "bundled-spec",
+      "operation_id": "get_/content.json",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
       ],
-      "target": "final-spec_bundled-spec"
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Retrieve latest published news articles",
+      "description_suggestion": "Retrieves the latest published articles from the Times Newswire. Returns a stream of recently published items with metadata including article links, headlines, publication dates, and content summaries. Supports optional filtering via query parameters. Requires API key authentication.",
+      "reasoning": "Operation has no summary or description, making it impossible for AI agents to understand its purpose. Added action-oriented summary explaining it retrieves latest articles, and comprehensive description covering what data is returned, that it provides a news stream, and authentication requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/content.json",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 21,
-        "character": 12
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 59,
-        "character": 49
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation must have non-empty \"tags\" array. [path: paths./content.json.get]",
+    "message": "Operation 'get_/content/{source}/{section}.json' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_input_details, missing_output_details, poor_ai_interpretability. Missing summary and description entirely. Added summary indicating the filtering capability by source and section. Description explains the path parameters, what filtering is applied, the returned article metadata, and authentication requirement for AI agent clarity.",
     "severity": 2,
-    "code": "operation-tags",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/content.json",
-        "get"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 65,
-        "character": 12
-      },
-      "end": {
-        "line": 139,
-        "character": 49
-      }
-    },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./content/{source}/{section}.json.get]",
-    "severity": 2,
-    "code": "operation-description",
-    "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -448,81 +2686,55 @@
         "/content/{source}/{section}.json",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 65,
-        "character": 12
-      },
-      "end": {
-        "line": 139,
-        "character": 49
-      }
-    },
-    "message": "Operation must have \"operationId\". [path: paths./content/{source}/{section}.json.get]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/content/{source}/{section}.json",
-        "get"
+      "target": "bundled-spec",
+      "operation_id": "get_/content/{source}/{section}.json",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
       ],
-      "target": "final-spec_bundled-spec"
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Get articles by news source and section",
+      "description_suggestion": "Retrieves published articles filtered by news source and section. The source parameter specifies the publication (e.g., 'nytimes'), and section parameter filters by content category (e.g., 'world', 'business'). Returns article metadata including links, headlines, publication timestamps, and summaries. Requires API key authentication.",
+      "reasoning": "Missing summary and description entirely. Added summary indicating the filtering capability by source and section. Description explains the path parameters, what filtering is applied, the returned article metadata, and authentication requirement for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}.json",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 65,
-        "character": 12
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 139,
-        "character": 49
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation must have non-empty \"tags\" array. [path: paths./content/{source}/{section}.json.get]",
+    "message": "Operation 'get_/content/{source}/{section}/{time-period}.json' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_input_details, missing_output_details, poor_ai_interpretability. No summary or description provided. Added summary indicating three-level filtering capability. Description clarifies all three path parameters (source, section, time-period), explains the time-period format with examples, specifies returned article metadata, and notes authentication requirement for AI agent decision-making.",
     "severity": 2,
-    "code": "operation-tags",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/content/{source}/{section}.json",
-        "get"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 145,
-        "character": 12
-      },
-      "end": {
-        "line": 226,
-        "character": 49
-      }
-    },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./content/{source}/{section}/{time-period}.json.get]",
-    "severity": 2,
-    "code": "operation-description",
-    "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -532,63 +2744,164 @@
         "/content/{source}/{section}/{time-period}.json",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "get_/content/{source}/{section}/{time-period}.json",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Get articles by source, section, and time period",
+      "description_suggestion": "Retrieves published articles filtered by news source, section, and time period. The source parameter specifies the publication, section filters by content category, and time-period limits results to a specific timeframe (e.g., '1', '7', '30' for days). Returns article metadata including links, headlines, publication timestamps, and summaries. Requires API key authentication.",
+      "reasoning": "No summary or description provided. Added summary indicating three-level filtering capability. Description clarifies all three path parameters (source, section, time-period), explains the time-period format with examples, specifies returned article metadata, and notes authentication requirement for AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/content/{source}/{section}/{time-period}.json",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 145,
-        "character": 12
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 226,
-        "character": 49
+        "line": 0,
+        "character": 12
       }
     },
-    "message": "Operation must have \"operationId\". [path: paths./content/{source}/{section}/{time-period}.json.get]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Semantic analysis completed: 3 operations analyzed, 3 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/content/{source}/{section}/{time-period}.json",
-        "get"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 3,
+      "total_issues_found": 3,
+      "batches_processed": 1
     }
   },
   {
     "range": {
       "start": {
-        "line": 145,
-        "character": 12
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 226,
-        "character": 49
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation must have non-empty \"tags\" array. [path: paths./content/{source}/{section}/{time-period}.json.get]",
-    "severity": 2,
-    "code": "operation-tags",
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "loader",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/content/{source}/{section}/{time-period}.json",
-        "get"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 3 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 3
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 3 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 3
     }
   }
 ]

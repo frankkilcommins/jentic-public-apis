@@ -24,7 +24,7 @@
         "schemas",
         "Currency"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -52,7 +52,7 @@
         "parameters",
         "XApiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -63,24 +63,73 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Must contain at least one of the following fields: schema, content. [path: components.parameters.XApiKey]",
-    "severity": 1,
-    "code": "struct",
+    "message": "Total Operations count: 10",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "parameters",
-        "XApiKey"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 10,
+      "paths": [
+        [
+          "paths",
+          "/config",
+          "get"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -91,25 +140,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Property `type` is not expected here. [path: components.parameters.XApiKey.type]",
-    "severity": 1,
-    "code": "struct",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "parameters",
-        "XApiKey",
-        "type"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -120,25 +165,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Property `examples` is not expected here. [path: components.schemas.Currency.examples]",
-    "severity": 1,
-    "code": "struct",
+    "message": "Schemas count: 87",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "Currency",
-        "examples"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 87
     }
   },
   {
@@ -149,22 +190,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "AccessToken"
+        ]
+      ]
     }
   },
   {
@@ -175,25 +222,30 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./config.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/config",
-        "get",
-        "operationId"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "AccessToken"
+        ]
+      ]
     }
   },
   {
@@ -204,32 +256,37 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Example value must conform to the schema: `smartContractAddress` property type must be string. [path: paths./config.get.responses.200.content.application/json.example.crypto.2.smartContractAddress]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/config",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        "crypto",
-        2,
-        "smartContractAddress"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "X-API-KEY",
+          "oauth2_flows": []
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "AccessToken"
+        ]
+      ]
     }
   },
   {
@@ -240,32 +297,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Example value must conform to the schema: `smartContractAddress` property type must be string. [path: paths./config.get.responses.200.content.application/json.example.crypto.3.smartContractAddress]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/config",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        "crypto",
-        3,
-        "smartContractAddress"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
     }
   },
   {
@@ -276,25 +322,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./quote.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Expected examples: 130",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/quote",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 130
     }
   },
   {
@@ -305,25 +347,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./buy.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Present examples: 33",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/buy",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 33
     }
   },
   {
@@ -334,25 +372,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./orders/{order_id}.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Total examples: 33",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/orders/{order_id}",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 33
     }
   },
   {
@@ -363,14 +397,2243 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./orders.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Summaries expected: 17",
+    "severity": 3,
+    "code": "summaries_expected",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 17,
+      "paths": [
+        [
+          "paths",
+          "/config"
+        ],
+        [
+          "paths",
+          "/config",
+          "get"
+        ],
+        [
+          "paths",
+          "/quote"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get"
+        ],
+        [
+          "paths",
+          "/buy"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhooks"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 10",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 10,
+      "paths": [
+        [
+          "paths",
+          "/config",
+          "get"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 172",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 172,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/config"
+        ],
+        [
+          "paths",
+          "/config",
+          "get"
+        ],
+        [
+          "paths",
+          "/config",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/config",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/config",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/quote"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          5,
+          "schema"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          6,
+          "schema"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/buy"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          6,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          7,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          8
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          8,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          9
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          9,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          10
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          10,
+          "schema"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/orders"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "components",
+          "schemas",
+          "Blockchain"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "countries"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat",
+          "items",
+          "properties",
+          "min_limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat",
+          "items",
+          "properties",
+          "max_limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto",
+          "items",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto",
+          "items",
+          "properties",
+          "smartContractAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "feePercentages"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "feePercentages",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "payment_methods"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "payment_methods",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "CountryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "CurrencyFiat"
+        ],
+        [
+          "components",
+          "schemas",
+          "CurrencyCryptoCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "CurrencyCryptoId"
+        ],
+        [
+          "components",
+          "schemas",
+          "EventType"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoneyCryptoId"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoneyCryptoId",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoneyFiat"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoneyFiat",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "fees"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "exchange_rate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "payment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "created_at"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "updated_at"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "fail_reason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "wallet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "transaction_hash"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "additionalProperties",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "fees_partner_currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "Quote"
+        ],
+        [
+          "components",
+          "schemas",
+          "RampRedirectUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "RampRedirectUrl",
+          "properties",
+          "ramp_redirect_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "signing_secret"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhooks"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookCreateRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookCreateRequest",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookCreateRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookUpdateRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookUpdateRequest",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookUpdateRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestError"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestError",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundError"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundError",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "DisabledByKillSwitchError"
+        ],
+        [
+          "components",
+          "schemas",
+          "DisabledByKillSwitchError",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedError"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedError",
+          "properties",
+          "errorId"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedError",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "responses",
+          "BadRequestErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "DisabledByKillSwitchErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "NotFoundErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "ServerErrorResponse"
+        ],
+        [
+          "components",
+          "parameters",
+          "XApiKey"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "AccessToken"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 132",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 132,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/config",
+          "get"
+        ],
+        [
+          "paths",
+          "/config",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/config",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/config",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/quote",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          8
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          9
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "parameters",
+          10
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/orders/{order_id}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "components",
+          "schemas",
+          "Blockchain"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "countries"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat",
+          "items",
+          "properties",
+          "min_limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "fiat",
+          "items",
+          "properties",
+          "max_limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto",
+          "items",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "crypto",
+          "items",
+          "properties",
+          "smartContractAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "feePercentages"
+        ],
+        [
+          "components",
+          "schemas",
+          "Config",
+          "properties",
+          "payment_methods"
+        ],
+        [
+          "components",
+          "schemas",
+          "CountryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "CurrencyFiat"
+        ],
+        [
+          "components",
+          "schemas",
+          "CurrencyCryptoCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "CurrencyCryptoId"
+        ],
+        [
+          "components",
+          "schemas",
+          "EventType"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoneyCryptoId",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoneyFiat",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "fees"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "exchange_rate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "payment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "created_at"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "updated_at"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "fail_reason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "wallet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "transaction_hash"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "fees_partner_currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Quote"
+        ],
+        [
+          "components",
+          "schemas",
+          "RampRedirectUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "RampRedirectUrl",
+          "properties",
+          "ramp_redirect_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "signing_secret"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookCreateRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookCreateRequest",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookCreateRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookUpdateRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookUpdateRequest",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookUpdateRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestError"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestError",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundError"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundError",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "DisabledByKillSwitchError"
+        ],
+        [
+          "components",
+          "schemas",
+          "DisabledByKillSwitchError",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedError"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedError",
+          "properties",
+          "errorId"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedError",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "responses",
+          "BadRequestErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "DisabledByKillSwitchErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "NotFoundErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "ServerErrorResponse"
+        ],
+        [
+          "components",
+          "parameters",
+          "XApiKey"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "AccessToken"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 9",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -379,805 +2642,15 @@
         "paths",
         "/orders",
         "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'id'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
         "responses",
-        200,
+        "200",
         "content",
         "application/json",
-        "example",
-        0
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'fiat'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'crypto'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'fees'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'exchange_rate'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'payment'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'created_at'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'updated_at'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'status'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'wallet'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'fees_partner_currency'. [path: paths./orders.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must NOT have unevaluated properties `$ref`. [path: paths./orders.get.responses.200.content.application/json.example.0.$ref]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0,
-        "$ref"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `crypto` property must have required property 'currencyId'. [path: paths./orders.get.responses.200.content.application/json.example.1.crypto]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        1,
-        "crypto"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `crypto` property must NOT have unevaluated properties `currency`. [path: paths./orders.get.responses.200.content.application/json.example.1.crypto.currency]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/orders",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        1,
-        "crypto",
-        "currency"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./webhooks/{webhook_id}.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks/{webhook_id}",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./webhooks/{webhook_id}.delete.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks/{webhook_id}",
-        "delete",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./webhooks/{webhook_id}.patch.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks/{webhook_id}",
-        "patch",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./webhooks.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'id'. [path: paths./webhooks.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'url'. [path: paths./webhooks.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'events'. [path: paths./webhooks.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must have required property 'signing_secret'. [path: paths./webhooks.get.responses.200.content.application/json.example.0]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Example value must conform to the schema: `0` property must NOT have unevaluated properties `$ref`. [path: paths./webhooks.get.responses.200.content.application/json.example.0.$ref]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks",
-        "get",
-        "responses",
-        200,
-        "content",
-        "application/json",
-        "example",
-        0,
-        "$ref"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./webhooks.post.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webhooks",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 9,
+      "paths": []
     }
   },
   {
@@ -1203,7 +2676,33 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 13,
+        "character": 10
+      },
+      "end": {
+        "line": 965,
+        "character": 78
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1231,7 +2730,7 @@
         "/config",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1246,7 +2745,7 @@
       }
     },
     "message": "\"smartContractAddress\" property type must be string [path: paths./config.get.responses.200.content.application/json.example.crypto.2.smartContractAddress]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-media-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -1267,7 +2766,67 @@
         "2",
         "smartContractAddress"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 102,
+        "character": 16
+      },
+      "end": {
+        "line": 103,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./config.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/config",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 105,
+        "character": 16
+      },
+      "end": {
+        "line": 106,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./config.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/config",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1295,7 +2854,277 @@
         "/quote",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 130,
+        "character": 10
+      },
+      "end": {
+        "line": 136,
+        "character": 53
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./quote.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 139,
+        "character": 10
+      },
+      "end": {
+        "line": 146,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./quote.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 149,
+        "character": 10
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./quote.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 158,
+        "character": 10
+      },
+      "end": {
+        "line": 169,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./quote.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 173,
+        "character": 10
+      },
+      "end": {
+        "line": 179,
+        "character": 56
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./quote.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 182,
+        "character": 10
+      },
+      "end": {
+        "line": 189,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 5 [path: paths./quote.get.parameters.5]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "parameters",
+        "5"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 192,
+        "character": 10
+      },
+      "end": {
+        "line": 198,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 6 [path: paths./quote.get.parameters.6]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "parameters",
+        "6"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 234,
+        "character": 16
+      },
+      "end": {
+        "line": 235,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./quote.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 237,
+        "character": 16
+      },
+      "end": {
+        "line": 238,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./quote.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/quote",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1323,7 +3152,367 @@
         "/buy",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 265,
+        "character": 10
+      },
+      "end": {
+        "line": 271,
+        "character": 53
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./buy.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 274,
+        "character": 10
+      },
+      "end": {
+        "line": 281,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./buy.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 284,
+        "character": 10
+      },
+      "end": {
+        "line": 290,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./buy.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 293,
+        "character": 10
+      },
+      "end": {
+        "line": 304,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./buy.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 308,
+        "character": 10
+      },
+      "end": {
+        "line": 314,
+        "character": 56
+      }
+    },
+    "message": "Parameters must include examples; missing 5 [path: paths./buy.get.parameters.5]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "5"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 317,
+        "character": 10
+      },
+      "end": {
+        "line": 323,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 6 [path: paths./buy.get.parameters.6]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "6"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 326,
+        "character": 10
+      },
+      "end": {
+        "line": 332,
+        "character": 37
+      }
+    },
+    "message": "Parameters must include examples; missing 7 [path: paths./buy.get.parameters.7]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "7"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 335,
+        "character": 10
+      },
+      "end": {
+        "line": 342,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 8 [path: paths./buy.get.parameters.8]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "8"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 345,
+        "character": 10
+      },
+      "end": {
+        "line": 350,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 9 [path: paths./buy.get.parameters.9]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "9"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 353,
+        "character": 10
+      },
+      "end": {
+        "line": 359,
+        "character": 61
+      }
+    },
+    "message": "Parameters must include examples; missing 10 [path: paths./buy.get.parameters.10]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "parameters",
+        "10"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 380,
+        "character": 16
+      },
+      "end": {
+        "line": 381,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./buy.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 383,
+        "character": 16
+      },
+      "end": {
+        "line": 384,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./buy.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1351,7 +3540,127 @@
         "/orders/{order_id}",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 411,
+        "character": 10
+      },
+      "end": {
+        "line": 418,
+        "character": 37
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./orders/{order_id}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders/{order_id}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 421,
+        "character": 10
+      },
+      "end": {
+        "line": 427,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./orders/{order_id}.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders/{order_id}",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 491,
+        "character": 16
+      },
+      "end": {
+        "line": 492,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./orders/{order_id}.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders/{order_id}",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 497,
+        "character": 16
+      },
+      "end": {
+        "line": 498,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./orders/{order_id}.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders/{order_id}",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1379,7 +3688,127 @@
         "/orders",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 525,
+        "character": 10
+      },
+      "end": {
+        "line": 532,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./orders.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 535,
+        "character": 10
+      },
+      "end": {
+        "line": 543,
+        "character": 234
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./orders.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 545,
+        "character": 10
+      },
+      "end": {
+        "line": 553,
+        "character": 339
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./orders.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 555,
+        "character": 10
+      },
+      "end": {
+        "line": 565,
+        "character": 159
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./orders.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1394,7 +3823,7 @@
       }
     },
     "message": "\"crypto\" property must have required property \"currencyId\" [path: paths./orders.get.responses.200.content.application/json.example.1.crypto]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-media-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -1414,7 +3843,67 @@
         "1",
         "crypto"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 630,
+        "character": 16
+      },
+      "end": {
+        "line": 631,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./orders.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 633,
+        "character": 16
+      },
+      "end": {
+        "line": 634,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./orders.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1442,7 +3931,97 @@
         "/webhooks/{webhook_id}",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 661,
+        "character": 10
+      },
+      "end": {
+        "line": 668,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./webhooks/{webhook_id}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 695,
+        "character": 16
+      },
+      "end": {
+        "line": 696,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks/{webhook_id}.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 701,
+        "character": 16
+      },
+      "end": {
+        "line": 702,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks/{webhook_id}.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1470,7 +4049,97 @@
         "/webhooks/{webhook_id}",
         "patch"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 727,
+        "character": 10
+      },
+      "end": {
+        "line": 734,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./webhooks/{webhook_id}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 771,
+        "character": 16
+      },
+      "end": {
+        "line": 772,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks/{webhook_id}.patch.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "patch",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 777,
+        "character": 16
+      },
+      "end": {
+        "line": 778,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks/{webhook_id}.patch.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "patch",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1498,7 +4167,97 @@
         "/webhooks/{webhook_id}",
         "delete"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 803,
+        "character": 10
+      },
+      "end": {
+        "line": 810,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./webhooks/{webhook_id}.delete.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "delete",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 821,
+        "character": 16
+      },
+      "end": {
+        "line": 822,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks/{webhook_id}.delete.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "delete",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 827,
+        "character": 16
+      },
+      "end": {
+        "line": 828,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks/{webhook_id}.delete.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "delete",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1526,7 +4285,67 @@
         "/webhooks",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 892,
+        "character": 16
+      },
+      "end": {
+        "line": 893,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 895,
+        "character": 16
+      },
+      "end": {
+        "line": 896,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1554,7 +4373,67 @@
         "/webhooks",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 955,
+        "character": 16
+      },
+      "end": {
+        "line": 956,
+        "character": 41
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks.post.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks",
+        "post",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 958,
+        "character": 16
+      },
+      "end": {
+        "line": 959,
+        "character": 46
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./webhooks.post.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks",
+        "post",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1582,7 +4461,35 @@
         "parameters",
         "XApiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 981,
+        "character": 16
+      },
+      "end": {
+        "line": 986,
+        "character": 24
+      }
+    },
+    "message": "Parameters must include examples; missing XApiKey [path: components.parameters.XApiKey]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "XApiKey"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1611,7 +4518,36 @@
         "XApiKey",
         "type"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 984,
+        "character": 16
+      },
+      "end": {
+        "line": 984,
+        "character": 27
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: components.parameters.XApiKey.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "XApiKey",
+        "name"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1645,7 +4581,73 @@
         "currency",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1065,
+        "character": 28
+      },
+      "end": {
+        "line": 1068,
+        "character": 62
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Config.properties.fiat.items.properties.min_limit]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Config",
+        "properties",
+        "fiat",
+        "items",
+        "properties",
+        "min_limit"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1070,
+        "character": 28
+      },
+      "end": {
+        "line": 1073,
+        "character": 62
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Config.properties.fiat.items.properties.max_limit]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Config",
+        "properties",
+        "fiat",
+        "items",
+        "properties",
+        "max_limit"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1660,7 +4662,7 @@
       }
     },
     "message": "\"smartContractAddress\" property type must be string [path: components.schemas.Config.example.crypto.2.smartContractAddress]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-schema-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -1677,7 +4679,7 @@
         "2",
         "smartContractAddress"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1706,7 +4708,67 @@
         "Currency",
         "examples"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1243,
+        "character": 19
+      },
+      "end": {
+        "line": 1246,
+        "character": 40
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.MoneyCryptoId.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "MoneyCryptoId",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1264,
+        "character": 19
+      },
+      "end": {
+        "line": 1267,
+        "character": 40
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.MoneyFiat.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "MoneyFiat",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1737,7 +4799,7 @@
         "fiat",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1768,7 +4830,7 @@
         "crypto",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1801,7 +4863,7 @@
         "ramp_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1834,7 +4896,7 @@
         "partner_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1867,7 +4929,37 @@
         "network_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1331,
+        "character": 26
+      },
+      "end": {
+        "line": 1334,
+        "character": 61
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Order.properties.exchange_rate]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Order",
+        "properties",
+        "exchange_rate"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1900,7 +4992,7 @@
         "ramp_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1933,7 +5025,7 @@
         "partner_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1966,7 +5058,7 @@
         "network_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1981,7 +5073,7 @@
       }
     },
     "message": "\"crypto\" property must have required property \"currencyId\" [path: components.schemas.Orders.example.1.crypto]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-schema-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -1997,7 +5089,7 @@
         "1",
         "crypto"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2028,7 +5120,7 @@
         "service_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2059,7 +5151,7 @@
         "network_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2090,7 +5182,7 @@
         "crypto",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2121,7 +5213,628 @@
         "partner_fee",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1770,
+        "character": 22
+      },
+      "end": {
+        "line": 1773,
+        "character": 70
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.UnexpectedError.properties.timestamp]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnexpectedError",
+        "properties",
+        "timestamp"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1786,
+        "character": 29
+      },
+      "end": {
+        "line": 1791,
+        "character": 52
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.BadRequestErrorResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "BadRequestErrorResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1799,
+        "character": 29
+      },
+      "end": {
+        "line": 1804,
+        "character": 51
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.DisabledByKillSwitchErrorResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "DisabledByKillSwitchErrorResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1812,
+        "character": 29
+      },
+      "end": {
+        "line": 1817,
+        "character": 36
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.NotFoundErrorResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "NotFoundErrorResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1825,
+        "character": 29
+      },
+      "end": {
+        "line": 1831,
+        "character": 40
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.ServerErrorResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "ServerErrorResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'delete_/webhooks/{webhook_id}' has semantic quality issues: missing_output_details, missing_side_effects. The current description explains the action but lacks clarity on response format and explicit confirmation of the side effect (cessation of all events). Added response status code, authentication requirement, and explicit statement about event delivery cessation to improve AI agent understanding of the operation's complete effect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "delete_/webhooks/{webhook_id}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Delete a webhook",
+      "current_description": "Delete a webhook so that events are not sent to the specified URL any more.\n\nFor more information, see the guides: [Work with webhooks -> Track order and payment lifecycle](https://developer.revolut.com/docs/guides/crypto-ramp/guides/buy-crypto/tutorials/work-with-webhooks/use-webhooks).",
+      "description_suggestion": "Deletes a webhook subscription by its ID, immediately stopping all event notifications to the associated URL. Requires the webhook_id path parameter and authentication. Returns a 204 No Content response on successful deletion. After deletion, no further order or payment lifecycle events will be sent to the previously configured endpoint.",
+      "reasoning": "The current description explains the action but lacks clarity on response format and explicit confirmation of the side effect (cessation of all events). Added response status code, authentication requirement, and explicit statement about event delivery cessation to improve AI agent understanding of the operation's complete effect.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/webhooks' has semantic quality issues: missing_output_details. The current description is clear about the action but lacks details about the response structure and practical use cases. Added information about response format (array of Webhook objects), what fields are included, and when an AI agent should use this operation (e.g., before creating/updating webhooks) to improve interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/webhooks",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details"
+      ],
+      "current_summary": "Retrieve a list of webhooks",
+      "current_description": "Get a list of webhooks that the partner is currently subscribed to.\n\nFor more information, see the guides: [Work with webhooks -> Track order and payment lifecycle](https://developer.revolut.com/docs/guides/crypto-ramp/guides/buy-crypto/tutorials/work-with-webhooks/use-webhooks).",
+      "description_suggestion": "Retrieves all webhooks currently configured for the authenticated partner. Returns an array of Webhook objects containing subscription details including event types, target URLs, and configuration status. Requires authentication. Use this operation to audit existing webhook subscriptions before creating or updating webhooks.",
+      "reasoning": "The current description is clear about the action but lacks details about the response structure and practical use cases. Added information about response format (array of Webhook objects), what fields are included, and when an AI agent should use this operation (e.g., before creating/updating webhooks) to improve interpretability.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webhooks",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post_/webhooks' has semantic quality issues: missing_input_details, missing_output_details. The current description lacks specificity about required inputs and response details. Added information about the request schema (WebhookCreateRequest), what must be specified (URL and event types), response status code, response structure (Webhook object with webhook_id), and when event delivery begins. This enables AI agents to understand what parameters are needed and what to expect in the response.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post_/webhooks",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Create a webhook",
+      "current_description": "Create a webhook so that Ramp can push event notifications to the specified URL.\n\nFor more information, see the guides: [Work with webhooks -> Track order and payment lifecycle](https://developer.revolut.com/docs/guides/crypto-ramp/guides/buy-crypto/tutorials/work-with-webhooks/use-webhooks).",
+      "description_suggestion": "Creates a new webhook subscription to receive event notifications from Ramp. Requires a WebhookCreateRequest body specifying the target URL and event types to subscribe to. Returns a 200 response with the created Webhook object including the webhook_id, configuration details, and subscription status. Requires authentication. The webhook will immediately begin receiving events matching the configured event types.",
+      "reasoning": "The current description lacks specificity about required inputs and response details. Added information about the request schema (WebhookCreateRequest), what must be specified (URL and event types), response status code, response structure (Webhook object with webhook_id), and when event delivery begins. This enables AI agents to understand what parameters are needed and what to expect in the response.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webhooks",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/buy' has semantic quality issues: vague_summary, missing_output_details. Original summary 'Retrieve a redirect URL' is too generic and doesn't convey the specific action (generating a purchase redirect). Description lacks clarity about the return type (RampRedirectUrl object) and doesn't clearly state this is for initiating purchases. Improved summary specifies the action and context. Enhanced description clarifies the return value, use case, and important formatting detail about minor currency units for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/buy",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/buy",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "Retrieve a redirect URL",
+      "current_description": "Retrieve a redirect URL to the Ramp app widget for provided buy parameters. Use it to redirect the customer to Revolut Ramp to make the purchase.\n \n:::note\nThe `fiatAmount` in the Redirect URL is provided in minor currency units. For example, GBP 12.00 is represented as `1200`.\n:::\n\nFor more information, see the guides: [Leverage the Crypto Ramp API -> Get a Revolut Ramp Redirect URL](https://developer.revolut.com/docs/guides/crypto-ramp/guides/buy-crypto/tutorials/use-the-api#get-a-revolut-ramp-redirect-url).",
+      "summary_suggestion": "Generate Ramp widget redirect URL for purchase",
+      "description_suggestion": "Generate a redirect URL to the Revolut Ramp app widget for initiating a cryptocurrency purchase with specified parameters. Returns a RampRedirectUrl object containing the widget URL. Use this URL to redirect customers to complete their fiat-to-crypto purchase. Note: fiatAmount values in the URL are in minor currency units (e.g., GBP 12.00 = 1200).",
+      "reasoning": "Original summary 'Retrieve a redirect URL' is too generic and doesn't convey the specific action (generating a purchase redirect). Description lacks clarity about the return type (RampRedirectUrl object) and doesn't clearly state this is for initiating purchases. Improved summary specifies the action and context. Enhanced description clarifies the return value, use case, and important formatting detail about minor currency units for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/buy",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/buy",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/orders' has semantic quality issues: vague_summary, missing_input_details. Original summary 'Retrieve all orders' is misleading as the operation requires date range filtering, not truly 'all' orders. Description lacks clarity about required input parameters (date range) and return type (array of Order objects). Improved summary clarifies the filtering requirement. Enhanced description specifies the required inputs, sorting behavior, and return type for better AI agent understanding of when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/orders",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/orders",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "Retrieve all orders",
+      "current_description": "Retrieve all orders by date range.\n\nThe results are sorted chronologically by the `created_at` date (i.e. oldest first).\n\nFor more information, see the guides: [Leverage the Crypto Ramp API -> Get all orders](https://developer.revolut.com/docs/guides/crypto-ramp/guides/buy-crypto/tutorials/use-the-api#get-all-orders).",
+      "summary_suggestion": "Retrieve orders filtered by date range",
+      "description_suggestion": "Retrieve all cryptocurrency purchase orders filtered by a specified date range. Results are sorted chronologically by creation date (oldest first). Requires date range parameters to filter orders. Returns an array of Order objects representing fiat-to-crypto exchange transactions.",
+      "reasoning": "Original summary 'Retrieve all orders' is misleading as the operation requires date range filtering, not truly 'all' orders. Description lacks clarity about required input parameters (date range) and return type (array of Order objects). Improved summary clarifies the filtering requirement. Enhanced description specifies the required inputs, sorting behavior, and return type for better AI agent understanding of when and how to use this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/orders",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/orders",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/webhooks/{webhook_id}' has semantic quality issues: vague_description, missing_output_details. Summary is adequate and action-oriented. Description is too vague ('Get the details') and lacks specificity about what details are returned (Webhook object with URL, event types, configuration). Enhanced description clarifies the return type, what information is included, and the use case for better AI agent understanding of the operation's purpose and output.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/webhooks/{webhook_id}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "Retrieve a webhook",
+      "current_description": "Get the details of a specific webhook.\n\nFor more information, see the guides: [Work with webhooks -> Track order and payment lifecycle](https://developer.revolut.com/docs/guides/crypto-ramp/guides/buy-crypto/tutorials/work-with-webhooks/use-webhooks).",
+      "description_suggestion": "Retrieve the configuration details of a specific webhook by webhook_id. Returns a Webhook object containing the webhook's URL, event types, and other configuration settings. Use this to verify webhook settings or retrieve webhook information for management purposes.",
+      "reasoning": "Summary is adequate and action-oriented. Description is too vague ('Get the details') and lacks specificity about what details are returned (Webhook object with URL, event types, configuration). Enhanced description clarifies the return type, what information is included, and the use case for better AI agent understanding of the operation's purpose and output.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'patch_/webhooks/{webhook_id}' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_side_effects. Summary is adequate. Description is too vague and lacks critical details: what can be updated (URL, event types), what input is expected (WebhookUpdateRequest), what is returned (updated Webhook object), whether partial updates are supported, and side effects (changes take effect immediately). Enhanced description provides specificity about inputs, outputs, update behavior, and side effects for better AI agent understanding of the operation's impact and requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhooks/{webhook_id}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "patch_/webhooks/{webhook_id}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Update a webhook",
+      "current_description": "Update the details of a specific webhook.\n\nFor more information, see the guides: [Work with webhooks -> Track order and payment lifecycle](https://developer.revolut.com/docs/guides/crypto-ramp/guides/buy-crypto/tutorials/work-with-webhooks/use-webhooks).",
+      "description_suggestion": "Update the configuration of a specific webhook identified by webhook_id. Accepts a WebhookUpdateRequest containing updatable fields such as URL and event types. Returns the updated Webhook object with new configuration. Supports partial updates - only provided fields will be modified. Changes take effect immediately for tracking order and payment lifecycle events.",
+      "reasoning": "Summary is adequate. Description is too vague and lacks critical details: what can be updated (URL, event types), what input is expected (WebhookUpdateRequest), what is returned (updated Webhook object), whether partial updates are supported, and side effects (changes take effect immediately). Enhanced description provides specificity about inputs, outputs, update behavior, and side effects for better AI agent understanding of the operation's impact and requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhooks/{webhook_id}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 10 operations analyzed, 7 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 10,
+      "total_issues_found": 7,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 86 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 86
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 86 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 86
     }
   }
 ]

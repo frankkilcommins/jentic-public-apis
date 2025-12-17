@@ -18,11 +18,11 @@
     "tags": null,
     "related_information": null,
     "data": {
-      "fixable": true,
+      "fixable": false,
       "path": [
         "servers"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -33,23 +33,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'api-key' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -60,22 +70,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Servers must be present. [path: openapi]",
-    "severity": 1,
-    "code": "no-empty-servers",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "openapi"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -86,22 +95,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Schemas count: 40",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 40
     }
   },
   {
@@ -112,14 +120,943 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./api/1.0/calculate.post.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "Authorization-Token",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 44",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 44
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/api/1.0/calculate"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 2",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 2,
+      "paths": [
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 51",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 51,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "origin"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "destination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "distance"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "departure"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "carrier"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "operatingCarrier"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "bookingClass"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "flightNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "ticketingCarrier"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "baseFareUSD"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "segments"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "unpublished"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "revenueBased"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "airlines"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "airlines",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryResult",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryResult",
+          "properties",
+          "totals"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateResult",
+          "properties",
+          "success"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateResult",
+          "properties",
+          "errorMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "programName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "fullName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "denomination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "tierNames"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "tierNames",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "airlines"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "airlines",
+          "items"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 36",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 36,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "origin"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "destination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "distance"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "departure"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "carrier"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "operatingCarrier"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "bookingClass"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "flightNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "ticketingCarrier"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "baseFareUSD"
+        ],
+        [
+          "components",
+          "schemas",
+          "Itinerary",
+          "properties",
+          "segments"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "unpublished"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "revenueBased"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryProgramResult",
+          "properties",
+          "airlines"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryResult",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateItineraryResult",
+          "properties",
+          "totals"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateResult",
+          "properties",
+          "success"
+        ],
+        [
+          "components",
+          "schemas",
+          "CalculateResult",
+          "properties",
+          "errorMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "programName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "fullName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "denomination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "tierNames"
+        ],
+        [
+          "components",
+          "schemas",
+          "Program",
+          "properties",
+          "airlines"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 10",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -128,38 +1065,16 @@
         "paths",
         "/api/1.0/calculate",
         "post",
-        "operationId"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "items"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./api/1.0/programs.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/1.0/programs",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 10,
+      "paths": []
     }
   },
   {
@@ -183,7 +1098,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -209,7 +1124,33 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 8,
+        "character": 10
+      },
+      "end": {
+        "line": 71,
+        "character": 69
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -237,7 +1178,7 @@
         "/api/1.0/calculate",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -265,7 +1206,7 @@
         "/api/1.0/calculate",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -295,7 +1236,37 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 44,
+        "character": 16
+      },
+      "end": {
+        "line": 45,
+        "character": 69
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./api/1.0/calculate.post.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/1.0/calculate",
+        "post",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -323,7 +1294,7 @@
         "/api/1.0/programs",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -351,7 +1322,7 @@
         "/api/1.0/programs",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -381,7 +1352,507 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 70,
+        "character": 16
+      },
+      "end": {
+        "line": 71,
+        "character": 69
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./api/1.0/programs.get.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/1.0/programs",
+        "get",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 96,
+        "character": 21
+      },
+      "end": {
+        "line": 100,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.distance]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "distance"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 121,
+        "character": 25
+      },
+      "end": {
+        "line": 125,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.flightNumber]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "flightNumber"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 145,
+        "character": 24
+      },
+      "end": {
+        "line": 148,
+        "character": 30
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Itinerary.properties.baseFareUSD]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Itinerary",
+        "properties",
+        "baseFareUSD"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 180,
+        "character": 18
+      },
+      "end": {
+        "line": 183,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.CalculateItineraryProgramResult.properties.value]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "CalculateItineraryProgramResult",
+        "properties",
+        "value"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Servers must be present. [path: openapi]",
+    "severity": 1,
+    "code": "no-empty-servers",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "openapi"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./api/1.0/calculate.post.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/1.0/calculate",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./api/1.0/programs.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/1.0/programs",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post_/api/1.0/calculate' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_context, poor_ai_interpretability. Original summary is vague about scope and doesn't clarify it processes itineraries. Description is completely missing, leaving AI agents unable to understand inputs, outputs, or use cases. Added details about expected Itinerary input structure, response format (CalculateItineraryResult), and practical context about program credit allocation to improve AI agent interpretability and decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/1.0/calculate",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post_/api/1.0/calculate",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Calculates the number of miles earned for every frequent flyer program.",
+      "current_description": "",
+      "summary_suggestion": "Calculate mileage earnings across frequent flyer programs",
+      "description_suggestion": "Calculates mileage earnings for a given flight itinerary across all supported frequent flyer programs. Accepts an Itinerary object containing flight segment details (origin, destination, airline, cabin class, etc.). Returns a CalculateItineraryResult containing earning calculations for each program, including base miles, bonus multipliers, and total credited miles. Useful for determining optimal program credit allocation for a specific flight.",
+      "reasoning": "Original summary is vague about scope and doesn't clarify it processes itineraries. Description is completely missing, leaving AI agents unable to understand inputs, outputs, or use cases. Added details about expected Itinerary input structure, response format (CalculateItineraryResult), and practical context about program credit allocation to improve AI agent interpretability and decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api/1.0/calculate",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/api/1.0/programs' has semantic quality issues: vague_description, missing_output_details, missing_context, poor_ai_interpretability. Original summary is adequate but description is missing entirely. Added details about response structure (array of Program objects), what information each program contains, and practical context about when to use this operation (discovery before calculations). This helps AI agents understand the operation's role in the workflow and what data they'll receive.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/1.0/programs",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/api/1.0/programs",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_context",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Lists all supported frequent flyer programs.",
+      "current_description": "",
+      "summary_suggestion": "Retrieve all supported frequent flyer programs",
+      "description_suggestion": "Retrieves a complete list of all supported frequent flyer programs available in the Where to Credit API. Returns an array of Program objects, each containing program details such as name, airline affiliation, earning rules, and program identifiers. Use this operation to discover available programs before calculating mileage earnings for specific itineraries.",
+      "reasoning": "Original summary is adequate but description is missing entirely. Added details about response structure (array of Program objects), what information each program contains, and practical context about when to use this operation (discovery before calculations). This helps AI agents understand the operation's role in the workflow and what data they'll receive.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api/1.0/programs",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 6 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 6
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 6 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 6
     }
   }
 ]

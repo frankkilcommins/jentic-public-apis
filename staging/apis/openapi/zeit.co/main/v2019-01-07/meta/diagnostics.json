@@ -10,33 +10,6 @@
         "character": 0
       }
     },
-    "message": "Security scheme 'bearerAuth' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
-    "code_description": null,
-    "source": "default-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
     "message": "Security scheme 'oauthAuthentication' is defined in components.securitySchemes but not used in any security requirement.",
     "severity": 2,
     "code": "UNUSED_SECURITY_SCHEME_DEFINED",
@@ -48,9 +21,10 @@
       "fixable": true,
       "path": [
         "components",
-        "securitySchemes"
+        "securitySchemes",
+        "oauthAuthentication"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -61,29 +35,48 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.alias.{$request.body#/url}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total Operations count: 5",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/integrations/webhooks",
-        "post",
-        "callbacks",
-        "alias",
-        "{$request.body#/url}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 5,
+      "paths": [
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -94,29 +87,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.deployment.{$request.body#/url}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/integrations/webhooks",
-        "post",
-        "callbacks",
-        "deployment",
-        "{$request.body#/url}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -127,29 +112,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.deploymentReady.{$request.body#/url}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Schemas count: 207",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/integrations/webhooks",
-        "post",
-        "callbacks",
-        "deploymentReady",
-        "{$request.body#/url}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 207
     }
   },
   {
@@ -160,29 +137,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.deploymentError.{$request.body#/url}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/integrations/webhooks",
-        "post",
-        "callbacks",
-        "deploymentError",
-        "{$request.body#/url}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "bearerAuth"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauthAuthentication"
+        ]
+      ]
     }
   },
   {
@@ -193,14 +174,4390 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.domain.{$request.body#/url}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security scheme types: ['http', 'oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "http",
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "bearerAuth"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauthAuthentication"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "http",
+          "http_scheme": "bearer",
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": []
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "bearerAuth"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauthAuthentication"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 228",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 228
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 3",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 3
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 3",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 3
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 23",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 23,
+      "paths": [
+        [
+          "paths",
+          "/v1/integrations/webhooks"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "alias",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "alias",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deployment",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deployment",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentReady",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentReady",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentError",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentError",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domain",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domain",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainVerify",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainVerify",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainDelete",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainDelete",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v4/domains"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 5",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 5,
+      "paths": [
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 265",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 265,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "name"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "url"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "alias",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "alias",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "alias",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deployment",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deployment",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deployment",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentReady",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentReady",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentReady",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentError",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentError",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentError",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domain",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domain",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domain",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainVerify",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainVerify",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainVerify",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainDelete",
+          "{$request.body#/url}"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainDelete",
+          "{$request.body#/url}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainDelete",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/v4/domains"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "boughtAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "cdnEnabled"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "expiresAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "id"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "intendedNameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "intendedNameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "name"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "nameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "nameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "nsVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "orderedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "serviceType"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "transferredAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "txtVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "verificationRecord"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "verified"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "boughtAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "cdnEnabled"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "expiresAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "id"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "intendedNameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "intendedNameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "name"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "nameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "nameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "nsVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "orderedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "serviceType"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "transferredAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "txtVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "verificationRecord"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "verified"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "suffix"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "aliases"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "aliases",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "aliases",
+          "items",
+          "properties",
+          "id"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "aliases",
+          "items",
+          "properties",
+          "alias"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "aliases",
+          "items",
+          "properties",
+          "created"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "certs"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "certs",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "certs",
+          "items",
+          "properties",
+          "id"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "certs",
+          "items",
+          "properties",
+          "cns"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "certs",
+          "items",
+          "properties",
+          "cns",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "certs",
+          "items",
+          "properties",
+          "created"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "creator"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "creator",
+          "properties",
+          "customerId"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "creator",
+          "properties",
+          "email"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "creator",
+          "properties",
+          "id"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "creator",
+          "properties",
+          "username"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "creator",
+          "properties",
+          "isDomainReseller"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "404",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "404",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "error"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "404",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "error",
+          "properties",
+          "code"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "404",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "error",
+          "properties",
+          "message"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "404",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "error",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "event"
+        ],
+        [
+          "components",
+          "schemas",
+          "event",
+          "properties",
+          "created"
+        ],
+        [
+          "components",
+          "schemas",
+          "event",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "event",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "event",
+          "properties",
+          "ownerId"
+        ],
+        [
+          "components",
+          "schemas",
+          "event",
+          "properties",
+          "region"
+        ],
+        [
+          "components",
+          "schemas",
+          "event",
+          "properties",
+          "teamId"
+        ],
+        [
+          "components",
+          "schemas",
+          "event",
+          "properties",
+          "userId"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "BK_JOB_ID"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "BUILD_NUMBER"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "CIRCLE_BUILD_URL"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "CIRCLE_COMPARE_URL"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "COMMIT"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "created-by"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "created_by"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "deploymentPrefix"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "GITHUB_SHA"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubCommitAuthorLogin"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubCommitAuthorName"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubCommitMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubCommitOrg"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubCommitRef"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubCommitRepo"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubCommitSha"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubDeployment"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubDeploymentAuthorizedBy"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubOrg"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubPrId"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "githubRepo"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabCommitAuthorAvatar"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabCommitAuthorLogin"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabCommitAuthorName"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabCommitMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabCommitRef"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabCommitSha"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabDeployment"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabProjectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabProjectName"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabProjectNamespace"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitlabProjectPath"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gitSha"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "gl"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "targetDomain"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "TRAVIS_BUILD_WEB_URL"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "meta",
+          "properties",
+          "useOldPipeline"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "events",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "configurationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "ownerId"
+        ],
+        [
+          "components",
+          "parameters",
+          "teamId"
+        ],
+        [
+          "components",
+          "parameters",
+          "teamId",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "alias"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "aliasId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "deploymentId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "deploymentUrl"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "oldDeploymentId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "aliasEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "ruleCount"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "zoneId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "domainId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainVerifyEvent"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainVerifyEvent",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainVerifyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainVerifyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainVerifyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainVerifyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainVerifyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "domainId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainDeleteEvent"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainDeleteEvent",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainDeleteEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainDeleteEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainDeleteEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainDeleteEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "domainDeleteEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "domainId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "deploymentId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "plan"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "project"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "regions"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "regions",
+          "items"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "sfo1"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "sfo1",
+          "properties",
+          "minInstances"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "sfo1",
+          "properties",
+          "maxInstances"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "bru1"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "bru1",
+          "properties",
+          "minInstances"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "bru1",
+          "properties",
+          "maxInstances"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "iad1"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "iad1",
+          "properties",
+          "minInstances"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "scale",
+          "properties",
+          "iad1",
+          "properties",
+          "maxInstances"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "deploymentId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "plan"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "project"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "regions"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "regions",
+          "items"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentReadyEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "deploymentId"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "plan"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "project"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "regions"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "regions",
+          "items"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "deploymentErrorEvent",
+          "content",
+          "application/json",
+          "schema",
+          "allOf",
+          1,
+          "properties",
+          "payload",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "bearerAuth"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauthAuthentication"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 75",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 75,
+      "paths": [
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "name"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "url"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "alias",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deployment",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentReady",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "deploymentError",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domain",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainVerify",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "callbacks",
+          "domainDelete",
+          "{$request.body#/url}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "boughtAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "cdnEnabled"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "expiresAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "id"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "intendedNameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "intendedNameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "name"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "nameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "nameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "nsVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "orderedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "serviceType"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "transferredAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "txtVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "verificationRecord"
+        ],
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domains",
+          "items",
+          "properties",
+          "verified"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "boughtAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "cdnEnabled"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "expiresAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "id"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "intendedNameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "intendedNameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "name"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "nameservers"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "nameservers",
+          "items"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "nsVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "orderedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "serviceType"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "transferredAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "txtVerifiedAt"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "verificationRecord"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "verified"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "suffix"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "aliases"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "certs"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "domain",
+          "properties",
+          "creator"
+        ],
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "components",
+          "schemas",
+          "deployment",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "configurationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "webhook",
+          "properties",
+          "ownerId"
+        ],
+        [
+          "components",
+          "parameters",
+          "teamId"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauthAuthentication"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 7",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "aliasEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        1,
+        "properties",
+        "payload",
+        "properties",
+        "deployment"
+      ],
+      "target": "bundled-spec",
+      "max_schema_depth": 7,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2,
+        "character": 9
+      },
+      "end": {
+        "line": 14,
+        "character": 60
+      }
+    },
+    "message": "Info \"description\" must be present and non-empty string. [path: info]",
+    "severity": 2,
+    "code": "info-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 21,
+        "character": 10
+      },
+      "end": {
+        "line": 711,
+        "character": 42
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 23,
+        "character": 12
+      },
+      "end": {
+        "line": 49,
+        "character": 58
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v1/integrations/webhooks.get]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 30,
+        "character": 10
+      },
+      "end": {
+        "line": 36,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/integrations/webhooks.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 57,
+        "character": 13
+      },
+      "end": {
+        "line": 210,
+        "character": 39
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v1/integrations/webhooks.post]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 64,
+        "character": 10
+      },
+      "end": {
+        "line": 70,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/integrations/webhooks.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -209,79 +4566,2332 @@
         "paths",
         "/v1/integrations/webhooks",
         "post",
-        "callbacks",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 220,
+        "character": 15
+      },
+      "end": {
+        "line": 239,
+        "character": 31
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v1/integrations/webhooks/:id.delete]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks/:id",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 227,
+        "character": 10
+      },
+      "end": {
+        "line": 233,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/integrations/webhooks/:id.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks/:id",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 245,
+        "character": 12
+      },
+      "end": {
+        "line": 402,
+        "character": 45
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v4/domains.get]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 252,
+        "character": 10
+      },
+      "end": {
+        "line": 258,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v4/domains.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 324,
+        "character": 37
+      },
+      "end": {
+        "line": 327,
+        "character": 45
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.boughtAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "boughtAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 324,
+        "character": 37
+      },
+      "end": {
+        "line": 327,
+        "character": 45
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.boughtAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "boughtAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 333,
+        "character": 38
+      },
+      "end": {
+        "line": 336,
+        "character": 45
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 333,
+        "character": 38
+      },
+      "end": {
+        "line": 336,
+        "character": 45
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 338,
+        "character": 38
+      },
+      "end": {
+        "line": 341,
+        "character": 45
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.expiresAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "expiresAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 338,
+        "character": 38
+      },
+      "end": {
+        "line": 341,
+        "character": 45
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.expiresAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "expiresAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 367,
+        "character": 41
+      },
+      "end": {
+        "line": 370,
+        "character": 45
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.nsVerifiedAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "nsVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 367,
+        "character": 41
+      },
+      "end": {
+        "line": 370,
+        "character": 45
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.nsVerifiedAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "nsVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 372,
+        "character": 38
+      },
+      "end": {
+        "line": 375,
+        "character": 45
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.orderedAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "orderedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 372,
+        "character": 38
+      },
+      "end": {
+        "line": 375,
+        "character": 45
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.orderedAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "orderedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 386,
+        "character": 42
+      },
+      "end": {
+        "line": 389,
+        "character": 45
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.transferredAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "transferredAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 386,
+        "character": 42
+      },
+      "end": {
+        "line": 389,
+        "character": 45
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.transferredAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "transferredAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 391,
+        "character": 42
+      },
+      "end": {
+        "line": 394,
+        "character": 45
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.txtVerifiedAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "txtVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 391,
+        "character": 42
+      },
+      "end": {
+        "line": 394,
+        "character": 45
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains.get.responses.200.content.application/json.schema.properties.domains.items.properties.txtVerifiedAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domains",
+        "items",
+        "properties",
+        "txtVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 416,
+        "character": 12
+      },
+      "end": {
+        "line": 711,
+        "character": 42
+      }
+    },
+    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v4/domains/{name}.get]",
+    "severity": 2,
+    "code": "operation-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 423,
+        "character": 10
+      },
+      "end": {
+        "line": 429,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v4/domains/{name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 432,
+        "character": 10
+      },
+      "end": {
+        "line": 438,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v4/domains/{name}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 510,
+        "character": 35
+      },
+      "end": {
+        "line": 513,
+        "character": 43
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.boughtAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
         "domain",
-        "{$request.body#/url}",
-        "post",
-        "summary"
+        "properties",
+        "boughtAt"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 510,
+        "character": 35
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 513,
+        "character": 43
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.domainVerify.{$request.body#/url}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.boughtAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
         "paths",
-        "/v1/integrations/webhooks",
-        "post",
-        "callbacks",
-        "domainVerify",
-        "{$request.body#/url}",
-        "post",
-        "summary"
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "boughtAt"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 519,
+        "character": 36
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 522,
+        "character": 43
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.domainDelete.{$request.body#/url}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
         "paths",
-        "/v1/integrations/webhooks",
-        "post",
-        "callbacks",
-        "domainDelete",
-        "{$request.body#/url}",
-        "post",
-        "summary"
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "createdAt"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 519,
+        "character": 36
+      },
+      "end": {
+        "line": 522,
+        "character": 43
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 524,
+        "character": 36
+      },
+      "end": {
+        "line": 527,
+        "character": 43
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.expiresAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "expiresAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 524,
+        "character": 36
+      },
+      "end": {
+        "line": 527,
+        "character": 43
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.expiresAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "expiresAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 553,
+        "character": 39
+      },
+      "end": {
+        "line": 556,
+        "character": 43
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.nsVerifiedAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "nsVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 553,
+        "character": 39
+      },
+      "end": {
+        "line": 556,
+        "character": 43
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.nsVerifiedAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "nsVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 558,
+        "character": 36
+      },
+      "end": {
+        "line": 561,
+        "character": 43
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.orderedAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "orderedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 558,
+        "character": 36
+      },
+      "end": {
+        "line": 561,
+        "character": 43
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.orderedAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "orderedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 572,
+        "character": 40
+      },
+      "end": {
+        "line": 575,
+        "character": 43
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.transferredAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "transferredAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 572,
+        "character": 40
+      },
+      "end": {
+        "line": 575,
+        "character": 43
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.transferredAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "transferredAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 577,
+        "character": 40
+      },
+      "end": {
+        "line": 580,
+        "character": 43
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.txtVerifiedAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "txtVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 577,
+        "character": 40
+      },
+      "end": {
+        "line": 580,
+        "character": 43
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.txtVerifiedAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "txtVerifiedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 611,
+        "character": 40
+      },
+      "end": {
+        "line": 612,
+        "character": 49
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.aliases.items.properties.created]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "aliases",
+        "items",
+        "properties",
+        "created"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 611,
+        "character": 40
+      },
+      "end": {
+        "line": 612,
+        "character": 49
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.aliases.items.properties.created]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "aliases",
+        "items",
+        "properties",
+        "created"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 637,
+        "character": 40
+      },
+      "end": {
+        "line": 638,
+        "character": 49
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.certs.items.properties.created]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "certs",
+        "items",
+        "properties",
+        "created"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 637,
+        "character": 40
+      },
+      "end": {
+        "line": 638,
+        "character": 49
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./v4/domains/{name}.get.responses.200.content.application/json.schema.properties.domain.properties.certs.items.properties.created]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "domain",
+        "properties",
+        "certs",
+        "items",
+        "properties",
+        "created"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 679,
+        "character": 33
+      },
+      "end": {
+        "line": 711,
+        "character": 42
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v4/domains/{name}.get.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v4/domains/{name}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 743,
+        "character": 15
+      },
+      "end": {
+        "line": 749,
+        "character": 26
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.parameters.teamId]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "teamId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 743,
+        "character": 15
+      },
+      "end": {
+        "line": 749,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing teamId [path: components.parameters.teamId]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "teamId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 800,
+        "character": 36
+      },
+      "end": {
+        "line": 801,
+        "character": 43
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.requestBodies.aliasEvent.content.application/json.schema.allOf.1.properties.payload.properties.ruleCount]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "aliasEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "ruleCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 800,
+        "character": 36
+      },
+      "end": {
+        "line": 801,
+        "character": 43
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.aliasEvent.content.application/json.schema.allOf.1.properties.payload.properties.ruleCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "aliasEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "ruleCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 843,
+        "character": 33
+      },
+      "end": {
+        "line": 844,
+        "character": 42
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.requestBodies.domainEvent.content.application/json.schema.allOf.1.properties.payload.properties.zoneId]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "domainEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "zoneId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 843,
+        "character": 33
+      },
+      "end": {
+        "line": 844,
+        "character": 42
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.domainEvent.content.application/json.schema.allOf.1.properties.payload.properties.zoneId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "domainEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "zoneId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1001,
+        "character": 47
+      },
+      "end": {
+        "line": 1002,
+        "character": 51
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.sfo1.properties.minInstances]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "sfo1",
+        "properties",
+        "minInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1001,
+        "character": 47
+      },
+      "end": {
+        "line": 1002,
+        "character": 51
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.sfo1.properties.minInstances]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "sfo1",
+        "properties",
+        "minInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1004,
+        "character": 47
+      },
+      "end": {
+        "line": 1005,
+        "character": 51
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.sfo1.properties.maxInstances]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "sfo1",
+        "properties",
+        "maxInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1004,
+        "character": 47
+      },
+      "end": {
+        "line": 1005,
+        "character": 51
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.sfo1.properties.maxInstances]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "sfo1",
+        "properties",
+        "maxInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1013,
+        "character": 47
+      },
+      "end": {
+        "line": 1014,
+        "character": 51
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.bru1.properties.minInstances]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "bru1",
+        "properties",
+        "minInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1013,
+        "character": 47
+      },
+      "end": {
+        "line": 1014,
+        "character": 51
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.bru1.properties.minInstances]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "bru1",
+        "properties",
+        "minInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1016,
+        "character": 47
+      },
+      "end": {
+        "line": 1017,
+        "character": 51
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.bru1.properties.maxInstances]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "bru1",
+        "properties",
+        "maxInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1016,
+        "character": 47
+      },
+      "end": {
+        "line": 1017,
+        "character": 51
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.bru1.properties.maxInstances]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "bru1",
+        "properties",
+        "maxInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1025,
+        "character": 47
+      },
+      "end": {
+        "line": 1026,
+        "character": 51
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.iad1.properties.minInstances]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "iad1",
+        "properties",
+        "minInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1025,
+        "character": 47
+      },
+      "end": {
+        "line": 1026,
+        "character": 51
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.iad1.properties.minInstances]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "iad1",
+        "properties",
+        "minInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1028,
+        "character": 47
+      },
+      "end": {
+        "line": 1029,
+        "character": 51
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.iad1.properties.maxInstances]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "iad1",
+        "properties",
+        "maxInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1028,
+        "character": 47
+      },
+      "end": {
+        "line": 1029,
+        "character": 51
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.requestBodies.deploymentEvent.content.application/json.schema.allOf.1.properties.payload.properties.scale.properties.iad1.properties.maxInstances]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "deploymentEvent",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        "1",
+        "properties",
+        "payload",
+        "properties",
+        "scale",
+        "properties",
+        "iad1",
+        "properties",
+        "maxInstances"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1219,
+        "character": 20
+      },
+      "end": {
+        "line": 1220,
+        "character": 29
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.event.properties.created]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "event",
+        "properties",
+        "created"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1219,
+        "character": 20
+      },
+      "end": {
+        "line": 1220,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.event.properties.created]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "event",
+        "properties",
+        "created"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1222,
+        "character": 22
+      },
+      "end": {
+        "line": 1223,
+        "character": 29
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.event.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "event",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1222,
+        "character": 22
+      },
+      "end": {
+        "line": 1223,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.event.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "event",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1413,
+        "character": 22
+      },
+      "end": {
+        "line": 1415,
+        "character": 29
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.webhook.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "webhook",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1413,
+        "character": 22
+      },
+      "end": {
+        "line": 1415,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.webhook.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "webhook",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -307,7 +6917,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -336,7 +6946,7 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -364,9 +6974,9 @@
         "schemas",
         "webhook",
         "required",
-        4
+        "4"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -395,7 +7005,40 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.alias.{$request.body#/url}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post",
+        "callbacks",
+        "alias",
+        "{$request.body#/url}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -423,9 +7066,9 @@
         "schemas",
         "event",
         "required",
-        3
+        "3"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -458,7 +7101,40 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.deployment.{$request.body#/url}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post",
+        "callbacks",
+        "deployment",
+        "{$request.body#/url}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -489,13 +7165,13 @@
         "application/json",
         "schema",
         "allOf",
-        1,
+        "1",
         "properties",
         "payload",
         "required",
-        1
+        "1"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -528,7 +7204,40 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.deploymentReady.{$request.body#/url}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post",
+        "callbacks",
+        "deploymentReady",
+        "{$request.body#/url}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -561,7 +7270,40 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.deploymentError.{$request.body#/url}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post",
+        "callbacks",
+        "deploymentError",
+        "{$request.body#/url}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -594,7 +7336,40 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.domain.{$request.body#/url}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post",
+        "callbacks",
+        "domain",
+        "{$request.body#/url}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -627,7 +7402,40 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.domainVerify.{$request.body#/url}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post",
+        "callbacks",
+        "domainVerify",
+        "{$request.body#/url}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -660,7 +7468,40 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/integrations/webhooks.post.callbacks.domainDelete.{$request.body#/url}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/integrations/webhooks",
+        "post",
+        "callbacks",
+        "domainDelete",
+        "{$request.body#/url}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -693,7 +7534,7 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -722,7 +7563,7 @@
         "delete",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -751,7 +7592,7 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -779,51 +7620,25 @@
         "parameters",
         "teamId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 2,
-        "character": 9
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 14,
-        "character": 60
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Info \"description\" must be present and non-empty string. [path: info]",
+    "message": "Operation 'getWebhooks' has semantic quality issues: vague_description, missing_output_details, poor_ai_interpretability. Summary is clear and actionable. However, missing description creates ambiguity about return format, what webhook data is included, and the use case. Added details about return structure, webhook object contents, and context for AI agent decision-making.",
     "severity": 2,
-    "code": "info-description",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 23,
-        "character": 12
-      },
-      "end": {
-        "line": 49,
-        "character": 58
-      }
-    },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v1/integrations/webhooks.get]",
-    "severity": 2,
-    "code": "operation-description",
-    "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -833,25 +7648,45 @@
         "/v1/integrations/webhooks",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "getWebhooks",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Get a list of existent webhooks",
+      "current_description": "",
+      "description_suggestion": "Retrieves all webhook subscriptions for the authenticated user. Returns an array of webhook objects, each containing the subscription URL, events being monitored, and configuration details. Use this to view all active webhook endpoints receiving ZEIT events.",
+      "reasoning": "Summary is clear and actionable. However, missing description creates ambiguity about return format, what webhook data is included, and the use case. Added details about return structure, webhook object contents, and context for AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 57,
-        "character": 13
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 210,
-        "character": 39
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v1/integrations/webhooks.post]",
+    "message": "Operation 'createWebhook' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Summary is adequate but description is completely missing. Added critical details about required inputs (URL, event types), response format (webhook object with ID), and side effects (immediate activation). This enables AI agents to understand prerequisites and outcomes.",
     "severity": 2,
-    "code": "operation-description",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -861,25 +7696,47 @@
         "/v1/integrations/webhooks",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "createWebhook",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Create a new webhook",
+      "current_description": "",
+      "description_suggestion": "Creates a new webhook subscription to receive ZEIT events at the specified URL. Requires the webhook URL and event types to subscribe to in the request body. Returns the created webhook object with a unique ID and subscription details. The webhook will immediately begin receiving POST requests for subscribed events.",
+      "reasoning": "Summary is adequate but description is completely missing. Added critical details about required inputs (URL, event types), response format (webhook object with ID), and side effects (immediate activation). This enables AI agents to understand prerequisites and outcomes.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/integrations/webhooks",
+          "post",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 220,
-        "character": 15
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 239,
-        "character": 31
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v1/integrations/webhooks/:id.delete]",
+    "message": "Operation 'deleteWebhooks' has semantic quality issues: vague_description, missing_output_details, missing_side_effects, poor_ai_interpretability. Summary is clear but description is missing. Added details about the ID parameter requirement, immediate effect (stops event delivery), return confirmation, and side effect (permanent cessation of events). Critical for AI agents to understand the destructive nature and consequences.",
     "severity": 2,
-    "code": "operation-description",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -889,25 +7746,46 @@
         "/v1/integrations/webhooks/:id",
         "delete"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "deleteWebhooks",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Remove a webhook by id",
+      "current_description": "",
+      "description_suggestion": "Deletes a webhook subscription by its ID, immediately stopping all event deliveries to that webhook URL. Requires the webhook ID as a path parameter. Returns a success confirmation. The webhook will no longer receive any ZEIT events after deletion.",
+      "reasoning": "Summary is clear but description is missing. Added details about the ID parameter requirement, immediate effect (stops event delivery), return confirmation, and side effect (permanent cessation of events). Critical for AI agents to understand the destructive nature and consequences.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/integrations/webhooks/:id",
+          "delete",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 245,
-        "character": 12
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 402,
-        "character": 45
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v4/domains.get]",
+    "message": "Operation 'getDomains' has semantic quality issues: vague_description, missing_output_details, poor_ai_interpretability. Summary is clear and specific. However, missing description leaves uncertainty about return format and domain object structure. Added details about array response, domain object properties, and use case context for AI agent understanding.",
     "severity": 2,
-    "code": "operation-description",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -917,25 +7795,45 @@
         "/v4/domains",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "getDomains",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Gets a list of domains registered for the authenticating user.",
+      "current_description": "",
+      "description_suggestion": "Retrieves all domains registered and managed by the authenticated user. Returns an array of domain objects containing domain names, registration status, DNS configuration, and other domain metadata. Use this to view all domains available for use with ZEIT deployments.",
+      "reasoning": "Summary is clear and specific. However, missing description leaves uncertainty about return format and domain object structure. Added details about array response, domain object properties, and use case context for AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v4/domains",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 416,
-        "character": 12
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 711,
-        "character": 42
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation \"description\" must be present and non-empty string. [path: paths./v4/domains/{name}.get]",
+    "message": "Operation 'getDomain' has semantic quality issues: vague_description, missing_output_details, poor_ai_interpretability. Summary is clear but description is missing. Added details about the required domain name parameter, response structure (domain object with specific properties), and use case. Helps AI agents understand what information is available and when to use this operation versus getDomains.",
     "severity": 2,
-    "code": "operation-description",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -945,35 +7843,154 @@
         "/v4/domains/{name}",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "getDomain",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Get a domain for the authenticated user by name",
+      "current_description": "",
+      "description_suggestion": "Retrieves detailed information about a specific domain by its name. Requires the domain name as a path parameter. Returns a domain object containing registration status, DNS records, nameserver configuration, and other domain-specific settings. Use this to inspect a particular domain's configuration and status.",
+      "reasoning": "Summary is clear but description is missing. Added details about the required domain name parameter, response structure (domain object with specific properties), and use case. Helps AI agents understand what information is available and when to use this operation versus getDomains.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v4/domains/{name}",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 743,
-        "character": 15
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 749,
-        "character": 26
+        "line": 0,
+        "character": 12
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.parameters.teamId]",
-    "severity": 2,
-    "code": "oas3-unused-component",
+    "message": "Semantic analysis completed: 5 operations analyzed, 5 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "parameters",
-        "teamId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 5,
+      "total_issues_found": 5,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 20 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 20
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 20 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 20
     }
   }
 ]

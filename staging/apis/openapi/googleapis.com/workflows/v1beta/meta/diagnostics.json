@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -140,7 +140,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -164,7 +164,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -175,24 +175,58 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 7",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 7,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -203,25 +237,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -232,27 +262,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}`. [path: paths./v1beta/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 81",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 81
     }
   },
   {
@@ -263,25 +287,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -292,27 +324,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}`. [path: paths./v1beta/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -323,25 +363,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}.patch.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "patch",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -352,27 +421,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}`. [path: paths./v1beta/{+name}.patch.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "patch",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -383,25 +446,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}/locations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 122",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}/locations",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 122
     }
   },
   {
@@ -412,27 +471,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}/locations`. [path: paths./v1beta/{+name}/locations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}/locations",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -443,14 +496,1693 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}/operations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 11",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 11,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+name}"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 138",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 138,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse",
+          "properties",
+          "unreachable"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse",
+          "properties",
+          "unreachable",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse",
+          "properties",
+          "workflows"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "apiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "target"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "verb"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "revisionCreateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "revisionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "serviceAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "sourceContents"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "Workflow"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 94",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 94,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse",
+          "properties",
+          "unreachable"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWorkflowsResponse",
+          "properties",
+          "workflows"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "apiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "target"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "verb"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "revisionCreateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "revisionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "serviceAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "sourceContents"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "Workflow",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 10",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -459,475 +2191,15 @@
         "paths",
         "/v1beta/{+name}/operations",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}/operations`. [path: paths./v1beta/{+name}/operations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}/operations",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+parent}/workflows.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+parent}/workflows",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1beta/{+parent}/workflows`. [path: paths./v1beta/{+parent}/workflows.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+parent}/workflows",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+parent}/workflows.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+parent}/workflows",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1beta/{+parent}/workflows`. [path: paths./v1beta/{+parent}/workflows.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+parent}/workflows",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}.patch.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}",
-        "patch",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}/locations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}/locations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}/operations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+name}/operations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+parent}/workflows.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+parent}/workflows",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+parent}/workflows.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta/{+parent}/workflows",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"Empty\" is never used. [path: components.schemas.Empty]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "Empty"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"OperationMetadata\" is never used. [path: components.schemas.OperationMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "OperationMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"Workflow\" is never used. [path: components.requestBodies.Workflow]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "requestBodies",
-        "Workflow"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 10,
+      "paths": []
     }
   },
   {
@@ -955,7 +2227,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 558,
+        "character": 55
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 15
+      },
+      "end": {
+        "line": 97,
+        "character": 70
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -985,7 +2341,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 99,
+        "character": 12
+      },
+      "end": {
+        "line": 137,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 101,
+        "character": 10
+      },
+      "end": {
+        "line": 107,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1015,7 +2429,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 139,
+        "character": 14
+      },
+      "end": {
+        "line": 190,
+        "character": 55
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 141,
+        "character": 10
+      },
+      "end": {
+        "line": 147,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1045,7 +2517,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 150,
+        "character": 10
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1beta/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 233,
+        "character": 12
+      },
+      "end": {
+        "line": 295,
+        "character": 58
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta/{+name}/locations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 235,
+        "character": 10
+      },
+      "end": {
+        "line": 241,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta/{+name}/locations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1075,7 +2635,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 244,
+        "character": 10
+      },
+      "end": {
+        "line": 249,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1beta/{+name}/locations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 252,
+        "character": 10
+      },
+      "end": {
+        "line": 257,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1beta/{+name}/locations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 260,
+        "character": 10
+      },
+      "end": {
+        "line": 265,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1beta/{+name}/locations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 334,
+        "character": 12
+      },
+      "end": {
+        "line": 396,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta/{+name}/operations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 336,
+        "character": 10
+      },
+      "end": {
+        "line": 342,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta/{+name}/operations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1105,7 +2813,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 345,
+        "character": 10
+      },
+      "end": {
+        "line": 350,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1beta/{+name}/operations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 353,
+        "character": 10
+      },
+      "end": {
+        "line": 358,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1beta/{+name}/operations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 361,
+        "character": 10
+      },
+      "end": {
+        "line": 366,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1beta/{+name}/operations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 435,
+        "character": 12
+      },
+      "end": {
+        "line": 505,
+        "character": 68
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta/{+parent}/workflows.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 437,
+        "character": 10
+      },
+      "end": {
+        "line": 443,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta/{+parent}/workflows.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1135,7 +2991,185 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 446,
+        "character": 10
+      },
+      "end": {
+        "line": 451,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1beta/{+parent}/workflows.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 454,
+        "character": 10
+      },
+      "end": {
+        "line": 459,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1beta/{+parent}/workflows.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 462,
+        "character": 10
+      },
+      "end": {
+        "line": 467,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1beta/{+parent}/workflows.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 470,
+        "character": 10
+      },
+      "end": {
+        "line": 475,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./v1beta/{+parent}/workflows.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 507,
+        "character": 13
+      },
+      "end": {
+        "line": 558,
+        "character": 55
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta/{+parent}/workflows.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 509,
+        "character": 10
+      },
+      "end": {
+        "line": 515,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta/{+parent}/workflows.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1165,7 +3199,403 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 518,
+        "character": 10
+      },
+      "end": {
+        "line": 523,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1beta/{+parent}/workflows.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 568,
+        "character": 16
+      },
+      "end": {
+        "line": 577,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 580,
+        "character": 21
+      },
+      "end": {
+        "line": 585,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 583,
+        "character": 16
+      },
+      "end": {
+        "line": 583,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 588,
+        "character": 12
+      },
+      "end": {
+        "line": 599,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 602,
+        "character": 17
+      },
+      "end": {
+        "line": 607,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 610,
+        "character": 15
+      },
+      "end": {
+        "line": 615,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 618,
+        "character": 12
+      },
+      "end": {
+        "line": 623,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 626,
+        "character": 20
+      },
+      "end": {
+        "line": 631,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 629,
+        "character": 16
+      },
+      "end": {
+        "line": 629,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 634,
+        "character": 20
+      },
+      "end": {
+        "line": 640,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 643,
+        "character": 18
+      },
+      "end": {
+        "line": 648,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 651,
+        "character": 19
+      },
+      "end": {
+        "line": 656,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 659,
+        "character": 24
+      },
+      "end": {
+        "line": 664,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1193,7 +3623,7 @@
         "requestBodies",
         "Workflow"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1221,7 +3651,7 @@
         "schemas",
         "Empty"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1252,7 +3682,7 @@
         "error",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1280,7 +3710,1314 @@
         "schemas",
         "OperationMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 838,
+        "character": 17
+      },
+      "end": {
+        "line": 841,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Status.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Status",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}`. [path: paths./v1beta/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}`. [path: paths./v1beta/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}`. [path: paths./v1beta/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}/locations`. [path: paths./v1beta/{+name}/locations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1beta/{+name}/operations`. [path: paths./v1beta/{+name}/operations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1beta/{+parent}/workflows`. [path: paths./v1beta/{+parent}/workflows.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1beta/{+parent}/workflows`. [path: paths./v1beta/{+parent}/workflows.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}/locations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}/locations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+name}/operations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+name}/operations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+parent}/workflows.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+parent}/workflows.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta/{+parent}/workflows.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta/{+parent}/workflows.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"Empty\" is never used. [path: components.schemas.Empty]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Empty"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"OperationMetadata\" is never used. [path: components.schemas.OperationMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OperationMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"Workflow\" is never used. [path: components.requestBodies.Workflow]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "Workflow"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workflows.projects.locations.workflows.delete' has semantic quality issues: vague_summary, missing_input_details, missing_side_effects. Original description lacks a summary and is incomplete. Added clarity about what gets deleted (workflow definition and execution history), the cascading effect on running executions, permanence of deletion, and required input format for AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workflows.projects.locations.workflows.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes a workflow with the specified name. This method also cancels and deletes all running executions of the workflow.",
+      "summary_suggestion": "Delete a workflow and its running executions",
+      "description_suggestion": "Deletes a workflow with the specified name. This operation also automatically cancels and deletes all running executions associated with the workflow. The workflow definition and its execution history will be permanently removed. Requires the workflow name in the format: projects/{project}/locations/{location}/workflows/{workflow}.",
+      "reasoning": "Original description lacks a summary and is incomplete. Added clarity about what gets deleted (workflow definition and execution history), the cascading effect on running executions, permanence of deletion, and required input format for AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workflows.projects.locations.workflows.get' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original description is too generic. Added summary, clarified what 'details' means (definition, state, metadata), specified required input format, and described the Workflow response object for better AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workflows.projects.locations.workflows.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets details of a single Workflow.",
+      "summary_suggestion": "Retrieve workflow definition and metadata",
+      "description_suggestion": "Retrieves the complete details of a single workflow, including its definition, current state, and metadata. Requires the workflow name in the format: projects/{project}/locations/{location}/workflows/{workflow}. Returns a Workflow object containing the workflow definition, creation time, update time, and other configuration details.",
+      "reasoning": "Original description is too generic. Added summary, clarified what 'details' means (definition, state, metadata), specified required input format, and described the Workflow response object for better AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workflows.projects.locations.workflows.patch' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original description lacks a summary and is incomplete regarding inputs/outputs. Added summary, clarified partial update support, specified required input (workflow name and Workflow object), and described the return value for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workflows.projects.locations.workflows.patch",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Updates an existing workflow. Running this method has no impact on already running executions of the workflow. A new revision of the workflow may be created as a result of a successful update operation. In that case, such revision will be used in new workflow executions.",
+      "summary_suggestion": "Update workflow definition and configuration",
+      "description_suggestion": "Updates an existing workflow's definition and configuration. The update does not affect currently running executions, which continue using the previous workflow version. A new workflow revision is created upon successful update and will be used for all subsequent workflow executions. Requires the workflow name and a Workflow object with updated fields. Supports partial updates - only specified fields will be modified. Returns the updated Workflow object with the new revision.",
+      "reasoning": "Original description lacks a summary and is incomplete regarding inputs/outputs. Added summary, clarified partial update support, specified required input (workflow name and Workflow object), and described the return value for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workflows.projects.locations.list' has semantic quality issues: vague_summary, missing_context, missing_input_details. Original description lacks context about the Workflows service domain. Added summary, clarified that this lists available regions for Workflows, specified required input format, mentioned pagination support, and described the response structure for AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/locations",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workflows.projects.locations.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists information about the supported locations for this service.",
+      "summary_suggestion": "List available service locations",
+      "description_suggestion": "Lists all Google Cloud locations where the Workflows service is available. This operation helps determine which regions can be used for creating and managing workflows. Requires the project name in the format: projects/{project}. Supports pagination through page_size and page_token parameters. Returns a ListLocationsResponse containing available Location objects with region details and capabilities.",
+      "reasoning": "Original description lacks context about the Workflows service domain. Added summary, clarified that this lists available regions for Workflows, specified required input format, mentioned pagination support, and described the response structure for AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/locations",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workflows.projects.locations.operations.list' has semantic quality issues: vague_summary, missing_context, missing_input_details, missing_output_details. Original description is too generic and lacks domain context. Added summary clarifying this is for workflow operations, specified the parent format, explained use cases, described filter and pagination support, and detailed the response structure for AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workflows.projects.locations.operations.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.",
+      "summary_suggestion": "List long-running workflow operations",
+      "description_suggestion": "Lists long-running operations related to workflows that match the specified filter criteria. This operation is useful for tracking asynchronous workflow management tasks such as create, update, or delete operations. Requires the parent location in the format: projects/{project}/locations/{location}. Supports filtering by operation status, name, and other criteria through the filter parameter. Supports pagination via page_size and page_token. Returns a ListOperationsResponse containing Operation objects with status and result information.",
+      "reasoning": "Original description is too generic and lacks domain context. Added summary clarifying this is for workflow operations, specified the parent format, explained use cases, described filter and pagination support, and detailed the response structure for AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta/{+name}/operations",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workflows.projects.locations.workflows.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original description lacks a summary and is incomplete. Added summary, specified required parent format, clarified filter and pagination support, described the response structure, and explained the ordering behavior for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workflows.projects.locations.workflows.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists Workflows in a given project and location. The default order is not specified.",
+      "summary_suggestion": "List workflows in a project location",
+      "description_suggestion": "Lists all workflows defined in a specific Google Cloud project and location. Requires the parent location in the format: projects/{project}/locations/{location}. Supports filtering workflows by name or other criteria through the filter parameter. Supports pagination via page_size and page_token parameters. Returns a ListWorkflowsResponse containing Workflow objects with their definitions, states, and metadata. Results order is not guaranteed unless explicitly sorted.",
+      "reasoning": "Original description lacks a summary and is incomplete. Added summary, specified required parent format, clarified filter and pagination support, described the response structure, and explained the ordering behavior for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workflows.projects.locations.workflows.create' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Original description lacks a summary and is incomplete regarding inputs/outputs. Added summary, specified required parent format and Workflow object input, clarified the long-running operation return type, explained the ALREADY_EXISTS error condition, and noted the workflow availability for execution for AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta/{+parent}/workflows",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workflows.projects.locations.workflows.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation will return ALREADY_EXISTS error.",
+      "summary_suggestion": "Create a new workflow definition",
+      "description_suggestion": "Creates a new workflow definition in the specified project and location. Requires the parent location in the format: projects/{project}/locations/{location} and a Workflow object containing the workflow definition and configuration. Returns a long-running Operation that, when completed, contains the created Workflow object. If a workflow with the same name already exists, the operation will fail with an ALREADY_EXISTS error. The workflow becomes available for execution immediately after successful creation.",
+      "reasoning": "Original description lacks a summary and is incomplete regarding inputs/outputs. Added summary, specified required parent format and Workflow object input, clarified the long-running operation return type, explained the ALREADY_EXISTS error condition, and noted the workflow availability for execution for AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta/{+parent}/workflows",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 7 operations analyzed, 7 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 7,
+      "total_issues_found": 7,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 58 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 58
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 58 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 58
     }
   }
 ]

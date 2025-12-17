@@ -7,24 +7,73 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object `description` must be non-empty string. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Total Operations count: 10",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 10,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/logs",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -35,26 +84,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Required property 'data' is undefined. [path: components.schemas.ExecuteWebhookResponse.required.2]",
-    "severity": 2,
-    "code": "no-required-schema-properties-undefined",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "ExecuteWebhookResponse",
-        "required",
-        2
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -65,26 +109,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Required property 'data' is undefined. [path: components.schemas.ResolveWebhookResponse.required.2]",
-    "severity": 2,
-    "code": "no-required-schema-properties-undefined",
+    "message": "Schemas count: 178",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "ResolveWebhookResponse",
-        "required",
-        2
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 178
     }
   },
   {
@@ -95,24 +134,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Component: \"consumerId\" is never used. [path: components.parameters.consumerId]",
-    "severity": 2,
-    "code": "no-unused-components",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "parameters",
-        "consumerId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apiKey"
+        ]
+      ]
     }
   },
   {
@@ -123,24 +166,30 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Component: \"id\" is never used. [path: components.parameters.id]",
-    "severity": 2,
-    "code": "no-unused-components",
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "parameters",
-        "id"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apiKey"
+        ]
+      ]
     }
   },
   {
@@ -151,24 +200,37 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Component: \"WebhookEvent\" is never used. [path: components.schemas.WebhookEvent]",
-    "severity": 2,
-    "code": "no-unused-components",
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "WebhookEvent"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "Authorization",
+          "oauth2_flows": []
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apiKey"
+        ]
+      ]
     }
   },
   {
@@ -179,14 +241,2785 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Component: \"NotImplementedResponse\" is never used. [path: components.responses.NotImplementedResponse]",
-    "severity": 2,
-    "code": "no-unused-components",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 212",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 212
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 124",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 124
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 124",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 124
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 16",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 16,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/logs"
+        ],
+        [
+          "paths",
+          "/webhook/logs",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 10",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 10,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/logs",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 230",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 230,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/webhook/webhooks"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/webhook/logs"
+        ],
+        [
+          "paths",
+          "/webhook/logs",
+          "get"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApplicationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          0
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "ConsumerId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeleteWebhookResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeleteWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeleteWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeliveryUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Description"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteBaseUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookEventRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookEventsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookEventsRequest",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "request_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookEventLogsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookEventLogsResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookEventLogsResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookEventLogsResponse",
+          "properties",
+          "data"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhooksResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhooksResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhooksResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhooksResponse",
+          "properties",
+          "data"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "previous"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "current"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "next"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "items_on_page"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors",
+          "properties",
+          "previous"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors",
+          "properties",
+          "current"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors",
+          "properties",
+          "next"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          0
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          0
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookEventRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookEventsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookEventsRequest",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "request_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          0
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          0
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnifiedApiId"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          0
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "detail",
+          "anyOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdatedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "disabled_reason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "event_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "entity_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "entity_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "entity_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "execution_attempt"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "occurred_at"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "success"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "service",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "service",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "endpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "event_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "execution_attempt"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "http_method"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "entity_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "request_body"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "response_body"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "retry_scheduled"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "execution_attempt"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "success"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLogsFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLogsFilter",
+          "properties",
+          "exclude_apis"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLogsFilter",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLogsFilter",
+          "properties",
+          "service",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLogsFilter",
+          "properties",
+          "consumer_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLogsFilter",
+          "properties",
+          "entity_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLogsFilter",
+          "properties",
+          "event_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Raw"
+        ],
+        [
+          "components",
+          "responses",
+          "BadRequestResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "CreateWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "DeleteWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "ExecuteWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "GetWebhookEventLogsResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "GetWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "GetWebhooksResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "NotFoundResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "NotImplementedResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "PaymentRequiredResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "ResolveWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UnauthorizedResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UnexpectedErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UnprocessableResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UpdateWebhookResponse"
+        ],
+        [
+          "components",
+          "parameters",
+          "applicationId"
+        ],
+        [
+          "components",
+          "parameters",
+          "applicationId",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "servicePathId"
+        ],
+        [
+          "components",
+          "parameters",
+          "servicePathId",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "consumerId"
+        ],
+        [
+          "components",
+          "parameters",
+          "consumerId",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "id"
+        ],
+        [
+          "components",
+          "parameters",
+          "id",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "webhookToken"
+        ],
+        [
+          "components",
+          "parameters",
+          "webhookToken",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "lookupIdToken"
+        ],
+        [
+          "components",
+          "parameters",
+          "lookupIdToken",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "lookupId"
+        ],
+        [
+          "components",
+          "parameters",
+          "lookupId",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "downstreamEventType"
+        ],
+        [
+          "components",
+          "parameters",
+          "downstreamEventType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "limit"
+        ],
+        [
+          "components",
+          "parameters",
+          "limit",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "cursor"
+        ],
+        [
+          "components",
+          "parameters",
+          "cursor",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "filter"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "apiKey"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 151",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 151,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/webhook/logs",
+          "get"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApplicationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "BadRequestResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "ConsumerId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeleteWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeleteWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeliveryUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Description"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteBaseUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "request_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecuteWebhookResponse",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookEventLogsResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookEventLogsResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhooksResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetWebhooksResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "previous"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "current"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "next"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "items_on_page"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors",
+          "properties",
+          "previous"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors",
+          "properties",
+          "current"
+        ],
+        [
+          "components",
+          "schemas",
+          "Meta",
+          "properties",
+          "cursors",
+          "properties",
+          "next"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotFoundResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotImplementedResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRequiredResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "request_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResolveWebhookResponse",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnauthorizedResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedErrorResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnifiedApiId"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "type_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "detail"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnprocessableResponse",
+          "properties",
+          "ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdatedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookRequest",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookResponse",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateWebhookResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "disabled_reason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Webhook",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "event_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "entity_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "entity_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "entity_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "execution_attempt"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEvent",
+          "properties",
+          "occurred_at"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "success"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "service",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "service",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "endpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "event_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "execution_attempt"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "http_method"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "entity_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "request_body"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "response_body"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "retry_scheduled"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "execution_attempt"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "status_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebhookEventLog",
+          "properties",
+          "attempts",
+          "items",
+          "properties",
+          "success"
+        ],
+        [
+          "components",
+          "schemas",
+          "Raw"
+        ],
+        [
+          "components",
+          "responses",
+          "BadRequestResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "CreateWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "DeleteWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "ExecuteWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "GetWebhookEventLogsResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "GetWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "GetWebhooksResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "NotFoundResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "NotImplementedResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "PaymentRequiredResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "ResolveWebhookResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UnauthorizedResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UnexpectedErrorResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UnprocessableResponse"
+        ],
+        [
+          "components",
+          "responses",
+          "UpdateWebhookResponse"
+        ],
+        [
+          "components",
+          "parameters",
+          "applicationId"
+        ],
+        [
+          "components",
+          "parameters",
+          "servicePathId"
+        ],
+        [
+          "components",
+          "parameters",
+          "consumerId"
+        ],
+        [
+          "components",
+          "parameters",
+          "id"
+        ],
+        [
+          "components",
+          "parameters",
+          "webhookToken"
+        ],
+        [
+          "components",
+          "parameters",
+          "lookupIdToken"
+        ],
+        [
+          "components",
+          "parameters",
+          "lookupId"
+        ],
+        [
+          "components",
+          "parameters",
+          "downstreamEventType"
+        ],
+        [
+          "components",
+          "parameters",
+          "limit"
+        ],
+        [
+          "components",
+          "parameters",
+          "cursor"
+        ],
+        [
+          "components",
+          "parameters",
+          "filter"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "apiKey"
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 8",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -194,9 +3027,234 @@
       "path": [
         "components",
         "responses",
-        "NotImplementedResponse"
+        "GetWebhookEventLogsResponse",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 8,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 26,
+        "character": 10
+      },
+      "end": {
+        "line": 670,
+        "character": 331
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 339,
+        "character": 24
+      },
+      "end": {
+        "line": 344,
+        "character": 78
+      }
+    },
+    "message": "When modeling object polymorphism with oneOf, define a discriminator for reliable deserialization. [path: paths./webhook/webhooks/{id}/execute/{serviceId}.post.requestBody.content.application/json.schema.oneOf]",
+    "severity": 2,
+    "code": "jentic-oneof-requires-discriminator-for-objects",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}/execute/{serviceId}",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "oneOf"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 351,
+        "character": 24
+      },
+      "end": {
+        "line": 356,
+        "character": 78
+      }
+    },
+    "message": "When modeling object polymorphism with oneOf, define a discriminator for reliable deserialization. [path: paths./webhook/webhooks/{id}/execute/{serviceId}.post.requestBody.content.application/x-www-form-urlencoded.schema.oneOf]",
+    "severity": 2,
+    "code": "jentic-oneof-requires-discriminator-for-objects",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}/execute/{serviceId}",
+        "post",
+        "requestBody",
+        "content",
+        "application/x-www-form-urlencoded",
+        "schema",
+        "oneOf"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 430,
+        "character": 24
+      },
+      "end": {
+        "line": 435,
+        "character": 78
+      }
+    },
+    "message": "When modeling object polymorphism with oneOf, define a discriminator for reliable deserialization. [path: paths./webhook/webhooks/{id}/x/{serviceId}.post.requestBody.content.application/json.schema.oneOf]",
+    "severity": 2,
+    "code": "jentic-oneof-requires-discriminator-for-objects",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}/x/{serviceId}",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "oneOf"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 442,
+        "character": 24
+      },
+      "end": {
+        "line": 447,
+        "character": 78
+      }
+    },
+    "message": "When modeling object polymorphism with oneOf, define a discriminator for reliable deserialization. [path: paths./webhook/webhooks/{id}/x/{serviceId}.post.requestBody.content.application/x-www-form-urlencoded.schema.oneOf]",
+    "severity": 2,
+    "code": "jentic-oneof-requires-discriminator-for-objects",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}/x/{serviceId}",
+        "post",
+        "requestBody",
+        "content",
+        "application/x-www-form-urlencoded",
+        "schema",
+        "oneOf"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 518,
+        "character": 24
+      },
+      "end": {
+        "line": 523,
+        "character": 78
+      }
+    },
+    "message": "When modeling object polymorphism with oneOf, define a discriminator for reliable deserialization. [path: paths./webhook/w/{id}/{serviceId}.post.requestBody.content.application/json.schema.oneOf]",
+    "severity": 2,
+    "code": "jentic-oneof-requires-discriminator-for-objects",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/w/{id}/{serviceId}",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "oneOf"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 679,
+        "character": 16
+      },
+      "end": {
+        "line": 679,
+        "character": 34
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: components.parameters.applicationId.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "applicationId",
+        "name"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -224,7 +3282,36 @@
         "parameters",
         "consumerId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 700,
+        "character": 16
+      },
+      "end": {
+        "line": 700,
+        "character": 39
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: components.parameters.consumerId.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "consumerId",
+        "name"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -252,7 +3339,207 @@
         "parameters",
         "id"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 710,
+        "character": 11
+      },
+      "end": {
+        "line": 717,
+        "character": 62
+      }
+    },
+    "message": "Parameters must include examples; missing id [path: components.parameters.id]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 719,
+        "character": 21
+      },
+      "end": {
+        "line": 726,
+        "character": 123
+      }
+    },
+    "message": "Parameters must include examples; missing webhookToken [path: components.parameters.webhookToken]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "webhookToken"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 756,
+        "character": 14
+      },
+      "end": {
+        "line": 764,
+        "character": 23
+      }
+    },
+    "message": "Parameters must include examples; missing limit [path: components.parameters.limit]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "limit"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 767,
+        "character": 15
+      },
+      "end": {
+        "line": 773,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing cursor [path: components.parameters.cursor]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "cursor"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 776,
+        "character": 15
+      },
+      "end": {
+        "line": 783,
+        "character": 63
+      }
+    },
+    "message": "Parameters must include examples; missing filter [path: components.parameters.filter]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "filter"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 790,
+        "character": 29
+      },
+      "end": {
+        "line": 792,
+        "character": 63
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.BadRequestResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "BadRequestResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 860,
+        "character": 29
+      },
+      "end": {
+        "line": 862,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.NotFoundResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "NotFoundResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -280,7 +3567,1219 @@
         "responses",
         "NotImplementedResponse"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 880,
+        "character": 29
+      },
+      "end": {
+        "line": 882,
+        "character": 68
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.PaymentRequiredResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "PaymentRequiredResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 900,
+        "character": 29
+      },
+      "end": {
+        "line": 902,
+        "character": 65
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.UnauthorizedResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "UnauthorizedResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 920,
+        "character": 29
+      },
+      "end": {
+        "line": 922,
+        "character": 66
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.UnprocessableResponse.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "UnprocessableResponse",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 949,
+        "character": 24
+      },
+      "end": {
+        "line": 952,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.BadRequestResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BadRequestResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 949,
+        "character": 24
+      },
+      "end": {
+        "line": 952,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BadRequestResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BadRequestResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 976,
+        "character": 14
+      },
+      "end": {
+        "line": 982,
+        "character": 42
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.BadRequestResponse.properties.detail.anyOf.1]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BadRequestResponse",
+        "properties",
+        "detail",
+        "anyOf",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1057,
+        "character": 24
+      },
+      "end": {
+        "line": 1060,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.CreateWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "CreateWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1057,
+        "character": 24
+      },
+      "end": {
+        "line": 1060,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.CreateWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "CreateWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1084,
+        "character": 24
+      },
+      "end": {
+        "line": 1087,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.DeleteWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "DeleteWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1084,
+        "character": 24
+      },
+      "end": {
+        "line": 1087,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.DeleteWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "DeleteWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1146,
+        "character": 24
+      },
+      "end": {
+        "line": 1149,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.ExecuteWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ExecuteWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1146,
+        "character": 24
+      },
+      "end": {
+        "line": 1149,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ExecuteWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ExecuteWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1177,
+        "character": 24
+      },
+      "end": {
+        "line": 1180,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.GetWebhookEventLogsResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetWebhookEventLogsResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1177,
+        "character": 24
+      },
+      "end": {
+        "line": 1180,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetWebhookEventLogsResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetWebhookEventLogsResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1213,
+        "character": 24
+      },
+      "end": {
+        "line": 1216,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.GetWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1213,
+        "character": 24
+      },
+      "end": {
+        "line": 1216,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1240,
+        "character": 24
+      },
+      "end": {
+        "line": 1243,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.GetWebhooksResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetWebhooksResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1240,
+        "character": 24
+      },
+      "end": {
+        "line": 1243,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetWebhooksResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetWebhooksResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1296,
+        "character": 26
+      },
+      "end": {
+        "line": 1299,
+        "character": 25
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Meta.properties.items_on_page]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Meta",
+        "properties",
+        "items_on_page"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1296,
+        "character": 26
+      },
+      "end": {
+        "line": 1299,
+        "character": 25
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Meta.properties.items_on_page]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Meta",
+        "properties",
+        "items_on_page"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1331,
+        "character": 24
+      },
+      "end": {
+        "line": 1334,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.NotFoundResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotFoundResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1331,
+        "character": 24
+      },
+      "end": {
+        "line": 1334,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.NotFoundResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotFoundResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1358,
+        "character": 14
+      },
+      "end": {
+        "line": 1364,
+        "character": 31
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.NotFoundResponse.properties.detail.anyOf.1]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotFoundResponse",
+        "properties",
+        "detail",
+        "anyOf",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1382,
+        "character": 24
+      },
+      "end": {
+        "line": 1385,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.NotImplementedResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotImplementedResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1409,
+        "character": 14
+      },
+      "end": {
+        "line": 1411,
+        "character": 42
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.NotImplementedResponse.properties.detail.anyOf.1]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotImplementedResponse",
+        "properties",
+        "detail",
+        "anyOf",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1427,
+        "character": 24
+      },
+      "end": {
+        "line": 1430,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.PaymentRequiredResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentRequiredResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1427,
+        "character": 24
+      },
+      "end": {
+        "line": 1430,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentRequiredResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentRequiredResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1482,
+        "character": 24
+      },
+      "end": {
+        "line": 1485,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.ResolveWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ResolveWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1482,
+        "character": 24
+      },
+      "end": {
+        "line": 1485,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ResolveWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ResolveWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1526,
+        "character": 24
+      },
+      "end": {
+        "line": 1529,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.UnauthorizedResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnauthorizedResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1526,
+        "character": 24
+      },
+      "end": {
+        "line": 1529,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.UnauthorizedResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnauthorizedResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1553,
+        "character": 14
+      },
+      "end": {
+        "line": 1559,
+        "character": 53
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.UnauthorizedResponse.properties.detail.anyOf.1]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnauthorizedResponse",
+        "properties",
+        "detail",
+        "anyOf",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1576,
+        "character": 24
+      },
+      "end": {
+        "line": 1579,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.UnexpectedErrorResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnexpectedErrorResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1576,
+        "character": 24
+      },
+      "end": {
+        "line": 1579,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.UnexpectedErrorResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnexpectedErrorResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1603,
+        "character": 14
+      },
+      "end": {
+        "line": 1609,
+        "character": 57
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.UnexpectedErrorResponse.properties.detail.anyOf.1]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnexpectedErrorResponse",
+        "properties",
+        "detail",
+        "anyOf",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1663,
+        "character": 24
+      },
+      "end": {
+        "line": 1666,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.UnprocessableResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnprocessableResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1663,
+        "character": 24
+      },
+      "end": {
+        "line": 1666,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.UnprocessableResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnprocessableResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1690,
+        "character": 14
+      },
+      "end": {
+        "line": 1695,
+        "character": 98
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.UnprocessableResponse.properties.detail.anyOf.1]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnprocessableResponse",
+        "properties",
+        "detail",
+        "anyOf",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1754,
+        "character": 24
+      },
+      "end": {
+        "line": 1757,
+        "character": 26
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.UpdateWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UpdateWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1754,
+        "character": 24
+      },
+      "end": {
+        "line": 1757,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.UpdateWebhookResponse.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UpdateWebhookResponse",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -308,7 +4807,1134 @@
         "schemas",
         "WebhookEvent"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1865,
+        "character": 30
+      },
+      "end": {
+        "line": 1868,
+        "character": 24
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WebhookEvent.properties.execution_attempt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEvent",
+        "properties",
+        "execution_attempt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1887,
+        "character": 24
+      },
+      "end": {
+        "line": 1890,
+        "character": 29
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.WebhookEventLog.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1887,
+        "character": 24
+      },
+      "end": {
+        "line": 1890,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WebhookEventLog.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1939,
+        "character": 30
+      },
+      "end": {
+        "line": 1942,
+        "character": 24
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.WebhookEventLog.properties.execution_attempt]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "execution_attempt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1939,
+        "character": 30
+      },
+      "end": {
+        "line": 1942,
+        "character": 24
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WebhookEventLog.properties.execution_attempt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "execution_attempt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1985,
+        "character": 36
+      },
+      "end": {
+        "line": 1988,
+        "character": 30
+      }
+    },
+    "message": "Format is not specified for a number property [path: components.schemas.WebhookEventLog.properties.attempts.items.properties.execution_attempt]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "attempts",
+        "items",
+        "properties",
+        "execution_attempt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1985,
+        "character": 36
+      },
+      "end": {
+        "line": 1988,
+        "character": 30
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WebhookEventLog.properties.attempts.items.properties.execution_attempt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "attempts",
+        "items",
+        "properties",
+        "execution_attempt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1990,
+        "character": 30
+      },
+      "end": {
+        "line": 1993,
+        "character": 35
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.WebhookEventLog.properties.attempts.items.properties.status_code]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "attempts",
+        "items",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1990,
+        "character": 30
+      },
+      "end": {
+        "line": 1993,
+        "character": 35
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WebhookEventLog.properties.attempts.items.properties.status_code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEventLog",
+        "properties",
+        "attempts",
+        "items",
+        "properties",
+        "status_code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object `description` must be non-empty string. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Required property 'data' is undefined. [path: components.schemas.ExecuteWebhookResponse.required.2]",
+    "severity": 2,
+    "code": "no-required-schema-properties-undefined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ExecuteWebhookResponse",
+        "required",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Required property 'data' is undefined. [path: components.schemas.ResolveWebhookResponse.required.2]",
+    "severity": 2,
+    "code": "no-required-schema-properties-undefined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ResolveWebhookResponse",
+        "required",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"consumerId\" is never used. [path: components.parameters.consumerId]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "consumerId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"id\" is never used. [path: components.parameters.id]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"WebhookEvent\" is never used. [path: components.schemas.WebhookEvent]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WebhookEvent"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"NotImplementedResponse\" is never used. [path: components.responses.NotImplementedResponse]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "NotImplementedResponse"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksResolve' has semantic quality issues: vague_description, missing_context, missing_output_details. The current description is too brief and lacks important context about what 'resolve' means in this domain, what parameters are required, and what the operation returns. Added clarity about lookup_id usage, service ID context, webhook delivery mechanism, and return value details to improve AI agent understanding of when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/w/{id}/{serviceId}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksResolve",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_context",
+        "missing_output_details"
+      ],
+      "current_summary": "Resolve and Execute a connection webhook",
+      "current_description": "Resolve a webhook based on lookup_id and then execute it",
+      "description_suggestion": "Resolves a webhook by its lookup_id and executes the associated webhook event. This operation retrieves the webhook configuration using the provided identifier and service ID, then triggers the webhook delivery to its configured endpoint. Returns the execution result including delivery status and any error details if the webhook execution fails.",
+      "reasoning": "The current description is too brief and lacks important context about what 'resolve' means in this domain, what parameters are required, and what the operation returns. Added clarity about lookup_id usage, service ID context, webhook delivery mechanism, and return value details to improve AI agent understanding of when and how to use this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhookVerify' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_context, missing_output_details, poor_ai_interpretability. The GET method and operation name 'webhookVerify' suggest this is a verification/validation operation, not an execution operation like webhooksResolve. The current description incorrectly mirrors the POST operation. Clarified that this is a read-only verification operation that checks webhook health and configuration without side effects, making it clear for AI agents to distinguish from the resolve operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/w/{id}/{serviceId}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhookVerify",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_context",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Resolve and Execute a connection webhook",
+      "current_description": "Resolve a webhook based on lookup_id and then execute it",
+      "summary_suggestion": "Verify webhook configuration and connectivity",
+      "description_suggestion": "Verifies the configuration and connectivity of a webhook by its lookup_id and service ID. This operation validates that the webhook endpoint is reachable and properly configured without triggering actual event delivery. Returns the verification status, endpoint health check results, and any configuration issues detected. Use this to test webhook setup before enabling event delivery.",
+      "reasoning": "The GET method and operation name 'webhookVerify' suggest this is a verification/validation operation, not an execution operation like webhooksResolve. The current description incorrectly mirrors the POST operation. Clarified that this is a read-only verification operation that checks webhook health and configuration without side effects, making it clear for AI agents to distinguish from the resolve operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webhook/w/{id}/{serviceId}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'eventLogsAll' has semantic quality issues: vague_description, missing_context, missing_input_details, missing_output_details. The current description is identical to the summary and provides no actionable information. Missing details about pagination support (cursor/limit), what data is returned in logs, and the use case for this operation. Enhanced with pagination context consistent with the API's documented pagination model, specific log fields, and practical use cases to help AI agents understand when to retrieve event logs.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/logs",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "eventLogsAll",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_context",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "List event logs",
+      "current_description": "List event logs",
+      "summary_suggestion": "Retrieve paginated webhook event logs",
+      "description_suggestion": "Retrieves a paginated list of webhook event logs for all webhooks. Supports cursor-based pagination via the cursor and limit parameters. Returns event log entries including event type, delivery status, timestamp, and response details. Use this to monitor webhook delivery history, troubleshoot failed deliveries, and audit webhook activity across your application.",
+      "reasoning": "The current description is identical to the summary and provides no actionable information. Missing details about pagination support (cursor/limit), what data is returned in logs, and the use case for this operation. Enhanced with pagination context consistent with the API's documented pagination model, specific log fields, and practical use cases to help AI agents understand when to retrieve event logs.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webhook/logs",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webhook/logs",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksAll' has semantic quality issues: vague_description, missing_input_details, missing_output_details. Current description is too minimal. Added details about pagination support (consistent with API context), return value structure, and what information is included in webhook objects to help AI agents understand the response format and pagination requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksAll",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "List webhook subscriptions",
+      "current_description": "List all webhook subscriptions",
+      "description_suggestion": "Retrieves a paginated list of all webhook subscriptions for the authenticated application. Supports cursor-based pagination via the cursor and limit query parameters. Returns an array of webhook subscription objects with their configuration details, delivery URLs, event types, and status.",
+      "reasoning": "Current description is too minimal. Added details about pagination support (consistent with API context), return value structure, and what information is included in webhook objects to help AI agents understand the response format and pagination requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksAdd' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_side_effects. Original description lacks specificity about required inputs and outputs. Enhanced to clarify what CreateWebhookRequest contains (delivery URL, event types, unified API), what is returned (webhook object with ID and status), and the side effect that the webhook becomes active immediately.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksAdd",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Create webhook subscription",
+      "current_description": "Create a webhook subscription to receive events",
+      "description_suggestion": "Creates a new webhook subscription to receive events from a specified Unified API. Requires a delivery URL, event types to subscribe to, and the target unified API. Returns the created webhook subscription object with a unique ID and current status. The webhook will begin receiving events immediately upon successful creation.",
+      "reasoning": "Original description lacks specificity about required inputs and outputs. Enhanced to clarify what CreateWebhookRequest contains (delivery URL, event types, unified API), what is returned (webhook object with ID and status), and the side effect that the webhook becomes active immediately.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksOne' has semantic quality issues: vague_description, missing_output_details. Description is too generic. Added clarity about what information is returned (delivery URL, event types, unified API, status, metadata) to help AI agents understand the response structure and determine if this operation provides needed webhook details.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksOne",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "Get webhook subscription",
+      "current_description": "Get the webhook subscription details",
+      "description_suggestion": "Retrieves detailed information for a specific webhook subscription by ID. Returns the complete webhook configuration including delivery URL, subscribed event types, unified API, status, and creation metadata.",
+      "reasoning": "Description is too generic. Added clarity about what information is returned (delivery URL, event types, unified API, status, metadata) to help AI agents understand the response structure and determine if this operation provides needed webhook details.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksUpdate' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_side_effects. Original description provides minimal context. Enhanced to explain PATCH semantics for partial updates, what fields can be modified, what is returned, and that changes are immediate. This helps AI agents understand update behavior and side effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksUpdate",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Update webhook subscription",
+      "current_description": "Update a webhook subscription",
+      "description_suggestion": "Updates an existing webhook subscription configuration. Supports partial updates via PATCH semantics - only provided fields in the UpdateWebhookRequest will be modified. Can update delivery URL, subscribed event types, and status. Returns the updated webhook subscription object. Changes take effect immediately.",
+      "reasoning": "Original description provides minimal context. Enhanced to explain PATCH semantics for partial updates, what fields can be modified, what is returned, and that changes are immediate. This helps AI agents understand update behavior and side effects.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksDelete' has semantic quality issues: vague_description, missing_output_details, missing_side_effects. Description lacks important details about the operation's effects. Added clarity that deletion is permanent, the webhook stops receiving events immediately, the response type (204), and that the action is irreversible. This helps AI agents understand the consequences of this destructive operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksDelete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Delete webhook subscription",
+      "current_description": "Delete a webhook subscription",
+      "description_suggestion": "Permanently deletes a webhook subscription by ID. The webhook will immediately stop receiving events. Returns a 204 No Content response on successful deletion. This action cannot be undone.",
+      "reasoning": "Description lacks important details about the operation's effects. Added clarity that deletion is permanent, the webhook stops receiving events immediately, the response type (204), and that the action is irreversible. This helps AI agents understand the consequences of this destructive operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks/{id}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksExecute' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, unclear_purpose. Both summary and description are extremely vague. 'Execute' doesn't clarify that this is a manual trigger operation. Enhanced summary to indicate manual triggering. Description now explains the purpose (trigger event delivery), required parameters (webhook ID, service ID), input format (ExecuteWebhookEventRequest), and what is returned (execution result and endpoint response).",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}/execute/{serviceId}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksExecute",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "unclear_purpose"
+      ],
+      "current_summary": "Execute a webhook",
+      "current_description": "Execute a webhook",
+      "summary_suggestion": "Manually trigger webhook event delivery",
+      "description_suggestion": "Manually executes a webhook subscription by triggering event delivery to its configured endpoint. Requires the webhook ID and service ID. Accepts an ExecuteWebhookEventRequest containing the event data to deliver. Returns the execution result including delivery status and response from the webhook endpoint.",
+      "reasoning": "Both summary and description are extremely vague. 'Execute' doesn't clarify that this is a manual trigger operation. Enhanced summary to indicate manual triggering. Description now explains the purpose (trigger event delivery), required parameters (webhook ID, service ID), input format (ExecuteWebhookEventRequest), and what is returned (execution result and endpoint response).",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/execute/{serviceId}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webhooksShortExecute' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, unclear_purpose, missing_context. Both summary and description are identical to webhooksExecute but this is a shorthand alternative endpoint. Enhanced to clarify the purpose (manual trigger via shorthand path), distinguish it from the standard execute endpoint, and explain that it's an alternative with a shorter URL. This helps AI agents understand when to use this variant and its relationship to the standard execute operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webhook/webhooks/{id}/x/{serviceId}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webhooksShortExecute",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "unclear_purpose",
+        "missing_context"
+      ],
+      "current_summary": "Execute a webhook",
+      "current_description": "Execute a webhook",
+      "summary_suggestion": "Manually trigger webhook with shorthand path",
+      "description_suggestion": "Manually executes a webhook subscription using a shorthand URL path (/x/ instead of /execute/). Requires the webhook ID and service ID. Accepts webhook event data in the request body. Returns the execution result including delivery status and response from the webhook endpoint. This is an alternative endpoint to webhooksExecute with a shorter URL path.",
+      "reasoning": "Both summary and description are identical to webhooksExecute but this is a shorthand alternative endpoint. Enhanced to clarify the purpose (manual trigger via shorthand path), distinguish it from the standard execute endpoint, and explain that it's an alternative with a shorter URL. This helps AI agents understand when to use this variant and its relationship to the standard execute operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webhook/webhooks/{id}/x/{serviceId}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 10 operations analyzed, 10 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 10,
+      "total_issues_found": 10,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 164 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 164
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 164 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 164
     }
   }
 ]

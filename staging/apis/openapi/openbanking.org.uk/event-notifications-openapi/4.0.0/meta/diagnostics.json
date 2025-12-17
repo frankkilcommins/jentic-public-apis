@@ -24,7 +24,7 @@
         0,
         "url"
       ],
-      "target": ""
+      "target": "bundled-spec"
     }
   },
   {
@@ -35,23 +35,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'TPPOAuth2Security' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 1",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 1,
+      "paths": [
+        [
+          "paths",
+          "/event-notifications",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -62,25 +67,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./event-notifications.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/event-notifications",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -91,14 +92,698 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Component: \"OBEventNotification1\" is never used. [path: components.schemas.OBEventNotification1]",
-    "severity": 2,
-    "code": "no-unused-components",
+    "message": "Schemas count: 21",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 21
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "TPPOAuth2Security"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "TPPOAuth2Security"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "clientCredentials"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "TPPOAuth2Security"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 25",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 25
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 2",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 2,
+      "paths": [
+        [
+          "paths",
+          "/event-notifications"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 1",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 1,
+      "paths": [
+        [
+          "paths",
+          "/event-notifications",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 30",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 30,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/event-notifications"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post",
+          "requestBody",
+          "content",
+          "application/jwt",
+          "schema"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post",
+          "responses",
+          "202"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEvent1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventLink1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventLink1",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventLink1",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "iss"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "iat"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "jti"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "aud"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "sub"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "txn"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "toe"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventResourceUpdate1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "subject_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "http://openbanking.org.uk/rid"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "http://openbanking.org.uk/rty"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "http://openbanking.org.uk/rlk"
+        ],
+        [
+          "components",
+          "parameters",
+          "x-fapi-financial-id-Param"
+        ],
+        [
+          "components",
+          "parameters",
+          "x-fapi-financial-id-Param",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "x-fapi-interaction-id-Param"
+        ],
+        [
+          "components",
+          "parameters",
+          "x-fapi-interaction-id-Param",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "TPPOAuth2Security"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 24",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 24,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post",
+          "responses",
+          "202"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEvent1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventLink1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventLink1",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventLink1",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "iss"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "iat"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "jti"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "aud"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "sub"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "txn"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventNotification1",
+          "properties",
+          "toe"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventResourceUpdate1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "subject_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "http://openbanking.org.uk/rid"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "http://openbanking.org.uk/rty"
+        ],
+        [
+          "components",
+          "schemas",
+          "OBEventSubject1",
+          "properties",
+          "http://openbanking.org.uk/rlk"
+        ],
+        [
+          "components",
+          "parameters",
+          "x-fapi-financial-id-Param"
+        ],
+        [
+          "components",
+          "parameters",
+          "x-fapi-interaction-id-Param"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "TPPOAuth2Security"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 11",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -106,9 +791,67 @@
       "path": [
         "components",
         "schemas",
-        "OBEventNotification1"
+        "OBEventNotification1",
+        "properties",
+        "events"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 11,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 13
+      },
+      "end": {
+        "line": 19,
+        "character": 33
+      }
+    },
+    "message": "Servers MUST be https and no other protocol is allowed. [path: servers.0.url]",
+    "severity": 2,
+    "code": "hosts-https-only-oas3",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 52,
+        "character": 37
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -136,7 +879,7 @@
         "/event-notifications",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -166,7 +909,121 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 60,
+        "character": 34
+      },
+      "end": {
+        "line": 66,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing x-fapi-financial-id-Param [path: components.parameters.x-fapi-financial-id-Param]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "x-fapi-financial-id-Param"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 62,
+        "character": 16
+      },
+      "end": {
+        "line": 62,
+        "character": 37
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: components.parameters.x-fapi-financial-id-Param.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "x-fapi-financial-id-Param",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 69,
+        "character": 36
+      },
+      "end": {
+        "line": 75,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing x-fapi-interaction-id-Param [path: components.parameters.x-fapi-interaction-id-Param]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "x-fapi-interaction-id-Param"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 71,
+        "character": 16
+      },
+      "end": {
+        "line": 71,
+        "character": 39
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: components.parameters.x-fapi-interaction-id-Param.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "x-fapi-interaction-id-Param",
+        "name"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -194,7 +1051,310 @@
         "schemas",
         "OBEventNotification1"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 139,
+        "character": 16
+      },
+      "end": {
+        "line": 143,
+        "character": 24
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OBEventNotification1.properties.iat]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OBEventNotification1",
+        "properties",
+        "iat"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 168,
+        "character": 16
+      },
+      "end": {
+        "line": 172,
+        "character": 24
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OBEventNotification1.properties.toe]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OBEventNotification1",
+        "properties",
+        "toe"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./event-notifications.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/event-notifications",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"OBEventNotification1\" is never used. [path: components.schemas.OBEventNotification1]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OBEventNotification1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'CreateEventNotification' has semantic quality issues: vague_description, missing_context, missing_input_details, missing_output_details, missing_side_effects, unclear_purpose, poor_ai_interpretability. The operation lacks a description entirely, making it impossible for AI agents to understand its purpose, inputs, outputs, or effects. The summary is generic and doesn't clarify the TPP context. The improved description explains: (1) the operation's purpose within the Event Notification API domain, (2) what inputs are expected (event subject, resource links, metadata), (3) authentication requirements (TPP OAuth2), (4) what is returned (confirmation with status), and (5) side effects (event delivery, state changes). This enables AI agents to determine when to use this operation and what to expect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/event-notifications",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "CreateEventNotification",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_context",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "unclear_purpose",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Send an event notification",
+      "current_description": "",
+      "summary_suggestion": "Create and send event notification to TPP",
+      "description_suggestion": "Creates and sends an event notification to a Third Party Provider (TPP) regarding resource updates. This operation accepts event notification data including the event subject, resource links, and notification metadata. The request requires TPP OAuth2 authentication. Returns confirmation of the notification creation with status details. The operation triggers event delivery to the subscribed TPP endpoint and updates the event notification state in the system.",
+      "reasoning": "The operation lacks a description entirely, making it impossible for AI agents to understand its purpose, inputs, outputs, or effects. The summary is generic and doesn't clarify the TPP context. The improved description explains: (1) the operation's purpose within the Event Notification API domain, (2) what inputs are expected (event subject, resource links, metadata), (3) authentication requirements (TPP OAuth2), (4) what is returned (confirmation with status), and (5) side effects (event delivery, state changes). This enables AI agents to determine when to use this operation and what to expect.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/event-notifications",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/event-notifications",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 1 operations analyzed, 1 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 1,
+      "total_issues_found": 1,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 6 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 6
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 6 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 6
     }
   }
 ]

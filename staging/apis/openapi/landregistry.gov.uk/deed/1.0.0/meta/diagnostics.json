@@ -7,23 +7,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "`/deed/` should not have a trailing slash. [path: paths./deed/]",
-    "severity": 1,
-    "code": "no-path-trailing-slash",
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/deed/"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/deed/",
+          "post"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -34,24 +44,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./deed/.post]",
-    "severity": 1,
-    "code": "security-defined",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/deed/",
-        "post"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -62,24 +69,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./deed/{deed_reference}.get]",
-    "severity": 1,
-    "code": "security-defined",
+    "message": "Schemas count: 45",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/deed/{deed_reference}",
-        "get"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 45
     }
   },
   {
@@ -90,22 +94,22 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Security Schemes count: 0",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 0,
+      "paths": []
     }
   },
   {
@@ -116,14 +120,788 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./deed/{deed_reference}.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Security scheme types: []",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 0 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 54",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 54
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/deed/"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 2",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 2,
+      "paths": [
+        [
+          "paths",
+          "/deed/",
+          "post"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 57",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 57,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/deed/"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "responses",
+          "201",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "responses",
+          "201",
+          "content",
+          "text/plain",
+          "schema"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalProvisions"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalProvisions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalProvisions",
+          "items",
+          "properties",
+          "additional_provision_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalProvisions",
+          "items",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Borrower"
+        ],
+        [
+          "components",
+          "schemas",
+          "Borrower",
+          "properties",
+          "forename"
+        ],
+        [
+          "components",
+          "schemas",
+          "Borrower",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Borrower",
+          "properties",
+          "middle_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Borrower",
+          "properties",
+          "surname"
+        ],
+        [
+          "components",
+          "schemas",
+          "Borrower",
+          "properties",
+          "token"
+        ],
+        [
+          "components",
+          "schemas",
+          "Borrowers"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChargeClause"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChargeClause",
+          "properties",
+          "cre_code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChargeClause",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Deed_Application"
+        ],
+        [
+          "components",
+          "schemas",
+          "Deed_Application",
+          "properties",
+          "identity_checked"
+        ],
+        [
+          "components",
+          "schemas",
+          "Deed_Application",
+          "properties",
+          "md_ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "Deed_Application",
+          "properties",
+          "property_address"
+        ],
+        [
+          "components",
+          "schemas",
+          "Deed_Application",
+          "properties",
+          "title_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Lender"
+        ],
+        [
+          "components",
+          "schemas",
+          "Lender",
+          "properties",
+          "address"
+        ],
+        [
+          "components",
+          "schemas",
+          "Lender",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Lender",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "OpBorrowers"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "deed_status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "effective_clause"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "md_ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "property_address"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "title_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName",
+          "properties",
+          "address"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName",
+          "properties",
+          "dob"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName",
+          "properties",
+          "forename"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName",
+          "properties",
+          "gender"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName",
+          "properties",
+          "middle_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName",
+          "properties",
+          "phone_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrivateIndividualName",
+          "properties",
+          "surname"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 15",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 15,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "components",
+          "schemas",
+          "Deed_Application",
+          "properties",
+          "property_address"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "deed_status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "effective_clause"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "md_ref"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "property_address"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operative_Deed",
+          "properties",
+          "deed",
+          "properties",
+          "title_number"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 8",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -132,9 +910,15 @@
         "paths",
         "/deed/{deed_reference}",
         "get",
-        "operationId"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 8,
+      "paths": []
     }
   },
   {
@@ -160,7 +944,33 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 13,
+        "character": 10
+      },
+      "end": {
+        "line": 102,
+        "character": 25
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -187,7 +997,7 @@
         "paths",
         "/deed/"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -215,7 +1025,71 @@
         "/deed/",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 34,
+        "character": 33
+      },
+      "end": {
+        "line": 36,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./deed/.post.responses.400.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/",
+        "post",
+        "responses",
+        "400",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 39,
+        "character": 27
+      },
+      "end": {
+        "line": 41,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./deed/.post.responses.400.content.text/plain]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/",
+        "post",
+        "responses",
+        "400",
+        "content",
+        "text/plain"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -243,7 +1117,69 @@
         "/deed/{deed_reference}",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 66,
+        "character": 10
+      },
+      "end": {
+        "line": 72,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./deed/{deed_reference}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/{deed_reference}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 89,
+        "character": 33
+      },
+      "end": {
+        "line": 91,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./deed/{deed_reference}.get.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/{deed_reference}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -273,7 +1209,439 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 206,
+        "character": 17
+      },
+      "end": {
+        "line": 208,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Error.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Error",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 280,
+        "character": 30
+      },
+      "end": {
+        "line": 323,
+        "character": 24
+      }
+    },
+    "message": "Potentially exposing internals (words \"private\" or \"internal\" spotted) [path: components.schemas.PrivateIndividualName]",
+    "severity": 2,
+    "code": "monite-general-exposing-internals",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PrivateIndividualName"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "`/deed/` should not have a trailing slash. [path: paths./deed/]",
+    "severity": 1,
+    "code": "no-path-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./deed/{deed_reference}.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/{deed_reference}",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./deed/.post]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./deed/{deed_reference}.get]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/{deed_reference}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'addDeed' has semantic quality issues: vague_summary, missing_output_details, missing_side_effects. Original summary 'Deed' is too vague and not action-oriented. Description has clarity issues (typo: 'reponse'), lacks explicit mention of the request schema, and doesn't clearly state the 201 response behavior or persistence side effects. Improved version specifies the action (creates deed application), clarifies the identity verification requirement, explicitly states the response code and return value, and indicates the side effect of system persistence for AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "addDeed",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Deed",
+      "current_description": "The post Deed endpoint creates a new deed based on the JSON provided.\n The reponse will return a URL that can retrieve the created deed. \n > REQUIRED: Land Registry system requests Conveyancer to confirm that the Borrowers identity has been established in accordance with Section 111 of the Network Access Agreement.",
+      "summary_suggestion": "Create a new deed application",
+      "description_suggestion": "Creates a new deed application in the Land Registry system based on the provided Deed_Application JSON. The operation requires confirmation that Borrower identity has been established in accordance with Section 111 of the Network Access Agreement. Returns a 201 status with a URL reference to retrieve the created deed. The deed is persisted in the system and can be subsequently retrieved using the returned deed reference.",
+      "reasoning": "Original summary 'Deed' is too vague and not action-oriented. Description has clarity issues (typo: 'reponse'), lacks explicit mention of the request schema, and doesn't clearly state the 201 response behavior or persistence side effects. Improved version specifies the action (creates deed application), clarifies the identity verification requirement, explicitly states the response code and return value, and indicates the side effect of system persistence for AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/deed/",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/deed/{deed_reference}' has semantic quality issues: vague_summary, missing_input_details. Original summary 'Deed' is too generic and not action-oriented. Description lacks clarity about the required deed_reference parameter format and its origin. Improved version specifies the retrieval action, clarifies the required parameter and its constraints, explicitly states the 200 response code, and enumerates the returned data fields for better AI agent interpretability when determining if this operation matches retrieval intents.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/deed/{deed_reference}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/deed/{deed_reference}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "Deed",
+      "current_description": "The Deed endpoint returns details of a specific deed based on the unique deed reference.\nThe response includes the Title Number, Property information, Borrower(s) information and deed information.",
+      "summary_suggestion": "Retrieve deed details by reference",
+      "description_suggestion": "Retrieves the complete details of a specific deed from the Land Registry system using the unique deed_reference parameter. Returns a 200 response containing the deed's Title Number, Property information, Borrower(s) information, and operative deed details. The deed_reference must be a valid reference previously returned from a deed creation operation.",
+      "reasoning": "Original summary 'Deed' is too generic and not action-oriented. Description lacks clarity about the required deed_reference parameter format and its origin. Improved version specifies the retrieval action, clarifies the required parameter and its constraints, explicitly states the 200 response code, and enumerates the returned data fields for better AI agent interpretability when determining if this operation matches retrieval intents.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/deed/{deed_reference}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 12 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 12
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 12 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 12
     }
   }
 ]

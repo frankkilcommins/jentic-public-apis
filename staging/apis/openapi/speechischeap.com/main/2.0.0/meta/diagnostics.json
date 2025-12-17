@@ -7,24 +7,43 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./jobs/health.get]",
-    "severity": 1,
-    "code": "security-defined",
+    "message": "Total Operations count: 4",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/jobs/health",
-        "get"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 4,
+      "paths": [
+        [
+          "paths",
+          "/jobs",
+          "post"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete"
+        ]
+      ]
     }
   },
   {
@@ -35,14 +54,1511 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./jobs/{job_id}.get]",
-    "severity": 1,
-    "code": "security-defined",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 39",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 39
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "BearerAuth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['http']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "http"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "BearerAuth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "http",
+          "http_scheme": "bearer",
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "BearerAuth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 47",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 47
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 19",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 19
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 19",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 19
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 7",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 7,
+      "paths": [
+        [
+          "paths",
+          "/jobs"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post"
+        ],
+        [
+          "paths",
+          "/jobs/health"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 4",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 4,
+      "paths": [
+        [
+          "paths",
+          "/jobs",
+          "post"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 65",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 65,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/jobs"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "input_url"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "can_label_audio"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "can_parse_speakers"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "can_parse_words"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "hotwords"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "is_private"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "language"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "minimum_confidence"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "prompt"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "segment_duration"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "user_agent"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "webhook_url"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "202"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/jobs/health"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "text/plain",
+          "schema"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "200",
+          "content",
+          "text/plain",
+          "schema"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "500"
+        ],
+        [
+          "components",
+          "schemas",
+          "Job"
+        ],
+        [
+          "components",
+          "schemas",
+          "Job",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Job",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "JobOutput"
+        ],
+        [
+          "components",
+          "schemas",
+          "JobOutput",
+          "properties",
+          "segments"
+        ],
+        [
+          "components",
+          "schemas",
+          "JobOutput",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "start"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "end"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "seek"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "confidence"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "language"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "processing_duration_in_s"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "speaker_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "label"
+        ],
+        [
+          "components",
+          "schemas",
+          "Segment",
+          "properties",
+          "words"
+        ],
+        [
+          "components",
+          "schemas",
+          "Word"
+        ],
+        [
+          "components",
+          "schemas",
+          "Word",
+          "properties",
+          "start"
+        ],
+        [
+          "components",
+          "schemas",
+          "Word",
+          "properties",
+          "end"
+        ],
+        [
+          "components",
+          "schemas",
+          "Word",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "BearerAuth"
+        ],
+        [
+          "tags",
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 33",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 33,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "input_url"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "can_label_audio"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "can_parse_speakers"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "can_parse_words"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "hotwords"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "is_private"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "language"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "minimum_confidence"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "prompt"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "segment_duration"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "user_agent"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "webhook_url"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "202"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/jobs",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/health",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "responses",
+          "500"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "BearerAuth"
+        ],
+        [
+          "tags",
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 11",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "responses",
+        "202",
+        "content",
+        "application/json",
+        "schema"
+      ],
+      "target": "bundled-spec",
+      "max_schema_depth": 11,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 18,
+        "character": 10
+      },
+      "end": {
+        "line": 329,
+        "character": 55
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 20,
+        "character": 13
+      },
+      "end": {
+        "line": 224,
+        "character": 55
+      }
+    },
+    "message": "Operation must have \"operationId\". [path: paths./jobs.post]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 66,
+        "character": 31
+      },
+      "end": {
+        "line": 69,
+        "character": 96
+      }
+    },
+    "message": "Potentially exposing internals (words \"private\" or \"internal\" spotted) [path: paths./jobs.post.requestBody.content.application/json.schema.properties.is_private]",
+    "severity": 2,
+    "code": "monite-general-exposing-internals",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "is_private"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 177,
+        "character": 39
+      },
+      "end": {
+        "line": 181,
+        "character": 99
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./jobs.post.requestBody.content.application/json.schema.properties.minimum_confidence]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "minimum_confidence"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 188,
+        "character": 37
+      },
+      "end": {
+        "line": 191,
+        "character": 123
+      }
+    },
+    "message": "Format is not specified for a number property [path: paths./jobs.post.requestBody.content.application/json.schema.properties.segment_duration]",
+    "severity": 3,
+    "code": "monite-data-missing-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "segment_duration"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 188,
+        "character": 37
+      },
+      "end": {
+        "line": 191,
+        "character": 123
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./jobs.post.requestBody.content.application/json.schema.properties.segment_duration]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "segment_duration"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 217,
+        "character": 16
+      },
+      "end": {
+        "line": 218,
+        "character": 58
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs.post.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 220,
+        "character": 16
+      },
+      "end": {
+        "line": 221,
+        "character": 68
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs.post.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 223,
+        "character": 16
+      },
+      "end": {
+        "line": 224,
+        "character": 55
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs.post.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs",
+        "post",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 230,
+        "character": 12
+      },
+      "end": {
+        "line": 243,
+        "character": 38
+      }
+    },
+    "message": "Operation must have \"operationId\". [path: paths./jobs/health.get]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/health",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 252,
+        "character": 12
+      },
+      "end": {
+        "line": 284,
+        "character": 55
+      }
+    },
+    "message": "Operation must have \"operationId\". [path: paths./jobs/{job_id}.get]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -52,7 +1568,515 @@
         "/jobs/{job_id}",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 259,
+        "character": 10
+      },
+      "end": {
+        "line": 266,
+        "character": 59
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./jobs/{job_id}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 280,
+        "character": 16
+      },
+      "end": {
+        "line": 281,
+        "character": 42
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs/{job_id}.get.responses.404]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "get",
+        "responses",
+        "404"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 283,
+        "character": 16
+      },
+      "end": {
+        "line": 284,
+        "character": 55
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs/{job_id}.get.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "get",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 288,
+        "character": 15
+      },
+      "end": {
+        "line": 329,
+        "character": 55
+      }
+    },
+    "message": "Operation must have \"operationId\". [path: paths./jobs/{job_id}.delete]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 300,
+        "character": 10
+      },
+      "end": {
+        "line": 307,
+        "character": 57
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./jobs/{job_id}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 322,
+        "character": 16
+      },
+      "end": {
+        "line": 323,
+        "character": 68
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs/{job_id}.delete.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "delete",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 325,
+        "character": 16
+      },
+      "end": {
+        "line": 326,
+        "character": 82
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs/{job_id}.delete.responses.404]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "delete",
+        "responses",
+        "404"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 328,
+        "character": 16
+      },
+      "end": {
+        "line": 329,
+        "character": 55
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./jobs/{job_id}.delete.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "delete",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 384,
+        "character": 15
+      },
+      "end": {
+        "line": 386,
+        "character": 24
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Segment.properties.id]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 384,
+        "character": 15
+      },
+      "end": {
+        "line": 386,
+        "character": 24
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.id]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 388,
+        "character": 18
+      },
+      "end": {
+        "line": 391,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.start]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "start"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 393,
+        "character": 16
+      },
+      "end": {
+        "line": 396,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.end]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "end"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 398,
+        "character": 17
+      },
+      "end": {
+        "line": 401,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.seek]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "seek"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 407,
+        "character": 23
+      },
+      "end": {
+        "line": 410,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.confidence]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "confidence"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 416,
+        "character": 37
+      },
+      "end": {
+        "line": 419,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Segment.properties.processing_duration_in_s]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Segment",
+        "properties",
+        "processing_duration_in_s"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 441,
+        "character": 18
+      },
+      "end": {
+        "line": 444,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Word.properties.start]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Word",
+        "properties",
+        "start"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 446,
+        "character": 16
+      },
+      "end": {
+        "line": 449,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Word.properties.end]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Word",
+        "properties",
+        "end"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -78,7 +2102,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -107,7 +2131,7 @@
         "post",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -136,7 +2160,7 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -165,7 +2189,7 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -194,7 +2218,7 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -223,53 +2247,25 @@
         "delete",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 20,
-        "character": 13
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 224,
-        "character": 55
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation must have \"operationId\". [path: paths./jobs.post]",
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./jobs/health.get]",
     "severity": 2,
-    "code": "operation-operationId",
+    "code": "security-defined",
     "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/jobs",
-        "post"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 230,
-        "character": 12
-      },
-      "end": {
-        "line": 243,
-        "character": 38
-      }
-    },
-    "message": "Operation must have \"operationId\". [path: paths./jobs/health.get]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "spectral-validator",
+    "source": "redocly-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -279,25 +2275,25 @@
         "/jobs/health",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 252,
-        "character": 12
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 284,
-        "character": 55
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation must have \"operationId\". [path: paths./jobs/{job_id}.get]",
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./jobs/{job_id}.get]",
     "severity": 2,
-    "code": "operation-operationId",
+    "code": "security-defined",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "redocly-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -307,25 +2303,121 @@
         "/jobs/{job_id}",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 288,
-        "character": 15
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 329,
-        "character": 55
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Operation must have \"operationId\". [path: paths./jobs/{job_id}.delete]",
+    "message": "Operation 'get_/jobs/health' has semantic quality issues: vague_description, missing_output_details, poor_ai_interpretability. Current description is too generic and lacks actionable context. Missing information about what constitutes a healthy response and when an AI agent should call this endpoint. Enhanced description clarifies the purpose, expected response, and practical use case for AI agents.",
     "severity": 2,
-    "code": "operation-operationId",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/health",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/jobs/health",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Get API Health",
+      "current_description": "This endpoint allows you to check the health of the Speech is Cheap Jobs API.",
+      "description_suggestion": "Checks the operational health and availability of the Speech is Cheap Jobs API. Returns a 200 status code if the API is operational and ready to process transcription jobs. Use this endpoint to verify API connectivity before submitting transcription jobs.",
+      "reasoning": "Current description is too generic and lacks actionable context. Missing information about what constitutes a healthy response and when an AI agent should call this endpoint. Enhanced description clarifies the purpose, expected response, and practical use case for AI agents.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/jobs/health",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/jobs/{job_id}' has semantic quality issues: vague_description, missing_output_details, missing_side_effects. Current description lacks specificity about possible status values and output structure. Missing details about when results become available and required parameters. Enhanced description provides concrete status values, clarifies output availability conditions, and explicitly mentions the required job_id parameter for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/jobs/{job_id}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/jobs/{job_id}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Get Job Status and Output",
+      "current_description": "This endpoint allows you to check the status of an existing transcription job and retrieve its results if available.",
+      "description_suggestion": "Retrieves the current status and transcription results for a specified job. Returns job metadata including status (pending, processing, completed, or failed) and the transcribed output with segments and word-level timing data when available. Results are only available after job processing completes. Requires the job_id path parameter.",
+      "reasoning": "Current description lacks specificity about possible status values and output structure. Missing details about when results become available and required parameters. Enhanced description provides concrete status values, clarifies output availability conditions, and explicitly mentions the required job_id parameter for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'delete_/jobs/{job_id}' has semantic quality issues: vague_description, missing_context, missing_side_effects. Current description is too minimal and doesn't clarify state constraints or side effects. Missing information about which job states can be cancelled, what happens after cancellation, and authentication requirements. Enhanced description specifies cancellable states, clarifies irreversibility, mentions authentication requirement, and explains the operation's effects for better AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
@@ -335,7 +2427,154 @@
         "/jobs/{job_id}",
         "delete"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "delete_/jobs/{job_id}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_context",
+        "missing_side_effects"
+      ],
+      "current_summary": "Cancel a Pending Job",
+      "current_description": "This endpoint allows you to cancel a pending transcription job.",
+      "description_suggestion": "Cancels a transcription job that is in pending or processing state. Once cancelled, the job cannot be resumed and no further processing will occur. Returns confirmation of cancellation. Only jobs in pending or processing states can be cancelled; completed or failed jobs cannot be cancelled. Requires the job_id path parameter and authentication.",
+      "reasoning": "Current description is too minimal and doesn't clarify state constraints or side effects. Missing information about which job states can be cancelled, what happens after cancellation, and authentication requirements. Enhanced description specifies cancellable states, clarifies irreversibility, mentions authentication requirement, and explains the operation's effects for better AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/jobs/{job_id}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 4 operations analyzed, 3 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 4,
+      "total_issues_found": 3,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 5 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 5
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 5 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 5
     }
   }
 ]

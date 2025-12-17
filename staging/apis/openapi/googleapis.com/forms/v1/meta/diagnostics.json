@@ -7,24 +7,73 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 10",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 10,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -35,25 +84,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -64,25 +109,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Schemas count: 190",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 190
     }
   },
   {
@@ -93,25 +134,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/responses.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/responses",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -122,25 +171,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/responses/{responseId}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/responses/{responseId}",
-        "get",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -151,25 +210,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches",
-        "get",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -180,25 +268,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -209,25 +293,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches/{watchId}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 233",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches/{watchId}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 233
     }
   },
   {
@@ -238,25 +318,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches/{watchId}:renew.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches/{watchId}:renew",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -267,14 +343,3117 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}:batchUpdate.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 19",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 19,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 257",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 257,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Answer"
+        ],
+        [
+          "components",
+          "schemas",
+          "Answer",
+          "properties",
+          "questionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormRequest",
+          "properties",
+          "includeFormInResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormRequest",
+          "properties",
+          "requests"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormResponse",
+          "properties",
+          "replies"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion",
+          "properties",
+          "options"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion",
+          "properties",
+          "shuffle"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "CloudPubsubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "CloudPubsubTopic",
+          "properties",
+          "topicName"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswer"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswer",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswers"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswers",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemResponse",
+          "properties",
+          "itemId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemResponse",
+          "properties",
+          "questionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemResponse",
+          "properties",
+          "questionId",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWatchRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWatchRequest",
+          "properties",
+          "watchId"
+        ],
+        [
+          "components",
+          "schemas",
+          "DateQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "DateQuestion",
+          "properties",
+          "includeTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "DateQuestion",
+          "properties",
+          "includeYear"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeleteItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExtraMaterial"
+        ],
+        [
+          "components",
+          "schemas",
+          "Feedback"
+        ],
+        [
+          "components",
+          "schemas",
+          "Feedback",
+          "properties",
+          "material"
+        ],
+        [
+          "components",
+          "schemas",
+          "Feedback",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer",
+          "properties",
+          "fileId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer",
+          "properties",
+          "fileName"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer",
+          "properties",
+          "mimeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswers"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswers",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "folderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "maxFileSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "maxFiles"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "types"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "types",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "formId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "linkedSheetId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "responderUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "revisionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "formId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "lastSubmittedTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "respondentEmail"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "responseId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "totalScore"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormSettings",
+          "properties",
+          "emailCollectionType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grade"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grade",
+          "properties",
+          "correct"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grade",
+          "properties",
+          "score"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grading"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grading",
+          "properties",
+          "pointValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grid"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grid",
+          "properties",
+          "shuffleQuestions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "altText"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "contentUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "sourceUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "ImageItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info",
+          "properties",
+          "documentTitle"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "itemId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFormResponsesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFormResponsesResponse",
+          "properties",
+          "responses"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFormResponsesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWatchesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWatchesResponse",
+          "properties",
+          "watches"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "index"
+        ],
+        [
+          "components",
+          "schemas",
+          "MediaProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "MediaProperties",
+          "properties",
+          "alignment"
+        ],
+        [
+          "components",
+          "schemas",
+          "MediaProperties",
+          "properties",
+          "width"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoveItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "goToAction"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "goToSectionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "isOther"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "PageBreakItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishState"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishState",
+          "properties",
+          "isAcceptingResponses"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishState",
+          "properties",
+          "isPublished"
+        ],
+        [
+          "components",
+          "schemas",
+          "Question"
+        ],
+        [
+          "components",
+          "schemas",
+          "Question",
+          "properties",
+          "questionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Question",
+          "properties",
+          "required"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuestionGroupItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuestionGroupItem",
+          "properties",
+          "questions"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuestionItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuizSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuizSettings",
+          "properties",
+          "isQuiz"
+        ],
+        [
+          "components",
+          "schemas",
+          "RatingQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "RatingQuestion",
+          "properties",
+          "iconType"
+        ],
+        [
+          "components",
+          "schemas",
+          "RatingQuestion",
+          "properties",
+          "ratingScaleLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "RenewWatchRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response"
+        ],
+        [
+          "components",
+          "schemas",
+          "RowQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "RowQuestion",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "high"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "highLabel"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "low"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "lowLabel"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsResponse",
+          "properties",
+          "formId"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswer"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswer",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswers"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswers",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextLink",
+          "properties",
+          "displayText"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextLink",
+          "properties",
+          "uri"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextQuestion",
+          "properties",
+          "paragraph"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeQuestion",
+          "properties",
+          "duration"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateFormInfoRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateFormInfoRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateItemRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateSettingsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateSettingsRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "Video"
+        ],
+        [
+          "components",
+          "schemas",
+          "Video",
+          "properties",
+          "youtubeUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoItem",
+          "properties",
+          "caption"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoLink",
+          "properties",
+          "displayText"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoLink",
+          "properties",
+          "youtubeUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "errorType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "eventType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "WatchTarget"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteControl"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteControl",
+          "properties",
+          "requiredRevisionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteControl",
+          "properties",
+          "targetRevisionId"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 211",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 211,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Answer"
+        ],
+        [
+          "components",
+          "schemas",
+          "Answer",
+          "properties",
+          "questionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormRequest",
+          "properties",
+          "includeFormInResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormRequest",
+          "properties",
+          "requests"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchUpdateFormResponse",
+          "properties",
+          "replies"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion",
+          "properties",
+          "options"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion",
+          "properties",
+          "shuffle"
+        ],
+        [
+          "components",
+          "schemas",
+          "ChoiceQuestion",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "CloudPubsubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "CloudPubsubTopic",
+          "properties",
+          "topicName"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswer"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswer",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswers"
+        ],
+        [
+          "components",
+          "schemas",
+          "CorrectAnswers",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemResponse",
+          "properties",
+          "itemId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateItemResponse",
+          "properties",
+          "questionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWatchRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateWatchRequest",
+          "properties",
+          "watchId"
+        ],
+        [
+          "components",
+          "schemas",
+          "DateQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "DateQuestion",
+          "properties",
+          "includeTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "DateQuestion",
+          "properties",
+          "includeYear"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeleteItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExtraMaterial"
+        ],
+        [
+          "components",
+          "schemas",
+          "Feedback"
+        ],
+        [
+          "components",
+          "schemas",
+          "Feedback",
+          "properties",
+          "material"
+        ],
+        [
+          "components",
+          "schemas",
+          "Feedback",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer",
+          "properties",
+          "fileId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer",
+          "properties",
+          "fileName"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswer",
+          "properties",
+          "mimeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswers"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadAnswers",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "folderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "maxFileSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "maxFiles"
+        ],
+        [
+          "components",
+          "schemas",
+          "FileUploadQuestion",
+          "properties",
+          "types"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "formId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "linkedSheetId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "responderUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "revisionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "formId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "lastSubmittedTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "respondentEmail"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "responseId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormResponse",
+          "properties",
+          "totalScore"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "FormSettings",
+          "properties",
+          "emailCollectionType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grade"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grade",
+          "properties",
+          "correct"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grade",
+          "properties",
+          "score"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grading"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grading",
+          "properties",
+          "pointValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grid"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grid",
+          "properties",
+          "shuffleQuestions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "altText"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "contentUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "sourceUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "ImageItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info",
+          "properties",
+          "documentTitle"
+        ],
+        [
+          "components",
+          "schemas",
+          "Info",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "itemId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFormResponsesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFormResponsesResponse",
+          "properties",
+          "responses"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFormResponsesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWatchesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListWatchesResponse",
+          "properties",
+          "watches"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "index"
+        ],
+        [
+          "components",
+          "schemas",
+          "MediaProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "MediaProperties",
+          "properties",
+          "alignment"
+        ],
+        [
+          "components",
+          "schemas",
+          "MediaProperties",
+          "properties",
+          "width"
+        ],
+        [
+          "components",
+          "schemas",
+          "MoveItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "goToAction"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "goToSectionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "isOther"
+        ],
+        [
+          "components",
+          "schemas",
+          "Option",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "PageBreakItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishState"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishState",
+          "properties",
+          "isAcceptingResponses"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublishState",
+          "properties",
+          "isPublished"
+        ],
+        [
+          "components",
+          "schemas",
+          "Question"
+        ],
+        [
+          "components",
+          "schemas",
+          "Question",
+          "properties",
+          "questionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Question",
+          "properties",
+          "required"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuestionGroupItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuestionGroupItem",
+          "properties",
+          "questions"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuestionItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuizSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "QuizSettings",
+          "properties",
+          "isQuiz"
+        ],
+        [
+          "components",
+          "schemas",
+          "RatingQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "RatingQuestion",
+          "properties",
+          "iconType"
+        ],
+        [
+          "components",
+          "schemas",
+          "RatingQuestion",
+          "properties",
+          "ratingScaleLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "RenewWatchRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response"
+        ],
+        [
+          "components",
+          "schemas",
+          "RowQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "RowQuestion",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "high"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "highLabel"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "low"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScaleQuestion",
+          "properties",
+          "lowLabel"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SetPublishSettingsResponse",
+          "properties",
+          "formId"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswer"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswer",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswers"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextAnswers",
+          "properties",
+          "answers"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextLink",
+          "properties",
+          "displayText"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextLink",
+          "properties",
+          "uri"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "TextQuestion",
+          "properties",
+          "paragraph"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeQuestion"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeQuestion",
+          "properties",
+          "duration"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateFormInfoRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateFormInfoRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateItemRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateItemRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateSettingsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "UpdateSettingsRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "Video"
+        ],
+        [
+          "components",
+          "schemas",
+          "Video",
+          "properties",
+          "youtubeUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoItem",
+          "properties",
+          "caption"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoLink",
+          "properties",
+          "displayText"
+        ],
+        [
+          "components",
+          "schemas",
+          "VideoLink",
+          "properties",
+          "youtubeUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "errorType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "eventType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Watch",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "WatchTarget"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteControl"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteControl",
+          "properties",
+          "requiredRevisionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteControl",
+          "properties",
+          "targetRevisionId"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 24",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -283,356 +3462,14 @@
         "paths",
         "/v1/forms/{formId}:batchUpdate",
         "post",
-        "summary"
+        "requestBody",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}:setPublishSettings.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}:setPublishSettings",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/responses.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/responses",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/responses/{responseId}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/responses/{responseId}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches/{watchId}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches/{watchId}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches/{watchId}:renew.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}/watches/{watchId}:renew",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}:batchUpdate.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}:batchUpdate",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}:setPublishSettings.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/forms/{formId}:setPublishSettings",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 24,
+      "paths": []
     }
   },
   {
@@ -660,7 +3497,1159 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 1116,
+        "character": 72
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 13
+      },
+      "end": {
+        "line": 117,
+        "character": 51
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 66,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 160,
+        "character": 12
+      },
+      "end": {
+        "line": 230,
+        "character": 40
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 162,
+        "character": 10
+      },
+      "end": {
+        "line": 168,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 269,
+        "character": 12
+      },
+      "end": {
+        "line": 347,
+        "character": 51
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}/responses.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 271,
+        "character": 10
+      },
+      "end": {
+        "line": 277,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}/responses.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 280,
+        "character": 10
+      },
+      "end": {
+        "line": 285,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/forms/{formId}/responses.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 288,
+        "character": 10
+      },
+      "end": {
+        "line": 293,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/forms/{formId}/responses.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 296,
+        "character": 10
+      },
+      "end": {
+        "line": 301,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/forms/{formId}/responses.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 386,
+        "character": 12
+      },
+      "end": {
+        "line": 449,
+        "character": 50
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}/responses/{responseId}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses/{responseId}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 388,
+        "character": 10
+      },
+      "end": {
+        "line": 394,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}/responses/{responseId}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses/{responseId}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 397,
+        "character": 10
+      },
+      "end": {
+        "line": 403,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/forms/{formId}/responses/{responseId}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses/{responseId}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 488,
+        "character": 12
+      },
+      "end": {
+        "line": 566,
+        "character": 49
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}/watches.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 490,
+        "character": 10
+      },
+      "end": {
+        "line": 496,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}/watches.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 568,
+        "character": 13
+      },
+      "end": {
+        "line": 651,
+        "character": 65
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}/watches.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 570,
+        "character": 10
+      },
+      "end": {
+        "line": 576,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}/watches.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 694,
+        "character": 15
+      },
+      "end": {
+        "line": 781,
+        "character": 51
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}/watches/{watchId}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 696,
+        "character": 10
+      },
+      "end": {
+        "line": 702,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}/watches/{watchId}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 705,
+        "character": 10
+      },
+      "end": {
+        "line": 711,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/forms/{formId}/watches/{watchId}.delete.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}",
+        "delete",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 820,
+        "character": 13
+      },
+      "end": {
+        "line": 912,
+        "character": 64
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}/watches/{watchId}:renew.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}:renew",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 822,
+        "character": 10
+      },
+      "end": {
+        "line": 828,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}/watches/{watchId}:renew.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}:renew",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 831,
+        "character": 10
+      },
+      "end": {
+        "line": 837,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/forms/{formId}/watches/{watchId}:renew.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}:renew",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 955,
+        "character": 13
+      },
+      "end": {
+        "line": 1014,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}:batchUpdate.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:batchUpdate",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 957,
+        "character": 10
+      },
+      "end": {
+        "line": 963,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}:batchUpdate.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:batchUpdate",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1057,
+        "character": 13
+      },
+      "end": {
+        "line": 1116,
+        "character": 72
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/forms/{formId}:setPublishSettings.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:setPublishSettings",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1059,
+        "character": 10
+      },
+      "end": {
+        "line": 1065,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/forms/{formId}:setPublishSettings.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:setPublishSettings",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1126,
+        "character": 16
+      },
+      "end": {
+        "line": 1135,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1138,
+        "character": 21
+      },
+      "end": {
+        "line": 1143,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1141,
+        "character": 16
+      },
+      "end": {
+        "line": 1141,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1146,
+        "character": 12
+      },
+      "end": {
+        "line": 1157,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1160,
+        "character": 17
+      },
+      "end": {
+        "line": 1165,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1168,
+        "character": 15
+      },
+      "end": {
+        "line": 1173,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1176,
+        "character": 12
+      },
+      "end": {
+        "line": 1181,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1184,
+        "character": 20
+      },
+      "end": {
+        "line": 1189,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1187,
+        "character": 16
+      },
+      "end": {
+        "line": 1187,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1192,
+        "character": 20
+      },
+      "end": {
+        "line": 1198,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1201,
+        "character": 18
+      },
+      "end": {
+        "line": 1206,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1209,
+        "character": 19
+      },
+      "end": {
+        "line": 1214,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1217,
+        "character": 24
+      },
+      "end": {
+        "line": 1222,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -691,7 +4680,7 @@
         "fileUploadAnswers",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -722,7 +4711,7 @@
         "fileUploadAnswers",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -753,7 +4742,7 @@
         "grade",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -784,7 +4773,7 @@
         "grade",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -815,7 +4804,7 @@
         "textAnswers",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -846,7 +4835,7 @@
         "textAnswers",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -877,7 +4866,7 @@
         "writeControl",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -908,7 +4897,7 @@
         "form",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -939,7 +4928,7 @@
         "writeControl",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -970,7 +4959,7 @@
         "item",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1001,7 +4990,7 @@
         "location",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1032,7 +5021,7 @@
         "watch",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1063,7 +5052,7 @@
         "location",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1094,7 +5083,7 @@
         "link",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1125,7 +5114,67 @@
         "video",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1502,
+        "character": 24
+      },
+      "end": {
+        "line": 1505,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.FileUploadQuestion.properties.maxFileSize]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "FileUploadQuestion",
+        "properties",
+        "maxFileSize"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1507,
+        "character": 21
+      },
+      "end": {
+        "line": 1510,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.FileUploadQuestion.properties.maxFiles]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "FileUploadQuestion",
+        "properties",
+        "maxFiles"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1156,7 +5205,7 @@
         "info",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1187,7 +5236,7 @@
         "publishSettings",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1218,7 +5267,7 @@
         "publishSettings",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1249,7 +5298,37 @@
         "settings",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1618,
+        "character": 23
+      },
+      "end": {
+        "line": 1622,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.FormResponse.properties.totalScore]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "FormResponse",
+        "properties",
+        "totalScore"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1280,7 +5359,7 @@
         "quizSettings",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1311,7 +5390,7 @@
         "feedback",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1342,7 +5421,37 @@
         "feedback",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1660,
+        "character": 18
+      },
+      "end": {
+        "line": 1664,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Grade.properties.score]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Grade",
+        "properties",
+        "score"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1373,7 +5482,7 @@
         "correctAnswers",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1404,7 +5513,37 @@
         "generalFeedback",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1680,
+        "character": 23
+      },
+      "end": {
+        "line": 1683,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Grading.properties.pointValue]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Grading",
+        "properties",
+        "pointValue"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1435,7 +5574,7 @@
         "whenRight",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1466,7 +5605,7 @@
         "whenWrong",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1497,7 +5636,7 @@
         "columns",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1528,7 +5667,7 @@
         "properties",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1559,7 +5698,7 @@
         "image",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1590,7 +5729,7 @@
         "imageItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1621,7 +5760,7 @@
         "pageBreakItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1652,7 +5791,7 @@
         "questionGroupItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1683,7 +5822,7 @@
         "questionItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1714,7 +5853,7 @@
         "textItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1745,7 +5884,67 @@
         "videoItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1837,
+        "character": 18
+      },
+      "end": {
+        "line": 1840,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Location.properties.index]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Location",
+        "properties",
+        "index"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1858,
+        "character": 18
+      },
+      "end": {
+        "line": 1861,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.MediaProperties.properties.width]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "MediaProperties",
+        "properties",
+        "width"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1776,7 +5975,7 @@
         "newLocation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1807,7 +6006,7 @@
         "originalLocation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1838,7 +6037,7 @@
         "image",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1869,7 +6068,7 @@
         "publishState",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1900,7 +6099,7 @@
         "choiceQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1931,7 +6130,7 @@
         "dateQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1962,7 +6161,7 @@
         "fileUploadQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1993,7 +6192,7 @@
         "grading",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2024,7 +6223,7 @@
         "ratingQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2055,7 +6254,7 @@
         "rowQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2086,7 +6285,7 @@
         "scaleQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2117,7 +6316,7 @@
         "textQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2148,7 +6347,7 @@
         "timeQuestion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2179,7 +6378,7 @@
         "grid",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2210,7 +6409,7 @@
         "image",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2241,7 +6440,7 @@
         "image",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2272,7 +6471,37 @@
         "question",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2049,
+        "character": 29
+      },
+      "end": {
+        "line": 2052,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.RatingQuestion.properties.ratingScaleLevel]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RatingQuestion",
+        "properties",
+        "ratingScaleLevel"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2303,7 +6532,7 @@
         "createItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2334,7 +6563,7 @@
         "deleteItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2365,7 +6594,7 @@
         "moveItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2396,7 +6625,7 @@
         "updateFormInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2427,7 +6656,7 @@
         "updateItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2458,7 +6687,7 @@
         "updateSettings",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2489,7 +6718,67 @@
         "createItem",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2115,
+        "character": 17
+      },
+      "end": {
+        "line": 2118,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ScaleQuestion.properties.high]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ScaleQuestion",
+        "properties",
+        "high"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2124,
+        "character": 16
+      },
+      "end": {
+        "line": 2127,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ScaleQuestion.properties.low]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ScaleQuestion",
+        "properties",
+        "low"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2520,7 +6809,7 @@
         "publishSettings",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2551,7 +6840,7 @@
         "publishSettings",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2582,7 +6871,7 @@
         "info",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2613,7 +6902,7 @@
         "item",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2644,7 +6933,7 @@
         "location",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2675,7 +6964,7 @@
         "settings",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2706,7 +6995,7 @@
         "properties",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2737,7 +7026,7 @@
         "video",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2768,7 +7057,7 @@
         "target",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2799,7 +7088,1324 @@
         "topic",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/responses.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/responses.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/responses/{responseId}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses/{responseId}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/responses/{responseId}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses/{responseId}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches/{watchId}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches/{watchId}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}/watches/{watchId}:renew.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}:renew",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}/watches/{watchId}:renew.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}:renew",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}:batchUpdate.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:batchUpdate",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}:batchUpdate.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:batchUpdate",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/forms/{formId}:setPublishSettings.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:setPublishSettings",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/forms/{formId}:setPublishSettings.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:setPublishSettings",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.watches.renew' has semantic quality issues: vague_summary, missing_output_details. Missing summary entirely. Description lacks clarity on return value and doesn't explicitly state what object is returned. Added summary for AI agent clarity. Enhanced description to specify the Watch object is returned and clarified the error handling behavior for better AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}:renew",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.watches.renew",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Renew an existing watch for seven days. The state of the watch after renewal is `ACTIVE`, and the `expire_time` is seven days from the renewal. Renewing a watch in an error state (e.g. `SUSPENDED`) succeeds if the error is no longer present, but fail otherwise. After a watch has expired, RenewWatch returns `NOT_FOUND`.",
+      "summary_suggestion": "Renew a form watch for seven days",
+      "description_suggestion": "Renews an existing watch on a form for an additional seven days. After renewal, the watch state becomes `ACTIVE` with `expire_time` set to seven days from the renewal timestamp. If the watch is in an error state (e.g., `SUSPENDED`), renewal succeeds only if the error condition has been resolved. Returns the renewed Watch object with updated expiration time. Returns `NOT_FOUND` if the watch has already expired.",
+      "reasoning": "Missing summary entirely. Description lacks clarity on return value and doesn't explicitly state what object is returned. Added summary for AI agent clarity. Enhanced description to specify the Watch object is returned and clarified the error handling behavior for better AI agent decision-making.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}:renew",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.batchUpdate' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Missing summary entirely. Description is extremely vague ('Change the form') without explaining what types of changes are possible, what inputs are required, or what is returned. Added actionable summary. Enhanced description to clarify: batch nature of updates, types of modifications possible, atomic behavior, return value structure, and side effects (immediate modification). This significantly improves AI agent interpretability for determining when to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:batchUpdate",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.batchUpdate",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Change the form with a batch of updates.",
+      "summary_suggestion": "Apply batch updates to a form",
+      "description_suggestion": "Applies a batch of updates to a form in a single request. Accepts a BatchUpdateFormRequest containing multiple update operations (e.g., modifying items, settings, info). Updates are applied atomically - either all updates succeed or the entire request fails. Returns a BatchUpdateFormResponse containing the updated form state and details about each applied update. Modifications affect the form's structure, content, and settings immediately.",
+      "reasoning": "Missing summary entirely. Description is extremely vague ('Change the form') without explaining what types of changes are possible, what inputs are required, or what is returned. Added actionable summary. Enhanced description to clarify: batch nature of updates, types of modifications possible, atomic behavior, return value structure, and side effects (immediate modification). This significantly improves AI agent interpretability for determining when to use this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:batchUpdate",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.setPublishSettings' has semantic quality issues: vague_summary, missing_output_details, missing_side_effects. Missing summary entirely. Description lacks information about return value and side effects. Added concise summary. Enhanced description to clarify: what publish settings control, the return value (PublishSettings object), the legacy form limitation (already present but contextualized), and side effects (immediate effect on accessibility). This helps AI agents understand the operation's impact and what to expect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}:setPublishSettings",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.setPublishSettings",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Updates the publish settings of a form. Legacy forms aren't supported because they don't have the `publish_settings` field.",
+      "summary_suggestion": "Update form publish settings",
+      "description_suggestion": "Updates the publish settings of a form, controlling how the form is shared and accessed. Accepts a SetPublishSettingsRequest with the desired publish configuration. Returns the updated PublishSettings object reflecting the new publication state. Note: Legacy forms are not supported as they lack the `publish_settings` field. Changes take effect immediately and affect form accessibility.",
+      "reasoning": "Missing summary entirely. Description lacks information about return value and side effects. Added concise summary. Enhanced description to clarify: what publish settings control, the return value (PublishSettings object), the legacy form limitation (already present but contextualized), and side effects (immediate effect on accessibility). This helps AI agents understand the operation's impact and what to expect.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}:setPublishSettings",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.create' has semantic quality issues: vague_summary, missing_context. Missing summary entirely. Description is verbose and uses awkward phrasing ('disallowed', 'you must first call'). Improved version clarifies that only specific fields are accepted, explains the workflow for adding items, and specifies the return value for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "Create a new form using the title given in the provided form message in the request. *Important:* Only the form.info.title and form.info.document_title fields are copied to the new form. All other fields including the form description, items and settings are disallowed. To create a new form and add items, you must first call forms.create to create an empty form with a title and (optional) document title, and then call forms.update to add the items.",
+      "summary_suggestion": "Create a new form with title",
+      "description_suggestion": "Creates a new Google Form with the specified title and optional document title. Only form.info.title and form.info.document_title fields are accepted in the request; all other fields (description, items, settings) are ignored. To add items to the form after creation, use the forms.update operation. Returns the newly created Form object with a unique formId.",
+      "reasoning": "Missing summary entirely. Description is verbose and uses awkward phrasing ('disallowed', 'you must first call'). Improved version clarifies that only specific fields are accepted, explains the workflow for adding items, and specifies the return value for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.get' has semantic quality issues: vague_summary, vague_description, missing_output_details. Missing summary and description is too minimal. Improved version specifies what is retrieved (complete form with all components), clarifies the required parameter, and explains the return value for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Get a form.",
+      "summary_suggestion": "Retrieve a form by ID",
+      "description_suggestion": "Retrieves a complete Google Form by its formId. Returns the Form object containing all form metadata, settings, items, and configuration. Requires the formId path parameter.",
+      "reasoning": "Missing summary and description is too minimal. Improved version specifies what is retrieved (complete form with all components), clarifies the required parameter, and explains the return value for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.responses.list' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details. Missing summary and description lacks detail about pagination, filtering capabilities, and return structure. Improved version explains pagination support, filtering options, and the response format to help AI agents understand available parameters and expected output.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.responses.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "List a form's responses.",
+      "summary_suggestion": "List all responses for a form",
+      "description_suggestion": "Lists all FormResponse objects submitted for a specific form. Supports pagination via optional parameters (pageSize, pageToken) and filtering by response timestamp. Returns a ListFormResponsesResponse containing an array of FormResponse objects and pagination information.",
+      "reasoning": "Missing summary and description lacks detail about pagination, filtering capabilities, and return structure. Improved version explains pagination support, filtering options, and the response format to help AI agents understand available parameters and expected output.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.responses.get' has semantic quality issues: vague_summary, vague_description, missing_output_details. Missing summary and description is too vague ('one response'). Improved version clarifies that it retrieves a specific response by ID, explains what data is returned (complete response with answers), and specifies required parameters.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/responses/{responseId}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.responses.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Get one response from the form.",
+      "summary_suggestion": "Retrieve a specific form response",
+      "description_suggestion": "Retrieves a single FormResponse object by responseId from a specified form. Returns the complete response data including respondent answers to all form items. Requires both formId and responseId path parameters.",
+      "reasoning": "Missing summary and description is too vague ('one response'). Improved version clarifies that it retrieves a specific response by ID, explains what data is returned (complete response with answers), and specifies required parameters.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/responses/{responseId}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.watches.list' has semantic quality issues: vague_summary, vague_description, missing_context, missing_output_details. Missing summary. Description is confusing ('maximum number of watches is two' with unclear context). Improved version clarifies that watches monitor form events, explains the per-event-type limit per form, and specifies the return value for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.watches.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_context",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Return a list of the watches owned by the invoking project. The maximum number of watches is two: For each invoker, the limit is one for each event type per form.",
+      "summary_suggestion": "List all watches for a form",
+      "description_suggestion": "Lists all Watch objects created for a specific form by the invoking project. Each Watch monitors form events and triggers notifications when specified events occur. Maximum of one watch per event type per form is allowed. Returns an array of Watch objects with their configuration and expiration times.",
+      "reasoning": "Missing summary. Description is confusing ('maximum number of watches is two' with unclear context). Improved version clarifies that watches monitor form events, explains the per-event-type limit per form, and specifies the return value for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.watches.create' has semantic quality issues: vague_summary, missing_context, missing_output_details. Missing summary. Description lacks clarity about watch purpose (monitoring and notifications) and return value. Improved version explains that watches trigger notifications, clarifies the uniqueness requirement for watchId, and specifies the return value.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.watches.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Create a new watch. If a watch ID is provided, it must be unused. For each invoking project, the per form limit is one watch per Watch.EventType. A watch expires seven days after it is created (see Watch.expire_time).",
+      "summary_suggestion": "Create a watch for form events",
+      "description_suggestion": "Creates a new Watch to monitor specified events on a form and receive notifications when those events occur. Each project can create one watch per event type per form. Watches automatically expire seven days after creation. If a watchId is provided in the request, it must be unique and unused. Returns the created Watch object with its expiration time.",
+      "reasoning": "Missing summary. Description lacks clarity about watch purpose (monitoring and notifications) and return value. Improved version explains that watches trigger notifications, clarifies the uniqueness requirement for watchId, and specifies the return value.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'forms.forms.watches.delete' has semantic quality issues: vague_summary, vague_description, missing_context, missing_side_effects. Missing summary and description is too minimal. Improved version clarifies what a watch does (sends notifications), explains the side effect (stops notifications), and specifies required parameters for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/forms/{formId}/watches/{watchId}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "forms.forms.watches.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_context",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Delete a watch.",
+      "summary_suggestion": "Delete a form event watch",
+      "description_suggestion": "Deletes a Watch by watchId, stopping all event notifications for that watch. After deletion, the form will no longer send notifications for the watch's configured event type. Requires both formId and watchId path parameters.",
+      "reasoning": "Missing summary and description is too minimal. Improved version clarifies what a watch does (sends notifications), explains the side effect (stops notifications), and specifies required parameters for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/forms/{formId}/watches/{watchId}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 10 operations analyzed, 10 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 10,
+      "total_issues_found": 10,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 190 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 190
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 190 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 190
     }
   }
 ]

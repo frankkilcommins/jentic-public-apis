@@ -10,21 +10,19 @@
         "character": 0
       }
     },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/orders.get]",
+    "message": "The 'info' object is missing required field(s): 'title', 'version'.",
     "severity": 1,
-    "code": "security-defined",
+    "code": "OPENAPI_MISSING_INFO_FIELDS",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "default-validator",
     "tags": null,
     "related_information": null,
     "data": {
-      "fixable": true,
+      "fixable": false,
       "path": [
-        "paths",
-        "/v1/orders",
-        "get"
+        "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -35,14 +33,2110 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/orders/{orderId}.get]",
-    "severity": 1,
-    "code": "security-defined",
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/v1/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 116",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 116
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 0",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: []",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 0 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 207",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 207
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/v1/orders"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 2",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 2,
+      "paths": [
+        [
+          "paths",
+          "/v1/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 153",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 153,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/orders"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          5,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          6,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          7,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          8
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          8,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          9
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          9,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          10
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          10,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "504"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "504"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "address1"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "address2"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "city"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "country"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "postalCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "BillTo"
+        ],
+        [
+          "components",
+          "schemas",
+          "BillTo",
+          "properties",
+          "taxId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "fax"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "jobTitle"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "nameFirst"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "nameLast"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "nameMiddle"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "organization"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "phone"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "fields"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "pathRelated"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "fields"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "retryAfterSec"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "domains"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "domains",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "label"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "period"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "periodUnit"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "pfid"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "quantity"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "discount"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "list"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "sale"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "savings"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "subtotal"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "taxes"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricingTaxDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricingTaxDetail",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricingTaxDetail",
+          "properties",
+          "rate"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemSummary",
+          "properties",
+          "label"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemTaxCollector"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemTaxCollector",
+          "properties",
+          "taxCollectorId"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "discount"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "list"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "sale"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "savings"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "taxes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "orderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "parentOrderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "payments"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderFee"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderFee",
+          "properties",
+          "icann"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderFee",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderList"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderList",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "discount"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "list"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "savings"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "subtotal"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "taxDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "taxes"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "orderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "parentOrderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummaryPricing"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummaryPricing",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "first"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "last"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "next"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "previous"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "paymentProfileId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "subcategory"
+        ],
+        [
+          "tags",
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 96",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 96,
+      "paths": [
+        [
+          "paths",
+          "/v1/orders",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          8
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          9
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "parameters",
+          10
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "responses",
+          "504"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "responses",
+          "504"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "country"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "postalCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "BillTo",
+          "properties",
+          "taxId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "fields"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorField",
+          "properties",
+          "pathRelated"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "fields"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorLimit",
+          "properties",
+          "retryAfterSec"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "domains"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "label"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "periodUnit"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "pfid"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItem",
+          "properties",
+          "quantity"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "discount"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "list"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "sale"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "savings"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "subtotal"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "taxes"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricing",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemPricingTaxDetail",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemSummary",
+          "properties",
+          "label"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemTaxCollector",
+          "properties",
+          "taxCollectorId"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "discount"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "list"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "sale"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "savings"
+        ],
+        [
+          "components",
+          "schemas",
+          "LineItemUnitPricing",
+          "properties",
+          "taxes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "orderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "parentOrderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderFee",
+          "properties",
+          "icann"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderFee",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderList",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "discount"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "list"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "savings"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "subtotal"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "taxDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "taxes"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderPricing",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "orderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummary",
+          "properties",
+          "parentOrderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrderSummaryPricing",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "first"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "last"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "next"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "previous"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pagination",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "paymentProfileId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payment",
+          "properties",
+          "subcategory"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 10",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -50,9 +2144,4821 @@
       "path": [
         "paths",
         "/v1/orders/{orderId}",
-        "get"
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/javascript",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 10,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2,
+        "character": 9
+      },
+      "end": {
+        "line": 5,
+        "character": 86
+      }
+    },
+    "message": "Info object must have \"contact\" object. [path: info]",
+    "severity": 2,
+    "code": "info-contact",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2,
+        "character": 9
+      },
+      "end": {
+        "line": 5,
+        "character": 86
+      }
+    },
+    "message": "Info \"description\" must be present and non-empty string. [path: info]",
+    "severity": 2,
+    "code": "info-description",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 12,
+        "character": 10
+      },
+      "end": {
+        "line": 637,
+        "character": 57
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 16,
+        "character": 10
+      },
+      "end": {
+        "line": 22,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/orders.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 25,
+        "character": 10
+      },
+      "end": {
+        "line": 31,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/orders.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 34,
+        "character": 10
+      },
+      "end": {
+        "line": 40,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/orders.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 43,
+        "character": 10
+      },
+      "end": {
+        "line": 49,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/orders.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 52,
+        "character": 10
+      },
+      "end": {
+        "line": 58,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./v1/orders.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 5 [path: paths./v1/orders.get.parameters.5]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "5"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 70,
+        "character": 10
+      },
+      "end": {
+        "line": 77,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 6 [path: paths./v1/orders.get.parameters.6]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "6"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 80,
+        "character": 10
+      },
+      "end": {
+        "line": 89,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 7 [path: paths./v1/orders.get.parameters.7]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "7"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 92,
+        "character": 10
+      },
+      "end": {
+        "line": 107,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 8 [path: paths./v1/orders.get.parameters.8]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "8"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 110,
+        "character": 10
+      },
+      "end": {
+        "line": 116,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 9 [path: paths./v1/orders.get.parameters.9]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "9"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 113,
+        "character": 20
+      },
+      "end": {
+        "line": 113,
+        "character": 34
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: paths./v1/orders.get.parameters.9.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "9",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 119,
+        "character": 10
+      },
+      "end": {
+        "line": 125,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 10 [path: paths./v1/orders.get.parameters.10]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "10"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 122,
+        "character": 20
+      },
+      "end": {
+        "line": 122,
+        "character": 31
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: paths./v1/orders.get.parameters.10.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "parameters",
+        "10",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 162,
+        "character": 39
+      },
+      "end": {
+        "line": 164,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.400.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 167,
+        "character": 33
+      },
+      "end": {
+        "line": 169,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.400.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 172,
+        "character": 32
+      },
+      "end": {
+        "line": 174,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.400.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 177,
+        "character": 32
+      },
+      "end": {
+        "line": 179,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.400.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 182,
+        "character": 25
+      },
+      "end": {
+        "line": 184,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.400.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 192,
+        "character": 39
+      },
+      "end": {
+        "line": 194,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.401.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 197,
+        "character": 33
+      },
+      "end": {
+        "line": 199,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.401.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 202,
+        "character": 32
+      },
+      "end": {
+        "line": 204,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.401.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 207,
+        "character": 32
+      },
+      "end": {
+        "line": 209,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.401.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 212,
+        "character": 25
+      },
+      "end": {
+        "line": 214,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.401.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 222,
+        "character": 39
+      },
+      "end": {
+        "line": 224,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.403.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 227,
+        "character": 33
+      },
+      "end": {
+        "line": 229,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.403.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 232,
+        "character": 32
+      },
+      "end": {
+        "line": 234,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.403.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 237,
+        "character": 32
+      },
+      "end": {
+        "line": 239,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.403.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 242,
+        "character": 25
+      },
+      "end": {
+        "line": 244,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.403.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 252,
+        "character": 39
+      },
+      "end": {
+        "line": 254,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.429.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 257,
+        "character": 33
+      },
+      "end": {
+        "line": 259,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 262,
+        "character": 32
+      },
+      "end": {
+        "line": 264,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.429.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 267,
+        "character": 32
+      },
+      "end": {
+        "line": 269,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.429.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 272,
+        "character": 25
+      },
+      "end": {
+        "line": 274,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.429.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 282,
+        "character": 39
+      },
+      "end": {
+        "line": 284,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.500.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 287,
+        "character": 33
+      },
+      "end": {
+        "line": 289,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 292,
+        "character": 32
+      },
+      "end": {
+        "line": 294,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.500.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 297,
+        "character": 32
+      },
+      "end": {
+        "line": 299,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.500.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 302,
+        "character": 25
+      },
+      "end": {
+        "line": 304,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.500.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 312,
+        "character": 39
+      },
+      "end": {
+        "line": 314,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.504.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 317,
+        "character": 33
+      },
+      "end": {
+        "line": 319,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.504.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 322,
+        "character": 32
+      },
+      "end": {
+        "line": 324,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.504.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 327,
+        "character": 32
+      },
+      "end": {
+        "line": 329,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.504.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 332,
+        "character": 25
+      },
+      "end": {
+        "line": 334,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders.get.responses.504.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 352,
+        "character": 10
+      },
+      "end": {
+        "line": 358,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/orders/{orderId}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 361,
+        "character": 10
+      },
+      "end": {
+        "line": 367,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/orders/{orderId}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 364,
+        "character": 20
+      },
+      "end": {
+        "line": 364,
+        "character": 34
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: paths./v1/orders/{orderId}.get.parameters.1.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "parameters",
+        "1",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 370,
+        "character": 10
+      },
+      "end": {
+        "line": 377,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/orders/{orderId}.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 373,
+        "character": 20
+      },
+      "end": {
+        "line": 373,
+        "character": 33
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: paths./v1/orders/{orderId}.get.parameters.2.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "parameters",
+        "2",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 380,
+        "character": 10
+      },
+      "end": {
+        "line": 386,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/orders/{orderId}.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 383,
+        "character": 20
+      },
+      "end": {
+        "line": 383,
+        "character": 31
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: paths./v1/orders/{orderId}.get.parameters.3.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "parameters",
+        "3",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 423,
+        "character": 39
+      },
+      "end": {
+        "line": 425,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.400.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 428,
+        "character": 33
+      },
+      "end": {
+        "line": 430,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.400.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 433,
+        "character": 32
+      },
+      "end": {
+        "line": 435,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.400.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 438,
+        "character": 32
+      },
+      "end": {
+        "line": 440,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.400.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 443,
+        "character": 25
+      },
+      "end": {
+        "line": 445,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.400.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "400",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 453,
+        "character": 39
+      },
+      "end": {
+        "line": 455,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.401.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 458,
+        "character": 33
+      },
+      "end": {
+        "line": 460,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.401.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 463,
+        "character": 32
+      },
+      "end": {
+        "line": 465,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.401.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 468,
+        "character": 32
+      },
+      "end": {
+        "line": 470,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.401.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 473,
+        "character": 25
+      },
+      "end": {
+        "line": 475,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.401.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "401",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 483,
+        "character": 39
+      },
+      "end": {
+        "line": 485,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.403.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 488,
+        "character": 33
+      },
+      "end": {
+        "line": 490,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.403.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 493,
+        "character": 32
+      },
+      "end": {
+        "line": 495,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.403.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 498,
+        "character": 32
+      },
+      "end": {
+        "line": 500,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.403.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 503,
+        "character": 25
+      },
+      "end": {
+        "line": 505,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.403.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "403",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 513,
+        "character": 39
+      },
+      "end": {
+        "line": 515,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.404.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 518,
+        "character": 33
+      },
+      "end": {
+        "line": 520,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 523,
+        "character": 32
+      },
+      "end": {
+        "line": 525,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.404.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 528,
+        "character": 32
+      },
+      "end": {
+        "line": 530,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.404.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 533,
+        "character": 25
+      },
+      "end": {
+        "line": 535,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.404.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 543,
+        "character": 39
+      },
+      "end": {
+        "line": 545,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.429.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 548,
+        "character": 33
+      },
+      "end": {
+        "line": 550,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 553,
+        "character": 32
+      },
+      "end": {
+        "line": 555,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.429.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 558,
+        "character": 32
+      },
+      "end": {
+        "line": 560,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.429.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 563,
+        "character": 25
+      },
+      "end": {
+        "line": 565,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.429.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 573,
+        "character": 39
+      },
+      "end": {
+        "line": 575,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.500.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 578,
+        "character": 33
+      },
+      "end": {
+        "line": 580,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 583,
+        "character": 32
+      },
+      "end": {
+        "line": 585,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.500.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 588,
+        "character": 32
+      },
+      "end": {
+        "line": 590,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.500.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 593,
+        "character": 25
+      },
+      "end": {
+        "line": 595,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.500.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 603,
+        "character": 39
+      },
+      "end": {
+        "line": 605,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.504.content.application/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "application/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 608,
+        "character": 33
+      },
+      "end": {
+        "line": 610,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.504.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 613,
+        "character": 32
+      },
+      "end": {
+        "line": 615,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.504.content.application/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "application/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 618,
+        "character": 32
+      },
+      "end": {
+        "line": 620,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.504.content.text/javascript]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "text/javascript"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 623,
+        "character": 25
+      },
+      "end": {
+        "line": 625,
+        "character": 54
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/orders/{orderId}.get.responses.504.content.text/xml]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/orders/{orderId}",
+        "get",
+        "responses",
+        "504",
+        "content",
+        "text/xml"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 933,
+        "character": 27
+      },
+      "end": {
+        "line": 933,
+        "character": 44
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.BillTo.properties.contact.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BillTo",
+        "properties",
+        "contact",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1060,
+        "character": 26
+      },
+      "end": {
+        "line": 1063,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ErrorLimit.properties.retryAfterSec]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ErrorLimit",
+        "properties",
+        "retryAfterSec"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1062,
+        "character": 22
+      },
+      "end": {
+        "line": 1062,
+        "character": 40
+      }
+    },
+    "message": "Incorrect integer format: integer-positive. Must be one of: int32, int64 [path: components.schemas.ErrorLimit.properties.retryAfterSec.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ErrorLimit",
+        "properties",
+        "retryAfterSec",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1085,
+        "character": 19
+      },
+      "end": {
+        "line": 1088,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItem.properties.period]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItem",
+        "properties",
+        "period"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1102,
+        "character": 17
+      },
+      "end": {
+        "line": 1104,
+        "character": 29
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.LineItem.properties.pfid]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItem",
+        "properties",
+        "pfid"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1102,
+        "character": 17
+      },
+      "end": {
+        "line": 1104,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItem.properties.pfid]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItem",
+        "properties",
+        "pfid"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1108,
+        "character": 27
+      },
+      "end": {
+        "line": 1108,
+        "character": 73
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItem.properties.pricing.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItem",
+        "properties",
+        "pricing",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1110,
+        "character": 21
+      },
+      "end": {
+        "line": 1113,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItem.properties.quantity]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItem",
+        "properties",
+        "quantity"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1112,
+        "character": 22
+      },
+      "end": {
+        "line": 1112,
+        "character": 40
+      }
+    },
+    "message": "Incorrect integer format: integer-positive. Must be one of: int32, int64 [path: components.schemas.LineItem.properties.quantity.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItem",
+        "properties",
+        "quantity",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1117,
+        "character": 27
+      },
+      "end": {
+        "line": 1117,
+        "character": 83
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItem.properties.taxCollector.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItem",
+        "properties",
+        "taxCollector",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1129,
+        "character": 21
+      },
+      "end": {
+        "line": 1132,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricing.properties.discount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "discount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1131,
+        "character": 22
+      },
+      "end": {
+        "line": 1131,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemPricing.properties.discount.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "discount",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1136,
+        "character": 27
+      },
+      "end": {
+        "line": 1136,
+        "character": 67
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItemPricing.properties.fees.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "fees",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1138,
+        "character": 17
+      },
+      "end": {
+        "line": 1141,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricing.properties.list]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "list"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1140,
+        "character": 22
+      },
+      "end": {
+        "line": 1140,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemPricing.properties.list.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "list",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1143,
+        "character": 17
+      },
+      "end": {
+        "line": 1146,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricing.properties.sale]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "sale"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1145,
+        "character": 22
+      },
+      "end": {
+        "line": 1145,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemPricing.properties.sale.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "sale",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1148,
+        "character": 20
+      },
+      "end": {
+        "line": 1151,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricing.properties.savings]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "savings"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1150,
+        "character": 22
+      },
+      "end": {
+        "line": 1150,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemPricing.properties.savings.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "savings",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1153,
+        "character": 21
+      },
+      "end": {
+        "line": 1156,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricing.properties.subtotal]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "subtotal"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1155,
+        "character": 22
+      },
+      "end": {
+        "line": 1155,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemPricing.properties.subtotal.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "subtotal",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1158,
+        "character": 18
+      },
+      "end": {
+        "line": 1161,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricing.properties.taxes]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "taxes"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1160,
+        "character": 22
+      },
+      "end": {
+        "line": 1160,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemPricing.properties.taxes.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "taxes",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1163,
+        "character": 17
+      },
+      "end": {
+        "line": 1165,
+        "character": 28
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.LineItemPricing.properties.unit]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricing",
+        "properties",
+        "unit"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1182,
+        "character": 19
+      },
+      "end": {
+        "line": 1185,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricingTaxDetail.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricingTaxDetail",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1184,
+        "character": 22
+      },
+      "end": {
+        "line": 1184,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemPricingTaxDetail.properties.amount.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricingTaxDetail",
+        "properties",
+        "amount",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1187,
+        "character": 17
+      },
+      "end": {
+        "line": 1189,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemPricingTaxDetail.properties.rate]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemPricingTaxDetail",
+        "properties",
+        "rate"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1211,
+        "character": 27
+      },
+      "end": {
+        "line": 1214,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemTaxCollector.properties.taxCollectorId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemTaxCollector",
+        "properties",
+        "taxCollectorId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1213,
+        "character": 22
+      },
+      "end": {
+        "line": 1213,
+        "character": 40
+      }
+    },
+    "message": "Incorrect integer format: integer-positive. Must be one of: int32, int64 [path: components.schemas.LineItemTaxCollector.properties.taxCollectorId.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemTaxCollector",
+        "properties",
+        "taxCollectorId",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1222,
+        "character": 28
+      },
+      "end": {
+        "line": 1262,
+        "character": 24
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.LineItemUnitPricing]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1224,
+        "character": 21
+      },
+      "end": {
+        "line": 1227,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemUnitPricing.properties.discount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "discount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1226,
+        "character": 22
+      },
+      "end": {
+        "line": 1226,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemUnitPricing.properties.discount.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "discount",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1231,
+        "character": 27
+      },
+      "end": {
+        "line": 1231,
+        "character": 82
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItemUnitPricing.properties.fees.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "fees",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1233,
+        "character": 17
+      },
+      "end": {
+        "line": 1236,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemUnitPricing.properties.list]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "list"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1235,
+        "character": 22
+      },
+      "end": {
+        "line": 1235,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemUnitPricing.properties.list.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "list",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1238,
+        "character": 17
+      },
+      "end": {
+        "line": 1241,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemUnitPricing.properties.sale]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "sale"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1240,
+        "character": 22
+      },
+      "end": {
+        "line": 1240,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemUnitPricing.properties.sale.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "sale",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1243,
+        "character": 20
+      },
+      "end": {
+        "line": 1246,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemUnitPricing.properties.savings]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "savings"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1245,
+        "character": 22
+      },
+      "end": {
+        "line": 1245,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemUnitPricing.properties.savings.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "savings",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1248,
+        "character": 18
+      },
+      "end": {
+        "line": 1251,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LineItemUnitPricing.properties.taxes]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "taxes"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1250,
+        "character": 22
+      },
+      "end": {
+        "line": 1250,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.LineItemUnitPricing.properties.taxes.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LineItemUnitPricing",
+        "properties",
+        "taxes",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1268,
+        "character": 27
+      },
+      "end": {
+        "line": 1268,
+        "character": 98
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.Order.properties.billTo.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Order",
+        "properties",
+        "billTo",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1302,
+        "character": 27
+      },
+      "end": {
+        "line": 1302,
+        "character": 66
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.Order.properties.pricing.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Order",
+        "properties",
+        "pricing",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1318,
+        "character": 18
+      },
+      "end": {
+        "line": 1321,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderFee.properties.icann]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderFee",
+        "properties",
+        "icann"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1320,
+        "character": 22
+      },
+      "end": {
+        "line": 1320,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderFee.properties.icann.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderFee",
+        "properties",
+        "icann",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1323,
+        "character": 18
+      },
+      "end": {
+        "line": 1326,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderFee.properties.total]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderFee",
+        "properties",
+        "total"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1325,
+        "character": 22
+      },
+      "end": {
+        "line": 1325,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderFee.properties.total.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderFee",
+        "properties",
+        "total",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1345,
+        "character": 27
+      },
+      "end": {
+        "line": 1345,
+        "character": 51
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.OrderList.properties.pagination.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderList",
+        "properties",
+        "pagination",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1356,
+        "character": 21
+      },
+      "end": {
+        "line": 1359,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderPricing.properties.discount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "discount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1358,
+        "character": 22
+      },
+      "end": {
+        "line": 1358,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderPricing.properties.discount.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "discount",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1363,
+        "character": 27
+      },
+      "end": {
+        "line": 1363,
+        "character": 53
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.OrderPricing.properties.fees.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "fees",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1365,
+        "character": 15
+      },
+      "end": {
+        "line": 1367,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderPricing.properties.id]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1369,
+        "character": 17
+      },
+      "end": {
+        "line": 1372,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderPricing.properties.list]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "list"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1371,
+        "character": 22
+      },
+      "end": {
+        "line": 1371,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderPricing.properties.list.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "list",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1374,
+        "character": 20
+      },
+      "end": {
+        "line": 1377,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderPricing.properties.savings]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "savings"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1376,
+        "character": 22
+      },
+      "end": {
+        "line": 1376,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderPricing.properties.savings.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "savings",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1379,
+        "character": 21
+      },
+      "end": {
+        "line": 1382,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderPricing.properties.subtotal]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "subtotal"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1381,
+        "character": 22
+      },
+      "end": {
+        "line": 1381,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderPricing.properties.subtotal.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "subtotal",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1391,
+        "character": 18
+      },
+      "end": {
+        "line": 1394,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderPricing.properties.taxes]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "taxes"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1393,
+        "character": 22
+      },
+      "end": {
+        "line": 1393,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderPricing.properties.taxes.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "taxes",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1396,
+        "character": 18
+      },
+      "end": {
+        "line": 1399,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.OrderPricing.properties.total]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "total"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1398,
+        "character": 22
+      },
+      "end": {
+        "line": 1398,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.OrderPricing.properties.total.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderPricing",
+        "properties",
+        "total",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1442,
+        "character": 27
+      },
+      "end": {
+        "line": 1442,
+        "character": 69
+      }
+    },
+    "message": "$ref must not be placed next to any other properties [path: components.schemas.OrderSummary.properties.pricing.description]",
+    "severity": 1,
+    "code": "no-$ref-siblings",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OrderSummary",
+        "properties",
+        "pricing",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1485,
+        "character": 18
+      },
+      "end": {
+        "line": 1487,
+        "character": 29
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Pagination.properties.total]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Pagination",
+        "properties",
+        "total"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1485,
+        "character": 18
+      },
+      "end": {
+        "line": 1487,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Pagination.properties.total]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Pagination",
+        "properties",
+        "total"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1494,
+        "character": 19
+      },
+      "end": {
+        "line": 1497,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Payment.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Payment",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1496,
+        "character": 22
+      },
+      "end": {
+        "line": 1496,
+        "character": 43
+      }
+    },
+    "message": "Incorrect integer format: currency-micro-unit. Must be one of: int32, int64 [path: components.schemas.Payment.properties.amount.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Payment",
+        "properties",
+        "amount",
+        "format"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -78,7 +6984,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -103,10 +7009,10 @@
       "fixable": true,
       "path": [
         "tags",
-        0,
+        "0",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -134,9 +7040,9 @@
         "schemas",
         "LineItemPricingTaxDetail",
         "required",
-        0
+        "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -164,371 +7070,293 @@
         "schemas",
         "LineItemUnitPricing"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 2,
-        "character": 9
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 6,
-        "character": 150
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Info object must have \"contact\" object. [path: info]",
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/orders.get]",
     "severity": 2,
-    "code": "info-contact",
+    "code": "security-defined",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "redocly-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "info"
+        "paths",
+        "/v1/orders",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 934,
-        "character": 27
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 934,
-        "character": 44
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.BillTo.properties.contact.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
-    "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "BillTo",
-        "properties",
-        "contact",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 1109,
-        "character": 27
-      },
-      "end": {
-        "line": 1109,
-        "character": 73
-      }
-    },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItem.properties.pricing.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
-    "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "LineItem",
-        "properties",
-        "pricing",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 1118,
-        "character": 27
-      },
-      "end": {
-        "line": 1118,
-        "character": 83
-      }
-    },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItem.properties.taxCollector.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
-    "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "LineItem",
-        "properties",
-        "taxCollector",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 1137,
-        "character": 27
-      },
-      "end": {
-        "line": 1137,
-        "character": 67
-      }
-    },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItemPricing.properties.fees.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
-    "code_description": null,
-    "source": "spectral-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "LineItemPricing",
-        "properties",
-        "fees",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 1223,
-        "character": 28
-      },
-      "end": {
-        "line": 1263,
-        "character": 24
-      }
-    },
-    "message": "Potentially unused component has been detected. [path: components.schemas.LineItemUnitPricing]",
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/orders/{orderId}.get]",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "security-defined",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "redocly-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "LineItemUnitPricing"
+        "paths",
+        "/v1/orders/{orderId}",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 1232,
-        "character": 27
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 1232,
-        "character": 82
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.LineItemUnitPricing.properties.fees.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
+    "message": "Operation 'list' has semantic quality issues: vague_description, missing_output_details, missing_context. Current description is incomplete and only mentions API Reseller constraints without explaining the operation's core functionality. Missing details about pagination, filter behavior, and return value structure. Enhanced description clarifies what the operation does, its constraints, expected output, and special considerations for different user types to improve AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "LineItemUnitPricing",
-        "properties",
-        "fees",
-        "description"
+        "paths",
+        "/v1/orders",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Retrieve a list of orders for the authenticated shopper. Only one filter may be used at a time",
+      "current_description": "<strong>API Resellers</strong><ul><li>This endpoint does not support subaccounts and therefore API Resellers should not supply an X-Shopper-Id header</li></ul>",
+      "summary_suggestion": "List orders for authenticated shopper with single filter",
+      "description_suggestion": "Retrieves a paginated list of orders for the authenticated shopper. Supports filtering by order status, date range, or other criteria, but only one filter may be applied per request. Returns an OrderList object containing order summaries. Note: API Resellers should not supply an X-Shopper-Id header as this endpoint does not support subaccounts.",
+      "reasoning": "Current description is incomplete and only mentions API Reseller constraints without explaining the operation's core functionality. Missing details about pagination, filter behavior, and return value structure. Enhanced description clarifies what the operation does, its constraints, expected output, and special considerations for different user types to improve AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/orders",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 1269,
-        "character": 27
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 1269,
-        "character": 98
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.Order.properties.billTo.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
+    "message": "Operation 'get' has semantic quality issues: vague_description, missing_output_details, missing_context. Summary is clear and action-oriented, but description lacks essential information about what data is returned and the structure of the response. Enhanced description specifies the Order schema contents, required parameters, and API Reseller constraints to enable AI agents to understand the complete operation scope and response structure.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "Order",
-        "properties",
-        "billTo",
-        "description"
+        "paths",
+        "/v1/orders/{orderId}",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Retrieve details for specified order",
+      "current_description": "<strong>API Resellers</strong><ul><li>This endpoint does not support subaccounts and therefore API Resellers should not supply an X-Shopper-Id header</li></ul>",
+      "description_suggestion": "Retrieves complete details for a specified order identified by orderId. Returns a full Order object containing line items, pricing, payment information, billing and shipping addresses, and order status. Requires the orderId path parameter. Note: API Resellers should not supply an X-Shopper-Id header as this endpoint does not support subaccounts.",
+      "reasoning": "Summary is clear and action-oriented, but description lacks essential information about what data is returned and the structure of the response. Enhanced description specifies the Order schema contents, required parameters, and API Reseller constraints to enable AI agents to understand the complete operation scope and response structure.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/orders/{orderId}",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 1303,
-        "character": 27
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 1303,
-        "character": 66
+        "line": 0,
+        "character": 12
       }
     },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.Order.properties.pricing.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "Order",
-        "properties",
-        "pricing",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
     }
   },
   {
     "range": {
       "start": {
-        "line": 1346,
-        "character": 27
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 1346,
-        "character": 51
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.OrderList.properties.pagination.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "loader",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "OrderList",
-        "properties",
-        "pagination",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
     }
   },
   {
     "range": {
       "start": {
-        "line": 1364,
-        "character": 27
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 1364,
-        "character": 53
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.OrderPricing.properties.fees.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "loader",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "OrderPricing",
-        "properties",
-        "fees",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
     }
   },
   {
     "range": {
       "start": {
-        "line": 1443,
-        "character": 27
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 1443,
-        "character": 69
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "$ref must not be placed next to any other properties [path: components.schemas.OrderSummary.properties.pricing.description]",
-    "severity": 1,
-    "code": "no-$ref-siblings",
+    "message": "API has 93 total references",
+    "severity": 3,
+    "code": "total_refs",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "loader",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "OrderSummary",
-        "properties",
-        "pricing",
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 93
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 93 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 93
     }
   }
 ]

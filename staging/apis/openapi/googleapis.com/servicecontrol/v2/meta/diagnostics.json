@@ -7,24 +7,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -35,25 +44,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2/services/{serviceName}:check.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2/services/{serviceName}:check",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -64,14 +69,3415 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2/services/{serviceName}:report.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Schemas count: 218",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 218
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 236",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 236
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/v2/services/{serviceName}:check"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 245",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 245,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "protocol"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeContext"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeContext",
+          "properties",
+          "extensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeContext",
+          "properties",
+          "extensions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeContext",
+          "properties",
+          "extensions",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "authorizationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "methodName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "numResponseItems"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "request"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "request",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "resourceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "resourceOriginalState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "resourceOriginalState",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "serviceData"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "serviceData",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "serviceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "accessLevels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "accessLevels",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "audiences"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "audiences",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "claims"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "claims",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "presenter"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "principal"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "authoritySelector"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "principalEmail"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "principalSubject"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "serviceAccountDelegationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "serviceAccountKeyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "thirdPartyPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "thirdPartyPrincipal",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "granted"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "permission"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "permissionType"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "resource"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest",
+          "properties",
+          "flags"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest",
+          "properties",
+          "resources"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest",
+          "properties",
+          "serviceConfigId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse",
+          "properties",
+          "dynamicMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse",
+          "properties",
+          "dynamicMetadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse",
+          "properties",
+          "headers",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal",
+          "properties",
+          "principalEmail"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal",
+          "properties",
+          "serviceMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal",
+          "properties",
+          "serviceMetadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "payload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "resourceTags"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "resourceTags",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "resourceType"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "violationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "ip"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "port"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "principal"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "regionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PolicyViolationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportRequest",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportRequest",
+          "properties",
+          "serviceConfigId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportResponse",
+          "properties",
+          "extensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportResponse",
+          "properties",
+          "extensions",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "host"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "headers",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "method"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "origin"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "protocol"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "query"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "reason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "scheme"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "size"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "time"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata",
+          "properties",
+          "callerIp"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata",
+          "properties",
+          "callerNetwork"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata",
+          "properties",
+          "callerSuppliedUserAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "annotations"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "annotations",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "uid"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "container"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "permission"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation",
+          "properties",
+          "currentLocations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation",
+          "properties",
+          "currentLocations",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation",
+          "properties",
+          "originalLocations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation",
+          "properties",
+          "originalLocations",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "backendLatency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "headers",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "size"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "time"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccountDelegationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccountDelegationInfo",
+          "properties",
+          "principalSubject"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceDelegationHistory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceDelegationHistory",
+          "properties",
+          "originalPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceDelegationHistory",
+          "properties",
+          "serviceMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "jobMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "jobMetadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "principalSubject"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "serviceDomain"
+        ],
+        [
+          "components",
+          "schemas",
+          "SpanContext"
+        ],
+        [
+          "components",
+          "schemas",
+          "SpanContext",
+          "properties",
+          "spanName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ThirdPartyPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "ThirdPartyPrincipal",
+          "properties",
+          "thirdPartyClaims"
+        ],
+        [
+          "components",
+          "schemas",
+          "ThirdPartyPrincipal",
+          "properties",
+          "thirdPartyClaims",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheFillBytes"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheHit"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheLookup"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheValidatedWithOriginServer"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "latency"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "protocol"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "referer"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "remoteIp"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "requestMethod"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "requestSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "requestUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "responseSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "serverIp"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "userAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "insertId"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "monitoredResourceLabels"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "monitoredResourceLabels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "protoPayload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "protoPayload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "structPayload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "structPayload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "textPayload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "trace"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "first"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "last"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "producer"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation",
+          "properties",
+          "file"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation",
+          "properties",
+          "function"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation",
+          "properties",
+          "line"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "contextId"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "destinations"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "payload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "checkedValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "constraint"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "errorMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "policyType"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 210",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 210,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "protocol"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "Api",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeContext"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeContext",
+          "properties",
+          "extensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeContext",
+          "properties",
+          "extensions",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "authorizationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "methodName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "numResponseItems"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "request"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "request",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "resourceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "resourceOriginalState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "resourceOriginalState",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "serviceData"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "serviceData",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuditLog",
+          "properties",
+          "serviceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "accessLevels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "audiences"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "claims"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "claims",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "presenter"
+        ],
+        [
+          "components",
+          "schemas",
+          "Auth",
+          "properties",
+          "principal"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "authoritySelector"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "principalEmail"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "principalSubject"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "serviceAccountDelegationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "serviceAccountKeyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "thirdPartyPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthenticationInfo",
+          "properties",
+          "thirdPartyPrincipal",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "granted"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "permission"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "permissionType"
+        ],
+        [
+          "components",
+          "schemas",
+          "AuthorizationInfo",
+          "properties",
+          "resource"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest",
+          "properties",
+          "flags"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest",
+          "properties",
+          "resources"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckRequest",
+          "properties",
+          "serviceConfigId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse",
+          "properties",
+          "dynamicMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse",
+          "properties",
+          "dynamicMetadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "CheckResponse",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal",
+          "properties",
+          "principalEmail"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal",
+          "properties",
+          "serviceMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "FirstPartyPrincipal",
+          "properties",
+          "serviceMetadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "payload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "resourceTags"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "resourceType"
+        ],
+        [
+          "components",
+          "schemas",
+          "OrgPolicyViolationInfo",
+          "properties",
+          "violationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "ip"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "port"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "principal"
+        ],
+        [
+          "components",
+          "schemas",
+          "Peer",
+          "properties",
+          "regionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PolicyViolationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportRequest",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportRequest",
+          "properties",
+          "serviceConfigId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportResponse",
+          "properties",
+          "extensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReportResponse",
+          "properties",
+          "extensions",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "host"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "method"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "origin"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "protocol"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "query"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "reason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "scheme"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "size"
+        ],
+        [
+          "components",
+          "schemas",
+          "Request",
+          "properties",
+          "time"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata",
+          "properties",
+          "callerIp"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata",
+          "properties",
+          "callerNetwork"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestMetadata",
+          "properties",
+          "callerSuppliedUserAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "annotations"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "uid"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resource",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "container"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "permission"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceInfo",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation",
+          "properties",
+          "currentLocations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceLocation",
+          "properties",
+          "originalLocations"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "backendLatency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "size"
+        ],
+        [
+          "components",
+          "schemas",
+          "Response",
+          "properties",
+          "time"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccountDelegationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccountDelegationInfo",
+          "properties",
+          "principalSubject"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceDelegationHistory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceDelegationHistory",
+          "properties",
+          "originalPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceDelegationHistory",
+          "properties",
+          "serviceMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "jobMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "jobMetadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "principalSubject"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceMetadata",
+          "properties",
+          "serviceDomain"
+        ],
+        [
+          "components",
+          "schemas",
+          "SpanContext"
+        ],
+        [
+          "components",
+          "schemas",
+          "SpanContext",
+          "properties",
+          "spanName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ThirdPartyPrincipal"
+        ],
+        [
+          "components",
+          "schemas",
+          "ThirdPartyPrincipal",
+          "properties",
+          "thirdPartyClaims"
+        ],
+        [
+          "components",
+          "schemas",
+          "ThirdPartyPrincipal",
+          "properties",
+          "thirdPartyClaims",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheFillBytes"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheHit"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheLookup"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "cacheValidatedWithOriginServer"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "latency"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "protocol"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "referer"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "remoteIp"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "requestMethod"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "requestSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "requestUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "responseSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "serverIp"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2HttpRequest",
+          "properties",
+          "userAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "insertId"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "monitoredResourceLabels"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "protoPayload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "protoPayload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "structPayload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "structPayload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "textPayload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntry",
+          "properties",
+          "trace"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "first"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "last"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntryOperation",
+          "properties",
+          "producer"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation",
+          "properties",
+          "file"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation",
+          "properties",
+          "function"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2LogEntrySourceLocation",
+          "properties",
+          "line"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "contextId"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "destinations"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "payload"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "payload",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "V2ResourceEvent",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "checkedValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "constraint"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "errorMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolationInfo",
+          "properties",
+          "policyType"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 11",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -80,207 +3486,14 @@
         "paths",
         "/v2/services/{serviceName}:report",
         "post",
-        "summary"
+        "requestBody",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/services/{serviceName}:check.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/services/{serviceName}:check",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/services/{serviceName}:report.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/services/{serviceName}:report",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"AuditLog\" is never used. [path: components.schemas.AuditLog]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "AuditLog"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"SpanContext\" is never used. [path: components.schemas.SpanContext]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "SpanContext"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"V2LogEntry\" is never used. [path: components.schemas.V2LogEntry]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "V2LogEntry"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"V2ResourceEvent\" is never used. [path: components.schemas.V2ResourceEvent]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "V2ResourceEvent"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 11,
+      "paths": []
     }
   },
   {
@@ -308,7 +3521,515 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 204,
+        "character": 60
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 13
+      },
+      "end": {
+        "line": 110,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2/services/{serviceName}:check.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:check",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/services/{serviceName}:check.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:check",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 153,
+        "character": 13
+      },
+      "end": {
+        "line": 204,
+        "character": 60
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2/services/{serviceName}:report.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:report",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 10
+      },
+      "end": {
+        "line": 161,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/services/{serviceName}:report.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:report",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 214,
+        "character": 16
+      },
+      "end": {
+        "line": 223,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 226,
+        "character": 21
+      },
+      "end": {
+        "line": 231,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 229,
+        "character": 16
+      },
+      "end": {
+        "line": 229,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 234,
+        "character": 12
+      },
+      "end": {
+        "line": 245,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 248,
+        "character": 17
+      },
+      "end": {
+        "line": 253,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 256,
+        "character": 15
+      },
+      "end": {
+        "line": 261,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 264,
+        "character": 12
+      },
+      "end": {
+        "line": 269,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 272,
+        "character": 20
+      },
+      "end": {
+        "line": 277,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 275,
+        "character": 16
+      },
+      "end": {
+        "line": 275,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 280,
+        "character": 20
+      },
+      "end": {
+        "line": 286,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 289,
+        "character": 18
+      },
+      "end": {
+        "line": 294,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 297,
+        "character": 19
+      },
+      "end": {
+        "line": 302,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 305,
+        "character": 24
+      },
+      "end": {
+        "line": 310,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -339,7 +4060,7 @@
         "api",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -370,7 +4091,7 @@
         "destination",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -401,7 +4122,7 @@
         "origin",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -432,7 +4153,7 @@
         "request",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -463,7 +4184,7 @@
         "resource",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -494,7 +4215,7 @@
         "response",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -525,7 +4246,7 @@
         "source",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -553,7 +4274,7 @@
         "schemas",
         "AuditLog"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -584,7 +4305,37 @@
         "authenticationInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 406,
+        "character": 29
+      },
+      "end": {
+        "line": 409,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.AuditLog.properties.numResponseItems]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "AuditLog",
+        "properties",
+        "numResponseItems"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -615,7 +4366,7 @@
         "policyViolationInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -646,7 +4397,7 @@
         "requestMetadata",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -677,7 +4428,7 @@
         "resourceLocation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -708,7 +4459,7 @@
         "status",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -739,7 +4490,7 @@
         "serviceDelegationHistory",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -770,7 +4521,7 @@
         "resourceAttributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -801,7 +4552,7 @@
         "attributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -832,7 +4583,37 @@
         "status",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 688,
+        "character": 17
+      },
+      "end": {
+        "line": 691,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Peer.properties.port]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Peer",
+        "properties",
+        "port"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -863,7 +4644,7 @@
         "orgPolicyViolationInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -894,7 +4675,37 @@
         "auth",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 794,
+        "character": 17
+      },
+      "end": {
+        "line": 797,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Request.properties.size]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Request",
+        "properties",
+        "size"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -925,7 +4736,7 @@
         "destinationAttributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -956,7 +4767,67 @@
         "requestAttributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 950,
+        "character": 17
+      },
+      "end": {
+        "line": 953,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Response.properties.code]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Response",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 962,
+        "character": 17
+      },
+      "end": {
+        "line": 965,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Response.properties.size]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Response",
+        "properties",
+        "size"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -987,7 +4858,7 @@
         "firstPartyPrincipal",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1018,7 +4889,7 @@
         "thirdPartyPrincipal",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1046,7 +4917,157 @@
         "schemas",
         "SpanContext"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1044,
+        "character": 17
+      },
+      "end": {
+        "line": 1047,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Status.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Status",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1082,
+        "character": 27
+      },
+      "end": {
+        "line": 1085,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.V2HttpRequest.properties.cacheFillBytes]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2HttpRequest",
+        "properties",
+        "cacheFillBytes"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1120,
+        "character": 24
+      },
+      "end": {
+        "line": 1123,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.V2HttpRequest.properties.requestSize]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2HttpRequest",
+        "properties",
+        "requestSize"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1129,
+        "character": 25
+      },
+      "end": {
+        "line": 1132,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.V2HttpRequest.properties.responseSize]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2HttpRequest",
+        "properties",
+        "responseSize"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1138,
+        "character": 19
+      },
+      "end": {
+        "line": 1141,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.V2HttpRequest.properties.status]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2HttpRequest",
+        "properties",
+        "status"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1074,7 +5095,7 @@
         "schemas",
         "V2LogEntry"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1105,7 +5126,7 @@
         "httpRequest",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1136,7 +5157,7 @@
         "operation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1167,7 +5188,37 @@
         "sourceLocation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1265,
+        "character": 17
+      },
+      "end": {
+        "line": 1268,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.V2LogEntrySourceLocation.properties.line]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2LogEntrySourceLocation",
+        "properties",
+        "line"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1195,7 +5246,37 @@
         "schemas",
         "V2ResourceEvent"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1276,
+        "character": 22
+      },
+      "end": {
+        "line": 1279,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.V2ResourceEvent.properties.contextId]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2ResourceEvent",
+        "properties",
+        "contextId"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1226,7 +5307,7 @@
         "parent",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1257,7 +5338,529 @@
         "resource",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2/services/{serviceName}:check.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:check",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/services/{serviceName}:check.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:check",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2/services/{serviceName}:report.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:report",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/services/{serviceName}:report.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:report",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"AuditLog\" is never used. [path: components.schemas.AuditLog]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "AuditLog"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"SpanContext\" is never used. [path: components.schemas.SpanContext]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SpanContext"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"V2LogEntry\" is never used. [path: components.schemas.V2LogEntry]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2LogEntry"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"V2ResourceEvent\" is never used. [path: components.schemas.V2ResourceEvent]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "V2ResourceEvent"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'servicecontrol.services.check' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Missing summary entirely. Description is verbose and mixes implementation details with operational guidance. Improved summary provides clear action-oriented statement. Improved description clarifies inputs (CheckRequest), outputs (CheckResponse), constraints (1 resource limit), and important operational notes while maintaining domain terminology consistency with the Service Infrastructure context.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:check",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "servicecontrol.services.check",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Private Preview. This feature is only available for approved services. This method provides admission control for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It checks whether an operation should be allowed based on the service configuration and relevant policies. It must be called before the operation is executed. For more information, see [Admission Control](https://cloud.google.com/service-infrastructure/docs/admission-control). NOTE: The admission control has an expected policy propagation delay of 60s. The caller **must** not depend on the most recent policy changes. NOTE: The admission control has a hard limit of 1 referenced resources per call. If an operation refers to more than 1 resources, the caller must call the Check method multiple times. This method requires the `servicemanagement.services.check` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).",
+      "summary_suggestion": "Check if operation is allowed by service policies",
+      "description_suggestion": "Performs admission control for service operations by evaluating whether an operation should be allowed based on service configuration and policies. Must be called before operation execution. Accepts a CheckRequest containing operation details and returns a CheckResponse indicating approval status. Supports maximum 1 referenced resource per call; multiple calls required for operations referencing more resources. Note: Policy propagation has ~60s delay; do not rely on most recent policy changes. Requires servicemanagement.services.check permission.",
+      "reasoning": "Missing summary entirely. Description is verbose and mixes implementation details with operational guidance. Improved summary provides clear action-oriented statement. Improved description clarifies inputs (CheckRequest), outputs (CheckResponse), constraints (1 resource limit), and important operational notes while maintaining domain terminology consistency with the Service Infrastructure context.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:check",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'servicecontrol.services.report' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description is verbose with mixed implementation details. Improved summary provides clear action-oriented statement indicating telemetry reporting purpose. Improved description specifies inputs (ReportRequest with operation list), outputs (ReportResponse), operational constraints (1000 ops/1MB hard limit, 100 ops recommended), and required permissions while using consistent Service Infrastructure terminology.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/services/{serviceName}:report",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "servicecontrol.services.report",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Private Preview. This feature is only available for approved services. This method provides telemetry reporting for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It reports a list of operations that have occurred on a service. It must be called after the operations have been executed. For more information, see [Telemetry Reporting](https://cloud.google.com/service-infrastructure/docs/telemetry-reporting). NOTE: The telemetry reporting has a hard limit of 1000 operations and 1MB per Report call. It is recommended to have no more than 100 operations per call. This method requires the `servicemanagement.services.report` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).",
+      "summary_suggestion": "Report executed service operations for telemetry",
+      "description_suggestion": "Reports telemetry data for operations executed on a service. Must be called after operations have completed. Accepts a ReportRequest containing a list of operations and returns a ReportResponse. Supports maximum 1000 operations and 1MB per call; recommended limit is 100 operations per call for optimal performance. Enables Service Infrastructure to track and analyze service activity. Requires servicemanagement.services.report permission.",
+      "reasoning": "Missing summary entirely. Description is verbose with mixed implementation details. Improved summary provides clear action-oriented statement indicating telemetry reporting purpose. Improved description specifies inputs (ReportRequest with operation list), outputs (ReportResponse), operational constraints (1000 ops/1MB hard limit, 100 ops recommended), and required permissions while using consistent Service Infrastructure terminology.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/services/{serviceName}:report",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 59 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 59
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 59 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 59
     }
   }
 ]

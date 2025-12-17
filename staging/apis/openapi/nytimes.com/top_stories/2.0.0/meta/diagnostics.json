@@ -7,23 +7,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'apikey' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 1",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 1,
+      "paths": [
+        [
+          "paths",
+          "/{section}.{format}",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -34,22 +39,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -60,14 +64,796 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./{section}.{format}.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Schemas count: 42",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 42
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "api-key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 47",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 47
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 2",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 2,
+      "paths": [
+        [
+          "paths",
+          "/{section}.{format}"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 1",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 1,
+      "paths": [
+        [
+          "paths",
+          "/{section}.{format}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 52",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 52,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "servers",
+          1
+        ],
+        [
+          "paths",
+          "/{section}.{format}"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "abstract"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "byline"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "des_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "des_facet",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "geo_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "geo_facet",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "item_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "kicker"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "material_type_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "caption"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "copyright"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "format"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "height"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "subtype"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "width"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "org_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "org_facet",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "per_facet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "per_facet",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "published_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls",
+          "items",
+          "properties",
+          "suggested_link_text"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "related_urls",
+          "items",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "section"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "short_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "subsection"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "thumbnail_standard"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "updated_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 6",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 6,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "responses",
+          "200"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 7",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -76,38 +862,18 @@
         "paths",
         "/{section}.{format}",
         "get",
-        "operationId"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "results",
+        "items"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./{section}.{format}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/{section}.{format}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 7,
+      "paths": []
     }
   },
   {
@@ -133,7 +899,61 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 13,
+        "character": 13
+      },
+      "end": {
+        "line": 13,
+        "character": 55
+      }
+    },
+    "message": "Servers MUST be https and no other protocol is allowed. [path: servers.0.url]",
+    "severity": 2,
+    "code": "hosts-https-only-oas3",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 10
+      },
+      "end": {
+        "line": 109,
+        "character": 32
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -161,7 +981,97 @@
         "/{section}.{format}",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 23,
+        "character": 10
+      },
+      "end": {
+        "line": 59,
+        "character": 38
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./{section}.{format}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{section}.{format}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 73,
+        "character": 38
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./{section}.{format}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{section}.{format}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 75,
+        "character": 10
+      },
+      "end": {
+        "line": 81,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./{section}.{format}.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{section}.{format}",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -191,7 +1101,406 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 159,
+        "character": 25
+      },
+      "end": {
+        "line": 160,
+        "character": 35
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Article.properties.multimedia.items.properties.height]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "height"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 159,
+        "character": 25
+      },
+      "end": {
+        "line": 160,
+        "character": 35
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Article.properties.multimedia.items.properties.height]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "height"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 171,
+        "character": 24
+      },
+      "end": {
+        "line": 172,
+        "character": 35
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Article.properties.multimedia.items.properties.width]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "width"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 171,
+        "character": 24
+      },
+      "end": {
+        "line": 172,
+        "character": 35
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Article.properties.multimedia.items.properties.width]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Article",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "width"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./{section}.{format}.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{section}.{format}",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./{section}.{format}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{section}.{format}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/{section}.{format}' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_context. Original summary 'Top Stories' is a noun phrase lacking action orientation. Description lacks clarity on inputs (section parameter, format options), outputs (Article object structure), and how to use the format parameter. Added specific details about parameters, supported formats, return type, and usage guidance to improve AI agent interpretability and help agents determine when to invoke this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{section}.{format}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/{section}.{format}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Top Stories",
+      "current_description": "The Top Stories API returns a list of articles and associated images currently on the specified section.  Support JSON and JSONP.",
+      "summary_suggestion": "Retrieve top stories for a specified section",
+      "description_suggestion": "Retrieves a list of current top stories and associated images for the specified section. Accepts section name as a path parameter and supports both JSON and JSONP response formats. Returns an array of Article objects containing article metadata and image data. Use the format parameter to specify desired response format (json or jsonp).",
+      "reasoning": "Original summary 'Top Stories' is a noun phrase lacking action orientation. Description lacks clarity on inputs (section parameter, format options), outputs (Article object structure), and how to use the format parameter. Added specific details about parameters, supported formats, return type, and usage guidance to improve AI agent interpretability and help agents determine when to invoke this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/{section}.{format}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 1 operations analyzed, 1 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 1,
+      "total_issues_found": 1,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 1 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 1 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 1
     }
   }
 ]

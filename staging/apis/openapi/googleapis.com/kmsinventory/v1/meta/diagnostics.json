@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -79,24 +79,38 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 3",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 3,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -107,25 +121,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}/protectedResourcesSummary.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/protectedResourcesSummary",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -136,27 +146,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}/protectedResourcesSummary`. [path: paths./v1/{+name}/protectedResourcesSummary.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 95",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/protectedResourcesSummary",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 95
     }
   },
   {
@@ -167,14 +171,1819 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/cryptoKeys.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 119",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 119
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 6",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 6,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 131",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 131,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          4,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ListCryptoKeysResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ListCryptoKeysResponse",
+          "properties",
+          "cryptoKeys"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ListCryptoKeysResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "cloudProduct"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "cryptoKeyVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "cryptoKeyVersions"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "cryptoKeyVersions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "project"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "projectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "resourceType"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "cloudProducts"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "cloudProducts",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "locations",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "projectCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "resourceCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "resourceTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "resourceTypes",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse",
+          "properties",
+          "protectedResources"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "cryptoKeyBackend"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "destroyScheduledDuration"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "importOnly"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "nextRotationTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "purpose"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "rotationPeriod"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "algorithm"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "destroyEventTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "destroyTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "externalDestructionFailureReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "generateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "generationFailureReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "importFailureReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "importJob"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "importTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "protectionLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "reimportEligible"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersionTemplate"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersionTemplate",
+          "properties",
+          "algorithm"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersionTemplate",
+          "properties",
+          "protectionLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1ExternalProtectionLevelOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1ExternalProtectionLevelOptions",
+          "properties",
+          "ekmConnectionKeyPath"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1ExternalProtectionLevelOptions",
+          "properties",
+          "externalKeyUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyAccessJustificationsPolicy"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyAccessJustificationsPolicy",
+          "properties",
+          "allowedAccessReasons"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyAccessJustificationsPolicy",
+          "properties",
+          "allowedAccessReasons",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestation"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestation",
+          "properties",
+          "content"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestation",
+          "properties",
+          "format"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "caviumCerts"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "caviumCerts",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "googleCardCerts"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "googleCardCerts",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "googlePartitionCerts"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "googlePartitionCerts",
+          "items"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 92",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 92,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ListCryptoKeysResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ListCryptoKeysResponse",
+          "properties",
+          "cryptoKeys"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ListCryptoKeysResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "cloudProduct"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "cryptoKeyVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "cryptoKeyVersions"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "project"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "projectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResource",
+          "properties",
+          "resourceType"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "cloudProducts"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "projectCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "resourceCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+          "properties",
+          "resourceTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse",
+          "properties",
+          "protectedResources"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "cryptoKeyBackend"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "destroyScheduledDuration"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "importOnly"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "nextRotationTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "purpose"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKey",
+          "properties",
+          "rotationPeriod"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "algorithm"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "destroyEventTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "destroyTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "externalDestructionFailureReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "generateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "generationFailureReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "importFailureReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "importJob"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "importTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "protectionLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "reimportEligible"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersion",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersionTemplate"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersionTemplate",
+          "properties",
+          "algorithm"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1CryptoKeyVersionTemplate",
+          "properties",
+          "protectionLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1ExternalProtectionLevelOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1ExternalProtectionLevelOptions",
+          "properties",
+          "ekmConnectionKeyPath"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1ExternalProtectionLevelOptions",
+          "properties",
+          "externalKeyUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyAccessJustificationsPolicy"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyAccessJustificationsPolicy",
+          "properties",
+          "allowedAccessReasons"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestation"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestation",
+          "properties",
+          "content"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestation",
+          "properties",
+          "format"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "caviumCerts"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "googleCardCerts"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudKmsV1KeyOperationAttestationCertificateChains",
+          "properties",
+          "googlePartitionCerts"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 13",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -183,243 +1992,15 @@
         "paths",
         "/v1/{+parent}/cryptoKeys",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/cryptoKeys`. [path: paths./v1/{+parent}/cryptoKeys.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/cryptoKeys",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+scope}/protectedResources:search.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+scope}/protectedResources:search",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `scope` is not used in the path `/v1/{+scope}/protectedResources:search`. [path: paths./v1/{+scope}/protectedResources:search.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+scope}/protectedResources:search",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}/protectedResourcesSummary.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/protectedResourcesSummary",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/cryptoKeys.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/cryptoKeys",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+scope}/protectedResources:search.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+scope}/protectedResources:search",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 13,
+      "paths": []
     }
   },
   {
@@ -446,7 +2027,7 @@
         "info",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -474,7 +2055,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 303,
+        "character": 77
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 12
+      },
+      "end": {
+        "line": 97,
+        "character": 105
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}/protectedResourcesSummary.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/protectedResourcesSummary",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}/protectedResourcesSummary.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/protectedResourcesSummary",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -504,7 +2169,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 136,
+        "character": 12
+      },
+      "end": {
+        "line": 190,
+        "character": 62
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/cryptoKeys.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 138,
+        "character": 10
+      },
+      "end": {
+        "line": 144,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/cryptoKeys.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -534,7 +2257,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 147,
+        "character": 10
+      },
+      "end": {
+        "line": 152,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/cryptoKeys.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 10
+      },
+      "end": {
+        "line": 160,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/cryptoKeys.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 229,
+        "character": 12
+      },
+      "end": {
+        "line": 303,
+        "character": 77
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+scope}/protectedResources:search.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 231,
+        "character": 10
+      },
+      "end": {
+        "line": 237,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+scope}/protectedResources:search.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -564,7 +2405,646 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 240,
+        "character": 10
+      },
+      "end": {
+        "line": 245,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+scope}/protectedResources:search.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 248,
+        "character": 10
+      },
+      "end": {
+        "line": 253,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+scope}/protectedResources:search.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 256,
+        "character": 10
+      },
+      "end": {
+        "line": 261,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+scope}/protectedResources:search.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 264,
+        "character": 10
+      },
+      "end": {
+        "line": 273,
+        "character": 29
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./v1/{+scope}/protectedResources:search.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 309,
+        "character": 16
+      },
+      "end": {
+        "line": 318,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 321,
+        "character": 21
+      },
+      "end": {
+        "line": 326,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 324,
+        "character": 16
+      },
+      "end": {
+        "line": 324,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 329,
+        "character": 12
+      },
+      "end": {
+        "line": 340,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 343,
+        "character": 17
+      },
+      "end": {
+        "line": 348,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 351,
+        "character": 15
+      },
+      "end": {
+        "line": 356,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 359,
+        "character": 12
+      },
+      "end": {
+        "line": 364,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 367,
+        "character": 20
+      },
+      "end": {
+        "line": 372,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 370,
+        "character": 16
+      },
+      "end": {
+        "line": 370,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 375,
+        "character": 20
+      },
+      "end": {
+        "line": 381,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 384,
+        "character": 18
+      },
+      "end": {
+        "line": 389,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 392,
+        "character": 19
+      },
+      "end": {
+        "line": 397,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 400,
+        "character": 24
+      },
+      "end": {
+        "line": 405,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 485,
+        "character": 35
+      },
+      "end": {
+        "line": 487,
+        "character": 30
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleCloudKmsInventoryV1ProtectedResourcesSummary.properties.cloudProducts.additionalProperties]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+        "properties",
+        "cloudProducts",
+        "additionalProperties"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 493,
+        "character": 35
+      },
+      "end": {
+        "line": 495,
+        "character": 30
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleCloudKmsInventoryV1ProtectedResourcesSummary.properties.locations.additionalProperties]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+        "properties",
+        "locations",
+        "additionalProperties"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 504,
+        "character": 25
+      },
+      "end": {
+        "line": 507,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GoogleCloudKmsInventoryV1ProtectedResourcesSummary.properties.projectCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+        "properties",
+        "projectCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 509,
+        "character": 26
+      },
+      "end": {
+        "line": 512,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleCloudKmsInventoryV1ProtectedResourcesSummary.properties.resourceCount]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+        "properties",
+        "resourceCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 515,
+        "character": 35
+      },
+      "end": {
+        "line": 517,
+        "character": 30
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleCloudKmsInventoryV1ProtectedResourcesSummary.properties.resourceTypes.additionalProperties]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleCloudKmsInventoryV1ProtectedResourcesSummary",
+        "properties",
+        "resourceTypes",
+        "additionalProperties"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -595,7 +3075,7 @@
         "keyAccessJustificationsPolicy",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -626,7 +3106,7 @@
         "primary",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -657,7 +3137,7 @@
         "primary",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -688,7 +3168,7 @@
         "versionTemplate",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -719,7 +3199,7 @@
         "attestation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -750,7 +3230,7 @@
         "attestation",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -781,7 +3261,7 @@
         "externalProtectionLevelOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -812,7 +3292,7 @@
         "certChains",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -843,7 +3323,648 @@
         "certChains",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}/protectedResourcesSummary`. [path: paths./v1/{+name}/protectedResourcesSummary.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/protectedResourcesSummary",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/cryptoKeys`. [path: paths./v1/{+parent}/cryptoKeys.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `scope` is not used in the path `/v1/{+scope}/protectedResources:search`. [path: paths./v1/{+scope}/protectedResources:search.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}/protectedResourcesSummary.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/protectedResourcesSummary",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}/protectedResourcesSummary.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/protectedResourcesSummary",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/cryptoKeys.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/cryptoKeys.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+scope}/protectedResources:search.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+scope}/protectedResources:search.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'kmsinventory.projects.locations.keyRings.cryptoKeys.getProtectedResourcesSummary' has semantic quality issues: vague_summary, missing_output_details. Missing summary entirely. Description lacks clarity about return value structure (ProtectedResourcesSummary schema) and doesn't mention snapshot-based data sourcing, which is important for AI agents to understand data freshness expectations. Added explicit return schema reference and data freshness context for better AI interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/protectedResourcesSummary",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "kmsinventory.projects.locations.keyRings.cryptoKeys.getProtectedResourcesSummary",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Returns aggregate information about the resources protected by the given Cloud KMS CryptoKey. Only resources within the same Cloud organization as the key will be returned. The project that holds the key must be part of an organization in order for this call to succeed.",
+      "summary_suggestion": "Get aggregate protected resources summary for CryptoKey",
+      "description_suggestion": "Retrieves aggregate information about resources protected by a specified Cloud KMS CryptoKey. Returns a ProtectedResourcesSummary containing counts and metadata of protected resources. Only resources within the same Cloud organization as the key are included. The project containing the key must be part of an organization for this operation to succeed. Data is sourced from snapshots and may not reflect real-time state.",
+      "reasoning": "Missing summary entirely. Description lacks clarity about return value structure (ProtectedResourcesSummary schema) and doesn't mention snapshot-based data sourcing, which is important for AI agents to understand data freshness expectations. Added explicit return schema reference and data freshness context for better AI interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/protectedResourcesSummary",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'kmsinventory.projects.cryptoKeys.list' has semantic quality issues: vague_summary, missing_output_details. Missing summary entirely. Description doesn't specify return value structure (ListCryptoKeysResponse) or mention pagination/filtering capabilities, which are critical for AI agents to understand how to retrieve large result sets. Added explicit return type reference and pagination context.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/cryptoKeys",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "kmsinventory.projects.cryptoKeys.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Returns cryptographic keys managed by Cloud KMS in a given Cloud project. Note that this data is sourced from snapshots, meaning it may not completely reflect the actual state of key metadata at call time.",
+      "summary_suggestion": "List Cloud KMS CryptoKeys in project",
+      "description_suggestion": "Lists all cryptographic keys managed by Cloud KMS within a specified Cloud project. Returns a paginated list of CryptoKey resources with their metadata. Data is sourced from snapshots and may not reflect real-time state at call time. Supports filtering and pagination parameters to control result set size and scope.",
+      "reasoning": "Missing summary entirely. Description doesn't specify return value structure (ListCryptoKeysResponse) or mention pagination/filtering capabilities, which are critical for AI agents to understand how to retrieve large result sets. Added explicit return type reference and pagination context.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/cryptoKeys",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'kmsinventory.organizations.protectedResources.search' has semantic quality issues: vague_summary, missing_output_details, missing_input_details. Missing summary entirely. Description is too generic and doesn't explain search capabilities, filtering options, or return value structure (SearchProtectedResourcesResponse). Doesn't clarify the difference from getProtectedResourcesSummary or explain use cases. Added search/filtering context and explicit return type for better AI agent decision-making about when to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+scope}/protectedResources:search",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "kmsinventory.organizations.protectedResources.search",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given Cloud organization.",
+      "summary_suggestion": "Search protected resources by CryptoKey in organization",
+      "description_suggestion": "Searches for resources protected by a specified Cloud KMS CryptoKey within a given Cloud organization. Returns a SearchProtectedResourcesResponse containing metadata about matching ProtectedResource objects. Supports filtering by resource type, location, and other criteria through query parameters. Useful for discovering which resources depend on a specific encryption key across the organization.",
+      "reasoning": "Missing summary entirely. Description is too generic and doesn't explain search capabilities, filtering options, or return value structure (SearchProtectedResourcesResponse). Doesn't clarify the difference from getProtectedResourcesSummary or explain use cases. Added search/filtering context and explicit return type for better AI agent decision-making about when to use this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+scope}/protectedResources:search",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 3 operations analyzed, 3 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 3,
+      "total_issues_found": 3,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 44 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 44
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 44 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 44
     }
   }
 ]

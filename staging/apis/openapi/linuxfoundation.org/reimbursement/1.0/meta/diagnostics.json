@@ -7,23 +7,58 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'ApiKeyAuth' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 7",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 7,
+      "paths": [
+        [
+          "paths",
+          "/api-docs",
+          "get"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/reset",
+          "post"
+        ],
+        [
+          "paths",
+          "/tag",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -34,22 +69,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -60,24 +94,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Schemas count: 39",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 39
     }
   },
   {
@@ -88,54 +119,1086 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api-docs.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "ApiKeyAuth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "ApiKeyAuth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "X-API-Key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "ApiKeyAuth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 53",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 53
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 21",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 21
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 21",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 21
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 13",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 13,
+      "paths": [
+        [
+          "paths",
+          "/api-docs"
+        ],
+        [
+          "paths",
+          "/api-docs",
+          "get"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/health"
+        ],
+        [
+          "paths",
+          "/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/reset"
+        ],
+        [
+          "paths",
+          "/reset",
+          "post"
+        ],
+        [
+          "paths",
+          "/tag"
+        ],
+        [
+          "paths",
+          "/tag",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 7",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 7,
+      "paths": [
+        [
+          "paths",
+          "/api-docs",
+          "get"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/reset",
+          "post"
+        ],
+        [
+          "paths",
+          "/tag",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 70",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 70,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/api-docs"
+        ],
+        [
+          "paths",
+          "/api-docs",
+          "get"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/health"
+        ],
+        [
+          "paths",
+          "/health",
+          "get"
+        ],
+        [
+          "paths",
+          "/health",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/health",
+          "get",
+          "responses",
+          "503"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/reset"
+        ],
+        [
+          "paths",
+          "/reset",
+          "post"
+        ],
+        [
+          "paths",
+          "/reset",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/tag"
+        ],
+        [
+          "paths",
+          "/tag",
+          "post"
+        ],
+        [
+          "paths",
+          "/tag",
+          "post",
+          "requestBody"
+        ],
+        [
+          "components",
+          "schemas",
+          "contact"
+        ],
+        [
+          "components",
+          "schemas",
+          "contact",
+          "properties",
+          "EmailAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "contact",
+          "properties",
+          "Name"
+        ],
+        [
+          "components",
+          "schemas",
+          "error-response"
+        ],
+        [
+          "components",
+          "schemas",
+          "error-response",
+          "properties",
+          "Code"
+        ],
+        [
+          "components",
+          "schemas",
+          "error-response",
+          "properties",
+          "Message"
+        ],
+        [
+          "components",
+          "schemas",
+          "health"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "BuildTimeStamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "Githash"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "Healths"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "TimeStamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Duration"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Healthy"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Name"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "TimeStamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-create-input"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-create-input",
+          "properties",
+          "ProjectName"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-reset-input"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-reset-input",
+          "properties",
+          "PolicyID"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-reset-input",
+          "properties",
+          "TemplatePolicyID"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "Email"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "EventName"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "TicketID"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "TxnType"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "Username"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-update-input"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-update-input",
+          "properties",
+          "Beneficiaries"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-update-input",
+          "properties",
+          "Categories"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-update-input",
+          "properties",
+          "Categories",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-update-input",
+          "properties",
+          "EntityType"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-update-input",
+          "properties",
+          "ProjectURL"
+        ],
+        [
+          "components",
+          "responses",
+          "error"
+        ],
+        [
+          "components",
+          "responses",
+          "invalid-request"
+        ],
+        [
+          "components",
+          "responses",
+          "not-found"
+        ],
+        [
+          "components",
+          "responses",
+          "ok"
+        ],
+        [
+          "components",
+          "responses",
+          "unauthorized"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "ApiKeyAuth"
+        ],
+        [
+          "tags",
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 37",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 37,
+      "paths": [
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/health",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/health",
+          "get",
+          "responses",
+          "503"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post"
+        ],
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/reset",
+          "post"
+        ],
+        [
+          "paths",
+          "/tag",
+          "post"
+        ],
+        [
+          "components",
+          "schemas",
+          "contact"
+        ],
+        [
+          "components",
+          "schemas",
+          "error-response"
+        ],
+        [
+          "components",
+          "schemas",
+          "error-response",
+          "properties",
+          "Code"
+        ],
+        [
+          "components",
+          "schemas",
+          "error-response",
+          "properties",
+          "Message"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "BuildTimeStamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "Githash"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "health",
+          "properties",
+          "TimeStamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Duration"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Healthy"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "Name"
+        ],
+        [
+          "components",
+          "schemas",
+          "health-status",
+          "properties",
+          "TimeStamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-create-input"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-reset-input"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-reset-input",
+          "properties",
+          "PolicyID"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-reset-input",
+          "properties",
+          "TemplatePolicyID"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "Email"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "EventName"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "TicketID"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "TxnType"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-tag-input",
+          "properties",
+          "Username"
+        ],
+        [
+          "components",
+          "schemas",
+          "policy-update-input"
+        ],
+        [
+          "components",
+          "responses",
+          "error"
+        ],
+        [
+          "components",
+          "responses",
+          "invalid-request"
+        ],
+        [
+          "components",
+          "responses",
+          "not-found"
+        ],
+        [
+          "components",
+          "responses",
+          "ok"
+        ],
+        [
+          "components",
+          "responses",
+          "unauthorized"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "ApiKeyAuth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 7",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
         "paths",
-        "/api-docs",
-        "get",
-        "responses"
+        "/reimbursement/{projectId}",
+        "post",
+        "requestBody",
+        "content",
+        "application/json",
+        "schema",
+        "allOf",
+        1
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./health.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/health",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 7,
+      "paths": []
     }
   },
   {
@@ -161,7 +1224,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -187,7 +1250,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -215,7 +1278,7 @@
         "/api-docs",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -245,7 +1308,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -273,7 +1336,67 @@
         "/expense/{action}/{reportId}",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 31,
+        "character": 10
+      },
+      "end": {
+        "line": 36,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./expense/{action}/{reportId}.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/expense/{action}/{reportId}",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 39,
+        "character": 10
+      },
+      "end": {
+        "line": 44,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./expense/{action}/{reportId}.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/expense/{action}/{reportId}",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -301,7 +1424,7 @@
         "/health",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -329,7 +1452,132 @@
         "/health",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 72,
+        "character": 33
+      },
+      "end": {
+        "line": 74,
+        "character": 55
+      }
+    },
+    "message": "Health path (`/health`) SHOULD support Health Check Response Format [path: paths./health.get.responses.200.content.application/json]",
+    "severity": 2,
+    "code": "api-health-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/health",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 82,
+        "character": 33
+      },
+      "end": {
+        "line": 84,
+        "character": 55
+      }
+    },
+    "message": "Health path (`/health`) SHOULD support Health Check Response Format [path: paths./health.get.responses.503.content.application/json]",
+    "severity": 2,
+    "code": "api-health-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/health",
+        "get",
+        "responses",
+        "503",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 82,
+        "character": 33
+      },
+      "end": {
+        "line": 84,
+        "character": 55
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./health.get.responses.503.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/health",
+        "get",
+        "responses",
+        "503",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 98,
+        "character": 8
+      },
+      "end": {
+        "line": 103,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./reimbursement/{projectId}.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/reimbursement/{projectId}",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -357,7 +1605,7 @@
         "/reset",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -385,7 +1633,795 @@
         "/tag",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 249,
+        "character": 29
+      },
+      "end": {
+        "line": 251,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.error.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "error",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 259,
+        "character": 29
+      },
+      "end": {
+        "line": 261,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.invalid-request.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "invalid-request",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 269,
+        "character": 29
+      },
+      "end": {
+        "line": 271,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.not-found.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "not-found",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 282,
+        "character": 29
+      },
+      "end": {
+        "line": 284,
+        "character": 59
+      }
+    },
+    "message": "Error response should use a standard error format. [path: components.responses.unauthorized.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "responses",
+        "unauthorized",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 310,
+        "character": 17
+      },
+      "end": {
+        "line": 314,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.error-response.properties.Code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "error-response",
+        "properties",
+        "Code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 313,
+        "character": 22
+      },
+      "end": {
+        "line": 313,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.error-response.properties.Code.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "error-response",
+        "properties",
+        "Code",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api-docs.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api-docs",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./health.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/health",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'getDoc' has semantic quality issues: vague_summary, vague_description, missing_context. Original summary is vague ('swagger documentation' is imprecise). Description is completely missing. Added clarity about what is returned, that it's the full API specification, and noted that no authentication is required for this endpoint.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api-docs",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "getDoc",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_context"
+      ],
+      "current_summary": "Get swagger documentation",
+      "current_description": "",
+      "summary_suggestion": "Retrieve OpenAPI/Swagger API documentation",
+      "description_suggestion": "Returns the complete OpenAPI specification for the Reimbursements API in Swagger/OpenAPI format. This documentation includes all available endpoints, schemas, security requirements, and operation details. No authentication required.",
+      "reasoning": "Original summary is vague ('swagger documentation' is imprecise). Description is completely missing. Added clarity about what is returned, that it's the full API specification, and noted that no authentication is required for this endpoint.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api-docs",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api-docs",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'expenseAction' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, missing_side_effects, not_actionable. Summary is too generic ('Expense Action'). Description is incomplete - missing what the action parameter values are, what inputs are required, what is returned, and what side effects occur. Enhanced to clarify the two supported actions, expected parameters, return value, and state change implications for AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/expense/{action}/{reportId}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "expenseAction",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "not_actionable"
+      ],
+      "current_summary": "Expense Action",
+      "current_description": "approves or rejects expense report",
+      "summary_suggestion": "Approve or reject expense report",
+      "description_suggestion": "Processes an action on an expense report identified by reportId. Supports 'approve' or 'reject' actions. The action parameter determines whether the expense report is approved or rejected. Returns the updated expense report status. This operation modifies the report state and may trigger notifications to relevant stakeholders.",
+      "reasoning": "Summary is too generic ('Expense Action'). Description is incomplete - missing what the action parameter values are, what inputs are required, what is returned, and what side effects occur. Enhanced to clarify the two supported actions, expected parameters, return value, and state change implications for AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/expense/{action}/{reportId}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'healthCheck' has semantic quality issues: vague_description, missing_output_details. Summary is clear and actionable. Description is missing entirely. Added details about what health information is returned, that no authentication is needed, and clarified the response structure based on the health-status schema.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/health",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "healthCheck",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "Get API Health Status",
+      "current_description": "",
+      "description_suggestion": "Returns the current health status of the Reimbursements API including service availability, database connectivity, and component status. No authentication required. Returns a health-status object with status indicators and timestamp information.",
+      "reasoning": "Summary is clear and actionable. Description is missing entirely. Added details about what health information is returned, that no authentication is needed, and clarified the response structure based on the health-status schema.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/health",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'updateReimbursement' has semantic quality issues: missing_input_details, missing_output_details, missing_side_effects. Summary is clear. Description lacks specificity about what can be updated, whether partial updates are supported, what is returned, and what side effects occur. Enhanced to clarify the update scope, support for partial updates, return value, and immediate effect on expense processing.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/reimbursement/{projectId}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "updateReimbursement",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Update Reimbursement",
+      "current_description": "Update an existing Reimbursement policy",
+      "description_suggestion": "Updates an existing reimbursement policy identified by projectId. Accepts partial updates via the policy-update-input schema. Modifies policy configuration including reimbursement rules and settings. Returns the updated reimbursement policy object. Changes take effect immediately and may affect future expense processing for the project.",
+      "reasoning": "Summary is clear. Description lacks specificity about what can be updated, whether partial updates are supported, what is returned, and what side effects occur. Enhanced to clarify the update scope, support for partial updates, return value, and immediate effect on expense processing.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'createReimbursement' has semantic quality issues: missing_input_details, missing_output_details, missing_side_effects. Summary is clear and actionable. Description is too brief and missing details about inputs, outputs, and side effects. Enhanced to clarify what input is required, what is returned (including policy ID), and that the policy becomes immediately active.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/reimbursement/{projectId}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "createReimbursement",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Create Reimbursement",
+      "current_description": "Create a new Reimbursement policy",
+      "description_suggestion": "Creates a new reimbursement policy for the specified projectId. Accepts policy configuration via policy-create-input schema. Returns the newly created reimbursement policy object with assigned policy ID and default settings. The policy becomes active immediately and applies to all future expenses submitted under the project.",
+      "reasoning": "Summary is clear and actionable. Description is too brief and missing details about inputs, outputs, and side effects. Enhanced to clarify what input is required, what is returned (including policy ID), and that the policy becomes immediately active.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/reimbursement/{projectId}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'resetPolicy' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Summary is vague ('Reset Policy' doesn't indicate what is being reset to). Description lacks clarity on inputs, outputs, and critical side effects. Enhanced to clarify the reset target (template defaults), what inputs are required, what is returned, and the destructive nature of the operation for AI agent safety.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/reset",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "resetPolicy",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Reset Policy",
+      "current_description": "Reset an existing policy to match with templatePolicy",
+      "summary_suggestion": "Reset policy to template defaults",
+      "description_suggestion": "Resets an existing reimbursement policy to match the specified templatePolicy configuration. Accepts policy-reset-input containing the policy identifier and template reference. All custom policy settings are reverted to template defaults. Returns the reset policy object. This operation overwrites current policy configuration and cannot be undone without manual reconfiguration.",
+      "reasoning": "Summary is vague ('Reset Policy' doesn't indicate what is being reset to). Description lacks clarity on inputs, outputs, and critical side effects. Enhanced to clarify the reset target (template defaults), what inputs are required, what is returned, and the destructive nature of the operation for AI agent safety.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/reset",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/reset",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'tagPolicy' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details. Summary is vague ('Tag Policy' is unclear about the action). Description is circular and uninformative ('Tag adds a tag'). Missing details about what inputs are required, what is returned, and the purpose of tagging. Enhanced to clarify the action (adding tags), inputs, outputs, and the organizational benefit of tags.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/tag",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "tagPolicy",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Tag Policy",
+      "current_description": "Tag adds a tag to the policy",
+      "summary_suggestion": "Add tag to reimbursement policy",
+      "description_suggestion": "Adds one or more tags to a reimbursement policy for categorization and organization. Accepts policy-tag-input containing the policy identifier and tag information. Tags enable filtering, searching, and organizing policies. Returns the updated policy object with the newly added tags. Tags do not affect policy functionality but improve policy management and discoverability.",
+      "reasoning": "Summary is vague ('Tag Policy' is unclear about the action). Description is circular and uninformative ('Tag adds a tag'). Missing details about what inputs are required, what is returned, and the purpose of tagging. Enhanced to clarify the action (adding tags), inputs, outputs, and the organizational benefit of tags.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/tag",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/tag",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 7 operations analyzed, 7 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 7,
+      "total_issues_found": 7,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 36 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 36
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 36 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 36
     }
   }
 ]

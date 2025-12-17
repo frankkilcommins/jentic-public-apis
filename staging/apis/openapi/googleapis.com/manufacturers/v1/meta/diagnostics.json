@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -140,7 +140,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -164,7 +164,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -188,7 +188,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -212,7 +212,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -236,7 +236,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -260,7 +260,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -271,24 +271,63 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 8",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 8,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete"
+        ]
+      ]
     }
   },
   {
@@ -299,25 +338,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -328,27 +363,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 200",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 200
     }
   },
   {
@@ -359,25 +388,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -388,27 +425,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -419,25 +464,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -448,27 +522,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -479,25 +547,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/productCertifications.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 240",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/productCertifications",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 240
     }
   },
   {
@@ -508,27 +572,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/productCertifications`. [path: paths./v1/{+parent}/productCertifications.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/productCertifications",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -539,14 +597,3206 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 12",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 12,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 257",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 257,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          1,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          2,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "additionalImageLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "ageGroup"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "certification"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "color"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "disclosureDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "excludedDestination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "excludedDestination",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "featureDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "flavor"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "format"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "gender"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "gtin"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "gtin",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "includedDestination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "includedDestination",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "intendedCountry"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "intendedCountry",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "itemGroupId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "material"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "mpn"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "pattern"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productHighlight"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productHighlight",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productLine"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productPageUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productType",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "releaseDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "richProductContent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "richProductContent",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "scent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "size"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "sizeSystem"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "sizeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "sizeType",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "targetClientId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "theme"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "videoLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "videoLink",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "virtualModelLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "Capacity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Capacity",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Capacity",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "authority"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "logo"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "validUntil"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "approvedCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "approvedCountries",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "destination"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "disapprovedCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "disapprovedCountries",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "pendingCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "pendingCountries",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "FeatureDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "FeatureDescription",
+          "properties",
+          "headline"
+        ],
+        [
+          "components",
+          "schemas",
+          "FeatureDescription",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "schemas",
+          "FloatUnit"
+        ],
+        [
+          "components",
+          "schemas",
+          "FloatUnit",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "FloatUnit",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification",
+          "properties",
+          "authority"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "activeIngredients"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "alcoholByVolume"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "allergens"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "derivedNutritionClaim"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "derivedNutritionClaim",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "directions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "indications"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "ingredients"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "nutritionClaim"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "nutritionClaim",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "storageInstructions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "imageUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "applicableCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "applicableCountries",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "attribute"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "destination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "resolution"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductCertificationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductCertificationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductCertificationsResponse",
+          "properties",
+          "productCertifications"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductsResponse",
+          "properties",
+          "products"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "addedSugarsDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "calciumDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "cholesterolDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "dietaryFiberDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "folateDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "folateMcgDfe"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "ironDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "nutritionFactMeasure"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "potassiumDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "preparedSizeDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "proteinDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "saturatedFatDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "servingSizeDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "servingsPerContainer"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "sodiumDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "totalCarbohydrateDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "totalFatDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "totalSugarsDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "transFatDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "vitaminDDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "voluntaryNutritionFact"
+        ],
+        [
+          "components",
+          "schemas",
+          "Price"
+        ],
+        [
+          "components",
+          "schemas",
+          "Price",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Price",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "contentLanguage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "destinationStatuses"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "feedLabel"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "parent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "productId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "targetCountry"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "certification"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "countryCode",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "destinationStatuses"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "mpn"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "mpn",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "productCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "productCode",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "productType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "productType",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail",
+          "properties",
+          "attributeName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail",
+          "properties",
+          "attributeValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail",
+          "properties",
+          "sectionName"
+        ],
+        [
+          "components",
+          "schemas",
+          "VoluntaryNutritionFact"
+        ],
+        [
+          "components",
+          "schemas",
+          "VoluntaryNutritionFact",
+          "properties",
+          "dailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "VoluntaryNutritionFact",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 195",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 195,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "additionalImageLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "ageGroup"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "certification"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "color"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "disclosureDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "excludedDestination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "featureDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "flavor"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "format"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "gender"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "gtin"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "includedDestination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "intendedCountry"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "itemGroupId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "material"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "mpn"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "pattern"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productHighlight"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productLine"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productPageUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "productType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "releaseDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "richProductContent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "scent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "size"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "sizeSystem"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "sizeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "targetClientId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "theme"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "videoLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "virtualModelLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "Capacity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Capacity",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Capacity",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "authority"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "logo"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "validUntil"
+        ],
+        [
+          "components",
+          "schemas",
+          "Certification",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "approvedCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "destination"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "disapprovedCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "pendingCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "DestinationStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "FeatureDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "FeatureDescription",
+          "properties",
+          "headline"
+        ],
+        [
+          "components",
+          "schemas",
+          "FeatureDescription",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "schemas",
+          "FloatUnit"
+        ],
+        [
+          "components",
+          "schemas",
+          "FloatUnit",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "FloatUnit",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification",
+          "properties",
+          "authority"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleShoppingManufacturersV1ProductCertification",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "activeIngredients"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "alcoholByVolume"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "allergens"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "derivedNutritionClaim"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "directions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "indications"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "ingredients"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "nutritionClaim"
+        ],
+        [
+          "components",
+          "schemas",
+          "Grocery",
+          "properties",
+          "storageInstructions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "imageUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "applicableCountries"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "attribute"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "destination"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "resolution"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Issue",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductCertificationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductCertificationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductCertificationsResponse",
+          "properties",
+          "productCertifications"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListProductsResponse",
+          "properties",
+          "products"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "addedSugarsDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "calciumDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "cholesterolDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "dietaryFiberDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "folateDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "folateMcgDfe"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "ironDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "nutritionFactMeasure"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "potassiumDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "preparedSizeDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "proteinDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "saturatedFatDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "servingSizeDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "servingsPerContainer"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "sodiumDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "totalCarbohydrateDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "totalFatDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "totalSugarsDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "transFatDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "vitaminDDailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Nutrition",
+          "properties",
+          "voluntaryNutritionFact"
+        ],
+        [
+          "components",
+          "schemas",
+          "Price"
+        ],
+        [
+          "components",
+          "schemas",
+          "Price",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Price",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "contentLanguage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "destinationStatuses"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "feedLabel"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "parent"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "productId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Product",
+          "properties",
+          "targetCountry"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "certification"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "destinationStatuses"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "mpn"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "productCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "productType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductCertification",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail",
+          "properties",
+          "attributeName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail",
+          "properties",
+          "attributeValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProductDetail",
+          "properties",
+          "sectionName"
+        ],
+        [
+          "components",
+          "schemas",
+          "VoluntaryNutritionFact"
+        ],
+        [
+          "components",
+          "schemas",
+          "VoluntaryNutritionFact",
+          "properties",
+          "dailyPercentage"
+        ],
+        [
+          "components",
+          "schemas",
+          "VoluntaryNutritionFact",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 15",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -555,573 +3805,15 @@
         "paths",
         "/v1/{+parent}/products",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products`. [path: paths./v1/{+parent}/products.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.get.parameters.1.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "get",
-        "parameters",
-        1,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products/{+name}.put.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "put",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.put.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "put",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.put.parameters.1.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "put",
-        "parameters",
-        1,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.delete.parameters.1.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "delete",
-        "parameters",
-        1,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/productCertifications.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/productCertifications",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products/{+name}.put.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "put",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/products/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 15,
+      "paths": []
     }
   },
   {
@@ -1149,7 +3841,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 605,
+        "character": 57
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 15
+      },
+      "end": {
+        "line": 97,
+        "character": 86
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1179,7 +3955,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 99,
+        "character": 12
+      },
+      "end": {
+        "line": 137,
+        "character": 83
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 101,
+        "character": 10
+      },
+      "end": {
+        "line": 107,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1209,7 +4043,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 139,
+        "character": 14
+      },
+      "end": {
+        "line": 190,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 141,
+        "character": 10
+      },
+      "end": {
+        "line": 147,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1239,7 +4131,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 150,
+        "character": 10
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 233,
+        "character": 12
+      },
+      "end": {
+        "line": 287,
+        "character": 84
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/productCertifications.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 235,
+        "character": 10
+      },
+      "end": {
+        "line": 241,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/productCertifications.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1269,7 +4249,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 244,
+        "character": 10
+      },
+      "end": {
+        "line": 249,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/productCertifications.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 252,
+        "character": 10
+      },
+      "end": {
+        "line": 257,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/productCertifications.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 326,
+        "character": 12
+      },
+      "end": {
+        "line": 398,
+        "character": 61
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/products.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 328,
+        "character": 10
+      },
+      "end": {
+        "line": 334,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/products.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1299,7 +4397,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 337,
+        "character": 10
+      },
+      "end": {
+        "line": 352,
+        "character": 29
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/products.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 355,
+        "character": 10
+      },
+      "end": {
+        "line": 360,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/products.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 363,
+        "character": 10
+      },
+      "end": {
+        "line": 368,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+parent}/products.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 437,
+        "character": 15
+      },
+      "end": {
+        "line": 484,
+        "character": 63
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/products/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 439,
+        "character": 10
+      },
+      "end": {
+        "line": 445,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/products/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1329,7 +4575,37 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 448,
+        "character": 10
+      },
+      "end": {
+        "line": 454,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/products/{+name}.delete.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1359,7 +4635,65 @@
         "parameters",
         "1"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 486,
+        "character": 12
+      },
+      "end": {
+        "line": 551,
+        "character": 60
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/products/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 488,
+        "character": 10
+      },
+      "end": {
+        "line": 494,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/products/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1389,7 +4723,37 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 497,
+        "character": 10
+      },
+      "end": {
+        "line": 503,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/products/{+name}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1419,7 +4783,95 @@
         "parameters",
         "1"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 506,
+        "character": 10
+      },
+      "end": {
+        "line": 521,
+        "character": 29
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/products/{+name}.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 553,
+        "character": 12
+      },
+      "end": {
+        "line": 605,
+        "character": 57
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/products/{+name}.put]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 555,
+        "character": 10
+      },
+      "end": {
+        "line": 561,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/products/{+name}.put.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1449,7 +4901,37 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 564,
+        "character": 10
+      },
+      "end": {
+        "line": 570,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/products/{+name}.put.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1479,7 +4961,373 @@
         "parameters",
         "1"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 615,
+        "character": 16
+      },
+      "end": {
+        "line": 624,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 627,
+        "character": 21
+      },
+      "end": {
+        "line": 632,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 630,
+        "character": 16
+      },
+      "end": {
+        "line": 630,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 635,
+        "character": 12
+      },
+      "end": {
+        "line": 646,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 649,
+        "character": 17
+      },
+      "end": {
+        "line": 654,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 657,
+        "character": 15
+      },
+      "end": {
+        "line": 662,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 665,
+        "character": 12
+      },
+      "end": {
+        "line": 670,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 673,
+        "character": 20
+      },
+      "end": {
+        "line": 678,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 676,
+        "character": 16
+      },
+      "end": {
+        "line": 676,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 681,
+        "character": 20
+      },
+      "end": {
+        "line": 687,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 690,
+        "character": 18
+      },
+      "end": {
+        "line": 695,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 698,
+        "character": 19
+      },
+      "end": {
+        "line": 703,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 706,
+        "character": 24
+      },
+      "end": {
+        "line": 711,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1510,7 +5358,7 @@
         "capacity",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1541,7 +5389,7 @@
         "count",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1572,7 +5420,7 @@
         "grocery",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1603,7 +5451,7 @@
         "imageLink",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1634,7 +5482,7 @@
         "nutrition",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1665,7 +5513,67 @@
         "suggestedRetailPrice",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 936,
+        "character": 18
+      },
+      "end": {
+        "line": 939,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Capacity.properties.value]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Capacity",
+        "properties",
+        "value"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 985,
+        "character": 18
+      },
+      "end": {
+        "line": 988,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Count.properties.value]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Count",
+        "properties",
+        "value"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1696,7 +5604,67 @@
         "image",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1063,
+        "character": 19
+      },
+      "end": {
+        "line": 1066,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.FloatUnit.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "FloatUnit",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1099,
+        "character": 28
+      },
+      "end": {
+        "line": 1102,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Grocery.properties.alcoholByVolume]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Grocery",
+        "properties",
+        "alcoholByVolume"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1727,7 +5695,37 @@
         "addedSugars",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1276,
+        "character": 39
+      },
+      "end": {
+        "line": 1279,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.addedSugarsDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "addedSugarsDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1758,7 +5756,37 @@
         "calcium",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1285,
+        "character": 35
+      },
+      "end": {
+        "line": 1288,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.calciumDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "calciumDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1789,7 +5817,37 @@
         "cholesterol",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1294,
+        "character": 39
+      },
+      "end": {
+        "line": 1297,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.cholesterolDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "cholesterolDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1820,7 +5878,37 @@
         "dietaryFiber",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1303,
+        "character": 40
+      },
+      "end": {
+        "line": 1306,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.dietaryFiberDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "dietaryFiberDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1851,7 +5939,7 @@
         "energy",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1882,7 +5970,37 @@
         "energyFromFat",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1316,
+        "character": 34
+      },
+      "end": {
+        "line": 1319,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.folateDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "folateDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1913,7 +6031,37 @@
         "folateFolicAcid",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1325,
+        "character": 25
+      },
+      "end": {
+        "line": 1328,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.folateMcgDfe]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "folateMcgDfe"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1944,7 +6092,37 @@
         "iron",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1334,
+        "character": 32
+      },
+      "end": {
+        "line": 1337,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.ironDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "ironDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1975,7 +6153,7 @@
         "monounsaturatedFat",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2006,7 +6184,7 @@
         "polyols",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2037,7 +6215,7 @@
         "polyunsaturatedFat",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2068,7 +6246,37 @@
         "potassium",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1359,
+        "character": 37
+      },
+      "end": {
+        "line": 1362,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.potassiumDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "potassiumDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2099,7 +6307,37 @@
         "protein",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1372,
+        "character": 35
+      },
+      "end": {
+        "line": 1375,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.proteinDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "proteinDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2130,7 +6368,37 @@
         "saturatedFat",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1381,
+        "character": 40
+      },
+      "end": {
+        "line": 1384,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.saturatedFatDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "saturatedFatDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2161,7 +6429,7 @@
         "servingSizeMeasure",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2192,7 +6460,37 @@
         "sodium",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1402,
+        "character": 34
+      },
+      "end": {
+        "line": 1405,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.sodiumDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "sodiumDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2223,7 +6521,7 @@
         "starch",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2254,7 +6552,37 @@
         "totalCarbohydrate",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1415,
+        "character": 45
+      },
+      "end": {
+        "line": 1418,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.totalCarbohydrateDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "totalCarbohydrateDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2285,7 +6613,37 @@
         "totalFat",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1424,
+        "character": 36
+      },
+      "end": {
+        "line": 1427,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.totalFatDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "totalFatDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2316,7 +6674,37 @@
         "totalSugars",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1433,
+        "character": 39
+      },
+      "end": {
+        "line": 1436,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.totalSugarsDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "totalSugarsDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2347,7 +6735,37 @@
         "transFat",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1442,
+        "character": 36
+      },
+      "end": {
+        "line": 1445,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.transFatDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "transFatDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2378,7 +6796,37 @@
         "vitaminD",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1451,
+        "character": 36
+      },
+      "end": {
+        "line": 1454,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Nutrition.properties.vitaminDDailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Nutrition",
+        "properties",
+        "vitaminDDailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2409,7 +6857,37 @@
         "attributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1618,
+        "character": 28
+      },
+      "end": {
+        "line": 1621,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.VoluntaryNutritionFact.properties.dailyPercentage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "VoluntaryNutritionFact",
+        "properties",
+        "dailyPercentage"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2440,7 +6918,1436 @@
         "value",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/productCertifications`. [path: paths./v1/{+parent}/productCertifications.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products`. [path: paths./v1/{+parent}/products.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.get.parameters.1.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get",
+        "parameters",
+        "1",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.put.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.put.parameters.1.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put",
+        "parameters",
+        "1",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+parent}/products/{+name}`. [path: paths./v1/{+parent}/products/{+name}.delete.parameters.1.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete",
+        "parameters",
+        "1",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/productCertifications.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/productCertifications.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products/{+name}.put.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products/{+name}.put.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/products/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/products/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.products.update' has semantic quality issues: vague_summary, missing_output_details, poor_ai_interpretability. The current summary is missing entirely. The description is verbose and difficult for AI agents to parse due to its length and complex conditional logic. The response schema information is missing. Improved summary provides clear action-oriented language. Improved description reorganizes information for clarity, explicitly states the return value, and better separates the main operation from asynchronous processing details, making it easier for AI agents to understand when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "put"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.products.update",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Inserts or updates the attributes of the product in a Manufacturer Center account. Creates a product with the provided attributes. If the product already exists, then all attributes are replaced with the new ones. The checks at upload time are minimal. All required attributes need to be present for a product to be valid. Issues may show up later after the API has accepted a new upload for a product and it is possible to overwrite an existing valid product with an invalid product. To detect this, you should retrieve the product and check it for issues once the new version is available. Uploaded attributes first need to be processed before they can be retrieved. Until then, new products will be unavailable, and retrieval of previously uploaded products will return the original state of the product.",
+      "summary_suggestion": "Create or update product attributes",
+      "description_suggestion": "Inserts or updates product attributes in a Manufacturer Center account. If the product does not exist, it will be created with the provided attributes. If the product exists, all attributes are replaced with the new ones. The operation performs minimal validation at upload time; all required attributes must be present for the product to be valid. Note: Uploaded attributes require processing before retrieval. During processing, new products are unavailable and existing products return their previous state. After processing completes, retrieve the product and check for issues to validate the update. Returns the updated Product object.",
+      "reasoning": "The current summary is missing entirely. The description is verbose and difficult for AI agents to parse due to its length and complex conditional logic. The response schema information is missing. Improved summary provides clear action-oriented language. Improved description reorganizes information for clarity, explicitly states the return value, and better separates the main operation from asynchronous processing details, making it easier for AI agents to understand when and how to use this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "put",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.languages.productCertifications.delete' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Missing summary entirely. Description lacks clarity on what resource name parameter is expected, what the deletion effect is (permanent removal), and what response is returned. Added input parameter context, side effect (permanent deletion), and output details for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.languages.productCertifications.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes a product certification by its name. This method can only be called by certification bodies.",
+      "summary_suggestion": "Delete a product certification by name",
+      "description_suggestion": "Deletes a product certification identified by its resource name. This operation permanently removes the certification link between a product and its certification body. Only certification bodies are authorized to perform this action. Returns an empty response on successful deletion.",
+      "reasoning": "Missing summary entirely. Description lacks clarity on what resource name parameter is expected, what the deletion effect is (permanent removal), and what response is returned. Added input parameter context, side effect (permanent deletion), and output details for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.languages.productCertifications.get' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description lacks input parameter context (resource name format) and output details (what ProductCertification object contains). Added clarity on expected input format and response structure for AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.languages.productCertifications.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets a product certification by its name. This method can only be called by certification bodies.",
+      "summary_suggestion": "Retrieve a product certification by name",
+      "description_suggestion": "Retrieves a product certification identified by its resource name. Returns the complete ProductCertification object containing certification details, linked product information, and certification metadata. Only certification bodies are authorized to access this data.",
+      "reasoning": "Missing summary entirely. Description lacks input parameter context (resource name format) and output details (what ProductCertification object contains). Added clarity on expected input format and response structure for AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.languages.productCertifications.patch' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description mentions allow_missing parameter but lacks clarity on request body structure, return value, and partial update behavior. Added explicit mention of ProductCertification request schema, return object details, and conditional creation logic for better AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.languages.productCertifications.patch",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Updates (or creates if allow_missing = true) a product certification which links certifications with products. This method can only be called by certification bodies.",
+      "summary_suggestion": "Update or create a product certification",
+      "description_suggestion": "Updates an existing product certification or creates a new one if allow_missing is set to true. Accepts a ProductCertification object containing certification details and product linkage information. Returns the updated or newly created ProductCertification object. Only certification bodies are authorized to perform this operation. Supports partial updates when allow_missing is false.",
+      "reasoning": "Missing summary entirely. Description mentions allow_missing parameter but lacks clarity on request body structure, return value, and partial update behavior. Added explicit mention of ProductCertification request schema, return object details, and conditional creation logic for better AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.languages.productCertifications.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description lacks input context (parent parameter meaning), output details (response structure), and pagination information. Added clarity on parent parameter semantics, response schema reference, and pagination support for AI agent usability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/productCertifications",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.languages.productCertifications.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists product certifications from a specified certification body. This method can only be called by certification bodies.",
+      "summary_suggestion": "List product certifications for a certification body",
+      "description_suggestion": "Lists all product certifications associated with a specified certification body identified by the parent resource. Returns a ListProductCertificationsResponse containing an array of ProductCertification objects and pagination information. Supports filtering and pagination parameters. Only certification bodies are authorized to access this data.",
+      "reasoning": "Missing summary entirely. Description lacks input context (parent parameter meaning), output details (response structure), and pagination information. Added clarity on parent parameter semantics, response schema reference, and pagination support for AI agent usability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/productCertifications",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.products.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description is too generic and lacks input parameter context (parent resource), output structure details (ListProductsResponse), and pagination/filtering capabilities. Added specificity about parent parameter, response schema, supported query parameters, and authentication requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.products.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists all the products in a Manufacturer Center account.",
+      "summary_suggestion": "List all products in a manufacturer account",
+      "description_suggestion": "Lists all products in a specified Manufacturer Center account identified by the parent resource. Returns a ListProductsResponse containing an array of Product objects with their attributes and current status. Supports filtering, sorting, and pagination parameters. Requires authentication with appropriate account access permissions.",
+      "reasoning": "Missing summary entirely. Description is too generic and lacks input parameter context (parent resource), output structure details (ListProductsResponse), and pagination/filtering capabilities. Added specificity about parent parameter, response schema, supported query parameters, and authentication requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.products.delete' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Missing summary entirely. Description lacks input parameter context (resource name), side effects (permanent deletion of associated data), output details, and authorization requirements. Added clarity on what gets deleted, authorization requirements, and response format for AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.products.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes the product from a Manufacturer Center account.",
+      "summary_suggestion": "Delete a product from manufacturer account",
+      "description_suggestion": "Deletes a product from a Manufacturer Center account identified by its resource name. This operation permanently removes the product and all associated data including attributes, certifications, and issue history. Returns an empty response on successful deletion. Requires authentication with account owner or administrator permissions.",
+      "reasoning": "Missing summary entirely. Description lacks input parameter context (resource name), side effects (permanent deletion of associated data), output details, and authorization requirements. Added clarity on what gets deleted, authorization requirements, and response format for AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'manufacturers.accounts.products.get' has semantic quality issues: vague_summary, missing_input_details. Missing summary entirely. Description provides good context about processing delays but lacks input parameter clarity (resource name format) and explicit output structure details. Added summary and clarified input parameter semantics while preserving important processing timeline information for AI agent awareness.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/products/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "manufacturers.accounts.products.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets the product from a Manufacturer Center account, including product issues. A recently updated product takes around 15 minutes to process. Changes are only visible after it has been processed. While some issues may be available once the product has been processed, other issues may take days to appear.",
+      "summary_suggestion": "Retrieve a product with issues and status",
+      "description_suggestion": "Retrieves a product from a Manufacturer Center account identified by its resource name, including all associated product issues and current validation status. Returns a Product object containing attributes, certifications, and Issue objects. Note: Recently updated products require approximately 15 minutes for processing; changes become visible only after processing completes. Some issues appear immediately upon processing, while others may take up to several days to surface. Requires authentication with account access permissions.",
+      "reasoning": "Missing summary entirely. Description provides good context about processing delays but lacks input parameter clarity (resource name format) and explicit output structure details. Added summary and clarified input parameter semantics while preserving important processing timeline information for AI agent awareness.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/products/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 8 operations analyzed, 8 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 8,
+      "total_issues_found": 8,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 97 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 97
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 97 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 97
     }
   }
 ]

@@ -7,25 +7,53 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./shipment/{shipmentId}/cancel.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total Operations count: 6",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/shipment/{shipmentId}/cancel",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 6,
+      "paths": [
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -36,25 +64,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./shipment/create_from_shipping_quote.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/shipment/create_from_shipping_quote",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -65,25 +89,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./shipment/{shipmentId}/download_label_file.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Schemas count: 118",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/shipment/{shipmentId}/download_label_file",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 118
     }
   },
   {
@@ -94,25 +114,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./shipment/{shipmentId}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/shipment/{shipmentId}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_auth"
+        ]
+      ]
     }
   },
   {
@@ -123,14 +146,2459 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./shipping_quote.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_auth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_auth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 136",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 136
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 12",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 12,
+      "paths": [
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipping_quote"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 170",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 170,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "servers",
+          0,
+          "variables",
+          "basePath"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/pdf",
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/pdf",
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipping_quote"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalOption"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalOption",
+          "properties",
+          "optionType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Amount",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Amount",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "companyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "fullName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "addressLine1"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "addressLine2"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "city"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "county"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "postalCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "stateOrProvince"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "additionalOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "labelCustomMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "labelSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "rateId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "shippingQuoteId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "height"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "length"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "width"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "domain"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errorId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "inputRefIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "inputRefIds",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "longMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "outputRefIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "outputRefIds",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "parameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subdomain"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorParameter"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorParameter",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorParameter",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "channel"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "orderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PackageSpecification"
+        ],
+        [
+          "components",
+          "schemas",
+          "PhoneNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "PhoneNumber",
+          "properties",
+          "phoneNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotEndTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotStartTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotTimeZone"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "additionalOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "destinationTimeZone"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "maxEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "minEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "pickupNetworks"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "pickupNetworks",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "pickupSlotId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "pickupType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "rateId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingCarrierCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingCarrierName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingQuoteId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingServiceCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingServiceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "additionalOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "destinationTimeZone"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "maxEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "minEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "pickupNetworks"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "pickupNetworks",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "pickupSlots"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "pickupType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "rateId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "rateRecommendation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "rateRecommendation",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingCarrierCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingCarrierName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingServiceCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingServiceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "creationDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "labelCustomMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "labelDownloadUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "labelSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "shipmentId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "shipmentTrackingNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShipmentCancellation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShipmentCancellation",
+          "properties",
+          "cancellationRequestedDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShipmentCancellation",
+          "properties",
+          "cancellationStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "creationDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "expirationDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "rates"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "shippingQuoteId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "warnings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuoteRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuoteRequest",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "Weight"
+        ],
+        [
+          "components",
+          "schemas",
+          "Weight",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Weight",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api_auth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 148",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 148,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalOption"
+        ],
+        [
+          "components",
+          "schemas",
+          "AdditionalOption",
+          "properties",
+          "optionType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Amount",
+          "properties",
+          "currency"
+        ],
+        [
+          "components",
+          "schemas",
+          "Amount",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "companyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Contact",
+          "properties",
+          "fullName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "addressLine1"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "addressLine2"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "city"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "county"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "postalCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContactAddress",
+          "properties",
+          "stateOrProvince"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "additionalOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "labelCustomMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "labelSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "rateId"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateShipmentFromQuoteRequest",
+          "properties",
+          "shippingQuoteId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "height"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "length"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Dimensions",
+          "properties",
+          "width"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "domain"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errorId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "inputRefIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "longMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "outputRefIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "parameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subdomain"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorParameter"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorParameter",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorParameter",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "channel"
+        ],
+        [
+          "components",
+          "schemas",
+          "Order",
+          "properties",
+          "orderId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PackageSpecification"
+        ],
+        [
+          "components",
+          "schemas",
+          "PhoneNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "PhoneNumber",
+          "properties",
+          "phoneNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotEndTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotStartTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "PickupSlot",
+          "properties",
+          "pickupSlotTimeZone"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "additionalOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "destinationTimeZone"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "maxEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "minEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "pickupNetworks"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "pickupSlotId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "pickupType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "rateId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingCarrierCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingCarrierName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingQuoteId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingServiceCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PurchasedRate",
+          "properties",
+          "shippingServiceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "additionalOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "destinationTimeZone"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "maxEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "minEstimatedDeliveryDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "pickupNetworks"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "pickupSlots"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "pickupType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "rateId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "rateRecommendation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "rateRecommendation",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingCarrierCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingCarrierName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingServiceCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "Rate",
+          "properties",
+          "shippingServiceName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "creationDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "labelCustomMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "labelDownloadUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "labelSize"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "shipmentId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Shipment",
+          "properties",
+          "shipmentTrackingNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShipmentCancellation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShipmentCancellation",
+          "properties",
+          "cancellationRequestedDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShipmentCancellation",
+          "properties",
+          "cancellationStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "creationDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "expirationDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "rates"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "shippingQuoteId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuote",
+          "properties",
+          "warnings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuoteRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ShippingQuoteRequest",
+          "properties",
+          "orders"
+        ],
+        [
+          "components",
+          "schemas",
+          "Weight"
+        ],
+        [
+          "components",
+          "schemas",
+          "Weight",
+          "properties",
+          "unit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Weight",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api_auth"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 11",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -139,38 +2607,69 @@
         "paths",
         "/shipping_quote",
         "post",
-        "summary"
+        "responses",
+        "201",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 11,
+      "paths": []
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 26,
+        "character": 10
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 550,
+        "character": 67
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./shipping_quote/{shippingQuoteId}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 28,
+        "character": 13
+      },
+      "end": {
+        "line": 99,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./shipment/{shipmentId}/cancel.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
         "paths",
-        "/shipping_quote/{shippingQuoteId}",
-        "get",
-        "summary"
+        "/shipment/{shipmentId}/cancel",
+        "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -200,7 +2699,185 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 35,
+        "character": 10
+      },
+      "end": {
+        "line": 41,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./shipment/{shipmentId}/cancel.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/cancel",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 56,
+        "character": 16
+      },
+      "end": {
+        "line": 57,
+        "character": 40
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}/cancel.post.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/cancel",
+        "post",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 16
+      },
+      "end": {
+        "line": 66,
+        "character": 67
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}/cancel.post.responses.404]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/cancel",
+        "post",
+        "responses",
+        "404"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 71,
+        "character": 16
+      },
+      "end": {
+        "line": 78,
+        "character": 70
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}/cancel.post.responses.409]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/cancel",
+        "post",
+        "responses",
+        "409"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 83,
+        "character": 16
+      },
+      "end": {
+        "line": 90,
+        "character": 63
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}/cancel.post.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/cancel",
+        "post",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 106,
+        "character": 13
+      },
+      "end": {
+        "line": 210,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./shipment/create_from_shipping_quote.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -230,7 +2907,98 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 113,
+        "character": 10
+      },
+      "end": {
+        "line": 119,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./shipment/create_from_shipping_quote.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 122,
+        "character": 10
+      },
+      "end": {
+        "line": 128,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./shipment/create_from_shipping_quote.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 123,
+        "character": 20
+      },
+      "end": {
+        "line": 123,
+        "character": 45
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: paths./shipment/create_from_shipping_quote.post.parameters.1.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post",
+        "parameters",
+        "1",
+        "name"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -263,7 +3031,125 @@
         "schema",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 16
+      },
+      "end": {
+        "line": 167,
+        "character": 61
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/create_from_shipping_quote.post.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 172,
+        "character": 16
+      },
+      "end": {
+        "line": 189,
+        "character": 100
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/create_from_shipping_quote.post.responses.409]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post",
+        "responses",
+        "409"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 194,
+        "character": 16
+      },
+      "end": {
+        "line": 201,
+        "character": 63
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/create_from_shipping_quote.post.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 217,
+        "character": 12
+      },
+      "end": {
+        "line": 288,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./shipment/{shipmentId}/download_label_file.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -293,7 +3179,185 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 224,
+        "character": 10
+      },
+      "end": {
+        "line": 230,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./shipment/{shipmentId}/download_label_file.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 233,
+        "character": 10
+      },
+      "end": {
+        "line": 239,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./shipment/{shipmentId}/download_label_file.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 257,
+        "character": 16
+      },
+      "end": {
+        "line": 258,
+        "character": 40
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}/download_label_file.get.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 260,
+        "character": 16
+      },
+      "end": {
+        "line": 267,
+        "character": 67
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}/download_label_file.get.responses.404]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get",
+        "responses",
+        "404"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 272,
+        "character": 16
+      },
+      "end": {
+        "line": 279,
+        "character": 63
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}/download_label_file.get.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 295,
+        "character": 12
+      },
+      "end": {
+        "line": 354,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./shipment/{shipmentId}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}",
+        "get"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -323,7 +3387,155 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 302,
+        "character": 10
+      },
+      "end": {
+        "line": 308,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./shipment/{shipmentId}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 323,
+        "character": 16
+      },
+      "end": {
+        "line": 324,
+        "character": 40
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}.get.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}",
+        "get",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 326,
+        "character": 16
+      },
+      "end": {
+        "line": 333,
+        "character": 67
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}.get.responses.404]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}",
+        "get",
+        "responses",
+        "404"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 338,
+        "character": 16
+      },
+      "end": {
+        "line": 345,
+        "character": 63
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipment/{shipmentId}.get.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}",
+        "get",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 361,
+        "character": 13
+      },
+      "end": {
+        "line": 484,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./shipping_quote.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -353,7 +3565,98 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 368,
+        "character": 10
+      },
+      "end": {
+        "line": 374,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./shipping_quote.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 369,
+        "character": 20
+      },
+      "end": {
+        "line": 369,
+        "character": 45
+      }
+    },
+    "message": "Header `name` should not start with \"X-\". [path: paths./shipping_quote.post.parameters.0.name]",
+    "severity": 2,
+    "code": "no-x-headers",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 377,
+        "character": 10
+      },
+      "end": {
+        "line": 383,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./shipping_quote.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -386,7 +3689,125 @@
         "schema",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 419,
+        "character": 16
+      },
+      "end": {
+        "line": 436,
+        "character": 85
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipping_quote.post.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 441,
+        "character": 16
+      },
+      "end": {
+        "line": 463,
+        "character": 95
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipping_quote.post.responses.409]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post",
+        "responses",
+        "409"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 468,
+        "character": 16
+      },
+      "end": {
+        "line": 475,
+        "character": 63
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipping_quote.post.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 491,
+        "character": 12
+      },
+      "end": {
+        "line": 550,
+        "character": 67
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./shipping_quote/{shippingQuoteId}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote/{shippingQuoteId}",
+        "get"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -416,7 +3837,127 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 498,
+        "character": 10
+      },
+      "end": {
+        "line": 504,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./shipping_quote/{shippingQuoteId}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote/{shippingQuoteId}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 519,
+        "character": 16
+      },
+      "end": {
+        "line": 520,
+        "character": 40
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipping_quote/{shippingQuoteId}.get.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote/{shippingQuoteId}",
+        "get",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 522,
+        "character": 16
+      },
+      "end": {
+        "line": 529,
+        "character": 67
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipping_quote/{shippingQuoteId}.get.responses.404]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote/{shippingQuoteId}",
+        "get",
+        "responses",
+        "404"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 534,
+        "character": 16
+      },
+      "end": {
+        "line": 541,
+        "character": 63
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./shipping_quote/{shippingQuoteId}.get.responses.500]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote/{shippingQuoteId}",
+        "get",
+        "responses",
+        "500"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -447,7 +3988,7 @@
         "additionalCost",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -478,7 +4019,7 @@
         "contactAddress",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -509,7 +4050,7 @@
         "primaryPhone",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -540,7 +4081,65 @@
         "returnTo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 709,
+        "character": 20
+      },
+      "end": {
+        "line": 712,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Error.properties.errorId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Error",
+        "properties",
+        "errorId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 750,
+        "character": 23
+      },
+      "end": {
+        "line": 762,
+        "character": 58
+      }
+    },
+    "message": "Parameters must include examples; missing ErrorParameter [path: components.schemas.ErrorParameter]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ErrorParameter"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -571,7 +4170,7 @@
         "dimensions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -602,7 +4201,7 @@
         "weight",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -633,7 +4232,7 @@
         "baseShippingCost",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -664,7 +4263,7 @@
         "totalShippingCost",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -695,7 +4294,7 @@
         "baseShippingCost",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -726,7 +4325,7 @@
         "cancellation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -757,7 +4356,7 @@
         "packageSpecification",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -788,7 +4387,7 @@
         "rate",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -819,7 +4418,7 @@
         "returnTo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -850,7 +4449,7 @@
         "shipFrom",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -881,7 +4480,7 @@
         "shipTo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -912,7 +4511,7 @@
         "packageSpecification",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -943,7 +4542,7 @@
         "shipFrom",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -974,7 +4573,7 @@
         "shipTo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1005,7 +4604,7 @@
         "packageSpecification",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1036,7 +4635,7 @@
         "shipFrom",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1067,7 +4666,616 @@
         "shipTo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./shipment/{shipmentId}/cancel.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/cancel",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./shipment/create_from_shipping_quote.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./shipment/{shipmentId}/download_label_file.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./shipment/{shipmentId}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./shipping_quote.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./shipping_quote/{shippingQuoteId}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote/{shippingQuoteId}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'cancelShipment' has semantic quality issues: vague_summary, missing_side_effects. Missing summary entirely. Description is clear but could be more concise and structured for AI agent interpretation. Reorganized to emphasize the action, inputs, outputs, and critical constraint about label usage as a precondition.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/cancel",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "cancelShipment",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "This method cancels the shipment associated with the specified shipment ID and the associated shipping label is deleted. When you cancel a shipment, the <b>totalShippingCost</b> of the canceled shipment is refunded to the account established by the user's billing agreement.  <br><br>Note that you cannot cancel a shipment if you have used the associated shipping label.",
+      "summary_suggestion": "Cancel shipment and delete associated label",
+      "description_suggestion": "Cancels the shipment associated with the specified shipment ID and deletes the associated shipping label. When a shipment is canceled, the totalShippingCost is refunded to the billing agreement account. Important: A shipment cannot be canceled if the associated shipping label has already been used.",
+      "reasoning": "Missing summary entirely. Description is clear but could be more concise and structured for AI agent interpretation. Reorganized to emphasize the action, inputs, outputs, and critical constraint about label usage as a precondition.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/cancel",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'createFromShippingQuote' has semantic quality issues: vague_summary, missing_side_effects. Missing summary. Description is comprehensive but verbose and contains HTML formatting. Condensed for AI agent clarity while preserving critical information: inputs, outputs, side effects (billing), constraints (USPS only, billing agreement required), and error conditions.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/create_from_shipping_quote",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "createFromShippingQuote",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "This method creates a shipment based on the <b>shippingQuoteId</b> and <b>rateId</b> values supplied in the request. The rate identified by the <b>rateId</b> value specifies the carrier and service for the package shipment, and the rate ID must be contained in the shipping quote identified by the <b>shippingQuoteId</b> value. Call <b>createShippingQuote</b> to retrieve a set of live shipping rates.<br><br><span class=\"tablenote\"><b>Note:</b> The Logistics API only supports USPS shipping rates and labels.</span><br/>When you create a shipment, eBay generates a shipping label that you can download and use to ship your package.<br/><br/>In a <b>createFromShippingQuote</b> request, sellers can include a list of shipping options they want to add to the base service quoted in the selected rate. The list of available shipping options is specific to each quoted rate and if available, the options are listed in the rate container of the shipping quote.<br/><br/>In addition to a configurable return-to location and other details about the shipment, the response to this method includes:<ul><li>The shipping carrier and service to be used for the package shipment</li><li>A list of selected shipping options, if any</li><li>The shipment tracking number</li><li>The total shipping cost (the sum cost of the base shipping service and any added options)</li></ul>When you create a shipment, your billing agreement account is charged the sum of the <b>baseShippingCost</b> and the total cost of any additional shipping options you might have selected. Use the URL returned in <b>labelDownloadURL</b> field, or call <b>downloadLabelFile</b> with the <b>shipmentId</b> value from the response, to download a shipping label for your package.<br/><br/><div class=\"msgbox_important\"><p class=\"msgbox_importantInDiv\" data-mc-autonum=\"&lt;b&gt;&lt;span style=&quot;color: #dd1e31;&quot; class=&quot;mcFormatColor&quot;&gt;Important! &lt;/span&gt;&lt;/b&gt;\"><span class=\"autonumber\"><span><b><span style=\"color: #dd1e31;\" class=\"mcFormatColor\">Important!</span></b></span></span> Sellers must set up their payment method before they can use this method to create a shipment and the associated shipping label.</p></div><h3 id=\"ba\">Set up a billing agreement</h3>Prior to using this method to create a shipment, sellers must first set up their billing agreement. Failure to do so will return <code>Error 90030 Payment could not be completed.</code><br/><br/>The preferred method for sellers to set up their billing agreement is to go to <a href=\"https://gslblui.ebay.com/gslblui/payments \" target=\"_blank\">Set up billing agreement</a> and follow the on-screen directions.<br/><br/>Alternatively, sellers can do the following:<ul><li>Go to https://www.ebay.com/ship/single/{order_id}, where {order_id} is that of the order for which the label is being printed.</li><li>When prompted, select <b>PayPal</b>.</li><li>Verify that <b>Save PayPal for future purchases</b> is selected.</li><li>Click <b>Set up Payments</b> which will open PayPal in a pop-up window.</li><li>Log in using <i>PayPal credentials</i>, and then follow the on-screen prompts to set up the billing agreement.</li><li>Once the agreement has been set up, sellers can leave this page as there is no need to actually print a label.</li></ul>",
+      "summary_suggestion": "Create shipment from selected shipping quote rate",
+      "description_suggestion": "Creates a shipment based on the specified shippingQuoteId and rateId. The rateId must correspond to a rate within the shipping quote. Generates a shipping label (USPS only) and returns shipment details including carrier, service, tracking number, and totalShippingCost. Optional shipping options can be added to the base service. The billing agreement account is charged immediately with the sum of baseShippingCost and any selected options. Requires a valid billing agreement setup; failure to set up payment will return Error 90030.",
+      "reasoning": "Missing summary. Description is comprehensive but verbose and contains HTML formatting. Condensed for AI agent clarity while preserving critical information: inputs, outputs, side effects (billing), constraints (USPS only, billing agreement required), and error conditions.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/shipment/create_from_shipping_quote",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'downloadLabelFile' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description lacks clarity on output format options and has incomplete documentation (HTML comment). Clarified that Accept header controls format, specified default is PDF, and noted USPS-only constraint for consistency with other operations.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}/download_label_file",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "downloadLabelFile",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "This method returns the shipping label file that was generated for the <b>shipmentId</b> value specified in the request. Call <b>createFromShippingQuote</b> to generate a shipment ID.<br><br><span class=\"tablenote\"><b>Note:</b> The Logistics API only supports USPS shipping rates and labels.</span><br>Use the <code>Accept</code> HTTP header to specify the format of the returned file. The default file format is a PDF file. <!-- Are other options available? -->",
+      "summary_suggestion": "Download shipping label file for shipment",
+      "description_suggestion": "Downloads the shipping label file generated for the specified shipment ID. Returns the label in the format specified by the Accept HTTP header (default: PDF). The shipment ID must be obtained from a prior createFromShippingQuote operation. USPS labels only.",
+      "reasoning": "Missing summary. Description lacks clarity on output format options and has incomplete documentation (HTML comment). Clarified that Accept header controls format, specified default is PDF, and noted USPS-only constraint for consistency with other operations.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}/download_label_file",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'getShipment' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description is too minimal and doesn't indicate what information is returned. Added details about the response content (carrier, service, tracking number, cost, options, label URL) to help AI agents understand the operation's value and when to use it.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipment/{shipmentId}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "getShipment",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "This method retrieves the shipment details for the specified shipment ID. Call <b>createFromShippingQuote</b> to generate a shipment ID.",
+      "summary_suggestion": "Retrieve shipment details by shipment ID",
+      "description_suggestion": "Retrieves complete shipment details for the specified shipment ID, including carrier, service, tracking number, shipping cost, selected options, and label download URL. The shipment ID must be obtained from a prior createFromShippingQuote operation.",
+      "reasoning": "Missing summary. Description is too minimal and doesn't indicate what information is returned. Added details about the response content (carrier, service, tracking number, cost, options, label URL) to help AI agents understand the operation's value and when to use it.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/shipment/{shipmentId}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'createShippingQuote' has semantic quality issues: vague_summary. Missing summary. Description is comprehensive and well-structured, explaining rates, time windows, options, pricing, and next steps. Only the summary needs improvement for conciseness and AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "createShippingQuote",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary"
+      ],
+      "current_summary": "",
+      "current_description": "The <b>createShippingQuote</b> method returns a <i>shipping quote </i> that contains a list of live \"rates.\"  <br><br>Each rate represents an offer made by a shipping carrier for a specific service and each offer has a live quote for the base service cost. Rates have a time window in which they are \"live,\" and rates expire when their purchase window ends. If offered by the carrier, rates can include shipping options (and their associated prices), and users can add any offered shipping option to the base service should they desire.  Also, depending on the services required, rates can also include pickup and delivery windows.<br><br><span class=\"tablenote\"><b>Note:</b> The Logistics API only supports USPS shipping rates and labels.</span><br>Each rate is for a single package and is based on the following information: <ul><li>The shipping origin</li> <li>The shipping destination</li> <li>The package size (weight and dimensions)</li></ul>  Rates are identified by a unique eBay-assigned <b>rateId</b> and rates are based on price points, pickup and delivery time frames, and other user requirements. Because each rate offered must be compliant with the eBay shipping program, all rates reflect eBay-negotiated prices.  <br><br>The various rates returned in a shipping quote offer the user a choice from which they can choose a shipping service that best fits their needs. Select the rate for your shipment and using the associated <b>rateId</b>, call <b>createFromShippingQuote</b> to create a shipment and generate a shipping label that you can use to ship the package.",
+      "summary_suggestion": "Get live shipping rates for package",
+      "reasoning": "Missing summary. Description is comprehensive and well-structured, explaining rates, time windows, options, pricing, and next steps. Only the summary needs improvement for conciseness and AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/shipping_quote",
+          "post",
+          "summary"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'getShippingQuote' has semantic quality issues: vague_summary. Missing summary. Description is clear and complete, explaining what a shipping quote contains and how to obtain a quote ID. Only the summary needs improvement for consistency and AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/shipping_quote/{shippingQuoteId}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "getShippingQuote",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary"
+      ],
+      "current_summary": "",
+      "current_description": "This method retrieves the complete details of the shipping quote associated with the specified <b>shippingQuoteId</b> value.  <br><br>A \"shipping quote\" pertains to a single specific package and contains a set of shipping \"rates\" that quote the cost to ship the package by different shipping carriers and services. The quotes are based on the package's origin, destination, and size.  <br><br>Call <b>createShippingQuote</b> to create a <b>shippingQuoteId</b>.",
+      "summary_suggestion": "Retrieve shipping quote details by ID",
+      "reasoning": "Missing summary. Description is clear and complete, explaining what a shipping quote contains and how to obtain a quote ID. Only the summary needs improvement for consistency and AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/shipping_quote/{shippingQuoteId}",
+          "get",
+          "summary"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 6 operations analyzed, 6 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 6,
+      "total_issues_found": 6,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 38 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 38
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 38 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 38
     }
   }
 ]

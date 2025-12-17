@@ -7,24 +7,63 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 8",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 8,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -35,25 +74,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:allocateIds.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:allocateIds",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -64,25 +99,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:beginTransaction.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Schemas count: 234",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:beginTransaction",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 234
     }
   },
   {
@@ -93,25 +124,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:commit.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:commit",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -122,25 +161,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:lookup.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:lookup",
-        "post",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -151,25 +200,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:reserveIds.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:reserveIds",
-        "post",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -180,25 +258,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:rollback.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:rollback",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -209,14 +283,3605 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:runAggregationQuery.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 270",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 270
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 16",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 16,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 291",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 291,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Aggregation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Aggregation",
+          "properties",
+          "alias"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationQuery"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationQuery",
+          "properties",
+          "aggregations"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResult",
+          "properties",
+          "aggregateProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch",
+          "properties",
+          "aggregationResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch",
+          "properties",
+          "moreResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsRequest",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsResponse",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "ArrayValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "ArrayValue",
+          "properties",
+          "values"
+        ],
+        [
+          "components",
+          "schemas",
+          "Avg"
+        ],
+        [
+          "components",
+          "schemas",
+          "BeginTransactionRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "BeginTransactionResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BeginTransactionResponse",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest",
+          "properties",
+          "mode"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest",
+          "properties",
+          "mutations"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse",
+          "properties",
+          "commitTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse",
+          "properties",
+          "indexUpdates"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse",
+          "properties",
+          "mutationResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "CompositeFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "CompositeFilter",
+          "properties",
+          "filters"
+        ],
+        [
+          "components",
+          "schemas",
+          "CompositeFilter",
+          "properties",
+          "op"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count",
+          "properties",
+          "upTo"
+        ],
+        [
+          "components",
+          "schemas",
+          "Entity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Entity",
+          "properties",
+          "properties"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "cursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "debugStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "debugStats",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "executionDuration"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "readOperations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "resultsReturned"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExplainMetrics"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExplainOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExplainOptions",
+          "properties",
+          "analyze"
+        ],
+        [
+          "components",
+          "schemas",
+          "Filter"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "distanceMeasure"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "distanceResultProperty"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "distanceThreshold"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "operationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata",
+          "properties",
+          "migrationState"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata",
+          "properties",
+          "migrationStep"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter",
+          "properties",
+          "kinds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter",
+          "properties",
+          "kinds",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter",
+          "properties",
+          "namespaceIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter",
+          "properties",
+          "namespaceIds",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesMetadata",
+          "properties",
+          "outputUrlPrefix"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesResponse",
+          "properties",
+          "outputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ImportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ImportEntitiesMetadata",
+          "properties",
+          "inputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1IndexOperationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1IndexOperationMetadata",
+          "properties",
+          "indexId"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationProgressEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationProgressEvent",
+          "properties",
+          "step"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationStateEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationStateEvent",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1PrepareStepDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1PrepareStepDetails",
+          "properties",
+          "concurrencyMode"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1Progress"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1Progress",
+          "properties",
+          "workCompleted"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1Progress",
+          "properties",
+          "workEstimated"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1RedirectWritesStepDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1RedirectWritesStepDetails",
+          "properties",
+          "concurrencyMode"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "operationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter",
+          "properties",
+          "kinds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter",
+          "properties",
+          "kinds",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter",
+          "properties",
+          "namespaceIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter",
+          "properties",
+          "namespaceIds",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesMetadata",
+          "properties",
+          "outputUrlPrefix"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesResponse",
+          "properties",
+          "outputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ImportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ImportEntitiesMetadata",
+          "properties",
+          "inputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1Progress"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1Progress",
+          "properties",
+          "workCompleted"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1Progress",
+          "properties",
+          "workEstimated"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "allowLiterals"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "namedBindings"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "positionalBindings"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "queryString"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQueryParameter"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQueryParameter",
+          "properties",
+          "cursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "Key"
+        ],
+        [
+          "components",
+          "schemas",
+          "Key",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "KindExpression"
+        ],
+        [
+          "components",
+          "schemas",
+          "KindExpression",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "LatLng"
+        ],
+        [
+          "components",
+          "schemas",
+          "LatLng",
+          "properties",
+          "latitude"
+        ],
+        [
+          "components",
+          "schemas",
+          "LatLng",
+          "properties",
+          "longitude"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupRequest",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "deferred"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "found"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "missing"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "baseVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "conflictResolutionStrategy"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "propertyTransforms"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "conflictDetected"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "transformResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartitionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartitionId",
+          "properties",
+          "namespaceId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartitionId",
+          "properties",
+          "projectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement",
+          "properties",
+          "kind"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PlanSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "PlanSummary",
+          "properties",
+          "indexesUsed"
+        ],
+        [
+          "components",
+          "schemas",
+          "PlanSummary",
+          "properties",
+          "indexesUsed",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "PlanSummary",
+          "properties",
+          "indexesUsed",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Projection"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyFilter",
+          "properties",
+          "op"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyMask",
+          "properties",
+          "paths"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyMask",
+          "properties",
+          "paths",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyOrder"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyOrder",
+          "properties",
+          "direction"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyReference"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyReference",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyTransform"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyTransform",
+          "properties",
+          "property"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyTransform",
+          "properties",
+          "setToServerValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "distinctOn"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "endCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "kind"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "offset"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "order"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "projection"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "startCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "endCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "entityResultType"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "entityResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "moreResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "skippedCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "skippedResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "snapshotVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOnly"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOnly",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions",
+          "properties",
+          "readConsistency"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadWrite"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadWrite",
+          "properties",
+          "previousTransaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsRequest",
+          "properties",
+          "databaseId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsRequest",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RollbackRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RollbackRequest",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "RollbackResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunAggregationQueryRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunAggregationQueryResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunQueryRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunQueryResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Sum"
+        ],
+        [
+          "components",
+          "schemas",
+          "TransactionOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "blobValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "booleanValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "doubleValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "excludeFromIndexes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "integerValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "meaning"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "nullValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "stringValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "timestampValue"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 245",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 245,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Aggregation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Aggregation",
+          "properties",
+          "alias"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationQuery"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationQuery",
+          "properties",
+          "aggregations"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResult",
+          "properties",
+          "aggregateProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch",
+          "properties",
+          "aggregationResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch",
+          "properties",
+          "moreResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "AggregationResultBatch",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsRequest",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "AllocateIdsResponse",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "ArrayValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "ArrayValue",
+          "properties",
+          "values"
+        ],
+        [
+          "components",
+          "schemas",
+          "Avg"
+        ],
+        [
+          "components",
+          "schemas",
+          "BeginTransactionRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "BeginTransactionResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BeginTransactionResponse",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest",
+          "properties",
+          "mode"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest",
+          "properties",
+          "mutations"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitRequest",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse",
+          "properties",
+          "commitTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse",
+          "properties",
+          "indexUpdates"
+        ],
+        [
+          "components",
+          "schemas",
+          "CommitResponse",
+          "properties",
+          "mutationResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "CompositeFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "CompositeFilter",
+          "properties",
+          "filters"
+        ],
+        [
+          "components",
+          "schemas",
+          "CompositeFilter",
+          "properties",
+          "op"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count"
+        ],
+        [
+          "components",
+          "schemas",
+          "Count",
+          "properties",
+          "upTo"
+        ],
+        [
+          "components",
+          "schemas",
+          "Entity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Entity",
+          "properties",
+          "properties"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "cursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "EntityResult",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "debugStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "debugStats",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "executionDuration"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "readOperations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExecutionStats",
+          "properties",
+          "resultsReturned"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExplainMetrics"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExplainOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExplainOptions",
+          "properties",
+          "analyze"
+        ],
+        [
+          "components",
+          "schemas",
+          "Filter"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "distanceMeasure"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "distanceResultProperty"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "distanceThreshold"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindNearest",
+          "properties",
+          "limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "operationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1CommonMetadata",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata",
+          "properties",
+          "migrationState"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata",
+          "properties",
+          "migrationStep"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter",
+          "properties",
+          "kinds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1EntityFilter",
+          "properties",
+          "namespaceIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesMetadata",
+          "properties",
+          "outputUrlPrefix"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ExportEntitiesResponse",
+          "properties",
+          "outputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ImportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1ImportEntitiesMetadata",
+          "properties",
+          "inputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1IndexOperationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1IndexOperationMetadata",
+          "properties",
+          "indexId"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationProgressEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationProgressEvent",
+          "properties",
+          "step"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationStateEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1MigrationStateEvent",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1PrepareStepDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1PrepareStepDetails",
+          "properties",
+          "concurrencyMode"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1Progress"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1Progress",
+          "properties",
+          "workCompleted"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1Progress",
+          "properties",
+          "workEstimated"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1RedirectWritesStepDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1RedirectWritesStepDetails",
+          "properties",
+          "concurrencyMode"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "operationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1CommonMetadata",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter",
+          "properties",
+          "kinds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1EntityFilter",
+          "properties",
+          "namespaceIds"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesMetadata",
+          "properties",
+          "outputUrlPrefix"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ExportEntitiesResponse",
+          "properties",
+          "outputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ImportEntitiesMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1ImportEntitiesMetadata",
+          "properties",
+          "inputUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1Progress"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1Progress",
+          "properties",
+          "workCompleted"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleDatastoreAdminV1beta1Progress",
+          "properties",
+          "workEstimated"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "allowLiterals"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "namedBindings"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "positionalBindings"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQuery",
+          "properties",
+          "queryString"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQueryParameter"
+        ],
+        [
+          "components",
+          "schemas",
+          "GqlQueryParameter",
+          "properties",
+          "cursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "Key"
+        ],
+        [
+          "components",
+          "schemas",
+          "Key",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "KindExpression"
+        ],
+        [
+          "components",
+          "schemas",
+          "KindExpression",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "LatLng"
+        ],
+        [
+          "components",
+          "schemas",
+          "LatLng",
+          "properties",
+          "latitude"
+        ],
+        [
+          "components",
+          "schemas",
+          "LatLng",
+          "properties",
+          "longitude"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupRequest",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "deferred"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "found"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "missing"
+        ],
+        [
+          "components",
+          "schemas",
+          "LookupResponse",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "baseVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "conflictResolutionStrategy"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "propertyTransforms"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mutation",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "conflictDetected"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "transformResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "MutationResult",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartitionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartitionId",
+          "properties",
+          "namespaceId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartitionId",
+          "properties",
+          "projectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement",
+          "properties",
+          "kind"
+        ],
+        [
+          "components",
+          "schemas",
+          "PathElement",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PlanSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "PlanSummary",
+          "properties",
+          "indexesUsed"
+        ],
+        [
+          "components",
+          "schemas",
+          "PlanSummary",
+          "properties",
+          "indexesUsed",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Projection"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyFilter",
+          "properties",
+          "op"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyMask",
+          "properties",
+          "paths"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyOrder"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyOrder",
+          "properties",
+          "direction"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyReference"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyReference",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyTransform"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyTransform",
+          "properties",
+          "property"
+        ],
+        [
+          "components",
+          "schemas",
+          "PropertyTransform",
+          "properties",
+          "setToServerValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "distinctOn"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "endCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "kind"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "limit"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "offset"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "order"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "projection"
+        ],
+        [
+          "components",
+          "schemas",
+          "Query",
+          "properties",
+          "startCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "endCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "entityResultType"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "entityResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "moreResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "skippedCursor"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "skippedResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "QueryResultBatch",
+          "properties",
+          "snapshotVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOnly"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOnly",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions",
+          "properties",
+          "readConsistency"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions",
+          "properties",
+          "readTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadOptions",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadWrite"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReadWrite",
+          "properties",
+          "previousTransaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsRequest",
+          "properties",
+          "databaseId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsRequest",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReserveIdsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RollbackRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RollbackRequest",
+          "properties",
+          "transaction"
+        ],
+        [
+          "components",
+          "schemas",
+          "RollbackResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunAggregationQueryRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunAggregationQueryResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunQueryRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunQueryResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Sum"
+        ],
+        [
+          "components",
+          "schemas",
+          "TransactionOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "blobValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "booleanValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "doubleValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "excludeFromIndexes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "integerValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "meaning"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "nullValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "stringValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Value",
+          "properties",
+          "timestampValue"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 18",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -225,578 +3890,14 @@
         "paths",
         "/v1beta3/projects/{projectId}:runAggregationQuery",
         "post",
-        "summary"
+        "requestBody",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:runQuery.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:runQuery",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:allocateIds.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:allocateIds",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:beginTransaction.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:beginTransaction",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:commit.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:commit",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:lookup.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:lookup",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:reserveIds.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:reserveIds",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:rollback.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:rollback",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:runAggregationQuery.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:runAggregationQuery",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:runQuery.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1beta3/projects/{projectId}:runQuery",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1ExportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1ExportEntitiesMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1ExportEntitiesMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1ExportEntitiesResponse\" is never used. [path: components.schemas.GoogleDatastoreAdminV1ExportEntitiesResponse]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1ExportEntitiesResponse"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1ImportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1ImportEntitiesMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1ImportEntitiesMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1IndexOperationMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1IndexOperationMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1IndexOperationMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1MigrationProgressEvent\" is never used. [path: components.schemas.GoogleDatastoreAdminV1MigrationProgressEvent]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1MigrationProgressEvent"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1MigrationStateEvent\" is never used. [path: components.schemas.GoogleDatastoreAdminV1MigrationStateEvent]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1MigrationStateEvent"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1beta1ExportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1beta1ExportEntitiesMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1beta1ExportEntitiesMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1beta1ExportEntitiesResponse\" is never used. [path: components.schemas.GoogleDatastoreAdminV1beta1ExportEntitiesResponse]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1beta1ExportEntitiesResponse"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleDatastoreAdminV1beta1ImportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1beta1ImportEntitiesMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleDatastoreAdminV1beta1ImportEntitiesMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 18,
+      "paths": []
     }
   },
   {
@@ -824,7 +3925,863 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 768,
+        "character": 62
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 13
+      },
+      "end": {
+        "line": 110,
+        "character": 65
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:allocateIds.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:allocateIds",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:allocateIds.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:allocateIds",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 153,
+        "character": 13
+      },
+      "end": {
+        "line": 204,
+        "character": 70
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:beginTransaction.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:beginTransaction",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 10
+      },
+      "end": {
+        "line": 161,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:beginTransaction.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:beginTransaction",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 247,
+        "character": 13
+      },
+      "end": {
+        "line": 298,
+        "character": 60
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:commit.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:commit",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 249,
+        "character": 10
+      },
+      "end": {
+        "line": 255,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:commit.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:commit",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 341,
+        "character": 13
+      },
+      "end": {
+        "line": 392,
+        "character": 60
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:lookup.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:lookup",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 343,
+        "character": 10
+      },
+      "end": {
+        "line": 349,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:lookup.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:lookup",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 435,
+        "character": 13
+      },
+      "end": {
+        "line": 486,
+        "character": 64
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:reserveIds.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:reserveIds",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 437,
+        "character": 10
+      },
+      "end": {
+        "line": 443,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:reserveIds.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:reserveIds",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 529,
+        "character": 13
+      },
+      "end": {
+        "line": 580,
+        "character": 62
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:rollback.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:rollback",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 531,
+        "character": 10
+      },
+      "end": {
+        "line": 537,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:rollback.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:rollback",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 623,
+        "character": 13
+      },
+      "end": {
+        "line": 674,
+        "character": 73
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:runAggregationQuery.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runAggregationQuery",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 625,
+        "character": 10
+      },
+      "end": {
+        "line": 631,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:runAggregationQuery.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runAggregationQuery",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 717,
+        "character": 13
+      },
+      "end": {
+        "line": 768,
+        "character": 62
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1beta3/projects/{projectId}:runQuery.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runQuery",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 719,
+        "character": 10
+      },
+      "end": {
+        "line": 725,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1beta3/projects/{projectId}:runQuery.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runQuery",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 778,
+        "character": 16
+      },
+      "end": {
+        "line": 787,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 790,
+        "character": 21
+      },
+      "end": {
+        "line": 795,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 793,
+        "character": 16
+      },
+      "end": {
+        "line": 793,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 798,
+        "character": 12
+      },
+      "end": {
+        "line": 809,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 812,
+        "character": 17
+      },
+      "end": {
+        "line": 817,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 820,
+        "character": 15
+      },
+      "end": {
+        "line": 825,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 828,
+        "character": 12
+      },
+      "end": {
+        "line": 833,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 836,
+        "character": 20
+      },
+      "end": {
+        "line": 841,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 839,
+        "character": 16
+      },
+      "end": {
+        "line": 839,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 844,
+        "character": 20
+      },
+      "end": {
+        "line": 850,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 853,
+        "character": 18
+      },
+      "end": {
+        "line": 858,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 861,
+        "character": 19
+      },
+      "end": {
+        "line": 866,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 869,
+        "character": 24
+      },
+      "end": {
+        "line": 874,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -855,7 +4812,7 @@
         "avg",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -886,7 +4843,7 @@
         "count",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -917,7 +4874,7 @@
         "sum",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -948,7 +4905,7 @@
         "nestedQuery",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -979,7 +4936,7 @@
         "property",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1010,7 +4967,67 @@
         "transactionOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1065,
+        "character": 25
+      },
+      "end": {
+        "line": 1068,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.CommitResponse.properties.indexUpdates]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "CommitResponse",
+        "properties",
+        "indexUpdates"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1105,
+        "character": 17
+      },
+      "end": {
+        "line": 1108,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Count.properties.upTo]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Count",
+        "properties",
+        "upTo"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1041,7 +5058,7 @@
         "key",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1072,7 +5089,97 @@
         "entity",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1152,
+        "character": 20
+      },
+      "end": {
+        "line": 1155,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.EntityResult.properties.version]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "EntityResult",
+        "properties",
+        "version"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1175,
+        "character": 27
+      },
+      "end": {
+        "line": 1178,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.ExecutionStats.properties.readOperations]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ExecutionStats",
+        "properties",
+        "readOperations"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1180,
+        "character": 28
+      },
+      "end": {
+        "line": 1183,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.ExecutionStats.properties.resultsReturned]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ExecutionStats",
+        "properties",
+        "resultsReturned"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1103,7 +5210,7 @@
         "executionStats",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1134,7 +5241,7 @@
         "planSummary",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1165,7 +5272,7 @@
         "compositeFilter",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1196,7 +5303,67 @@
         "propertyFilter",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1243,
+        "character": 30
+      },
+      "end": {
+        "line": 1246,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.FindNearest.properties.distanceThreshold]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "FindNearest",
+        "properties",
+        "distanceThreshold"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1248,
+        "character": 18
+      },
+      "end": {
+        "line": 1251,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.FindNearest.properties.limit]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "FindNearest",
+        "properties",
+        "limit"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1227,7 +5394,7 @@
         "queryVector",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1258,7 +5425,7 @@
         "vectorProperty",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1286,7 +5453,7 @@
         "schemas",
         "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1314,7 +5481,7 @@
         "schemas",
         "GoogleDatastoreAdminV1ExportEntitiesMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1345,7 +5512,7 @@
         "common",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1376,7 +5543,7 @@
         "entityFilter",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1407,7 +5574,7 @@
         "progressBytes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1438,7 +5605,7 @@
         "progressEntities",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1466,7 +5633,7 @@
         "schemas",
         "GoogleDatastoreAdminV1ExportEntitiesResponse"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1494,7 +5661,7 @@
         "schemas",
         "GoogleDatastoreAdminV1ImportEntitiesMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1525,7 +5692,7 @@
         "common",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1556,7 +5723,7 @@
         "entityFilter",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1587,7 +5754,7 @@
         "progressBytes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1618,7 +5785,7 @@
         "progressEntities",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1646,7 +5813,7 @@
         "schemas",
         "GoogleDatastoreAdminV1IndexOperationMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1677,7 +5844,7 @@
         "common",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1708,7 +5875,7 @@
         "progressEntities",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1736,7 +5903,7 @@
         "schemas",
         "GoogleDatastoreAdminV1MigrationProgressEvent"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1767,7 +5934,7 @@
         "prepareStepDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1798,7 +5965,7 @@
         "redirectWritesStepDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1826,7 +5993,67 @@
         "schemas",
         "GoogleDatastoreAdminV1MigrationStateEvent"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1505,
+        "character": 26
+      },
+      "end": {
+        "line": 1508,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleDatastoreAdminV1Progress.properties.workCompleted]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1Progress",
+        "properties",
+        "workCompleted"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1510,
+        "character": 26
+      },
+      "end": {
+        "line": 1513,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleDatastoreAdminV1Progress.properties.workEstimated]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1Progress",
+        "properties",
+        "workEstimated"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1854,7 +6081,7 @@
         "schemas",
         "GoogleDatastoreAdminV1beta1ExportEntitiesMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1885,7 +6112,7 @@
         "common",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1916,7 +6143,7 @@
         "entityFilter",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1947,7 +6174,7 @@
         "progressBytes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1978,7 +6205,7 @@
         "progressEntities",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2006,7 +6233,7 @@
         "schemas",
         "GoogleDatastoreAdminV1beta1ExportEntitiesResponse"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2034,7 +6261,7 @@
         "schemas",
         "GoogleDatastoreAdminV1beta1ImportEntitiesMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2065,7 +6292,7 @@
         "common",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2096,7 +6323,7 @@
         "entityFilter",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2127,7 +6354,7 @@
         "progressBytes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2158,7 +6385,67 @@
         "progressEntities",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1665,
+        "character": 26
+      },
+      "end": {
+        "line": 1668,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleDatastoreAdminV1beta1Progress.properties.workCompleted]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1beta1Progress",
+        "properties",
+        "workCompleted"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1670,
+        "character": 26
+      },
+      "end": {
+        "line": 1673,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.GoogleDatastoreAdminV1beta1Progress.properties.workEstimated]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1beta1Progress",
+        "properties",
+        "workEstimated"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2189,7 +6476,7 @@
         "value",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2220,7 +6507,67 @@
         "partitionId",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1751,
+        "character": 21
+      },
+      "end": {
+        "line": 1754,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LatLng.properties.latitude]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LatLng",
+        "properties",
+        "latitude"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1756,
+        "character": 22
+      },
+      "end": {
+        "line": 1759,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.LatLng.properties.longitude]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "LatLng",
+        "properties",
+        "longitude"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2251,7 +6598,7 @@
         "propertyMask",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2282,7 +6629,37 @@
         "readOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1820,
+        "character": 24
+      },
+      "end": {
+        "line": 1823,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Mutation.properties.baseVersion]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Mutation",
+        "properties",
+        "baseVersion"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2313,7 +6690,7 @@
         "delete",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2344,7 +6721,7 @@
         "insert",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2375,7 +6752,7 @@
         "propertyMask",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2406,7 +6783,7 @@
         "update",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2437,7 +6814,7 @@
         "upsert",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2468,7 +6845,67 @@
         "key",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1897,
+        "character": 20
+      },
+      "end": {
+        "line": 1900,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.MutationResult.properties.version]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "MutationResult",
+        "properties",
+        "version"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1922,
+        "character": 15
+      },
+      "end": {
+        "line": 1925,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.PathElement.properties.id]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PathElement",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2499,7 +6936,7 @@
         "property",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2530,7 +6967,7 @@
         "property",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2561,7 +6998,7 @@
         "value",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2592,7 +7029,7 @@
         "property",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2623,7 +7060,7 @@
         "appendMissingElements",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2654,7 +7091,7 @@
         "increment",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2685,7 +7122,7 @@
         "maximum",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2716,7 +7153,7 @@
         "minimum",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2747,7 +7184,7 @@
         "removeAllFromArray",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2778,7 +7215,7 @@
         "filter",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2809,7 +7246,127 @@
         "findNearest",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2104,
+        "character": 18
+      },
+      "end": {
+        "line": 2107,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Query.properties.limit]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Query",
+        "properties",
+        "limit"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2109,
+        "character": 19
+      },
+      "end": {
+        "line": 2112,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Query.properties.offset]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Query",
+        "properties",
+        "offset"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2182,
+        "character": 27
+      },
+      "end": {
+        "line": 2185,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.QueryResultBatch.properties.skippedResults]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "QueryResultBatch",
+        "properties",
+        "skippedResults"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2187,
+        "character": 28
+      },
+      "end": {
+        "line": 2190,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.QueryResultBatch.properties.snapshotVersion]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "QueryResultBatch",
+        "properties",
+        "snapshotVersion"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2840,7 +7397,7 @@
         "aggregationQuery",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2871,7 +7428,7 @@
         "explainOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2902,7 +7459,7 @@
         "gqlQuery",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2933,7 +7490,7 @@
         "partitionId",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2964,7 +7521,7 @@
         "readOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2995,7 +7552,7 @@
         "batch",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3026,7 +7583,7 @@
         "explainMetrics",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3057,7 +7614,7 @@
         "query",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3088,7 +7645,7 @@
         "explainOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3119,7 +7676,7 @@
         "gqlQuery",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3150,7 +7707,7 @@
         "partitionId",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3181,7 +7738,7 @@
         "propertyMask",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3212,7 +7769,7 @@
         "query",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3243,7 +7800,7 @@
         "readOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3274,7 +7831,7 @@
         "batch",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3305,7 +7862,7 @@
         "explainMetrics",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3336,7 +7893,7 @@
         "query",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3367,7 +7924,7 @@
         "property",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3398,7 +7955,7 @@
         "readOnly",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3429,7 +7986,7 @@
         "readWrite",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3460,7 +8017,37 @@
         "arrayValue",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2412,
+        "character": 24
+      },
+      "end": {
+        "line": 2415,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Value.properties.doubleValue]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Value",
+        "properties",
+        "doubleValue"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -3491,7 +8078,7 @@
         "entityValue",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -3522,7 +8109,37 @@
         "geoPointValue",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2429,
+        "character": 25
+      },
+      "end": {
+        "line": 2432,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Value.properties.integerValue]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Value",
+        "properties",
+        "integerValue"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -3553,7 +8170,1419 @@
         "keyValue",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 2438,
+        "character": 20
+      },
+      "end": {
+        "line": 2441,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Value.properties.meaning]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Value",
+        "properties",
+        "meaning"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:allocateIds.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:allocateIds",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:allocateIds.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:allocateIds",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:beginTransaction.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:beginTransaction",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:beginTransaction.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:beginTransaction",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:commit.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:commit",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:commit.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:commit",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:lookup.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:lookup",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:lookup.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:lookup",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:reserveIds.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:reserveIds",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:reserveIds.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:reserveIds",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:rollback.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:rollback",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:rollback.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:rollback",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:runAggregationQuery.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runAggregationQuery",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:runAggregationQuery.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runAggregationQuery",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1beta3/projects/{projectId}:runQuery.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runQuery",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1beta3/projects/{projectId}:runQuery.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runQuery",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1DatastoreFirestoreMigrationMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1ExportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1ExportEntitiesMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1ExportEntitiesMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1ExportEntitiesResponse\" is never used. [path: components.schemas.GoogleDatastoreAdminV1ExportEntitiesResponse]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1ExportEntitiesResponse"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1ImportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1ImportEntitiesMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1ImportEntitiesMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1IndexOperationMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1IndexOperationMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1IndexOperationMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1MigrationProgressEvent\" is never used. [path: components.schemas.GoogleDatastoreAdminV1MigrationProgressEvent]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1MigrationProgressEvent"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1MigrationStateEvent\" is never used. [path: components.schemas.GoogleDatastoreAdminV1MigrationStateEvent]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1MigrationStateEvent"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1beta1ExportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1beta1ExportEntitiesMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1beta1ExportEntitiesMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1beta1ExportEntitiesResponse\" is never used. [path: components.schemas.GoogleDatastoreAdminV1beta1ExportEntitiesResponse]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1beta1ExportEntitiesResponse"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleDatastoreAdminV1beta1ImportEntitiesMetadata\" is never used. [path: components.schemas.GoogleDatastoreAdminV1beta1ImportEntitiesMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleDatastoreAdminV1beta1ImportEntitiesMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.runQuery' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, missing_context, not_actionable, poor_ai_interpretability. Original description is severely lacking. It provides no context about inputs (RunQueryRequest structure, query parameters), outputs (RunQueryResponse, EntityResult objects), or operational details (pagination, consistency options). The empty summary and minimal description make it impossible for AI agents to understand when to use this operation or what parameters to provide. Improved version includes: (1) clear action verb 'Executes', (2) input details referencing RunQueryRequest and query parameters, (3) output details including EntityResult and cursor information, (4) operational context about read consistency and result constraints, (5) domain-appropriate terminology consistent with the API context (Entity, Datastore, ReadOptions, EntityResult, PartitionId concepts).",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runQuery",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.runQuery",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context",
+        "not_actionable",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Queries for entities.",
+      "summary_suggestion": "Execute a query to retrieve Datastore entities",
+      "description_suggestion": "Executes a query against the Datastore to retrieve entities matching specified criteria. Accepts a RunQueryRequest containing query parameters such as kind filters, property filters, projections, and ordering. Returns a RunQueryResponse with matched EntityResult objects, cursor information for pagination, and query execution metadata. Supports read consistency options (strong or eventual) via ReadOptions. Results are limited by the query's configured constraints.",
+      "reasoning": "Original description is severely lacking. It provides no context about inputs (RunQueryRequest structure, query parameters), outputs (RunQueryResponse, EntityResult objects), or operational details (pagination, consistency options). The empty summary and minimal description make it impossible for AI agents to understand when to use this operation or what parameters to provide. Improved version includes: (1) clear action verb 'Executes', (2) input details referencing RunQueryRequest and query parameters, (3) output details including EntityResult and cursor information, (4) operational context about read consistency and result constraints, (5) domain-appropriate terminology consistent with the API context (Entity, Datastore, ReadOptions, EntityResult, PartitionId concepts).",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runQuery",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.allocateIds' has semantic quality issues: vague_summary, missing_output_details, poor_ai_interpretability. Original description lacks a summary and is incomplete. Added clarity about the operation's purpose (pre-allocation before insertion), what it accepts (list of keys), what it returns (allocated IDs), and clarified that it doesn't modify existing entities. This helps AI agents understand when to use this operation in entity creation workflows.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:allocateIds",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.allocateIds",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Allocates IDs for the given keys, which is useful for referencing an entity before it is inserted.",
+      "summary_suggestion": "Allocate entity IDs for given keys",
+      "description_suggestion": "Allocates unique entity IDs for the provided keys in Cloud Datastore. This operation is useful for obtaining entity identifiers before inserting entities into the database, enabling forward references. Accepts a list of keys and returns allocated IDs that can be used in subsequent entity creation operations. Does not modify existing entities.",
+      "reasoning": "Original description lacks a summary and is incomplete. Added clarity about the operation's purpose (pre-allocation before insertion), what it accepts (list of keys), what it returns (allocated IDs), and clarified that it doesn't modify existing entities. This helps AI agents understand when to use this operation in entity creation workflows.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:allocateIds",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.beginTransaction' has semantic quality issues: vague_summary, vague_description, missing_context, missing_output_details, poor_ai_interpretability. Original description is too minimal. Added context about transaction purpose (atomic operations), what it returns (transaction ID), ACID guarantees, and lifecycle management. This enables AI agents to understand transaction workflows and when to use this operation as part of multi-step data operations.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:beginTransaction",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.beginTransaction",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_context",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Begins a new transaction.",
+      "summary_suggestion": "Begin a new Datastore transaction",
+      "description_suggestion": "Initiates a new transaction in Cloud Datastore for executing a series of read and write operations atomically. Returns a transaction ID that must be used in subsequent operations (lookup, query, commit, or rollback). Transactions provide ACID guarantees for data consistency. The transaction remains active until explicitly committed or rolled back.",
+      "reasoning": "Original description is too minimal. Added context about transaction purpose (atomic operations), what it returns (transaction ID), ACID guarantees, and lifecycle management. This enables AI agents to understand transaction workflows and when to use this operation as part of multi-step data operations.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:beginTransaction",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.commit' has semantic quality issues: vague_summary, missing_context, missing_input_details, missing_output_details, poor_ai_interpretability. Original description lacks summary and is incomplete. Added context about transaction requirements (valid transaction ID), input details (mutations list), output details (results and generated keys), and critical side effect (atomic all-or-nothing behavior). This helps AI agents understand transaction completion workflows and error handling.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:commit",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.commit",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Commits a transaction, optionally creating, deleting or modifying some entities.",
+      "summary_suggestion": "Commit transaction with entity mutations",
+      "description_suggestion": "Commits an active transaction to Cloud Datastore, persisting all entity mutations (creates, updates, deletes) atomically. Requires a valid transaction ID from beginTransaction. Accepts a list of mutations specifying entities to create, update, or delete. Returns the committed mutation results including generated keys for newly created entities. All mutations are applied atomically - if any mutation fails, the entire transaction is rolled back.",
+      "reasoning": "Original description lacks summary and is incomplete. Added context about transaction requirements (valid transaction ID), input details (mutations list), output details (results and generated keys), and critical side effect (atomic all-or-nothing behavior). This helps AI agents understand transaction completion workflows and error handling.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:commit",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.lookup' has semantic quality issues: vague_summary, missing_context, missing_input_details, missing_output_details, poor_ai_interpretability. Original description is too vague. Added context about input (list of keys, read options), output (EntityResult objects with found/missing/deferred keys), and consistency options. This helps AI agents understand how to retrieve entities and handle partial results or consistency requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:lookup",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.lookup",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Looks up entities by key.",
+      "summary_suggestion": "Retrieve entities by their keys",
+      "description_suggestion": "Retrieves one or more entities from Cloud Datastore by their unique keys. Accepts a list of entity keys and optional read options (consistency level, transaction context). Returns EntityResult objects containing the found entities, missing keys, and deferred keys. Supports both strong and eventual consistency reads. Can be executed within a transaction for consistent reads.",
+      "reasoning": "Original description is too vague. Added context about input (list of keys, read options), output (EntityResult objects with found/missing/deferred keys), and consistency options. This helps AI agents understand how to retrieve entities and handle partial results or consistency requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:lookup",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.reserveIds' has semantic quality issues: vague_summary, missing_context, missing_output_details, poor_ai_interpretability. Original description lacks summary and is unclear about the operation's purpose and effects. Added context about why this is useful (controlling ID assignment), what it accepts (keys with specific IDs), what it does (reserves identifiers), and clarified it doesn't create entities. This helps AI agents understand ID management workflows.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:reserveIds",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.reserveIds",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.",
+      "summary_suggestion": "Reserve entity IDs to prevent auto-allocation",
+      "description_suggestion": "Reserves the specified entity IDs in Cloud Datastore to prevent them from being auto-allocated by the system. Useful when you want to use specific ID values for entities. Accepts a list of keys with specific IDs to reserve. After reservation, these IDs will not be assigned to other entities. Does not create entities, only reserves their identifiers for future use.",
+      "reasoning": "Original description lacks summary and is unclear about the operation's purpose and effects. Added context about why this is useful (controlling ID assignment), what it accepts (keys with specific IDs), what it does (reserves identifiers), and clarified it doesn't create entities. This helps AI agents understand ID management workflows.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:reserveIds",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.rollback' has semantic quality issues: vague_summary, missing_context, missing_input_details, poor_ai_interpretability. Original description lacks summary and context. Added details about transaction ID requirement, what happens to mutations (discarded), transaction state after rollback (terminated), and use cases (error handling, conditional aborts). This helps AI agents understand transaction lifecycle and error recovery patterns.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:rollback",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.rollback",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_input_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Rolls back a transaction.",
+      "summary_suggestion": "Rollback an active transaction",
+      "description_suggestion": "Rolls back an active transaction in Cloud Datastore, discarding all pending mutations and releasing transaction locks. Requires a valid transaction ID from beginTransaction. Cancels all entity modifications (creates, updates, deletes) that were staged but not yet committed. After rollback, the transaction is terminated and cannot be reused. Use this to abort operations when errors occur or conditions are not met.",
+      "reasoning": "Original description lacks summary and context. Added details about transaction ID requirement, what happens to mutations (discarded), transaction state after rollback (terminated), and use cases (error handling, conditional aborts). This helps AI agents understand transaction lifecycle and error recovery patterns.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:rollback",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'datastore.projects.runAggregationQuery' has semantic quality issues: vague_summary, vague_description, missing_context, missing_input_details, missing_output_details, poor_ai_interpretability. Original description is too minimal and vague. Added context about aggregation types (count, sum, average), input structure (query with filters/grouping), output format (results with computed values), execution modes (transactional/non-transactional), and performance benefits. This helps AI agents understand when to use aggregation queries versus entity retrieval.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1beta3/projects/{projectId}:runAggregationQuery",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "datastore.projects.runAggregationQuery",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_context",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Runs an aggregation query.",
+      "summary_suggestion": "Execute aggregation query on entities",
+      "description_suggestion": "Executes an aggregation query against Cloud Datastore entities, computing aggregate functions (count, sum, average, etc.) over a filtered set of entities. Accepts a RunAggregationQueryRequest containing the query definition with filters, grouping, and aggregation specifications. Returns aggregation results with computed values and optional grouping information. Supports both transactional and non-transactional execution. More efficient than retrieving all entities for client-side aggregation.",
+      "reasoning": "Original description is too minimal and vague. Added context about aggregation types (count, sum, average), input structure (query with filters/grouping), output format (results with computed values), execution modes (transactional/non-transactional), and performance benefits. This helps AI agents understand when to use aggregation queries versus entity retrieval.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1beta3/projects/{projectId}:runAggregationQuery",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 8 operations analyzed, 8 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 8,
+      "total_issues_found": 8,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 208 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 208
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 208 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 208
     }
   }
 ]

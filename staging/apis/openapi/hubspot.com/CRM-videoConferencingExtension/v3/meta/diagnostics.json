@@ -7,25 +7,38 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Total Operations count: 3",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/crm/v3/extensions/videoconferencing/settings/{appId}",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 3,
+      "paths": [
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete"
+        ]
+      ]
     }
   },
   {
@@ -36,25 +49,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.put.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/crm/v3/extensions/videoconferencing/settings/{appId}",
-        "put",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -65,25 +74,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.delete.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Schemas count: 28",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/crm/v3/extensions/videoconferencing/settings/{appId}",
-        "delete",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 28
     }
   },
   {
@@ -94,22 +99,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "developer_hapikey"
+        ]
+      ]
     }
   },
   {
@@ -120,24 +131,30 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "developer_hapikey"
+        ]
+      ]
     }
   },
   {
@@ -148,25 +165,37 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/crm/v3/extensions/videoconferencing/settings/{appId}",
-        "get",
-        "responses"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "hapikey",
+          "oauth2_flows": []
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "developer_hapikey"
+        ]
+      ]
     }
   },
   {
@@ -177,25 +206,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.put.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/crm/v3/extensions/videoconferencing/settings/{appId}",
-        "put",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -206,25 +231,716 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Expected examples: 36",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 36
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 12",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 12
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 12",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 12
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 3",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 3,
+      "paths": [
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 44",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 44,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete",
+          "responses",
+          "204"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "userVerifyUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "fetchAccountsUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "createMeetingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "updateMeetingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "deleteMeetingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "developer_hapikey"
+        ],
+        [
+          "tags",
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 28",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 28,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete",
+          "responses",
+          "204"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "userVerifyUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "createMeetingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "updateMeetingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExternalSettings",
+          "properties",
+          "deleteMeetingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 8",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "paths",
-        "/crm/v3/extensions/videoconferencing/settings/{appId}",
-        "delete",
-        "responses"
+        "components",
+        "responses",
+        "Error",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 8,
+      "paths": []
     }
   },
   {
@@ -250,7 +966,33 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 28,
+        "character": 10
+      },
+      "end": {
+        "line": 156,
+        "character": 35
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -279,7 +1021,37 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 38,
+        "character": 10
+      },
+      "end": {
+        "line": 47,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -308,7 +1080,37 @@
         "put",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 80,
+        "character": 10
+      },
+      "end": {
+        "line": 89,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.put.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "put",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -337,7 +1139,561 @@
         "delete",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 132,
+        "character": 10
+      },
+      "end": {
+        "line": 141,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.put.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "put",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.delete.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "delete",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.put.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "put",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./crm/v3/extensions/videoconferencing/settings/{appId}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get-/crm/v3/extensions/videoconferencing/settings/{appId}_getById' has semantic quality issues: vague_summary, missing_output_details, poor_ai_interpretability. Original summary 'Get settings' is too generic and doesn't indicate the domain context. Description lacks clarity about what settings are returned (ExternalSettings with URLs), what the appId parameter represents, and potential error conditions. Enhanced version specifies the return schema, domain context (video conferencing), and error handling for better AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get-/crm/v3/extensions/videoconferencing/settings/{appId}_getById",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Get settings",
+      "current_description": "Return the settings for a video conference application with the specified ID.",
+      "summary_suggestion": "Retrieve video conferencing application settings",
+      "description_suggestion": "Retrieves the external settings configuration for a video conferencing application identified by the appId. Returns the ExternalSettings object containing the URLs for various video conferencing actions (join, create, update, delete, etc.). Requires valid appId parameter. Returns 404 if the application settings are not found.",
+      "reasoning": "Original summary 'Get settings' is too generic and doesn't indicate the domain context. Description lacks clarity about what settings are returned (ExternalSettings with URLs), what the appId parameter represents, and potential error conditions. Enhanced version specifies the return schema, domain context (video conferencing), and error handling for better AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'put-/crm/v3/extensions/videoconferencing/settings/{appId}_replace' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Original summary lacks domain specificity. Description missing critical details: what input is expected (ExternalSettings schema), constraints on input (https protocol requirement), what is returned, and that this is a full replacement (not partial update). Enhanced version clarifies the request/response schemas, protocol requirements, operation semantics, and side effects for AI agents to understand when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "put"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "put-/crm/v3/extensions/videoconferencing/settings/{appId}_replace",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Update settings",
+      "current_description": "Updates the settings for a video conference application with the specified ID.",
+      "summary_suggestion": "Update video conferencing application settings",
+      "description_suggestion": "Updates or replaces the external settings configuration for a video conferencing application identified by the appId. Accepts an ExternalSettings object containing URLs for video conferencing actions (join, create, update, delete operations). All URLs must use the https protocol. Returns the updated ExternalSettings object. This is a full replacement operation - all required fields must be provided. Modifies the application's video conferencing integration configuration.",
+      "reasoning": "Original summary lacks domain specificity. Description missing critical details: what input is expected (ExternalSettings schema), constraints on input (https protocol requirement), what is returned, and that this is a full replacement (not partial update). Enhanced version clarifies the request/response schemas, protocol requirements, operation semantics, and side effects for AI agents to understand when and how to use this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "summary"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "put",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'delete-/crm/v3/extensions/videoconferencing/settings/{appId}_archive' has semantic quality issues: vague_summary, missing_output_details, missing_side_effects, inconsistent_terminology, poor_ai_interpretability. Original summary 'Delete settings' is too generic. Description lacks clarity about consequences (permanent removal, impact on HubSpot integration), what happens after deletion, and response format. The operation_id mentions 'archive' but description says 'delete', creating terminology inconsistency. Enhanced version clarifies the destructive nature of the operation, its side effects on HubSpot integration, and the expected response, helping AI agents understand the significance of this action.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/crm/v3/extensions/videoconferencing/settings/{appId}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "delete-/crm/v3/extensions/videoconferencing/settings/{appId}_archive",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_side_effects",
+        "inconsistent_terminology",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Delete settings",
+      "current_description": "Deletes the settings for a video conference application with the specified ID.",
+      "summary_suggestion": "Remove video conferencing application settings",
+      "description_suggestion": "Removes the external settings configuration for a video conferencing application identified by the appId. This operation permanently deletes the application's video conferencing integration settings, preventing HubSpot from adding video conference links for this application. The application will no longer be available for video conferencing integration after deletion. Returns a 204 No Content response on successful deletion.",
+      "reasoning": "Original summary 'Delete settings' is too generic. Description lacks clarity about consequences (permanent removal, impact on HubSpot integration), what happens after deletion, and response format. The operation_id mentions 'archive' but description says 'delete', creating terminology inconsistency. Enhanced version clarifies the destructive nature of the operation, its side effects on HubSpot integration, and the expected response, helping AI agents understand the significance of this action.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/crm/v3/extensions/videoconferencing/settings/{appId}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 3 operations analyzed, 3 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 3,
+      "total_issues_found": 3,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 8 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 8
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 8 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 8
     }
   }
 ]

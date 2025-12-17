@@ -24,7 +24,7 @@
         0,
         "url"
       ],
-      "target": ""
+      "target": "bundled-spec"
     }
   },
   {
@@ -35,25 +35,73 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./info.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total Operations count: 10",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/info",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 10,
+      "paths": [
+        [
+          "paths",
+          "/info",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get"
+        ],
+        [
+          "paths",
+          "/whoami",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -64,14 +112,1779 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/devices.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 93",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 93
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "api_key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 4",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 4
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 117",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 117
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 20",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 20,
+      "paths": [
+        [
+          "paths",
+          "/info"
+        ],
+        [
+          "paths",
+          "/info",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get"
+        ],
+        [
+          "paths",
+          "/whoami"
+        ],
+        [
+          "paths",
+          "/whoami",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 143",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 143,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/info"
+        ],
+        [
+          "paths",
+          "/info",
+          "get"
+        ],
+        [
+          "paths",
+          "/info",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/whoami"
+        ],
+        [
+          "paths",
+          "/whoami",
+          "get"
+        ],
+        [
+          "paths",
+          "/whoami",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "User"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "apiKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "groups"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "groups",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "needsPasswordChange"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "role"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "booleanArrayValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "booleanArrayValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "booleanArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "booleanArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "booleanValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "booleanValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "booleanValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "dataStoreDevice"
+        ],
+        [
+          "components",
+          "schemas",
+          "dataStoreDevice",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "dataStoreDevice",
+          "allOf",
+          1,
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "dataStoreDevice",
+          "allOf",
+          1,
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "device"
+        ],
+        [
+          "components",
+          "schemas",
+          "device",
+          "properties",
+          "deviceType"
+        ],
+        [
+          "components",
+          "schemas",
+          "errorValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "errorValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "errorValue",
+          "allOf",
+          1,
+          "properties",
+          "errorCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "errorValue",
+          "allOf",
+          1,
+          "properties",
+          "errorMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "floatArrayValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "floatArrayValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "floatArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "floatArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "floatValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "floatValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "floatValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "currentApiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "groovAdminVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "groovBoxDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "groovNodeRedVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "isGroovBox"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "isGroovBoxSetup"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "isLicenseValid"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "licenseType"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "minimumApiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "shouldShowTrialDialog"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "timezoneName"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "timezoneOffset"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "trialPeriodExpiration"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "warVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "integerArrayValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "integerArrayValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "integerArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "integerArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "integerValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "integerValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "integerValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "stringArrayValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "stringArrayValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "stringArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "stringArrayValue",
+          "allOf",
+          1,
+          "properties",
+          "value",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "stringValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "stringValue",
+          "allOf",
+          1
+        ],
+        [
+          "components",
+          "schemas",
+          "stringValue",
+          "allOf",
+          1,
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagDefinition"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagDefinition",
+          "properties",
+          "dataType"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagDefinition",
+          "properties",
+          "deviceId"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagDefinition",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagDefinition",
+          "properties",
+          "length"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagDefinition",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagReference"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagReference",
+          "properties",
+          "count"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagReference",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagReference",
+          "properties",
+          "index"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagValue",
+          "properties",
+          "valueType"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "tags",
+          2
+        ],
+        [
+          "tags",
+          3
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 58",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 58,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/info",
+          "get"
+        ],
+        [
+          "paths",
+          "/info",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/whoami",
+          "get"
+        ],
+        [
+          "paths",
+          "/whoami",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "User",
+          "properties",
+          "needsPasswordChange"
+        ],
+        [
+          "components",
+          "schemas",
+          "dataStoreDevice"
+        ],
+        [
+          "components",
+          "schemas",
+          "device"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "currentApiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "groovAdminVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "groovBoxDescription"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "groovNodeRedVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "isGroovBox"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "isGroovBoxSetup"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "isLicenseValid"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "licenseType"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "minimumApiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "shouldShowTrialDialog"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "timezoneName"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "timezoneOffset"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "trialPeriodExpiration"
+        ],
+        [
+          "components",
+          "schemas",
+          "groovInfo",
+          "properties",
+          "warVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagReference",
+          "properties",
+          "count"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagReference",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "tagReference",
+          "properties",
+          "index"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "tags",
+          2
+        ],
+        [
+          "tags",
+          3
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 6",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -80,259 +1893,88 @@
         "paths",
         "/v1/data-store/devices",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "items"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 6,
+      "paths": []
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 15,
+        "character": 13
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 15,
+        "character": 19
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/devices/{id}/tags.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Servers MUST be https and no other protocol is allowed. [path: servers.0.url]",
+    "severity": 2,
+    "code": "hosts-https-only-oas3",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "paths",
-        "/v1/data-store/devices/{id}/tags",
-        "get",
-        "summary"
+        "servers",
+        "0",
+        "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 18,
+        "character": 10
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 442,
+        "character": 31
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/read.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "paths",
-        "/v1/data-store/read",
-        "post",
-        "summary"
+        "paths"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 20,
+        "character": 12
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 37,
+        "character": 34
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/read/{id}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Each operation should have a summary [path: paths./info.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
     "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/data-store/read/{id}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/tags.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/data-store/tags",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/write/{id}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/data-store/write/{id}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/logging/groovLogs.json.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/logging/groovLogs.json",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/logging/groovLogs.txt.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/logging/groovLogs.txt",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./whoami.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/whoami",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./info.get]",
-    "severity": 1,
-    "code": "security-defined",
-    "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -342,7 +1984,2071 @@
         "/info",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 41,
+        "character": 12
+      },
+      "end": {
+        "line": 66,
+        "character": 36
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/data-store/devices.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/devices",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 71,
+        "character": 8
+      },
+      "end": {
+        "line": 78,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/data-store/devices/{id}/tags.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/devices/{id}/tags",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 77,
+        "character": 22
+      },
+      "end": {
+        "line": 77,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: paths./v1/data-store/devices/{id}/tags.parameters.0.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/devices/{id}/tags",
+        "parameters",
+        "0",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 82,
+        "character": 12
+      },
+      "end": {
+        "line": 107,
+        "character": 39
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/data-store/devices/{id}/tags.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/devices/{id}/tags",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 112,
+        "character": 13
+      },
+      "end": {
+        "line": 137,
+        "character": 38
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/data-store/read.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 142,
+        "character": 8
+      },
+      "end": {
+        "line": 149,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/data-store/read/{id}.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 148,
+        "character": 22
+      },
+      "end": {
+        "line": 148,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: paths./v1/data-store/read/{id}.parameters.0.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "parameters",
+        "0",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 152,
+        "character": 8
+      },
+      "end": {
+        "line": 160,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/data-store/read/{id}.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 159,
+        "character": 22
+      },
+      "end": {
+        "line": 159,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: paths./v1/data-store/read/{id}.parameters.1.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "parameters",
+        "1",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 163,
+        "character": 8
+      },
+      "end": {
+        "line": 171,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/data-store/read/{id}.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 170,
+        "character": 22
+      },
+      "end": {
+        "line": 170,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: paths./v1/data-store/read/{id}.parameters.2.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "parameters",
+        "2",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 175,
+        "character": 12
+      },
+      "end": {
+        "line": 197,
+        "character": 32
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/data-store/read/{id}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 201,
+        "character": 12
+      },
+      "end": {
+        "line": 226,
+        "character": 36
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/data-store/tags.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/tags",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 231,
+        "character": 8
+      },
+      "end": {
+        "line": 238,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/data-store/write/{id}.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 237,
+        "character": 22
+      },
+      "end": {
+        "line": 237,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: paths./v1/data-store/write/{id}.parameters.0.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "parameters",
+        "0",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 241,
+        "character": 8
+      },
+      "end": {
+        "line": 247,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/data-store/write/{id}.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 250,
+        "character": 8
+      },
+      "end": {
+        "line": 258,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/data-store/write/{id}.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 257,
+        "character": 22
+      },
+      "end": {
+        "line": 257,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: paths./v1/data-store/write/{id}.parameters.2.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "parameters",
+        "2",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 262,
+        "character": 13
+      },
+      "end": {
+        "line": 284,
+        "character": 33
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/data-store/write/{id}.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 288,
+        "character": 12
+      },
+      "end": {
+        "line": 350,
+        "character": 40
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/logging/groovLogs.json.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.json",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 290,
+        "character": 10
+      },
+      "end": {
+        "line": 305,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/logging/groovLogs.json.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.json",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 308,
+        "character": 10
+      },
+      "end": {
+        "line": 316,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/logging/groovLogs.json.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.json",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 315,
+        "character": 24
+      },
+      "end": {
+        "line": 315,
+        "character": 31
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: paths./v1/logging/groovLogs.json.get.parameters.1.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.json",
+        "get",
+        "parameters",
+        "1",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 319,
+        "character": 10
+      },
+      "end": {
+        "line": 324,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/logging/groovLogs.json.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.json",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 354,
+        "character": 12
+      },
+      "end": {
+        "line": 416,
+        "character": 40
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/logging/groovLogs.txt.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.txt",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 356,
+        "character": 10
+      },
+      "end": {
+        "line": 371,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/logging/groovLogs.txt.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.txt",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 374,
+        "character": 10
+      },
+      "end": {
+        "line": 382,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/logging/groovLogs.txt.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.txt",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 381,
+        "character": 24
+      },
+      "end": {
+        "line": 381,
+        "character": 31
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: paths./v1/logging/groovLogs.txt.get.parameters.1.schema.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.txt",
+        "get",
+        "parameters",
+        "1",
+        "schema",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 385,
+        "character": 10
+      },
+      "end": {
+        "line": 390,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/logging/groovLogs.txt.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.txt",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 420,
+        "character": 12
+      },
+      "end": {
+        "line": 442,
+        "character": 31
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./whoami.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/whoami",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 458,
+        "character": 24
+      },
+      "end": {
+        "line": 458,
+        "character": 31
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.User.properties.groups.items.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "User",
+        "properties",
+        "groups",
+        "items",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 463,
+        "character": 15
+      },
+      "end": {
+        "line": 465,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.User.properties.id]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "User",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 464,
+        "character": 22
+      },
+      "end": {
+        "line": 464,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.User.properties.id.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "User",
+        "properties",
+        "id",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 489,
+        "character": 26
+      },
+      "end": {
+        "line": 506,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.booleanArrayValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "booleanArrayValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 510,
+        "character": 21
+      },
+      "end": {
+        "line": 524,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.booleanValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "booleanValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 535,
+        "character": 19
+      },
+      "end": {
+        "line": 537,
+        "character": 32
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.dataStoreDevice.allOf.1.properties.id]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "dataStoreDevice",
+        "allOf",
+        "1",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 536,
+        "character": 26
+      },
+      "end": {
+        "line": 536,
+        "character": 33
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.dataStoreDevice.allOf.1.properties.id.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "dataStoreDevice",
+        "allOf",
+        "1",
+        "properties",
+        "id",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 567,
+        "character": 19
+      },
+      "end": {
+        "line": 585,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.errorValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "errorValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 589,
+        "character": 24
+      },
+      "end": {
+        "line": 607,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.floatArrayValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "floatArrayValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 611,
+        "character": 19
+      },
+      "end": {
+        "line": 626,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.floatValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "floatValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 618,
+        "character": 22
+      },
+      "end": {
+        "line": 620,
+        "character": 32
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.floatValue.allOf.1.properties.value]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "floatValue",
+        "allOf",
+        "1",
+        "properties",
+        "value"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 632,
+        "character": 30
+      },
+      "end": {
+        "line": 635,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.groovInfo.properties.currentApiVersion]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "currentApiVersion"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 634,
+        "character": 22
+      },
+      "end": {
+        "line": 634,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: components.schemas.groovInfo.properties.currentApiVersion.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "currentApiVersion",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 665,
+        "character": 30
+      },
+      "end": {
+        "line": 668,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.groovInfo.properties.minimumApiVersion]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "minimumApiVersion"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 667,
+        "character": 22
+      },
+      "end": {
+        "line": 667,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: components.schemas.groovInfo.properties.minimumApiVersion.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "minimumApiVersion",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 678,
+        "character": 27
+      },
+      "end": {
+        "line": 681,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.groovInfo.properties.timezoneOffset]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "timezoneOffset"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 680,
+        "character": 22
+      },
+      "end": {
+        "line": 680,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: components.schemas.groovInfo.properties.timezoneOffset.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "timezoneOffset",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 683,
+        "character": 34
+      },
+      "end": {
+        "line": 686,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.groovInfo.properties.trialPeriodExpiration]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "trialPeriodExpiration"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 685,
+        "character": 22
+      },
+      "end": {
+        "line": 685,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.groovInfo.properties.trialPeriodExpiration.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "groovInfo",
+        "properties",
+        "trialPeriodExpiration",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 713,
+        "character": 26
+      },
+      "end": {
+        "line": 731,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.integerArrayValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "integerArrayValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 722,
+        "character": 28
+      },
+      "end": {
+        "line": 722,
+        "character": 35
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.integerArrayValue.allOf.1.properties.value.items.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "integerArrayValue",
+        "allOf",
+        "1",
+        "properties",
+        "value",
+        "items",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 735,
+        "character": 21
+      },
+      "end": {
+        "line": 750,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.integerValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "integerValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 742,
+        "character": 22
+      },
+      "end": {
+        "line": 744,
+        "character": 32
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.integerValue.allOf.1.properties.value]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "integerValue",
+        "allOf",
+        "1",
+        "properties",
+        "value"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 743,
+        "character": 26
+      },
+      "end": {
+        "line": 743,
+        "character": 33
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.integerValue.allOf.1.properties.value.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "integerValue",
+        "allOf",
+        "1",
+        "properties",
+        "value",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 754,
+        "character": 25
+      },
+      "end": {
+        "line": 771,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.stringArrayValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "stringArrayValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 775,
+        "character": 20
+      },
+      "end": {
+        "line": 789,
+        "character": 28
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.stringValue]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "stringValue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 808,
+        "character": 21
+      },
+      "end": {
+        "line": 810,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.tagDefinition.properties.deviceId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagDefinition",
+        "properties",
+        "deviceId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 809,
+        "character": 22
+      },
+      "end": {
+        "line": 809,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.tagDefinition.properties.deviceId.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagDefinition",
+        "properties",
+        "deviceId",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 812,
+        "character": 15
+      },
+      "end": {
+        "line": 814,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.tagDefinition.properties.id]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagDefinition",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 813,
+        "character": 22
+      },
+      "end": {
+        "line": 813,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.tagDefinition.properties.id.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagDefinition",
+        "properties",
+        "id",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 816,
+        "character": 19
+      },
+      "end": {
+        "line": 818,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.tagDefinition.properties.length]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagDefinition",
+        "properties",
+        "length"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 817,
+        "character": 22
+      },
+      "end": {
+        "line": 817,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: components.schemas.tagDefinition.properties.length.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagDefinition",
+        "properties",
+        "length",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 832,
+        "character": 21
+      },
+      "end": {
+        "line": 853,
+        "character": 24
+      }
+    },
+    "message": "Potentially unused component has been detected. [path: components.schemas.tagReference]",
+    "severity": 2,
+    "code": "oas3-unused-component",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagReference"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 834,
+        "character": 18
+      },
+      "end": {
+        "line": 837,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.tagReference.properties.count]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagReference",
+        "properties",
+        "count"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 836,
+        "character": 22
+      },
+      "end": {
+        "line": 836,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: components.schemas.tagReference.properties.count.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagReference",
+        "properties",
+        "count",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 839,
+        "character": 15
+      },
+      "end": {
+        "line": 842,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.tagReference.properties.id]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagReference",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 841,
+        "character": 22
+      },
+      "end": {
+        "line": 841,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int64. Must be one of: float, double [path: components.schemas.tagReference.properties.id.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagReference",
+        "properties",
+        "id",
+        "format"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 844,
+        "character": 18
+      },
+      "end": {
+        "line": 847,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.tagReference.properties.index]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagReference",
+        "properties",
+        "index"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 846,
+        "character": 22
+      },
+      "end": {
+        "line": 846,
+        "character": 29
+      }
+    },
+    "message": "Incorrect number format: int32. Must be one of: float, double [path: components.schemas.tagReference.properties.index.format]",
+    "severity": 2,
+    "code": "monite-data-incorrect-number-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "tagReference",
+        "properties",
+        "index",
+        "format"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -368,7 +4074,36 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./info.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/info",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -397,7 +4132,7 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -425,9 +4160,9 @@
         "schemas",
         "groovInfo",
         "required",
-        2
+        "2"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -455,9 +4190,38 @@
         "schemas",
         "groovInfo",
         "required",
-        3
+        "3"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/devices.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/devices",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -486,7 +4250,36 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/devices/{id}/tags.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/devices/{id}/tags",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -515,7 +4308,36 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/read.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -544,7 +4366,36 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/read/{id}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/read/{id}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -573,7 +4424,36 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/tags.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/tags",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -602,7 +4482,36 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/data-store/write/{id}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -631,7 +4540,36 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/logging/groovLogs.json.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.json",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -660,7 +4598,36 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/logging/groovLogs.txt.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/logging/groovLogs.txt",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -689,7 +4656,36 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./whoami.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/whoami",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -718,7 +4714,7 @@
         "get",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -746,287 +4742,712 @@
         "schemas",
         "tagReference"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 489,
-        "character": 26
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 506,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.booleanArrayValue]",
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./info.get]",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "security-defined",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "redocly-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "booleanArrayValue"
+        "paths",
+        "/info",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 510,
-        "character": 21
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 524,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.booleanValue]",
+    "message": "Operation 'downloadLogJson' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description lacks clarity on parameters (3 parameters mentioned but not explained), output format details, and use cases. Added summary describing the action clearly. Enhanced description to explain parameter support, output format, and practical use cases for AI agent decision-making.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "booleanValue"
+        "paths",
+        "/v1/logging/groovLogs.json",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "downloadLogJson",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Downloads the complete groov View log in JSON format. Added in groov View R4.2a.",
+      "summary_suggestion": "Download groov View event log as JSON",
+      "description_suggestion": "Downloads the complete groov View event log in JSON format. Returns the full log history as a JSON file. Supports filtering by date range and log level through query parameters. Useful for log analysis, archival, and integration with external systems. Available since groov View R4.2a.",
+      "reasoning": "Missing summary entirely. Description lacks clarity on parameters (3 parameters mentioned but not explained), output format details, and use cases. Added summary describing the action clearly. Enhanced description to explain parameter support, output format, and practical use cases for AI agent decision-making.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.json",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 567,
-        "character": 19
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 585,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.errorValue]",
+    "message": "Operation 'downloadLogText' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details. Missing summary entirely. Description is vague about format and lacks parameter details. Added action-oriented summary. Enhanced description to clarify text format, explain parameter support, and provide context about when to use this format versus JSON for better AI agent interpretability.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "errorValue"
+        "paths",
+        "/v1/logging/groovLogs.txt",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "downloadLogText",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Downloads the complete groov View log. Added in groov View R4.2a.",
+      "summary_suggestion": "Download groov View event log as text",
+      "description_suggestion": "Downloads the complete groov View event log in plain text format. Returns the full log history as a text file suitable for viewing in standard text editors. Supports filtering by date range and log level through query parameters. Useful for quick log review and compatibility with legacy systems. Available since groov View R4.2a.",
+      "reasoning": "Missing summary entirely. Description is vague about format and lacks parameter details. Added action-oriented summary. Enhanced description to clarify text format, explain parameter support, and provide context about when to use this format versus JSON for better AI agent interpretability.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/logging/groovLogs.txt",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 589,
-        "character": 24
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 607,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.floatArrayValue]",
+    "message": "Operation 'whoAmI' has semantic quality issues: vague_summary, missing_output_details. Missing summary entirely. Description lacks clarity on what information is returned (should reference User schema). Added concise action-oriented summary. Enhanced description to specify return type (User object), clarify accessible roles, and explain practical use cases for AI agents to understand when to call this operation.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "floatArrayValue"
+        "paths",
+        "/whoami",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "whoAmI",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Get information about the user you are authenticated as. Authorized for admins, editors, operators, and kiosk.",
+      "summary_suggestion": "Retrieve authenticated user information",
+      "description_suggestion": "Retrieves information about the currently authenticated user. Returns a User object containing user identity, role, and permissions. Accessible to users with any role: admins, editors, operators, and kiosk users. Useful for determining current user context and authorization level.",
+      "reasoning": "Missing summary entirely. Description lacks clarity on what information is returned (should reference User schema). Added concise action-oriented summary. Enhanced description to specify return type (User object), clarify accessible roles, and explain practical use cases for AI agents to understand when to call this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/whoami",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/whoami",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 611,
-        "character": 19
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 626,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.floatValue]",
+    "message": "Operation 'groovInfo' has semantic quality issues: vague_summary, missing_output_details. Missing summary entirely. Description lacks detail about what information is returned. Added summary and expanded description to specify return type (groovInfo schema) and what kind of system details are available, improving AI agent understanding of the operation's purpose and output.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "floatValue"
+        "paths",
+        "/info",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "groovInfo",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Get information about groov View. No authorization required.",
+      "summary_suggestion": "Retrieve groov View system information",
+      "description_suggestion": "Retrieves system information about the groov View instance including version, configuration, and capabilities. No authentication required. Returns a groovInfo object containing system details such as version, build information, and feature availability.",
+      "reasoning": "Missing summary entirely. Description lacks detail about what information is returned. Added summary and expanded description to specify return type (groovInfo schema) and what kind of system details are available, improving AI agent understanding of the operation's purpose and output.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/info",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/info",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 713,
-        "character": 26
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 731,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.integerArrayValue]",
+    "message": "Operation 'listDevices' has semantic quality issues: vague_summary, missing_output_details, missing_context. Missing summary. Description lacks output details and context about what devices are returned and how to use this operation. Added summary, clarified return type (dataStoreDevice objects), and provided context about typical usage patterns for AI agent decision-making.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "integerArrayValue"
+        "paths",
+        "/v1/data-store/devices",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "listDevices",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "List devices available in the data store. Authorized for admins and editors.",
+      "summary_suggestion": "List all data store devices",
+      "description_suggestion": "Retrieves a list of all Data Store devices configured in the groov View project. Requires admin or editor authorization. Returns an array of dataStoreDevice objects containing device identifiers, names, and connection information. Use this to discover available devices before querying their tags.",
+      "reasoning": "Missing summary. Description lacks output details and context about what devices are returned and how to use this operation. Added summary, clarified return type (dataStoreDevice objects), and provided context about typical usage patterns for AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 735,
-        "character": 21
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 750,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.integerValue]",
+    "message": "Operation 'listDeviceTags' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description lacks clarity about required input (device ID parameter) and output format (tagDefinition objects). Added summary and expanded description to specify path parameter requirement and return type, enabling AI agents to understand the operation's dependencies and outputs.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "integerValue"
+        "paths",
+        "/v1/data-store/devices/{id}/tags",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "listDeviceTags",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "List tags of the given device. Authorized for admins and editors.",
+      "summary_suggestion": "List tags for a specific device",
+      "description_suggestion": "Retrieves all tags defined for a specific Data Store device. Requires the device ID as a path parameter and admin or editor authorization. Returns an array of tagDefinition objects containing tag names, data types, and access information. Use after identifying a device via listDevices.",
+      "reasoning": "Missing summary. Description lacks clarity about required input (device ID parameter) and output format (tagDefinition objects). Added summary and expanded description to specify path parameter requirement and return type, enabling AI agents to understand the operation's dependencies and outputs.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/data-store/devices/{id}/tags",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 754,
-        "character": 25
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 771,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.stringArrayValue]",
+    "message": "Operation 'batchReadTags' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description lacks input details (POST body structure) and output format (tagValue objects). Added summary emphasizing batch efficiency and expanded description to clarify request body requirements and return type, helping AI agents understand when to use batch vs. individual read operations.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "stringArrayValue"
+        "paths",
+        "/v1/data-store/read",
+        "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "batchReadTags",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Read selected tags from the data store. Authorized for admins and editors.",
+      "summary_suggestion": "Read multiple tag values in one request",
+      "description_suggestion": "Reads current values from multiple selected tags in a single batch operation. Requires a POST request body containing an array of tag IDs to read and admin or editor authorization. Returns an array of tagValue objects with current values for each requested tag. More efficient than individual read operations for multiple tags.",
+      "reasoning": "Missing summary. Description lacks input details (POST body structure) and output format (tagValue objects). Added summary emphasizing batch efficiency and expanded description to clarify request body requirements and return type, helping AI agents understand when to use batch vs. individual read operations.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read",
+          "post",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 775,
-        "character": 20
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 789,
-        "character": 28
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.stringValue]",
+    "message": "Operation 'readTag' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description lacks input details (tag ID parameter) and output specifics (tagValue object structure). Added summary and expanded description to clarify path parameter requirement and return type including metadata like timestamp and quality status, improving AI agent understanding of the operation's inputs and outputs.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "stringValue"
+        "paths",
+        "/v1/data-store/read/{id}",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "readTag",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Read the current value of a single tag. Authorized for admins and editors.",
+      "summary_suggestion": "Read current value of a single tag",
+      "description_suggestion": "Retrieves the current value of a specific Data Store tag. Requires the tag ID as a path parameter and admin or editor authorization. Returns a tagValue object containing the tag's current value, timestamp, and quality status. Use for real-time monitoring of individual tag values.",
+      "reasoning": "Missing summary. Description lacks input details (tag ID parameter) and output specifics (tagValue object structure). Added summary and expanded description to clarify path parameter requirement and return type including metadata like timestamp and quality status, improving AI agent understanding of the operation's inputs and outputs.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/data-store/read/{id}",
+          "get",
+          "description"
+        ]
+      ]
     }
   },
   {
     "range": {
       "start": {
-        "line": 832,
-        "character": 21
+        "line": 0,
+        "character": 0
       },
       "end": {
-        "line": 853,
-        "character": 24
+        "line": 0,
+        "character": 0
       }
     },
-    "message": "Potentially unused component has been detected. [path: components.schemas.tagReference]",
+    "message": "Operation 'listAllTags' has semantic quality issues: vague_summary, missing_output_details, missing_context. Missing summary. Description lacks output details and context about tag discovery workflow. Added summary and expanded description to specify return type (tagDefinition objects), clarify that tags span all devices, and provide context about typical usage patterns for AI agent decision-making.",
     "severity": 2,
-    "code": "oas3-unused-component",
+    "code": "POOR_OPERATION_SEMANTICS",
     "code_description": null,
-    "source": "spectral-validator",
+    "source": "semantic_analyzer",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "components",
-        "schemas",
-        "tagReference"
+        "paths",
+        "/v1/data-store/tags",
+        "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "operation_id": "listAllTags",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "List all data store tags defined in the project. Authorized for admins and editors.",
+      "summary_suggestion": "List all data store tags in project",
+      "description_suggestion": "Retrieves a complete list of all Data Store tags defined across all devices in the groov View project. Requires admin or editor authorization. Returns an array of tagDefinition objects containing tag names, data types, device associations, and access information. Use to discover available tags before reading or writing values.",
+      "reasoning": "Missing summary. Description lacks output details and context about tag discovery workflow. Added summary and expanded description to specify return type (tagDefinition objects), clarify that tags span all devices, and provide context about typical usage patterns for AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/data-store/tags",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'writeTag' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Missing summary. Description lacks input details (tag ID parameter and POST body structure), output format (tagValue confirmation), and side effects (state changes in data store). Added summary and expanded description to clarify all inputs, return type, and important side effects, enabling AI agents to understand the operation's full impact.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/data-store/write/{id}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "writeTag",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Writes a new value to the given tag. Authorized for admins and editors.",
+      "summary_suggestion": "Write a new value to a tag",
+      "description_suggestion": "Writes a new value to a specific Data Store tag. Requires the tag ID as a path parameter, a POST request body containing the new value, and admin or editor authorization. Returns a tagValue object confirming the written value and timestamp. Side effect: Updates the tag's current value in the data store, which may trigger downstream automations or notifications depending on project configuration.",
+      "reasoning": "Missing summary. Description lacks input details (tag ID parameter and POST body structure), output format (tagValue confirmation), and side effects (state changes in data store). Added summary and expanded description to clarify all inputs, return type, and important side effects, enabling AI agents to understand the operation's full impact.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/data-store/write/{id}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 10 operations analyzed, 10 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 10,
+      "total_issues_found": 10,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 18 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 18
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 18 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 18
     }
   }
 ]

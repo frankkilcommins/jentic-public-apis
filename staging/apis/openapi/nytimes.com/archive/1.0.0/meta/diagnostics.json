@@ -10,33 +10,6 @@
         "character": 0
       }
     },
-    "message": "Security scheme 'apikey' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
-    "code_description": null,
-    "source": "default-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
     "message": "{'description': 'The year (e.g. 2016).', 'in': 'path', 'name': 'year', 'required': True, 'schema': {'default': '2016', 'format': 'int32', 'maximum': '2030', 'minimum': '1851', 'type': 'integer'}, 'x-consoleDefault': '2016'} is not valid under any of the given schemas",
     "severity": 1,
     "code": "oneOf",
@@ -53,7 +26,7 @@
         "parameters",
         0
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -83,7 +56,7 @@
         "parameters",
         1
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -107,7 +80,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -131,7 +104,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -142,14 +115,919 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.0.schema.maximum]",
-    "severity": 1,
-    "code": "struct",
+    "message": "Total Operations count: 1",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 1,
+      "paths": [
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 47",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 47
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "api-key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 51",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 51
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 2",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 2,
+      "paths": [
+        [
+          "paths",
+          "/{year}/{month}.json"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 1",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 1,
+      "paths": [
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 56",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 56,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "servers",
+          1
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "response"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "response",
+          "properties",
+          "docs"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "response",
+          "properties",
+          "meta"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "response",
+          "properties",
+          "meta",
+          "properties",
+          "hits"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "response",
+          "properties",
+          "meta",
+          "properties",
+          "offset"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "response",
+          "properties",
+          "meta",
+          "properties",
+          "time"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "abstract"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "blog"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "byline"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "byline",
+          "properties",
+          "organization"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "byline",
+          "properties",
+          "original"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "byline",
+          "properties",
+          "person"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "document_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "headline"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "headline",
+          "properties",
+          "kicker"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "headline",
+          "properties",
+          "main"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "keywords"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "keywords",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "keywords",
+          "properties",
+          "rank"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "keywords",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "lead_paragraph"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "caption"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "copyright"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "format"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "height"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "subtype"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "multimedia",
+          "items",
+          "properties",
+          "width"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "news_desk"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "print_page"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "pub_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "section_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "slideshow_credits"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "snippet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "source"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "subsection_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "type_of_material"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "web_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "Doc",
+          "properties",
+          "word_count"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "apikey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 5",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 5,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "responses",
+          "200"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 8",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -158,192 +1036,20 @@
         "paths",
         "/{year}/{month}.json",
         "get",
-        "parameters",
-        0,
+        "responses",
+        "200",
+        "content",
+        "application/json",
         "schema",
-        "maximum"
+        "properties",
+        "response",
+        "properties",
+        "docs",
+        "items"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.0.schema.minimum]",
-    "severity": 1,
-    "code": "struct",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/{year}/{month}.json",
-        "get",
-        "parameters",
-        0,
-        "schema",
-        "minimum"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.1.schema.maximum]",
-    "severity": 1,
-    "code": "struct",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/{year}/{month}.json",
-        "get",
-        "parameters",
-        1,
-        "schema",
-        "maximum"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.1.schema.minimum]",
-    "severity": 1,
-    "code": "struct",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/{year}/{month}.json",
-        "get",
-        "parameters",
-        1,
-        "schema",
-        "minimum"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./{year}/{month}.json.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/{year}/{month}.json",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./{year}/{month}.json.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/{year}/{month}.json",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 8,
+      "paths": []
     }
   },
   {
@@ -369,7 +1075,61 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 13,
+        "character": 13
+      },
+      "end": {
+        "line": 13,
+        "character": 52
+      }
+    },
+    "message": "Servers MUST be https and no other protocol is allowed. [path: servers.0.url]",
+    "severity": 2,
+    "code": "hosts-https-only-oas3",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 10
+      },
+      "end": {
+        "line": 95,
+        "character": 32
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -397,7 +1157,37 @@
         "/{year}/{month}.json",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 23,
+        "character": 10
+      },
+      "end": {
+        "line": 35,
+        "character": 38
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./{year}/{month}.json.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -412,7 +1202,7 @@
       }
     },
     "message": "schema is invalid: data/maximum must be number [path: paths./{year}/{month}.json.get.parameters.0.schema.default]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-schema-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -429,7 +1219,7 @@
         "schema",
         "default"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -461,7 +1251,7 @@
         "schema",
         "maximum"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -493,7 +1283,37 @@
         "schema",
         "minimum"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 37,
+        "character": 10
+      },
+      "end": {
+        "line": 49,
+        "character": 35
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./{year}/{month}.json.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -508,7 +1328,7 @@
       }
     },
     "message": "schema is invalid: data/maximum must be number [path: paths./{year}/{month}.json.get.parameters.1.schema.default]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-schema-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -525,7 +1345,7 @@
         "schema",
         "default"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -557,7 +1377,7 @@
         "schema",
         "maximum"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -589,7 +1409,241 @@
         "schema",
         "minimum"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 68,
+        "character": 35
+      },
+      "end": {
+        "line": 69,
+        "character": 47
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./{year}/{month}.json.get.responses.200.content.application/json.schema.properties.response.properties.meta.properties.hits]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "response",
+        "properties",
+        "meta",
+        "properties",
+        "hits"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 68,
+        "character": 35
+      },
+      "end": {
+        "line": 69,
+        "character": 47
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./{year}/{month}.json.get.responses.200.content.application/json.schema.properties.response.properties.meta.properties.hits]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "response",
+        "properties",
+        "meta",
+        "properties",
+        "hits"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 71,
+        "character": 37
+      },
+      "end": {
+        "line": 72,
+        "character": 47
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./{year}/{month}.json.get.responses.200.content.application/json.schema.properties.response.properties.meta.properties.offset]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "response",
+        "properties",
+        "meta",
+        "properties",
+        "offset"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 71,
+        "character": 37
+      },
+      "end": {
+        "line": 72,
+        "character": 47
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./{year}/{month}.json.get.responses.200.content.application/json.schema.properties.response.properties.meta.properties.offset]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "response",
+        "properties",
+        "meta",
+        "properties",
+        "offset"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 74,
+        "character": 35
+      },
+      "end": {
+        "line": 75,
+        "character": 47
+      }
+    },
+    "message": "Format is not specified for an integer property [path: paths./{year}/{month}.json.get.responses.200.content.application/json.schema.properties.response.properties.meta.properties.time]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "response",
+        "properties",
+        "meta",
+        "properties",
+        "time"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 74,
+        "character": 35
+      },
+      "end": {
+        "line": 75,
+        "character": 47
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: paths./{year}/{month}.json.get.responses.200.content.application/json.schema.properties.response.properties.meta.properties.time]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema",
+        "properties",
+        "response",
+        "properties",
+        "meta",
+        "properties",
+        "time"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -619,7 +1673,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -649,7 +1703,7 @@
         "properties",
         "blog"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -681,7 +1735,533 @@
         "properties",
         "person"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 169,
+        "character": 25
+      },
+      "end": {
+        "line": 170,
+        "character": 35
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Doc.properties.multimedia.items.properties.height]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Doc",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "height"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 169,
+        "character": 25
+      },
+      "end": {
+        "line": 170,
+        "character": 35
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Doc.properties.multimedia.items.properties.height]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Doc",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "height"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 181,
+        "character": 24
+      },
+      "end": {
+        "line": 182,
+        "character": 35
+      }
+    },
+    "message": "Format is not specified for an integer property [path: components.schemas.Doc.properties.multimedia.items.properties.width]",
+    "severity": 3,
+    "code": "monite-data-missing-integer-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Doc",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "width"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 181,
+        "character": 24
+      },
+      "end": {
+        "line": 182,
+        "character": 35
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Doc.properties.multimedia.items.properties.width]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Doc",
+        "properties",
+        "multimedia",
+        "items",
+        "properties",
+        "width"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.0.schema.maximum]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "parameters",
+        "0",
+        "schema",
+        "maximum"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.0.schema.minimum]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "parameters",
+        "0",
+        "schema",
+        "minimum"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.1.schema.maximum]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "parameters",
+        "1",
+        "schema",
+        "maximum"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Expected type `number` but got `string`. [path: paths./{year}/{month}.json.get.parameters.1.schema.minimum]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "parameters",
+        "1",
+        "schema",
+        "minimum"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./{year}/{month}.json.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./{year}/{month}.json.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/{year}/{month}.json' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original summary 'Archive API' is too generic and doesn't describe the operation's action. Description lacks specificity about parameter formats, return structure details, and doesn't clearly indicate the operation retrieves historical article data. Enhanced version specifies parameter formats, clarifies the return value contains article metadata, and reinforces the use case for AI agent decision-making about when to invoke this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/{year}/{month}.json",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/{year}/{month}.json",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Archive API",
+      "current_description": "The Archive API provides lists of NYT articles by month going back to 1851.  Simply pass in the year and month you want and it returns a JSON object with all articles for that month.",
+      "summary_suggestion": "Retrieve NYT articles by year and month",
+      "description_suggestion": "Retrieves a list of New York Times articles published in a specified month and year, dating back to 1851. Accepts year (YYYY format) and month (MM format) as path parameters. Returns a JSON object containing article metadata including headlines, bylines, abstracts, and other document properties. Useful for building local databases of NYT article metadata.",
+      "reasoning": "Original summary 'Archive API' is too generic and doesn't describe the operation's action. Description lacks specificity about parameter formats, return structure details, and doesn't clearly indicate the operation retrieves historical article data. Enhanced version specifies parameter formats, clarifies the return value contains article metadata, and reinforces the use case for AI agent decision-making about when to invoke this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/{year}/{month}.json",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 1 operations analyzed, 1 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 1,
+      "total_issues_found": 1,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 1 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 1 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 1
     }
   }
 ]

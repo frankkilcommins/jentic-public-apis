@@ -7,24 +7,73 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 10",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 10,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -35,25 +84,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -64,25 +109,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments.post.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Schemas count: 185",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 185
     }
   },
   {
@@ -93,25 +134,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments/{paymentId}",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Authorization"
+        ]
+      ]
     }
   },
   {
@@ -122,25 +166,30 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/cancel.post.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments/{paymentId}/cancel",
-        "post",
-        "operationId"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Authorization"
+        ]
+      ]
     }
   },
   {
@@ -151,25 +200,37 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/capture.post.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments/{paymentId}/capture",
-        "post",
-        "operationId"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "Authorization",
+          "oauth2_flows": []
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Authorization"
+        ]
+      ]
     }
   },
   {
@@ -180,25 +241,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/events.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments/{paymentId}/events",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
     }
   },
   {
@@ -209,14 +266,3353 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/refunds.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Expected examples: 257",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 257
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 114",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 114
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 114",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 114
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 18",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 18,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/refunds"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 10",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 10,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 293",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 293,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          5,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          6,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          7,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          8
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          8,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          9
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          9,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          10
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          10,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          11
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          11,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          12
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          12,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "422"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "422"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "202"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "412"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/refunds"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          5,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "422"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "city"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "country"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "line1"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "line2"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address",
+          "properties",
+          "postcode"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "card_brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "card_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "cardholder_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "expiry_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "first_digits_card_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "last_digits_card_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "language"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "reference"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "return_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "language"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "payment_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "payment_provider"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "provider_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "reference"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "return_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "EmbeddedRefunds"
+        ],
+        [
+          "components",
+          "schemas",
+          "EmbeddedRefunds",
+          "properties",
+          "refunds"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorResponse",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorResponse",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "card_brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "corporate_card_surcharge"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "fee"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "language"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "net_amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "payment_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "payment_provider"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "provider_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "reference"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "return_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "total_amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "href"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "method"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payer"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payer",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "Payer",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "card_brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "corporate_card_surcharge"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "fee"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "language"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "net_amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "payment_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "payment_provider"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "provider_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "reference"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "return_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "total_amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentError"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentError",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentError",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentError",
+          "properties",
+          "field"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvent",
+          "properties",
+          "payment_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvent",
+          "properties",
+          "updated"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEventLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvents"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvents",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvents",
+          "properties",
+          "payment_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentLinks"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentLinksForEvents"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentLinksForSearch"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRefundRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRefundRequest",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRefundRequest",
+          "properties",
+          "refund_amount_available"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSearchResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSearchResults",
+          "properties",
+          "count"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSearchResults",
+          "properties",
+          "page"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSearchResults",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSearchResults",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary",
+          "properties",
+          "capture_submit_time"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary",
+          "properties",
+          "captured_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary",
+          "properties",
+          "settled_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "finished"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "PostLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "PostLink",
+          "properties",
+          "href"
+        ],
+        [
+          "components",
+          "schemas",
+          "PostLink",
+          "properties",
+          "method"
+        ],
+        [
+          "components",
+          "schemas",
+          "PostLink",
+          "properties",
+          "params"
+        ],
+        [
+          "components",
+          "schemas",
+          "PostLink",
+          "properties",
+          "params",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "PostLink",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrefilledCardholderDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrefilledCardholderDetails",
+          "properties",
+          "cardholder_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Refund"
+        ],
+        [
+          "components",
+          "schemas",
+          "Refund",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Refund",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "Refund",
+          "properties",
+          "refund_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "Refund",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundDetailForSearch"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundDetailForSearch",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundDetailForSearch",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundDetailForSearch",
+          "properties",
+          "refund_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundDetailForSearch",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundError"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundError",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundError",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundError",
+          "properties",
+          "field"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundForSearchResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundForSearchResult",
+          "properties",
+          "payment_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundLinksForSearch"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSearchResults"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSearchResults",
+          "properties",
+          "count"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSearchResults",
+          "properties",
+          "page"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSearchResults",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSearchResults",
+          "properties",
+          "total"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSettlementSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSettlementSummary",
+          "properties",
+          "settled_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary",
+          "properties",
+          "amount_available"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary",
+          "properties",
+          "amount_submitted"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchNavigationLinks"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Authorization"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 162",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 162,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          8
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          9
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          10
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          11
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "parameters",
+          12
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "422"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "201"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "422"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "204"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "409"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "202"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "412"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds",
+          "post",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "404"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "429"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/refunds/{refundId}",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "401"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "422"
+        ],
+        [
+          "paths",
+          "/v1/refunds",
+          "get",
+          "responses",
+          "500"
+        ],
+        [
+          "components",
+          "schemas",
+          "Address"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "card_type"
+        ],
+        [
+          "components",
+          "schemas",
+          "CardDetails",
+          "properties",
+          "expiry_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "language"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "reference"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreateCardPaymentRequest",
+          "properties",
+          "return_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "created_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "language"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "payment_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "provider_id"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "reference"
+        ],
+        [
+          "components",
+          "schemas",
+          "CreatePaymentResult",
+          "properties",
+          "return_url"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "card_brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "fee"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "GetPaymentResult",
+          "properties",
+          "net_amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "card_brand"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "delayed_capture"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "fee"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "moto"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentDetailForSearch",
+          "properties",
+          "net_amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentError"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvent",
+          "properties",
+          "updated"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEventLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentEvents"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentLinks"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentLinksForEvents"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentLinksForSearch"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRefundRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRefundRequest",
+          "properties",
+          "amount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentRefundRequest",
+          "properties",
+          "refund_amount_available"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary",
+          "properties",
+          "capture_submit_time"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary",
+          "properties",
+          "captured_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentSettlementSummary",
+          "properties",
+          "settled_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "finished"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "PaymentState",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "PostLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "PrefilledCardholderDetails",
+          "properties",
+          "cardholder_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundError"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundLinksForSearch"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSettlementSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSettlementSummary",
+          "properties",
+          "settled_date"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary",
+          "properties",
+          "amount_available"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary",
+          "properties",
+          "amount_submitted"
+        ],
+        [
+          "components",
+          "schemas",
+          "RefundSummary",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchNavigationLinks"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 12",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -225,206 +3621,15 @@
         "paths",
         "/v1/payments/{paymentId}/refunds",
         "get",
-        "operationId"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/refunds.post.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments/{paymentId}/refunds",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/payments/{paymentId}/refunds/{refundId}",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/refunds.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/refunds",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"Payer\" is never used. [path: components.schemas.Payer]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "Payer"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 12,
+      "paths": []
     }
   },
   {
@@ -450,7 +3655,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -478,7 +3683,549 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 13,
+        "character": 10
+      },
+      "end": {
+        "line": 932,
+        "character": 35
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 17,
+        "character": 10
+      },
+      "end": {
+        "line": 23,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/payments.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 26,
+        "character": 10
+      },
+      "end": {
+        "line": 32,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/payments.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 35,
+        "character": 10
+      },
+      "end": {
+        "line": 50,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/payments.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 53,
+        "character": 10
+      },
+      "end": {
+        "line": 59,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/payments.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 62,
+        "character": 10
+      },
+      "end": {
+        "line": 68,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./v1/payments.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 71,
+        "character": 10
+      },
+      "end": {
+        "line": 77,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 5 [path: paths./v1/payments.get.parameters.5]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "5"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 80,
+        "character": 10
+      },
+      "end": {
+        "line": 86,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 6 [path: paths./v1/payments.get.parameters.6]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "6"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 89,
+        "character": 10
+      },
+      "end": {
+        "line": 95,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 7 [path: paths./v1/payments.get.parameters.7]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "7"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 98,
+        "character": 10
+      },
+      "end": {
+        "line": 104,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 8 [path: paths./v1/payments.get.parameters.8]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "8"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 107,
+        "character": 10
+      },
+      "end": {
+        "line": 113,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 9 [path: paths./v1/payments.get.parameters.9]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "9"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 116,
+        "character": 10
+      },
+      "end": {
+        "line": 122,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 10 [path: paths./v1/payments.get.parameters.10]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "10"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 125,
+        "character": 10
+      },
+      "end": {
+        "line": 131,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 11 [path: paths./v1/payments.get.parameters.11]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "11"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 134,
+        "character": 10
+      },
+      "end": {
+        "line": 140,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 12 [path: paths./v1/payments.get.parameters.12]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "parameters",
+        "12"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 16
+      },
+      "end": {
+        "line": 156,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 160,
+        "character": 33
+      },
+      "end": {
+        "line": 162,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments.get.responses.422.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "responses",
+        "422",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 170,
+        "character": 33
+      },
+      "end": {
+        "line": 172,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments.get.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 180,
+        "character": 33
+      },
+      "end": {
+        "line": 182,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -507,7 +4254,165 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 215,
+        "character": 33
+      },
+      "end": {
+        "line": 217,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments.post.responses.400.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "post",
+        "responses",
+        "400",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 223,
+        "character": 16
+      },
+      "end": {
+        "line": 224,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments.post.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "post",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 228,
+        "character": 33
+      },
+      "end": {
+        "line": 230,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments.post.responses.422.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "post",
+        "responses",
+        "422",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 238,
+        "character": 33
+      },
+      "end": {
+        "line": 240,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments.post.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "post",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 248,
+        "character": 33
+      },
+      "end": {
+        "line": 250,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments.post.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "post",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -536,7 +4441,133 @@
         "post",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 306,
+        "character": 16
+      },
+      "end": {
+        "line": 307,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 311,
+        "character": 33
+      },
+      "end": {
+        "line": 313,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}.get.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 321,
+        "character": 33
+      },
+      "end": {
+        "line": 323,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}.get.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 331,
+        "character": 33
+      },
+      "end": {
+        "line": 333,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -565,7 +4596,197 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 373,
+        "character": 33
+      },
+      "end": {
+        "line": 375,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/cancel.post.responses.400.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post",
+        "responses",
+        "400",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 381,
+        "character": 16
+      },
+      "end": {
+        "line": 382,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}/cancel.post.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 386,
+        "character": 33
+      },
+      "end": {
+        "line": 388,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/cancel.post.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 396,
+        "character": 33
+      },
+      "end": {
+        "line": 398,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/cancel.post.responses.409.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post",
+        "responses",
+        "409",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 406,
+        "character": 33
+      },
+      "end": {
+        "line": 408,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/cancel.post.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 416,
+        "character": 33
+      },
+      "end": {
+        "line": 418,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/cancel.post.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -594,7 +4815,197 @@
         "post",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 458,
+        "character": 33
+      },
+      "end": {
+        "line": 460,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/capture.post.responses.400.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post",
+        "responses",
+        "400",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 466,
+        "character": 16
+      },
+      "end": {
+        "line": 467,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}/capture.post.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 471,
+        "character": 33
+      },
+      "end": {
+        "line": 473,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/capture.post.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 481,
+        "character": 33
+      },
+      "end": {
+        "line": 483,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/capture.post.responses.409.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post",
+        "responses",
+        "409",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 491,
+        "character": 33
+      },
+      "end": {
+        "line": 493,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/capture.post.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 501,
+        "character": 33
+      },
+      "end": {
+        "line": 503,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/capture.post.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -623,7 +5034,133 @@
         "post",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 548,
+        "character": 16
+      },
+      "end": {
+        "line": 549,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}/events.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/events",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 553,
+        "character": 33
+      },
+      "end": {
+        "line": 555,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/events.get.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/events",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 563,
+        "character": 33
+      },
+      "end": {
+        "line": 565,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/events.get.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/events",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 573,
+        "character": 33
+      },
+      "end": {
+        "line": 575,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/events.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/events",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -652,7 +5189,163 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 598,
+        "character": 10
+      },
+      "end": {
+        "line": 603,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/payments/{paymentId}/refunds.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 618,
+        "character": 16
+      },
+      "end": {
+        "line": 619,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}/refunds.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 623,
+        "character": 33
+      },
+      "end": {
+        "line": 625,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds.get.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 633,
+        "character": 33
+      },
+      "end": {
+        "line": 635,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds.get.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 643,
+        "character": 33
+      },
+      "end": {
+        "line": 645,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -681,7 +5374,193 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 666,
+        "character": 10
+      },
+      "end": {
+        "line": 672,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/payments/{paymentId}/refunds.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 690,
+        "character": 16
+      },
+      "end": {
+        "line": 691,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}/refunds.post.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "post",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 695,
+        "character": 33
+      },
+      "end": {
+        "line": 697,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds.post.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "post",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 703,
+        "character": 16
+      },
+      "end": {
+        "line": 704,
+        "character": 61
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}/refunds.post.responses.412]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "post",
+        "responses",
+        "412"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 708,
+        "character": 33
+      },
+      "end": {
+        "line": 710,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds.post.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "post",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 718,
+        "character": 33
+      },
+      "end": {
+        "line": 720,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds.post.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "post",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -710,7 +5589,193 @@
         "post",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 754,
+        "character": 10
+      },
+      "end": {
+        "line": 759,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds/{refundId}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 762,
+        "character": 10
+      },
+      "end": {
+        "line": 767,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds/{refundId}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 782,
+        "character": 16
+      },
+      "end": {
+        "line": 783,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds/{refundId}",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 787,
+        "character": 33
+      },
+      "end": {
+        "line": 789,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.responses.404.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds/{refundId}",
+        "get",
+        "responses",
+        "404",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 797,
+        "character": 33
+      },
+      "end": {
+        "line": 799,
+        "character": 62
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.responses.429.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds/{refundId}",
+        "get",
+        "responses",
+        "429",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 807,
+        "character": 33
+      },
+      "end": {
+        "line": 809,
+        "character": 61
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds/{refundId}",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -739,7 +5804,281 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 832,
+        "character": 10
+      },
+      "end": {
+        "line": 838,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/refunds.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 841,
+        "character": 10
+      },
+      "end": {
+        "line": 847,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/refunds.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 850,
+        "character": 10
+      },
+      "end": {
+        "line": 856,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/refunds.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 859,
+        "character": 10
+      },
+      "end": {
+        "line": 865,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/refunds.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 868,
+        "character": 10
+      },
+      "end": {
+        "line": 874,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./v1/refunds.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 877,
+        "character": 10
+      },
+      "end": {
+        "line": 883,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 5 [path: paths./v1/refunds.get.parameters.5]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "parameters",
+        "5"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 898,
+        "character": 16
+      },
+      "end": {
+        "line": 899,
+        "character": 77
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./v1/refunds.get.responses.401]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "responses",
+        "401"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 903,
+        "character": 33
+      },
+      "end": {
+        "line": 905,
+        "character": 60
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/refunds.get.responses.422.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "responses",
+        "422",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 913,
+        "character": 33
+      },
+      "end": {
+        "line": 915,
+        "character": 60
+      }
+    },
+    "message": "Error response should use a standard error format. [path: paths./v1/refunds.get.responses.500.content.application/json]",
+    "severity": 2,
+    "code": "no-unknown-error-format",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "responses",
+        "500",
+        "content",
+        "application/json"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -768,7 +6107,7 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -799,7 +6138,38 @@
         "billing_address",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1067,
+        "character": 35
+      },
+      "end": {
+        "line": 1068,
+        "character": 30
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.CreateCardPaymentRequest.properties.metadata.additionalProperties]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "CreateCardPaymentRequest",
+        "properties",
+        "metadata",
+        "additionalProperties"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -814,7 +6184,7 @@
       }
     },
     "message": "\"example\" property type must be object [path: components.schemas.CreateCardPaymentRequest.properties.metadata.example]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-schema-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -830,7 +6200,7 @@
         "metadata",
         "example"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -861,7 +6231,7 @@
         "prefilled_cardholder_details",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -892,7 +6262,7 @@
         "prefilled_cardholder_details",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -923,7 +6293,67 @@
         "_links",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1117,
+        "character": 19
+      },
+      "end": {
+        "line": 1121,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.CreatePaymentResult.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "CreatePaymentResult",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1233,
+        "character": 19
+      },
+      "end": {
+        "line": 1236,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetPaymentResult.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetPaymentResult",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -954,7 +6384,97 @@
         "card_details",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1248,
+        "character": 37
+      },
+      "end": {
+        "line": 1252,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetPaymentResult.properties.corporate_card_surcharge]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetPaymentResult",
+        "properties",
+        "corporate_card_surcharge"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1273,
+        "character": 16
+      },
+      "end": {
+        "line": 1278,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetPaymentResult.properties.fee]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetPaymentResult",
+        "properties",
+        "fee"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1300,
+        "character": 23
+      },
+      "end": {
+        "line": 1305,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetPaymentResult.properties.net_amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetPaymentResult",
+        "properties",
+        "net_amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -985,7 +6505,7 @@
         "refund_summary",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1016,7 +6536,37 @@
         "settlement_summary",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1342,
+        "character": 25
+      },
+      "end": {
+        "line": 1346,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.GetPaymentResult.properties.total_amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GetPaymentResult",
+        "properties",
+        "total_amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1044,7 +6594,7 @@
         "schemas",
         "Payer"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1075,7 +6625,37 @@
         "_links",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1386,
+        "character": 19
+      },
+      "end": {
+        "line": 1389,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentDetailForSearch.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentDetailForSearch",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1106,7 +6686,97 @@
         "card_details",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1401,
+        "character": 37
+      },
+      "end": {
+        "line": 1405,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentDetailForSearch.properties.corporate_card_surcharge]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentDetailForSearch",
+        "properties",
+        "corporate_card_surcharge"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1426,
+        "character": 16
+      },
+      "end": {
+        "line": 1431,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentDetailForSearch.properties.fee]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentDetailForSearch",
+        "properties",
+        "fee"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1453,
+        "character": 23
+      },
+      "end": {
+        "line": 1458,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentDetailForSearch.properties.net_amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentDetailForSearch",
+        "properties",
+        "net_amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1137,7 +6807,7 @@
         "refund_summary",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1168,7 +6838,37 @@
         "settlement_summary",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1495,
+        "character": 25
+      },
+      "end": {
+        "line": 1499,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentDetailForSearch.properties.total_amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentDetailForSearch",
+        "properties",
+        "total_amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1199,7 +6899,7 @@
         "_links",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1230,7 +6930,7 @@
         "state",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1261,7 +6961,7 @@
         "state",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1292,7 +6992,7 @@
         "payment_url",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1323,7 +7023,7 @@
         "payment_url",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1354,7 +7054,7 @@
         "_links",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1385,7 +7085,7 @@
         "cancel",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1416,7 +7116,7 @@
         "cancel",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1447,7 +7147,7 @@
         "capture",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1478,7 +7178,7 @@
         "capture",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1509,7 +7209,7 @@
         "events",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1540,7 +7240,7 @@
         "events",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1571,7 +7271,7 @@
         "next_url",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1602,7 +7302,7 @@
         "next_url",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1633,7 +7333,7 @@
         "next_url_post",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1664,7 +7364,7 @@
         "next_url_post",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1695,7 +7395,7 @@
         "refunds",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1726,7 +7426,7 @@
         "refunds",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1757,7 +7457,7 @@
         "self",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1788,7 +7488,7 @@
         "self",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1819,7 +7519,7 @@
         "self",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1850,7 +7550,7 @@
         "self",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1881,7 +7581,7 @@
         "cancel",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1912,7 +7612,7 @@
         "cancel",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1943,7 +7643,7 @@
         "capture",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1974,7 +7674,7 @@
         "capture",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2005,7 +7705,7 @@
         "events",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2036,7 +7736,7 @@
         "events",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2067,7 +7767,7 @@
         "refunds",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2098,7 +7798,7 @@
         "refunds",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2129,7 +7829,7 @@
         "self",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2160,7 +7860,128 @@
         "self",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1694,
+        "character": 18
+      },
+      "end": {
+        "line": 1697,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentSearchResults.properties.count]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentSearchResults",
+        "properties",
+        "count"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1699,
+        "character": 17
+      },
+      "end": {
+        "line": 1702,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentSearchResults.properties.page]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentSearchResults",
+        "properties",
+        "page"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1710,
+        "character": 18
+      },
+      "end": {
+        "line": 1713,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PaymentSearchResults.properties.total]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PaymentSearchResults",
+        "properties",
+        "total"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1785,
+        "character": 35
+      },
+      "end": {
+        "line": 1786,
+        "character": 30
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: components.schemas.PostLink.properties.params.additionalProperties]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PostLink",
+        "properties",
+        "params",
+        "additionalProperties"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2175,7 +7996,7 @@
       }
     },
     "message": "\"example\" property type must be object [path: components.schemas.PostLink.properties.params.example]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-schema-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -2191,7 +8012,7 @@
         "params",
         "example"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2222,7 +8043,7 @@
         "billing_address",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2253,7 +8074,37 @@
         "billing_address",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1820,
+        "character": 19
+      },
+      "end": {
+        "line": 1824,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Refund.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Refund",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2284,7 +8135,7 @@
         "settlement_summary",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2315,7 +8166,37 @@
         "_links",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1859,
+        "character": 19
+      },
+      "end": {
+        "line": 1863,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.RefundDetailForSearch.properties.amount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RefundDetailForSearch",
+        "properties",
+        "amount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2346,7 +8227,7 @@
         "settlement_summary",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2377,7 +8258,7 @@
         "_embedded",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2408,7 +8289,7 @@
         "payment",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2439,7 +8320,7 @@
         "payment",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2470,7 +8351,7 @@
         "self",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2501,7 +8382,7 @@
         "self",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2532,7 +8413,157 @@
         "_links",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1948,
+        "character": 18
+      },
+      "end": {
+        "line": 1951,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.RefundSearchResults.properties.count]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RefundSearchResults",
+        "properties",
+        "count"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1953,
+        "character": 17
+      },
+      "end": {
+        "line": 1956,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.RefundSearchResults.properties.page]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RefundSearchResults",
+        "properties",
+        "page"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1964,
+        "character": 18
+      },
+      "end": {
+        "line": 1967,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.RefundSearchResults.properties.total]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RefundSearchResults",
+        "properties",
+        "total"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1987,
+        "character": 29
+      },
+      "end": {
+        "line": 1992,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.RefundSummary.properties.amount_available]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RefundSummary",
+        "properties",
+        "amount_available"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1994,
+        "character": 29
+      },
+      "end": {
+        "line": 1998,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.RefundSummary.properties.amount_submitted]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RefundSummary",
+        "properties",
+        "amount_submitted"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2563,7 +8594,7 @@
         "first_page",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2594,7 +8625,7 @@
         "last_page",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2625,7 +8656,7 @@
         "next_page",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2656,7 +8687,7 @@
         "prev_page",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2687,7 +8718,1030 @@
         "self",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments.post.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/cancel.post.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/capture.post.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/events.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/events",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/refunds.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/refunds.post.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/payments/{paymentId}/refunds/{refundId}.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/refunds/{refundId}",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./v1/refunds.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/refunds",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Example value must conform to the schema: type must be object. [path: components.schemas.PostLink.properties.params.example]",
+    "severity": 2,
+    "code": "no-invalid-schema-examples",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PostLink",
+        "properties",
+        "params",
+        "example"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Example value must conform to the schema: type must be object. [path: components.schemas.CreateCardPaymentRequest.properties.metadata.example]",
+    "severity": 2,
+    "code": "no-invalid-schema-examples",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "CreateCardPaymentRequest",
+        "properties",
+        "metadata",
+        "example"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"Payer\" is never used. [path: components.schemas.Payer]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Payer"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'POST /v1/payments/{paymentId}/refunds' has semantic quality issues: vague_description, missing_output_details, missing_side_effects, not_actionable. Current description is incomplete and misleading - it says 'Return' but this is a POST operation that creates a refund. Missing details about what inputs are required (payment must be refundable), what the operation does (creates a refund), what is returned (refund object details), and side effects (payment state changes). Added clarity about partial refund support and authentication requirements for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operation_id": "POST /v1/payments/{paymentId}/refunds",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_side_effects",
+        "not_actionable"
+      ],
+      "current_summary": "Submit a refund for a payment",
+      "current_description": "Return issued refund information. The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'",
+      "description_suggestion": "Creates a refund for a previously captured card payment. Requires the payment ID in the path and valid API key authentication via Bearer token in the Authorization header. Returns the created refund object with refund ID, amount, status, and settlement information. The payment must be in a refundable state. Partial refunds are supported by specifying an amount less than the original payment.",
+      "reasoning": "Current description is incomplete and misleading - it says 'Return' but this is a POST operation that creates a refund. Missing details about what inputs are required (payment must be refundable), what the operation does (creates a refund), what is returned (refund object details), and side effects (payment state changes). Added clarity about partial refund support and authentication requirements for better AI agent understanding.",
+      "batch_index": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'GET /v1/payments/{paymentId}/refunds/{refundId}' has semantic quality issues: vague_description, missing_output_details. Current description lacks clarity about what information is returned and has a grammatical issue. Added details about required path parameters, authentication method, and specific fields returned (amount, status, created date, settlement summary) to improve AI agent interpretability and help agents understand what data they will receive.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operation_id": "GET /v1/payments/{paymentId}/refunds/{refundId}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "Find payment refund by ID",
+      "current_description": "Return payment refund information by Refund ID The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'",
+      "description_suggestion": "Retrieves detailed information about a specific refund for a payment. Requires the payment ID and refund ID in the path, and valid API key authentication via Bearer token in the Authorization header. Returns the refund object including refund ID, amount, status, created date, and settlement summary information.",
+      "reasoning": "Current description lacks clarity about what information is returned and has a grammatical issue. Added details about required path parameters, authentication method, and specific fields returned (amount, status, created date, settlement summary) to improve AI agent interpretability and help agents understand what data they will receive.",
+      "batch_index": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'GET /v1/refunds' has semantic quality issues: vague_description, missing_input_details, missing_output_details. Current summary is too generic and description is incomplete. Missing information about pagination support (6 parameters suggest pagination), what filters are available beyond dates, what the response structure includes, and how results are ordered. Enhanced summary to indicate filtering capability and added details about pagination, response structure, and result ordering to help AI agents understand how to construct queries and process results.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operation_id": "GET /v1/refunds",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Search refunds",
+      "current_description": "Search refunds by 'from' and 'to' date. The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'",
+      "summary_suggestion": "Search refunds by date range and filters",
+      "description_suggestion": "Searches refunds across all payments using optional date range and filtering parameters. Requires valid API key authentication via Bearer token in the Authorization header. Supports filtering by 'from' and 'to' dates, and includes pagination parameters for result navigation. Returns a paginated list of refund objects with navigation links to access additional pages. Results are ordered by creation date.",
+      "reasoning": "Current summary is too generic and description is incomplete. Missing information about pagination support (6 parameters suggest pagination), what filters are available beyond dates, what the response structure includes, and how results are ordered. Enhanced summary to indicate filtering capability and added details about pagination, response structure, and result ordering to help AI agents understand how to construct queries and process results.",
+      "batch_index": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Search payments' has semantic quality issues: missing_output_details, missing_context. Original summary is too generic. Description lacks information about pagination, return format, and how multiple filters interact. Added details about paginated results and simultaneous filter support for better AI agent understanding of capabilities.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Search payments",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Search payments",
+      "current_description": "Search payments by reference, state, 'from' and 'to' date. The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'",
+      "summary_suggestion": "Search payments by reference, state, and date range",
+      "description_suggestion": "Search for payments using optional filters including reference, payment state, and date range ('from' and 'to'). Returns a paginated list of payments matching the search criteria. Requires Bearer token authentication via the authorization header. Supports filtering by multiple criteria simultaneously.",
+      "reasoning": "Original summary is too generic. Description lacks information about pagination, return format, and how multiple filters interact. Added details about paginated results and simultaneous filter support for better AI agent understanding of capabilities.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/payments",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Create a payment' has semantic quality issues: missing_output_details, missing_side_effects. Summary is adequate. Description lacks critical details about request body requirements, return value structure, and initial payment state. Added information about payment lifecycle and what the operation returns to improve AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Create a payment",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Create new payment",
+      "current_description": "Create a new payment for the account associated to the Authorisation token. The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'",
+      "description_suggestion": "Create a new card payment for the account associated with the provided Bearer token. Accepts payment details via the request body including amount, reference, and description. Returns the created payment object with a unique payment ID and initial state. The payment is created in 'created' state and requires subsequent actions (e.g., capture) to complete the transaction.",
+      "reasoning": "Summary is adequate. Description lacks critical details about request body requirements, return value structure, and initial payment state. Added information about payment lifecycle and what the operation returns to improve AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Get a payment' has semantic quality issues: vague_description, missing_output_details. Summary is clear and actionable. Description is incomplete with missing details about what information is returned and lacks clarity about the response structure. Enhanced to specify the types of data returned (amount, state, card details, settlement info) for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Get a payment",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "Find payment by ID",
+      "current_description": "Return information about the payment The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'",
+      "description_suggestion": "Retrieve detailed information about a specific payment using its payment ID. Returns the complete payment object including amount, state, card details, settlement information, and available actions. Requires Bearer token authentication via the authorization header.",
+      "reasoning": "Summary is clear and actionable. Description is incomplete with missing details about what information is returned and lacks clarity about the response structure. Enhanced to specify the types of data returned (amount, state, card details, settlement info) for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments/{paymentId}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Cancel a payment' has semantic quality issues: missing_output_details, missing_context. Summary is clear. Description lacks specificity about which states allow cancellation and what the response contains. Added clarification about terminal states, return value, and irreversibility to help AI agents understand preconditions and effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/cancel",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Cancel a payment",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Cancel payment",
+      "current_description": "Cancel a payment based on the provided payment ID and the Authorisation token. The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'. A payment can only be cancelled if it's in a state that isn't finished.",
+      "description_suggestion": "Cancel a payment using its payment ID. The payment must be in a non-terminal state (not finished, captured, or failed) to be cancelled. Requires Bearer token authentication via the authorization header. Returns the updated payment object with state changed to 'cancelled'. This action is irreversible.",
+      "reasoning": "Summary is clear. Description lacks specificity about which states allow cancellation and what the response contains. Added clarification about terminal states, return value, and irreversibility to help AI agents understand preconditions and effects.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments/{paymentId}/cancel",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Capture a payment' has semantic quality issues: missing_output_details, missing_context. Summary is clear. Description lacks information about the response and the purpose/effect of capturing. Added details about the resulting state, settlement implications, and return value to clarify the operation's significance in the payment lifecycle.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/capture",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Capture a payment",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Capture payment",
+      "current_description": "Capture a payment based on the provided payment ID and the Authorisation token. The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'. A payment can only be captured if it's in 'submitted' state",
+      "description_suggestion": "Capture a payment using its payment ID to complete the transaction. The payment must be in 'submitted' state to be captured. Requires Bearer token authentication via the authorization header. Returns the updated payment object with state changed to 'success'. Capturing confirms the payment and initiates settlement processing.",
+      "reasoning": "Summary is clear. Description lacks information about the response and the purpose/effect of capturing. Added details about the resulting state, settlement implications, and return value to clarify the operation's significance in the payment lifecycle.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments/{paymentId}/capture",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Get events for a payment' has semantic quality issues: vague_summary, vague_description, missing_output_details. Original summary is awkwardly phrased. Description is vague about what events are included and lacks context about the response format. Improved summary to be more action-oriented and enhanced description to explain event types and use cases for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/payments/{paymentId}/events",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Get events for a payment",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "Return payment events by ID",
+      "current_description": "Return payment events information about a certain payment The Authorisation token needs to be specified in the 'authorization' header as 'authorization: Bearer YOUR_API_KEY_HERE'",
+      "summary_suggestion": "Retrieve payment event history by payment ID",
+      "description_suggestion": "Retrieve the event history for a specific payment using its payment ID. Returns a chronological list of all events that have occurred for the payment, including state transitions, captures, refunds, and other significant actions. Requires Bearer token authentication via the authorization header. Useful for auditing and understanding payment lifecycle progression.",
+      "reasoning": "Original summary is awkwardly phrased. Description is vague about what events are included and lacks context about the response format. Improved summary to be more action-oriented and enhanced description to explain event types and use cases for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/payments/{paymentId}/events",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 10 operations analyzed, 9 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 10,
+      "total_issues_found": 9,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 98 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 98
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 98 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 98
     }
   }
 ]
