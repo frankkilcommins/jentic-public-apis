@@ -7,23 +7,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "`/cms/v3/audit-logs/` should not have a trailing slash. [path: paths./cms/v3/audit-logs/]",
-    "severity": 1,
-    "code": "no-path-trailing-slash",
+    "message": "Total Operations count: 1",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/cms/v3/audit-logs/"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 1,
+      "paths": [
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -34,22 +39,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -60,24 +64,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Schemas count: 50",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 50
     }
   },
   {
@@ -88,25 +89,1057 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./cms/v3/audit-logs/.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey', 'oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey",
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        },
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "private-app-legacy",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 61",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 61
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 14",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 14
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 14",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 14
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 2",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 2,
+      "paths": [
+        [
+          "paths",
+          "/cms/v3/audit-logs/"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 1",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 1,
+      "paths": [
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 67",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 67,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          0,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          1,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          2,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          3,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          5,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          6,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          7,
+          "schema"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          7,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponsePublicAuditLog"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponsePublicAuditLog",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "PreviousPage"
+        ],
+        [
+          "components",
+          "schemas",
+          "PreviousPage",
+          "properties",
+          "before"
+        ],
+        [
+          "components",
+          "schemas",
+          "PreviousPage",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "Paging"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "meta"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "objectName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "fullName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "event"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "userId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "objectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "objectType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "NextPage"
+        ],
+        [
+          "components",
+          "schemas",
+          "NextPage",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "NextPage",
+          "properties",
+          "after"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ],
+        [
+          "tags",
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 32",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 32,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          5
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          6
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "parameters",
+          7
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponsePublicAuditLog"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "objectName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "fullName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "event"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "userId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "objectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "objectType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicAuditLog",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 8",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "paths",
-        "/cms/v3/audit-logs/",
-        "get",
-        "responses"
+        "components",
+        "responses",
+        "Error",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 8,
+      "paths": []
     }
   },
   {
@@ -132,7 +1165,33 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 25,
+        "character": 10
+      },
+      "end": {
+        "line": 163,
+        "character": 23
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -159,7 +1218,247 @@
         "paths",
         "/cms/v3/audit-logs/"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 35,
+        "character": 10
+      },
+      "end": {
+        "line": 45,
+        "character": 32
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./cms/v3/audit-logs/.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 49,
+        "character": 10
+      },
+      "end": {
+        "line": 59,
+        "character": 32
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./cms/v3/audit-logs/.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 63,
+        "character": 10
+      },
+      "end": {
+        "line": 73,
+        "character": 32
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./cms/v3/audit-logs/.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 77,
+        "character": 10
+      },
+      "end": {
+        "line": 87,
+        "character": 32
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./cms/v3/audit-logs/.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 91,
+        "character": 10
+      },
+      "end": {
+        "line": 99,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./cms/v3/audit-logs/.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 102,
+        "character": 10
+      },
+      "end": {
+        "line": 110,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 5 [path: paths./cms/v3/audit-logs/.get.parameters.5]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "5"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 113,
+        "character": 10
+      },
+      "end": {
+        "line": 122,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 6 [path: paths./cms/v3/audit-logs/.get.parameters.6]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "6"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 125,
+        "character": 10
+      },
+      "end": {
+        "line": 135,
+        "character": 32
+      }
+    },
+    "message": "Parameters must include examples; missing 7 [path: paths./cms/v3/audit-logs/.get.parameters.7]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "parameters",
+        "7"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -191,7 +1490,7 @@
         "private_apps_legacy",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -206,7 +1505,7 @@
       }
     },
     "message": "\"timestamp\" property must match format \"date-time\" [path: components.schemas.PublicAuditLog.example.timestamp]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-schema-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -221,7 +1520,332 @@
         "example",
         "timestamp"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get-/cms/v3/audit-logs/_getPage' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, missing_context, poor_ai_interpretability. Original summary and description are too vague for AI agent interpretation. The current description lacks critical details about: (1) what audit logs contain (CMS changes), (2) available filter parameters, (3) pagination support, (4) response structure, (5) authentication requirements. The improved version clarifies the operation's purpose within the CMS audit context, explains input filtering capabilities, describes the paginated response format, and specifies security requirements. This enables AI agents to better determine when to use this operation and how to construct appropriate requests.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get-/cms/v3/audit-logs/_getPage",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Query audit logs",
+      "current_description": "Returns audit logs based on filters.",
+      "summary_suggestion": "Retrieve CMS audit logs with filtering and pagination",
+      "description_suggestion": "Retrieves a paginated collection of CMS content audit logs from your HubSpot account. Supports filtering by date range, user, action type, and other criteria through query parameters. Returns audit log entries containing details about CMS changes including timestamps, user information, action performed, and affected content. Results are paginated and can be sorted. Requires OAuth2 or private app authentication.",
+      "reasoning": "Original summary and description are too vague for AI agent interpretation. The current description lacks critical details about: (1) what audit logs contain (CMS changes), (2) available filter parameters, (3) pagination support, (4) response structure, (5) authentication requirements. The improved version clarifies the operation's purpose within the CMS audit context, explains input filtering capabilities, describes the paginated response format, and specifies security requirements. This enables AI agents to better determine when to use this operation and how to construct appropriate requests.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/cms/v3/audit-logs/",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 1 operations analyzed, 1 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 1,
+      "total_issues_found": 1,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "`/cms/v3/audit-logs/` should not have a trailing slash. [path: paths./cms/v3/audit-logs/]",
+    "severity": 1,
+    "code": "no-path-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./cms/v3/audit-logs/.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/cms/v3/audit-logs/",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Example value must conform to the schema: `timestamp` property must match format \"date-time\". [path: components.schemas.PublicAuditLog.example.timestamp]",
+    "severity": 2,
+    "code": "no-invalid-schema-examples",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicAuditLog",
+        "example",
+        "timestamp"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 8 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 8
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 8 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 8
     }
   }
 ]

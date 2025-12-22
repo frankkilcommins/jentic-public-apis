@@ -7,25 +7,53 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object `summary` must be non-empty string. [path: paths./v2/SipDomains/{SipDomain}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total Operations count: 6",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2/SipDomains/{SipDomain}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 6,
+      "paths": [
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -36,25 +64,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object `summary` must be non-empty string. [path: paths./v2/SipDomains/{SipDomain}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2/SipDomains/{SipDomain}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -65,24 +89,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Schemas count: 72",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 72
     }
   },
   {
@@ -93,24 +114,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "accountSid_authToken"
+        ]
+      ]
     }
   },
   {
@@ -121,24 +146,30 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.2.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Security scheme types: ['http']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        2,
-        "description"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "http"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "accountSid_authToken"
+        ]
+      ]
     }
   },
   {
@@ -149,14 +180,2116 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/PhoneNumbers/{PhoneNumber}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "http",
+          "http_scheme": "basic",
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "accountSid_authToken"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 3",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 3
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 118",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 118
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 33",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 33
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 33",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 33
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 18",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 18,
+      "paths": [
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "fetch"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "fetch"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "fetch"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "update"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 4",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 4,
+      "paths": [
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 144",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 144,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "fetch"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "VoiceRegion"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "FriendlyName"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "fetch"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "VoiceRegion"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "FriendlyName"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "fetch"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "VoiceRegion"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "FriendlyName"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers",
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "examples",
+          "update"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "servers",
+          0
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "phone_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "account_sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "friendly_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "voice_region"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "date_created"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "date_updated"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "sip_domain"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "account_sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "friendly_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "voice_region"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "date_created"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.sip_domain",
+          "properties",
+          "date_updated"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "sip_trunk_domain"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "account_sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "friendly_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "voice_region"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "date_created"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "date_updated"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "accountSid_authToken"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "tags",
+          2
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 65",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 65,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "VoiceRegion"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "FriendlyName"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "VoiceRegion"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "requestBody",
+          "content",
+          "application/x-www-form-urlencoded",
+          "schema",
+          "properties",
+          "FriendlyName"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Origin"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Methods"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Headers"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Allow-Credentials"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "responses",
+          "200",
+          "headers",
+          "Access-Control-Expose-Headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "phone_number"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "account_sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "friendly_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "voice_region"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "date_created"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.phone_number",
+          "properties",
+          "date_updated"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "sip_trunk_domain"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "account_sid"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "friendly_name"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "voice_region"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "date_created"
+        ],
+        [
+          "components",
+          "schemas",
+          "routes.v2.trunks",
+          "properties",
+          "date_updated"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 3",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -165,27 +2298,59 @@
         "paths",
         "/v2/PhoneNumbers/{PhoneNumber}",
         "get",
-        "responses"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 3,
+      "paths": []
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 23,
+        "character": 10
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 669,
+        "character": 36
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/PhoneNumbers/{PhoneNumber}.post.responses]",
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
     "severity": 2,
-    "code": "operation-4xx-response",
+    "code": "api-health",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 46,
+        "character": 10
+      },
+      "end": {
+        "line": 53,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/PhoneNumbers/{PhoneNumber}.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -194,125 +2359,40 @@
         "paths",
         "/v2/PhoneNumbers/{PhoneNumber}",
         "post",
-        "responses"
+        "parameters",
+        "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 160,
+        "character": 10
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 167,
+        "character": 28
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/SipDomains/{SipDomain}.get.responses]",
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/PhoneNumbers/{PhoneNumber}.get.parameters.0]",
     "severity": 2,
-    "code": "operation-4xx-response",
+    "code": "params-must-include-examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
         "paths",
-        "/v2/SipDomains/{SipDomain}",
+        "/v2/PhoneNumbers/{PhoneNumber}",
         "get",
-        "responses"
+        "parameters",
+        "0"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/SipDomains/{SipDomain}.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/SipDomains/{SipDomain}",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/Trunks/{SipTrunkDomain}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/Trunks/{SipTrunkDomain}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/Trunks/{SipTrunkDomain}.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/Trunks/{SipTrunkDomain}",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -341,7 +2421,95 @@
         "post",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 257,
+        "character": 19
+      },
+      "end": {
+        "line": 257,
+        "character": 21
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2/SipDomains/{SipDomain}.post.summary]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 257,
+        "character": 19
+      },
+      "end": {
+        "line": 257,
+        "character": 21
+      }
+    },
+    "message": "Operation summaries should start with a capital letter [path: paths./v2/SipDomains/{SipDomain}.post.summary]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary-sentence-case",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 262,
+        "character": 10
+      },
+      "end": {
+        "line": 269,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/SipDomains/{SipDomain}.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -370,7 +2538,945 @@
         "get",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 371,
+        "character": 19
+      },
+      "end": {
+        "line": 371,
+        "character": 21
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2/SipDomains/{SipDomain}.get.summary]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 371,
+        "character": 19
+      },
+      "end": {
+        "line": 371,
+        "character": 21
+      }
+    },
+    "message": "Operation summaries should start with a capital letter [path: paths./v2/SipDomains/{SipDomain}.get.summary]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary-sentence-case",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 376,
+        "character": 10
+      },
+      "end": {
+        "line": 383,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/SipDomains/{SipDomain}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 478,
+        "character": 10
+      },
+      "end": {
+        "line": 485,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/Trunks/{SipTrunkDomain}.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/Trunks/{SipTrunkDomain}",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 592,
+        "character": 10
+      },
+      "end": {
+        "line": 599,
+        "character": 28
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/Trunks/{SipTrunkDomain}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/Trunks/{SipTrunkDomain}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 676,
+        "character": 18
+      },
+      "end": {
+        "line": 676,
+        "character": 25
+      }
+    },
+    "message": "Please consider a more secure alternative to HTTP Basic. [path: components.securitySchemes.accountSid_authToken.scheme]",
+    "severity": 2,
+    "code": "no-http-basic",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "securitySchemes",
+        "accountSid_authToken",
+        "scheme"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.2.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "2",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/PhoneNumbers/{PhoneNumber}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/PhoneNumbers/{PhoneNumber}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/PhoneNumbers/{PhoneNumber}.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/PhoneNumbers/{PhoneNumber}",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object `summary` must be non-empty string. [path: paths./v2/SipDomains/{SipDomain}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/SipDomains/{SipDomain}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object `summary` must be non-empty string. [path: paths./v2/SipDomains/{SipDomain}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/SipDomains/{SipDomain}.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/Trunks/{SipTrunkDomain}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/Trunks/{SipTrunkDomain}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/Trunks/{SipTrunkDomain}.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/Trunks/{SipTrunkDomain}",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'UpdatePhoneNumber' has semantic quality issues: missing_input_details, missing_output_details, missing_side_effects. Original description is too brief and lacks critical details. Added information about what the operation does (determines processing location), required inputs (phone number identifier and region), expected output (updated routing configuration), and side effects (modifies routing behavior). This helps AI agents understand the operation's impact and when to use it.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/PhoneNumbers/{PhoneNumber}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "UpdatePhoneNumber",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Assign an Inbound Processing Region to a phone number.",
+      "current_description": "Assign an Inbound Processing Region to a phone number.",
+      "summary_suggestion": "Assign inbound processing region to phone number",
+      "description_suggestion": "Assigns an Inbound Processing Region to a specified phone number, determining where inbound traffic for that number will be processed. Requires the phone number identifier as a path parameter and the desired region in the request body. Returns the updated phone number routing configuration. This operation modifies the routing behavior for the phone number.",
+      "reasoning": "Original description is too brief and lacks critical details. Added information about what the operation does (determines processing location), required inputs (phone number identifier and region), expected output (updated routing configuration), and side effects (modifies routing behavior). This helps AI agents understand the operation's impact and when to use it.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'FetchPhoneNumber' has semantic quality issues: missing_output_details. Summary is clear and action-oriented. Description needs enhancement to specify what data is returned (routing configuration and metadata) and clarify that it's a read-only operation. This helps AI agents understand the complete response structure and that the operation has no side effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/PhoneNumbers/{PhoneNumber}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "FetchPhoneNumber",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details"
+      ],
+      "current_summary": "Fetch the Inbound Processing Region assigned to a phone number.",
+      "current_description": "Fetch the Inbound Processing Region assigned to a phone number.",
+      "description_suggestion": "Retrieves the Inbound Processing Region currently assigned to a specified phone number. Requires the phone number identifier as a path parameter. Returns the phone number routing configuration including the assigned region and related metadata. This is a read-only operation with no side effects.",
+      "reasoning": "Summary is clear and action-oriented. Description needs enhancement to specify what data is returned (routing configuration and metadata) and clarify that it's a read-only operation. This helps AI agents understand the complete response structure and that the operation has no side effects.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/PhoneNumbers/{PhoneNumber}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'UpdateSipDomain' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Operation has no summary or description, making it impossible for AI agents to understand its purpose. Based on API pattern consistency with phone number and trunk operations, this operation likely assigns an inbound processing region. Provided complete summary and description following the established domain terminology and operation patterns to enable AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "UpdateSipDomain",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Assign inbound processing region to SIP domain",
+      "description_suggestion": "Assigns an Inbound Processing Region to a specified SIP domain, determining where inbound traffic for that domain will be processed. Requires the SIP domain identifier as a path parameter and the desired region in the request body. Returns the updated SIP domain routing configuration. This operation modifies the routing behavior for the SIP domain.",
+      "reasoning": "Operation has no summary or description, making it impossible for AI agents to understand its purpose. Based on API pattern consistency with phone number and trunk operations, this operation likely assigns an inbound processing region. Provided complete summary and description following the established domain terminology and operation patterns to enable AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'FetchSipDomain' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_output_details, poor_ai_interpretability. Operation has no summary or description. Based on API pattern consistency with phone number and trunk operations, this operation likely fetches the assigned inbound processing region. Provided complete summary and description following established domain terminology to enable AI agents to understand the operation's purpose, inputs, and outputs.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/SipDomains/{SipDomain}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "FetchSipDomain",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Fetch inbound processing region for SIP domain",
+      "description_suggestion": "Retrieves the Inbound Processing Region currently assigned to a specified SIP domain. Requires the SIP domain identifier as a path parameter. Returns the SIP domain routing configuration including the assigned region and related metadata. This is a read-only operation with no side effects.",
+      "reasoning": "Operation has no summary or description. Based on API pattern consistency with phone number and trunk operations, this operation likely fetches the assigned inbound processing region. Provided complete summary and description following established domain terminology to enable AI agents to understand the operation's purpose, inputs, and outputs.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/SipDomains/{SipDomain}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'UpdateTrunks' has semantic quality issues: missing_input_details, missing_output_details, missing_side_effects. Original description is too brief and lacks critical details. Added information about what the operation does (determines processing location), required inputs (SIP trunk identifier and region), expected output (updated routing configuration), and side effects (modifies routing behavior). This helps AI agents understand the operation's impact and when to use it.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/Trunks/{SipTrunkDomain}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "UpdateTrunks",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Assign an Inbound Processing Region to a SIP Trunk",
+      "current_description": "Assign an Inbound Processing Region to a SIP Trunk",
+      "summary_suggestion": "Assign inbound processing region to SIP trunk",
+      "description_suggestion": "Assigns an Inbound Processing Region to a specified SIP trunk, determining where inbound traffic for that trunk will be processed. Requires the SIP trunk domain identifier as a path parameter and the desired region in the request body. Returns the updated SIP trunk routing configuration. This operation modifies the routing behavior for the SIP trunk.",
+      "reasoning": "Original description is too brief and lacks critical details. Added information about what the operation does (determines processing location), required inputs (SIP trunk identifier and region), expected output (updated routing configuration), and side effects (modifies routing behavior). This helps AI agents understand the operation's impact and when to use it.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'FetchTrunks' has semantic quality issues: missing_output_details. Summary is clear and action-oriented. Description needs enhancement to specify what data is returned (routing configuration and metadata) and clarify that it's a read-only operation. This helps AI agents understand the complete response structure and that the operation has no side effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/Trunks/{SipTrunkDomain}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "FetchTrunks",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details"
+      ],
+      "current_summary": "Fetch the Inbound Processing Region assigned to a SIP Trunk.",
+      "current_description": "Fetch the Inbound Processing Region assigned to a SIP Trunk.",
+      "description_suggestion": "Retrieves the Inbound Processing Region currently assigned to a specified SIP trunk. Requires the SIP trunk domain identifier as a path parameter. Returns the SIP trunk routing configuration including the assigned region and related metadata. This is a read-only operation with no side effects.",
+      "reasoning": "Summary is clear and action-oriented. Description needs enhancement to specify what data is returned (routing configuration and metadata) and clarify that it's a read-only operation. This helps AI agents understand the complete response structure and that the operation has no side effects.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/Trunks/{SipTrunkDomain}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 6 operations analyzed, 6 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 6,
+      "total_issues_found": 6,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 6 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 6
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 6 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 6
     }
   }
 ]

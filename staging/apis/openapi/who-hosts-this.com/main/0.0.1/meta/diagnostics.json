@@ -7,23 +7,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'QueryKey' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/Detect",
+          "get"
+        ],
+        [
+          "paths",
+          "/Status",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -34,22 +44,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -60,14 +69,473 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./Detect.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Schemas count: 1",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "QueryKey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "QueryKey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "QueryKey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 3",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 3
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/Detect"
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get"
+        ],
+        [
+          "paths",
+          "/Status"
+        ],
+        [
+          "paths",
+          "/Status",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 2",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 2,
+      "paths": [
+        [
+          "paths",
+          "/Detect",
+          "get"
+        ],
+        [
+          "paths",
+          "/Status",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 12",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 12,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/Detect"
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get"
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/Status"
+        ],
+        [
+          "paths",
+          "/Status",
+          "get"
+        ],
+        [
+          "paths",
+          "/Status",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "QueryKey"
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 5",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 5,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/Status",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "QueryKey"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 1",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -76,96 +544,39 @@
         "paths",
         "/Detect",
         "get",
-        "operationId"
+        "parameters",
+        0,
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 1,
+      "paths": []
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 35,
+        "character": 10
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 67,
+        "character": 70
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./Detect.get.responses]",
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
     "severity": 2,
-    "code": "operation-4xx-response",
+    "code": "api-health",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "paths",
-        "/Detect",
-        "get",
-        "responses"
+        "paths"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./Status.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/Status",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./Status.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/Status",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -193,7 +604,7 @@
         "/Detect",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -221,7 +632,37 @@
         "/Detect",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 39,
+        "character": 10
+      },
+      "end": {
+        "line": 45,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./Detect.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/Detect",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -251,7 +692,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -279,7 +720,7 @@
         "/Status",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -307,7 +748,7 @@
         "/Status",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -335,7 +776,387 @@
         "/Status",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./Detect.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/Detect",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./Detect.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/Detect",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./Status.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/Status",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./Status.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/Status",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/Detect' has semantic quality issues: missing_context, missing_input_details, missing_output_details. The summary is reasonable but could be more concise and action-oriented. The description is completely empty, which is a critical gap. Added details about: (1) what the operation does (detects hosting provider), (2) expected input (domain/URL), (3) expected output (hosting provider details), and (4) authentication requirement (API key). This enables AI agents to understand when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/Detect",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/Detect",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_context",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Discover the hosting provider for a web site",
+      "current_description": "",
+      "summary_suggestion": "Identify hosting provider for a website",
+      "description_suggestion": "Detects and returns the hosting provider information for a specified website. Accepts a domain or URL as input and returns the hosting provider details. Requires API key authentication via query parameter.",
+      "reasoning": "The summary is reasonable but could be more concise and action-oriented. The description is completely empty, which is a critical gap. Added details about: (1) what the operation does (detects hosting provider), (2) expected input (domain/URL), (3) expected output (hosting provider details), and (4) authentication requirement (API key). This enables AI agents to understand when and how to use this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/Detect",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/Detect",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/Status' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_context. The summary is somewhat vague about what 'usage details' specifically means. The description is empty, which prevents AI agents from understanding the response structure and specific metrics returned. Enhanced summary to be more specific about what status information is provided. Added description explaining: (1) what data is returned (usage statistics and billing info), (2) specific metrics included, (3) authentication requirement. This clarifies the operation's purpose and output for AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/Status",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/Status",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "View usage details for the current billing period",
+      "current_description": "",
+      "summary_suggestion": "Retrieve API usage and billing period status",
+      "description_suggestion": "Returns the current API usage statistics and billing period information for the authenticated account. Includes metrics such as requests made, requests remaining, and billing period dates. Requires API key authentication via query parameter.",
+      "reasoning": "The summary is somewhat vague about what 'usage details' specifically means. The description is empty, which prevents AI agents from understanding the response structure and specific metrics returned. Enhanced summary to be more specific about what status information is provided. Added description explaining: (1) what data is returned (usage statistics and billing info), (2) specific metrics included, (3) authentication requirement. This clarifies the operation's purpose and output for AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/Status",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/Status",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 0
     }
   }
 ]

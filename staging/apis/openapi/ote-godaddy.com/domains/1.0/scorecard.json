@@ -1,0 +1,929 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "700c3e46c98ae9766da205016a97fdb4",
+    "name": "Domains API",
+    "apiDescriptionVersion": "1.0",
+    "specification": "openapi",
+    "specificationVersion": "3.0.0",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/ote-godaddy.com/domains/0.0.0/openapi.json",
+    "vendor": {
+      "name": "ote-godaddy.com",
+      "domain": null,
+      "contact": {
+        "name": "",
+        "email": ""
+      }
+    },
+    "operationCount": 60,
+    "schemaCount": 653,
+    "securitySchemeCount": 0,
+    "securitySchemeTypes": [],
+    "tagCount": 5
+  },
+  "summary": {
+    "scoringDate": "2025-12-15T19:02:49+00:00",
+    "score": 14.11,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 50.17,
+        "grade": "C-"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 50.0,
+        "grade": "C-"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 60.89,
+        "grade": "B-"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 3.56,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 100.0,
+        "grade": "A+"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 36.96,
+        "grade": "F"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 50.08,
+      "grade": "C-",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 50.17,
+          "grade": "C-",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.8,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 35,
+                  "warning": 1642,
+                  "info": 68,
+                  "hint": 0
+                },
+                "weighted_cost": 25.173000000000002,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 0.0,
+              "metadata": {
+                "failure_reason": "validation_errors",
+                "diagnostic_counts": {
+                  "error": 35,
+                  "warning": 1642,
+                  "information": 68,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.21,
+              "metadata": {
+                "structural_issues": 8,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 8,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 50.0,
+          "grade": "C-",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 34.83,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 60.89,
+          "grade": "B-",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.66,
+              "metadata": {
+                "described_elements": 943,
+                "undescribed_elements": 492,
+                "describable_elements": 1435,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.56,
+              "metadata": {
+                "summaries_present": 60,
+                "missing_summaries": 47,
+                "summaries_expected": 107,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 3.56,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.04,
+              "metadata": {
+                "total_operations": 60,
+                "max_schema_depth": 11,
+                "normalised_endpoint_count": 1.0,
+                "normalised_schema_depth": 1.0,
+                "raw_complexity": 1.0,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 71.34,
+      "grade": "A-",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 100.0,
+          "grade": "A+",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 1.0,
+              "metadata": {
+                "strength_scores": [],
+                "schemes_count": 0,
+                "schemes": [],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 36.96,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.37,
+              "metadata": {
+                "number_of_describable_elements": 46,
+                "operations_with_issues": 46,
+                "operations_without_issues": 0,
+                "sum_of_element_descriptive_scores": 34.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transferOutReject",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/domains/maintenances",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/domains/maintenances/{maintenanceId}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/domains/usage/{yyyymm}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/customers/{customerId}/domains/register/schema/{tld}",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/register/validate",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/customers/{customerId}/domains/{domain}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/customers/{customerId}/domains/{domain}/actions",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "delete_/v2/customers/{customerId}/domains/{domain}/actions/{type}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/customers/{customerId}/domains/{domain}/actions/{type}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "delete_/v2/customers/{customerId}/domains/{domain}/changeOfRegistrant",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "cancelPrivacy",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "purchasePrivacy",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "recordAdd",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "recordReplace",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "recordReplaceType",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "recordDeleteTypeName",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "recordGet",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "domainsForwardsPut",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/customers/{customerId}/domains/notifications",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/customers/{customerId}/domains/notifications/optIn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "put_/v2/customers/{customerId}/domains/notifications/optIn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/v2/customers/{customerId}/domains/notifications/schemas/{type}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/notifications/{notificationId}/acknowledge",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/register",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "validate",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "suggest",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "tlds",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "cancel",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "update",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "updateContacts",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transfer",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transferInAccept",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transferInCancel",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transferInRestart",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transferInRetry",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transferOut",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/v2/customers/{customerId}/domains/{domain}/transferOutAccept",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "list",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAgreement",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "available",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "availableBulk",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "ContactsValidate",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "purchase",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "schema",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

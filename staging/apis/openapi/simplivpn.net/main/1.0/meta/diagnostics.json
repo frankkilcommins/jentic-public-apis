@@ -7,23 +7,58 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'Bearer' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 7",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 7,
+      "paths": [
+        [
+          "paths",
+          "/servers",
+          "get"
+        ],
+        [
+          "paths",
+          "/server-summaries",
+          "get"
+        ],
+        [
+          "paths",
+          "/register",
+          "post"
+        ],
+        [
+          "paths",
+          "/login",
+          "post"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -34,25 +69,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./servers.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/servers",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -63,25 +94,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./server-summaries.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Schemas count: 11",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/server-summaries",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 11
     }
   },
   {
@@ -92,22 +119,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
     }
   },
   {
@@ -118,25 +151,30 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./servers.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/servers",
-        "get",
-        "responses"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
     }
   },
   {
@@ -147,25 +185,37 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./server-summaries.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/server-summaries",
-        "get",
-        "responses"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "Authorization",
+          "oauth2_flows": []
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
     }
   },
   {
@@ -176,14 +226,612 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./register.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 17",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 17
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 14",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 14,
+      "paths": [
+        [
+          "paths",
+          "/servers"
+        ],
+        [
+          "paths",
+          "/servers",
+          "get"
+        ],
+        [
+          "paths",
+          "/server-summaries"
+        ],
+        [
+          "paths",
+          "/server-summaries",
+          "get"
+        ],
+        [
+          "paths",
+          "/register"
+        ],
+        [
+          "paths",
+          "/register",
+          "post"
+        ],
+        [
+          "paths",
+          "/login"
+        ],
+        [
+          "paths",
+          "/login",
+          "post"
+        ],
+        [
+          "paths",
+          "/enable-user"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/disable-user"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/username-available"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 5",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 5,
+      "paths": [
+        [
+          "paths",
+          "/register",
+          "post"
+        ],
+        [
+          "paths",
+          "/login",
+          "post"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 40",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 40,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/servers"
+        ],
+        [
+          "paths",
+          "/servers",
+          "get"
+        ],
+        [
+          "paths",
+          "/servers",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/server-summaries"
+        ],
+        [
+          "paths",
+          "/server-summaries",
+          "get"
+        ],
+        [
+          "paths",
+          "/server-summaries",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/register"
+        ],
+        [
+          "paths",
+          "/register",
+          "post"
+        ],
+        [
+          "paths",
+          "/register",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/register",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/login"
+        ],
+        [
+          "paths",
+          "/login",
+          "post"
+        ],
+        [
+          "paths",
+          "/login",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/login",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/enable-user"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/disable-user"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/username-available"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "DisableUser"
+        ],
+        [
+          "components",
+          "schemas",
+          "DisableUser",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "EnableUser"
+        ],
+        [
+          "components",
+          "schemas",
+          "EnableUser",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "Register"
+        ],
+        [
+          "components",
+          "schemas",
+          "Register",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "Register",
+          "properties",
+          "password"
+        ],
+        [
+          "components",
+          "schemas",
+          "Register",
+          "properties",
+          "await"
+        ],
+        [
+          "components",
+          "schemas",
+          "UserLogin"
+        ],
+        [
+          "components",
+          "schemas",
+          "UserLogin",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "UserLogin",
+          "properties",
+          "password"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 13",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 13,
+      "paths": [
+        [
+          "paths",
+          "/servers",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/server-summaries",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/register",
+          "post"
+        ],
+        [
+          "paths",
+          "/register",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/login",
+          "post"
+        ],
+        [
+          "paths",
+          "/login",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 3",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -192,125 +840,14 @@
         "paths",
         "/register",
         "post",
-        "responses"
+        "requestBody",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./login.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/login",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./enable-user.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/enable-user",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./disable-user.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/disable-user",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./username-available.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/username-available",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 3,
+      "paths": []
     }
   },
   {
@@ -336,7 +873,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -362,7 +899,61 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 12,
+        "character": 10
+      },
+      "end": {
+        "line": 159,
+        "character": 36
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 14,
+        "character": 12
+      },
+      "end": {
+        "line": 21,
+        "character": 36
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./servers.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/servers",
+        "get"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -390,7 +981,7 @@
         "/servers",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -420,7 +1011,35 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 27,
+        "character": 12
+      },
+      "end": {
+        "line": 34,
+        "character": 36
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./server-summaries.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/server-summaries",
+        "get"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -448,7 +1067,7 @@
         "/server-summaries",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -478,7 +1097,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -508,7 +1127,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -538,7 +1157,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -568,7 +1187,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -598,7 +1217,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -628,7 +1247,814 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./servers.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/servers",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./servers.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/servers",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./server-summaries.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/server-summaries",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./server-summaries.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/server-summaries",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./register.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/register",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./login.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/login",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./enable-user.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/enable-user",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./disable-user.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/disable-user",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./username-available.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/username-available",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'GetServers' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_output_details, poor_ai_interpretability. Operation has no summary or description, making it impossible for AI agents to understand its purpose. Added clear action-oriented summary, explanation of what is returned, and authentication requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/servers",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "GetServers",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Retrieve list of available VPN servers",
+      "description_suggestion": "Retrieves a list of all available VPN servers. Returns an array of server objects containing server details such as location, status, and connection information. No authentication required for this operation.",
+      "reasoning": "Operation has no summary or description, making it impossible for AI agents to understand its purpose. Added clear action-oriented summary, explanation of what is returned, and authentication requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/servers",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/servers",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'GetServerSummaries' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_output_details, poor_ai_interpretability. Operation has no summary or description. Added clear action-oriented summary distinguishing it from GetServers, explanation of condensed nature of summaries, use case context, and authentication requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/server-summaries",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "GetServerSummaries",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Retrieve summary information for all VPN servers",
+      "description_suggestion": "Retrieves a summary of all available VPN servers with condensed information. Returns an array of server summary objects containing essential server details such as location, status, and availability. Useful for displaying server lists in UI. No authentication required for this operation.",
+      "reasoning": "Operation has no summary or description. Added clear action-oriented summary distinguishing it from GetServers, explanation of condensed nature of summaries, use case context, and authentication requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/server-summaries",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/server-summaries",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Register' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Summary is too generic. Description is verbose and mixes procedural guidance with operational details. Reorganized to clearly state: authentication requirement, input parameters, return value, side effects (auto-enable), and token lifecycle for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/register",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Register",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Register",
+      "current_description": "This route allows VPN Admin user's with an api key to register a vpn user account. This route can only be called using your api key supplied to you from SimpliVPN. Before calling this you should use your api key to call the /UsernameAvailable route to make sure the username you want is available first. All subsequent user requests following can be done using the user's api token, their token's expire every 7 days, so you should occasionally check them and if you get unauthorized, refresh their token by calling /login route. This route will also auto-enable a new user.",
+      "summary_suggestion": "Register new VPN user account with API key",
+      "description_suggestion": "Registers a new VPN user account. Requires VPN Admin API key authentication. Input: username and password (see Register schema). Returns newly created user object with authentication token. Side effects: new user account is automatically enabled for VPN access. Tokens expire in 7 days and must be refreshed via /login. Prerequisite: verify username availability using /username-available endpoint first.",
+      "reasoning": "Summary is too generic. Description is verbose and mixes procedural guidance with operational details. Reorganized to clearly state: authentication requirement, input parameters, return value, side effects (auto-enable), and token lifecycle for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/register",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/register",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'Login' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Summary is too generic. Description lacks clarity on inputs, outputs, and when to use this operation. Reorganized to specify input schema reference, return value structure, token expiration handling, and that it's the entry point for unauthenticated users.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/login",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "Login",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Login",
+      "current_description": "This route allows you to login a user. The response will give you a Bearer auth token to use with all rquests pertaining to the user. This token expires in 7 days, so for every request you should check if you get an unauthorized responsve and re-validate the login if needed.",
+      "summary_suggestion": "Authenticate user and obtain Bearer token",
+      "description_suggestion": "Authenticates a user and returns a Bearer authentication token for subsequent API requests. Input: username and password (see UserLogin schema). Returns user object with Bearer token. Token expires in 7 days - when unauthorized responses occur, re-authenticate by calling this endpoint again. No prior authentication required.",
+      "reasoning": "Summary is too generic. Description lacks clarity on inputs, outputs, and when to use this operation. Reorganized to specify input schema reference, return value structure, token expiration handling, and that it's the entry point for unauthenticated users.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/login",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/login",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'EnableUser' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Summary is not action-oriented enough. Description lacks input/output details and side effects. Added clarity on what 'enable' means (can establish connections), authentication requirement, input/output structure, and relationship to disable operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/enable-user",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "EnableUser",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "EnableUser",
+      "current_description": "This route allows you to enable a user's vpn access. This route can only be called using your user's Bearer Auth token.",
+      "summary_suggestion": "Enable VPN access for user account",
+      "description_suggestion": "Enables VPN access for a user account. Requires Bearer token authentication. Input: user identifier (see EnableUser schema). Returns updated user object with enabled status. Side effect: user can now establish VPN connections. This operation reverses a previous disable action.",
+      "reasoning": "Summary is not action-oriented enough. Description lacks input/output details and side effects. Added clarity on what 'enable' means (can establish connections), authentication requirement, input/output structure, and relationship to disable operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/enable-user",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/enable-user",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'DisableUser' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Summary lacks action clarity. Description is incomplete - missing authentication requirement, input/output details, and side effects. Added specificity about what disable means, authentication, input/output structure, and relationship to enable operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/disable-user",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "DisableUser",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "DisableUser",
+      "current_description": "This route allows you to disable a user's vpn access.",
+      "summary_suggestion": "Disable VPN access for user account",
+      "description_suggestion": "Disables VPN access for a user account, preventing them from establishing new VPN connections. Requires Bearer token authentication. Input: user identifier (see DisableUser schema). Returns updated user object with disabled status. Side effect: user's existing VPN connections may be terminated. This operation can be reversed using /enable-user.",
+      "reasoning": "Summary lacks action clarity. Description is incomplete - missing authentication requirement, input/output details, and side effects. Added specificity about what disable means, authentication, input/output structure, and relationship to enable operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/disable-user",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/disable-user",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'UsernameAvailable' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Summary is not action-oriented. Description lacks input/output clarity and has inconsistent schema reference. Clarified that it returns availability status, specified authentication type (API key), added use case context (prerequisite to register), and corrected schema reference note.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/username-available",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "UsernameAvailable",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "UsernameAvailable",
+      "current_description": "This route allows VPN Admin user's to check if a specific username is available before registering an account username. This route can only be called using your api key supplied to you from SimpliVPN.",
+      "summary_suggestion": "Check if username is available for registration",
+      "description_suggestion": "Checks whether a username is available for new VPN user registration. Requires VPN Admin API key authentication. Input: desired username (see EnableUser schema). Returns boolean indicating availability status. Use this endpoint before calling /register to validate username choice. No user authentication required.",
+      "reasoning": "Summary is not action-oriented. Description lacks input/output clarity and has inconsistent schema reference. Clarified that it returns availability status, specified authentication type (API key), added use case context (prerequisite to register), and corrected schema reference note.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/username-available",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/username-available",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 7 operations analyzed, 7 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 7,
+      "total_issues_found": 7,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 5 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 5
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 5 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 5
     }
   }
 ]

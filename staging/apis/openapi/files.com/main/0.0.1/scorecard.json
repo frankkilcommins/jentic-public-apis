@@ -1,0 +1,982 @@
+{
+  "metadata": {
+    "version": "0.0.1",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "435d93ec221d9bb83e565367e8245922",
+    "name": "Files.com API",
+    "apiDescriptionVersion": "0.0.1",
+    "specification": "openapi",
+    "specificationVersion": "3.0.0",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/files.com/main/0.0.1/openapi.json",
+    "vendor": {
+      "name": "files.com",
+      "domain": null,
+      "contact": {
+        "name": "Files.com Customer Success Team",
+        "email": "support@files.com"
+      }
+    },
+    "operationCount": 260,
+    "schemaCount": 2936,
+    "securitySchemeCount": 1,
+    "securitySchemeTypes": [
+      "apiKey"
+    ],
+    "tagCount": 166
+  },
+  "summary": {
+    "scoringDate": "2025-12-16T02:57:03+00:00",
+    "score": 13.59,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 31.43,
+        "grade": "F"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 57.95,
+        "grade": "C+"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 73.12,
+        "grade": "A-"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 3.56,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 50.0,
+        "grade": "C-"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 28.57,
+        "grade": "F"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 45.47,
+      "grade": "D",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 31.43,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.26,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 561,
+                  "warning": 3188,
+                  "info": 346,
+                  "hint": 0
+                },
+                "weighted_cost": 344.916,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 0.0,
+              "metadata": {
+                "failure_reason": "validation_errors",
+                "diagnostic_counts": {
+                  "error": 561,
+                  "warning": 3188,
+                  "information": 346,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.0,
+              "metadata": {
+                "structural_issues": 40,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 40,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 57.95,
+          "grade": "C+",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.34,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 0.98,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 41.5,
+      "grade": "D-",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 73.12,
+          "grade": "A-",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.84,
+              "metadata": {
+                "described_elements": 5949,
+                "undescribed_elements": 1105,
+                "describable_elements": 7054,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.62,
+              "metadata": {
+                "summaries_present": 260,
+                "missing_summaries": 160,
+                "summaries_expected": 420,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 3.56,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.04,
+              "metadata": {
+                "total_operations": 260,
+                "max_schema_depth": 10,
+                "normalised_endpoint_count": 1.0,
+                "normalised_schema_depth": 1.0,
+                "raw_complexity": 1.0,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 40.26,
+      "grade": "D-",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 50.0,
+          "grade": "C-",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.5,
+              "metadata": {
+                "strength_scores": [
+                  0.5
+                ],
+                "schemes_count": 1,
+                "schemes": [
+                  {
+                    "type": "apiKey",
+                    "score": 0.5,
+                    "details": {
+                      "in": "header",
+                      "name": "X-FilesAPI-Key"
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 28.57,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.29,
+              "metadata": {
+                "number_of_describable_elements": 49,
+                "operations_with_issues": 49,
+                "operations_without_issues": 0,
+                "sum_of_element_descriptive_scores": 28.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "DeleteGroupsGroupIdMembershipsUserId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PatchGroupsGroupIdMembershipsUserId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetGroupsGroupIdPermissions",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetGroupsGroupIdUsers",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostGroupsGroupIdUsers",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteGroupsId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetGroupsId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostHistoryExports",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetHistoryExportsId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetInboxRecipients",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostInboxRecipients",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetInboxRegistrations",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetInboxUploads",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetInvoices",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostApiKeys",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteApiKeysId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetApiKeysId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PatchApiKeysId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetApiRequestLogs",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetApps",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetAs2IncomingMessages",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundleActions",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundleDownloads",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundleNotifications",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostBundleNotifications",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteBundleNotificationsId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundleNotificationsId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PatchBundleNotificationsId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PatchBundlesId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostBundlesIdShare",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetClickwraps",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostClickwraps",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteClickwrapsId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetClickwrapsId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PatchClickwrapsId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundleRecipients",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostBundleRecipients",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundleRegistrations",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundles",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostBundles",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteBundlesId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetBundlesId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "PatchGpgKeysId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetGroupUsers",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostGroupUsers",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteGroupUsersId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PatchGroupUsersId",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "GetGroups",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "PostGroups",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

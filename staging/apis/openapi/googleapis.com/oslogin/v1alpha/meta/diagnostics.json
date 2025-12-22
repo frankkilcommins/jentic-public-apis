@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -140,7 +140,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -164,7 +164,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -188,7 +188,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -199,24 +199,63 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 8",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 8,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -227,25 +266,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -256,27 +291,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 76",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 76
     }
   },
   {
@@ -287,25 +316,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -316,27 +353,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "post",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -347,25 +392,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "delete",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -376,27 +450,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
     }
   },
   {
@@ -407,25 +475,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.patch.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 119",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "patch",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 119
     }
   },
   {
@@ -436,27 +500,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.patch.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "patch",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -467,25 +525,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}/loginProfile.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}/loginProfile",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
     }
   },
   {
@@ -496,27 +550,83 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}/loginProfile`. [path: paths./v1alpha/{+name}/loginProfile.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Summaries expected: 13",
+    "severity": 3,
+    "code": "summaries_expected",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}/loginProfile",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 13,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+name}"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -527,25 +637,22 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+parent}/sshPublicKeys.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}/sshPublicKeys",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
     }
   },
   {
@@ -556,27 +663,891 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `parent` is not used in the path `/v1alpha/{+parent}/sshPublicKeys`. [path: paths./v1alpha/{+parent}/sshPublicKeys.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Describable elements: 138",
+    "severity": 3,
+    "code": "describable_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}/sshPublicKeys",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 138,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          2,
+          "schema",
+          "items"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "appEngineInstance"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "computeInstance"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "serviceAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "sshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse",
+          "properties",
+          "signedSshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "ImportSshPublicKeyResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ImportSshPublicKeyResponse",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "posixAccounts"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "securityKeys"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "sshPublicKeys"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "accountId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "gecos"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "gid"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "homeDirectory"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "operatingSystemType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "primary"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "shell"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "systemId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "uid"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProvisionPosixAccountRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProvisionPosixAccountRequest",
+          "properties",
+          "regions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProvisionPosixAccountRequest",
+          "properties",
+          "regions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey",
+          "properties",
+          "deviceNickname"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey",
+          "properties",
+          "privateKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey",
+          "properties",
+          "publicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SignSshPublicKeyRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "SignSshPublicKeyRequest",
+          "properties",
+          "sshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SignSshPublicKeyResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SignSshPublicKeyResponse",
+          "properties",
+          "signedSshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "expirationTimeUsec"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "fingerprint"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "key"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UniversalTwoFactor"
+        ],
+        [
+          "components",
+          "schemas",
+          "UniversalTwoFactor",
+          "properties",
+          "appId"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebAuthn"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebAuthn",
+          "properties",
+          "rpId"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "SshPublicKey"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
     }
   },
   {
@@ -587,14 +1558,610 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+parent}:importSshPublicKey.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Described elements: 91",
+    "severity": 3,
+    "code": "described_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 91,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}/loginProfile",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "appEngineInstance"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "computeInstance"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "serviceAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest",
+          "properties",
+          "sshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse",
+          "properties",
+          "signedSshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "ImportSshPublicKeyResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ImportSshPublicKeyResponse",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "posixAccounts"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "securityKeys"
+        ],
+        [
+          "components",
+          "schemas",
+          "LoginProfile",
+          "properties",
+          "sshPublicKeys"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "accountId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "gecos"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "gid"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "homeDirectory"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "operatingSystemType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "primary"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "shell"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "systemId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "uid"
+        ],
+        [
+          "components",
+          "schemas",
+          "PosixAccount",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProvisionPosixAccountRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ProvisionPosixAccountRequest",
+          "properties",
+          "regions"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey",
+          "properties",
+          "deviceNickname"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey",
+          "properties",
+          "privateKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SecurityKey",
+          "properties",
+          "publicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SignSshPublicKeyRequest",
+          "properties",
+          "sshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SignSshPublicKeyResponse",
+          "properties",
+          "signedSshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "expirationTimeUsec"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "fingerprint"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "key"
+        ],
+        [
+          "components",
+          "schemas",
+          "SshPublicKey",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "UniversalTwoFactor"
+        ],
+        [
+          "components",
+          "schemas",
+          "UniversalTwoFactor",
+          "properties",
+          "appId"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebAuthn"
+        ],
+        [
+          "components",
+          "schemas",
+          "WebAuthn",
+          "properties",
+          "rpId"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 10",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -603,472 +2170,15 @@
         "paths",
         "/v1alpha/{+parent}:importSshPublicKey",
         "post",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1alpha/{+parent}:importSshPublicKey`. [path: paths./v1alpha/{+parent}:importSshPublicKey.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}:importSshPublicKey",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+parent}:signSshPublicKey.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}:signSshPublicKey",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1alpha/{+parent}:signSshPublicKey`. [path: paths./v1alpha/{+parent}:signSshPublicKey.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}:signSshPublicKey",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.patch.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}",
-        "patch",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}/loginProfile.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+name}/loginProfile",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+parent}/sshPublicKeys.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}/sshPublicKeys",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+parent}:importSshPublicKey.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}:importSshPublicKey",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+parent}:signSshPublicKey.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha/{+parent}:signSshPublicKey",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest\" is never used. [path: components.schemas.GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse\" is never used. [path: components.schemas.GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"SshPublicKey\" is never used. [path: components.requestBodies.SshPublicKey]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "requestBodies",
-        "SshPublicKey"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 10,
+      "paths": []
     }
   },
   {
@@ -1096,7 +2206,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 742,
+        "character": 70
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 15
+      },
+      "end": {
+        "line": 118,
+        "character": 54
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1126,7 +2320,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 70,
+        "character": 10
+      },
+      "end": {
+        "line": 80,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1alpha/{+name}.delete.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "delete",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 120,
+        "character": 12
+      },
+      "end": {
+        "line": 166,
+        "character": 56
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 122,
+        "character": 10
+      },
+      "end": {
+        "line": 128,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1156,7 +2438,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 168,
+        "character": 14
+      },
+      "end": {
+        "line": 227,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 170,
+        "character": 10
+      },
+      "end": {
+        "line": 176,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1186,7 +2526,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 179,
+        "character": 10
+      },
+      "end": {
+        "line": 184,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1alpha/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 233,
+        "character": 13
+      },
+      "end": {
+        "line": 284,
+        "character": 75
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+name}.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 235,
+        "character": 10
+      },
+      "end": {
+        "line": 241,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+name}.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1216,7 +2644,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 327,
+        "character": 12
+      },
+      "end": {
+        "line": 431,
+        "character": 54
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+name}/loginProfile.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 329,
+        "character": 10
+      },
+      "end": {
+        "line": 335,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+name}/loginProfile.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1246,7 +2732,185 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 338,
+        "character": 10
+      },
+      "end": {
+        "line": 348,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1alpha/{+name}/loginProfile.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 351,
+        "character": 10
+      },
+      "end": {
+        "line": 356,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1alpha/{+name}/loginProfile.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 359,
+        "character": 10
+      },
+      "end": {
+        "line": 364,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1alpha/{+name}/loginProfile.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 367,
+        "character": 10
+      },
+      "end": {
+        "line": 377,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./v1alpha/{+name}/loginProfile.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 470,
+        "character": 13
+      },
+      "end": {
+        "line": 521,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+parent}/sshPublicKeys.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}/sshPublicKeys",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 472,
+        "character": 10
+      },
+      "end": {
+        "line": 478,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+parent}/sshPublicKeys.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}/sshPublicKeys",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1276,7 +2940,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 564,
+        "character": 13
+      },
+      "end": {
+        "line": 648,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+parent}:importSshPublicKey.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 566,
+        "character": 10
+      },
+      "end": {
+        "line": 572,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+parent}:importSshPublicKey.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1306,7 +3028,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 575,
+        "character": 10
+      },
+      "end": {
+        "line": 580,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1alpha/{+parent}:importSshPublicKey.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 583,
+        "character": 10
+      },
+      "end": {
+        "line": 592,
+        "character": 29
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1alpha/{+parent}:importSshPublicKey.post.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 595,
+        "character": 10
+      },
+      "end": {
+        "line": 605,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1alpha/{+parent}:importSshPublicKey.post.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 691,
+        "character": 13
+      },
+      "end": {
+        "line": 742,
+        "character": 70
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha/{+parent}:signSshPublicKey.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:signSshPublicKey",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 693,
+        "character": 10
+      },
+      "end": {
+        "line": 699,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha/{+parent}:signSshPublicKey.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:signSshPublicKey",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1336,7 +3206,373 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 752,
+        "character": 16
+      },
+      "end": {
+        "line": 761,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 764,
+        "character": 21
+      },
+      "end": {
+        "line": 769,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 767,
+        "character": 16
+      },
+      "end": {
+        "line": 767,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 772,
+        "character": 12
+      },
+      "end": {
+        "line": 783,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 786,
+        "character": 17
+      },
+      "end": {
+        "line": 791,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 794,
+        "character": 15
+      },
+      "end": {
+        "line": 799,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 802,
+        "character": 12
+      },
+      "end": {
+        "line": 807,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 810,
+        "character": 20
+      },
+      "end": {
+        "line": 815,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 813,
+        "character": 16
+      },
+      "end": {
+        "line": 813,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 818,
+        "character": 20
+      },
+      "end": {
+        "line": 824,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 827,
+        "character": 18
+      },
+      "end": {
+        "line": 832,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 835,
+        "character": 19
+      },
+      "end": {
+        "line": 840,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 843,
+        "character": 24
+      },
+      "end": {
+        "line": 848,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1364,7 +3600,7 @@
         "requestBodies",
         "SshPublicKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1392,7 +3628,7 @@
         "schemas",
         "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1420,7 +3656,7 @@
         "schemas",
         "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1451,7 +3687,97 @@
         "loginProfile",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 958,
+        "character": 16
+      },
+      "end": {
+        "line": 961,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.PosixAccount.properties.gid]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PosixAccount",
+        "properties",
+        "gid"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 993,
+        "character": 16
+      },
+      "end": {
+        "line": 996,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.PosixAccount.properties.uid]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PosixAccount",
+        "properties",
+        "uid"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1025,
+        "character": 23
+      },
+      "end": {
+        "line": 1027,
+        "character": 28
+      }
+    },
+    "message": "Potentially exposing internals (words \"private\" or \"internal\" spotted) [path: components.schemas.SecurityKey.properties.privateKey]",
+    "severity": 2,
+    "code": "monite-general-exposing-internals",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SecurityKey",
+        "properties",
+        "privateKey"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1482,7 +3808,7 @@
         "universalTwoFactor",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1513,7 +3839,1428 @@
         "webAuthn",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1065,
+        "character": 31
+      },
+      "end": {
+        "line": 1068,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.SshPublicKey.properties.expirationTimeUsec]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SshPublicKey",
+        "properties",
+        "expirationTimeUsec"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}`. [path: paths./v1alpha/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha/{+name}/loginProfile`. [path: paths./v1alpha/{+name}/loginProfile.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1alpha/{+parent}/sshPublicKeys`. [path: paths./v1alpha/{+parent}/sshPublicKeys.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}/sshPublicKeys",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1alpha/{+parent}:importSshPublicKey`. [path: paths./v1alpha/{+parent}:importSshPublicKey.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1alpha/{+parent}:signSshPublicKey`. [path: paths./v1alpha/{+parent}:signSshPublicKey.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:signSshPublicKey",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+name}/loginProfile.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+name}/loginProfile.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}/loginProfile",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+parent}/sshPublicKeys.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}/sshPublicKeys",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+parent}/sshPublicKeys.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}/sshPublicKeys",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+parent}:importSshPublicKey.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+parent}:importSshPublicKey.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha/{+parent}:signSshPublicKey.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:signSshPublicKey",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha/{+parent}:signSshPublicKey.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:signSshPublicKey",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest\" is never used. [path: components.schemas.GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse\" is never used. [path: components.schemas.GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyResponse"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"SshPublicKey\" is never used. [path: components.requestBodies.SshPublicKey]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "SshPublicKey"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'oslogin.users.projects.locations.signSshPublicKey' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Original description lacks a summary entirely and provides minimal context. The description is incomplete - it doesn't explain what inputs are expected (SignSshPublicKeyRequest), what is returned (SignSshPublicKeyResponse), or the authentication requirements. Added summary for quick operation identification, clarified input/output schemas, explained the purpose of the signed key, and noted authentication requirements. This improves AI agent ability to determine when to use this operation and what to expect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:signSshPublicKey",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "oslogin.users.projects.locations.signSshPublicKey",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Signs an SSH public key for a user to authenticate to a virtual machine on Google Compute Engine.",
+      "summary_suggestion": "Sign SSH public key for VM authentication",
+      "description_suggestion": "Signs an SSH public key to enable user authentication to Google Compute Engine virtual machines. Accepts a SignSshPublicKeyRequest containing the SSH public key to be signed. Returns a SignSshPublicKeyResponse with the signed key material and metadata. The signed key can then be used for SSH access to GCE instances. Requires authentication via OAuth2.",
+      "reasoning": "Original description lacks a summary entirely and provides minimal context. The description is incomplete - it doesn't explain what inputs are expected (SignSshPublicKeyRequest), what is returned (SignSshPublicKeyResponse), or the authentication requirements. Added summary for quick operation identification, clarified input/output schemas, explained the purpose of the signed key, and noted authentication requirements. This improves AI agent ability to determine when to use this operation and what to expect.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:signSshPublicKey",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'oslogin.users.projects.delete' has semantic quality issues: vague_summary, missing_context, missing_side_effects. Missing summary entirely. Description is too minimal and lacks context about what gets deleted, which project scope, and side effects on VM access. Added clarity about POSIX account removal scope, access revocation, and prerequisites for AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "oslogin.users.projects.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes a POSIX account.",
+      "summary_suggestion": "Delete a POSIX account from a project",
+      "description_suggestion": "Deletes a POSIX account associated with a user in a specific project. This operation removes the POSIX account entry and revokes associated access to VM instances in that project. The operation requires the account to exist and appropriate IAM permissions.",
+      "reasoning": "Missing summary entirely. Description is too minimal and lacks context about what gets deleted, which project scope, and side effects on VM access. Added clarity about POSIX account removal scope, access revocation, and prerequisites for AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'oslogin.users.sshPublicKeys.get' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description lacks specificity about what is returned and how the key is identified. Added return type information and clarification about resource name identification for better AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "oslogin.users.sshPublicKeys.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Retrieves an SSH public key.",
+      "summary_suggestion": "Retrieve an SSH public key by name",
+      "description_suggestion": "Retrieves the SSH public key information for a specific key identified by its resource name. Returns the SshPublicKey object containing the key data, fingerprint, and metadata.",
+      "reasoning": "Missing summary. Description lacks specificity about what is returned and how the key is identified. Added return type information and clarification about resource name identification for better AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'oslogin.users.sshPublicKeys.patch' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description mentions 'profile information' ambiguously - clarified that it returns both the updated key and LoginProfile. Added clarity about patch semantics behavior and what fields can be modified for AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "oslogin.users.sshPublicKeys.patch",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Updates an SSH public key and returns the profile information. This method supports patch semantics.",
+      "summary_suggestion": "Update an SSH public key with patch semantics",
+      "description_suggestion": "Updates an SSH public key using patch semantics, allowing partial updates of key properties. Accepts an SshPublicKey object with fields to be modified. Returns the updated SshPublicKey object and the associated LoginProfile containing POSIX account and SSH key information.",
+      "reasoning": "Missing summary. Description mentions 'profile information' ambiguously - clarified that it returns both the updated key and LoginProfile. Added clarity about patch semantics behavior and what fields can be modified for AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'oslogin.users.projects.provisionPosixAccount' has semantic quality issues: vague_summary, missing_output_details, missing_side_effects. Missing summary. Description lacks detail about request/response types, idempotency behavior, and what gets returned. Added clarity about request schema, return type, and idempotent behavior (returns existing if present) for AI agents to understand operation semantics.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+name}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "oslogin.users.projects.provisionPosixAccount",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Create a POSIX account if it doesn't exist.",
+      "summary_suggestion": "Provision a POSIX account for a project",
+      "description_suggestion": "Provisions a POSIX account for a user in a specific project if one does not already exist. Accepts a ProvisionPosixAccountRequest specifying the desired POSIX account configuration. Returns the created or existing PosixAccount object with assigned UID and GID. If an account already exists, returns the existing account without modification.",
+      "reasoning": "Missing summary. Description lacks detail about request/response types, idempotency behavior, and what gets returned. Added clarity about request schema, return type, and idempotent behavior (returns existing if present) for AI agents to understand operation semantics.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+name}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'oslogin.users.sshPublicKeys.create' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description is too minimal and lacks information about request/response types and what metadata is assigned. Added clarity about input schema, return type, and auto-generated fields for better AI agent understanding of operation effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}/sshPublicKeys",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "oslogin.users.sshPublicKeys.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Create an SSH public key",
+      "summary_suggestion": "Create a new SSH public key",
+      "description_suggestion": "Creates a new SSH public key for the authenticated user. Accepts an SshPublicKey object containing the public key data. Returns the created SshPublicKey object with assigned metadata including fingerprint and creation timestamp.",
+      "reasoning": "Missing summary. Description is too minimal and lacks information about request/response types and what metadata is assigned. Added clarity about input schema, return type, and auto-generated fields for better AI agent understanding of operation effects.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}/sshPublicKeys",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'oslogin.users.importSshPublicKey' has semantic quality issues: vague_summary, missing_output_details, missing_side_effects. Missing summary. Description is unclear about return type (says 'profile information' vaguely) and side effects of POSIX account auto-provisioning. Added clarity about response schema type, automatic POSIX account creation behavior, and what gets returned for AI agents to understand full operation scope and side effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha/{+parent}:importSshPublicKey",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "oslogin.users.importSshPublicKey",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.",
+      "summary_suggestion": "Import SSH public key and get login profile",
+      "description_suggestion": "Imports an SSH public key for the authenticated user and returns the complete LoginProfile. Accepts an SshPublicKey object. If no POSIX account exists, automatically provisions default POSIX account information with system-assigned username and UID. Returns ImportSshPublicKeyResponse containing the imported key and updated LoginProfile with POSIX account details.",
+      "reasoning": "Missing summary. Description is unclear about return type (says 'profile information' vaguely) and side effects of POSIX account auto-provisioning. Added clarity about response schema type, automatic POSIX account creation behavior, and what gets returned for AI agents to understand full operation scope and side effects.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha/{+parent}:importSshPublicKey",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 8 operations analyzed, 7 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 8,
+      "total_issues_found": 7,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 75 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 75
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 75 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 75
     }
   }
 ]

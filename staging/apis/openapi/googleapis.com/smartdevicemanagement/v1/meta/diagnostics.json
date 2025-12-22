@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -127,24 +127,48 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 5",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 5,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -155,25 +179,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -184,27 +204,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 48",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 48
     }
   },
   {
@@ -215,25 +229,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:executeCommand.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:executeCommand",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -244,27 +266,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}:executeCommand`. [path: paths./v1/{+name}:executeCommand.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:executeCommand",
-        "post",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -275,14 +305,1231 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/devices.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 73",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 73
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 10",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 10,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 88",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 88,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "parentRelations"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "traits"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "traits",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest",
+          "properties",
+          "command"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest",
+          "properties",
+          "params"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest",
+          "properties",
+          "params",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse",
+          "properties",
+          "results",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListDevicesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListDevicesResponse",
+          "properties",
+          "devices"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListRoomsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListRoomsResponse",
+          "properties",
+          "rooms"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListStructuresResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListStructuresResponse",
+          "properties",
+          "structures"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ParentRelation"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ParentRelation",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ParentRelation",
+          "properties",
+          "parent"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room",
+          "properties",
+          "traits"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room",
+          "properties",
+          "traits",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure",
+          "properties",
+          "traits"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure",
+          "properties",
+          "traits",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 61",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 61,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "parentRelations"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "traits"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "traits",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Device",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest",
+          "properties",
+          "command"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest",
+          "properties",
+          "params"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest",
+          "properties",
+          "params",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse",
+          "properties",
+          "results",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListDevicesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListDevicesResponse",
+          "properties",
+          "devices"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListRoomsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListRoomsResponse",
+          "properties",
+          "rooms"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListStructuresResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ListStructuresResponse",
+          "properties",
+          "structures"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ParentRelation"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ParentRelation",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1ParentRelation",
+          "properties",
+          "parent"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room",
+          "properties",
+          "traits"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Room",
+          "properties",
+          "traits",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure",
+          "properties",
+          "traits"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleHomeEnterpriseSdmV1Structure",
+          "properties",
+          "traits",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 9",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -291,333 +1538,15 @@
         "paths",
         "/v1/{+parent}/devices",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/devices`. [path: paths./v1/{+parent}/devices.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/devices",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/rooms.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/rooms",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/rooms`. [path: paths./v1/{+parent}/rooms.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/rooms",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/structures.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/structures",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/structures`. [path: paths./v1/{+parent}/structures.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/structures",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:executeCommand.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:executeCommand",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/devices.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/devices",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/rooms.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/rooms",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/structures.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/structures",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 9,
+      "paths": []
     }
   },
   {
@@ -645,7 +1574,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 430,
+        "character": 74
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 12
+      },
+      "end": {
+        "line": 97,
+        "character": 79
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -675,7 +1688,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 136,
+        "character": 13
+      },
+      "end": {
+        "line": 179,
+        "character": 99
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}:executeCommand.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:executeCommand",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 138,
+        "character": 10
+      },
+      "end": {
+        "line": 144,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}:executeCommand.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:executeCommand",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -705,7 +1776,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 222,
+        "character": 12
+      },
+      "end": {
+        "line": 268,
+        "character": 71
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/devices.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/devices",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 224,
+        "character": 10
+      },
+      "end": {
+        "line": 230,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/devices.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/devices",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -735,7 +1864,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 233,
+        "character": 10
+      },
+      "end": {
+        "line": 238,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/devices.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/devices",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 307,
+        "character": 12
+      },
+      "end": {
+        "line": 345,
+        "character": 80
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/rooms.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/rooms",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 309,
+        "character": 10
+      },
+      "end": {
+        "line": 315,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/rooms.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/rooms",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -765,7 +1982,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 384,
+        "character": 12
+      },
+      "end": {
+        "line": 430,
+        "character": 74
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/structures.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/structures",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 386,
+        "character": 10
+      },
+      "end": {
+        "line": 392,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/structures.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/structures",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -795,7 +2070,1307 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 395,
+        "character": 10
+      },
+      "end": {
+        "line": 400,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/structures.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/structures",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 436,
+        "character": 16
+      },
+      "end": {
+        "line": 445,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 448,
+        "character": 21
+      },
+      "end": {
+        "line": 453,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 451,
+        "character": 16
+      },
+      "end": {
+        "line": 451,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 456,
+        "character": 12
+      },
+      "end": {
+        "line": 467,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 470,
+        "character": 17
+      },
+      "end": {
+        "line": 475,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 478,
+        "character": 15
+      },
+      "end": {
+        "line": 483,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 486,
+        "character": 12
+      },
+      "end": {
+        "line": 491,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 494,
+        "character": 20
+      },
+      "end": {
+        "line": 499,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 497,
+        "character": 16
+      },
+      "end": {
+        "line": 497,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 502,
+        "character": 20
+      },
+      "end": {
+        "line": 508,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 511,
+        "character": 18
+      },
+      "end": {
+        "line": 516,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 519,
+        "character": 19
+      },
+      "end": {
+        "line": 524,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 527,
+        "character": 24
+      },
+      "end": {
+        "line": 532,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}:executeCommand`. [path: paths./v1/{+name}:executeCommand.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:executeCommand",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/devices`. [path: paths./v1/{+parent}/devices.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/devices",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/rooms`. [path: paths./v1/{+parent}/rooms.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/rooms",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/structures`. [path: paths./v1/{+parent}/structures.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/structures",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:executeCommand.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:executeCommand",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:executeCommand.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:executeCommand",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/devices.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/devices",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/devices.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/devices",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/rooms.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/rooms",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/rooms.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/rooms",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/structures.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/structures",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/structures.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/structures",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'smartdevicemanagement.enterprises.structures.rooms.get' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description lacks clarity about required input format (resource name parameter), what specific room details are returned, and the hierarchical resource naming convention. Added input parameter format and output details for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "smartdevicemanagement.enterprises.structures.rooms.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets a room managed by the enterprise.",
+      "summary_suggestion": "Retrieve a specific room resource",
+      "description_suggestion": "Retrieves a room resource by name. Returns the room details including its identifier and display name. Requires the full resource name of the room in the format: enterprises/{enterprise}/structures/{structure}/rooms/{room}.",
+      "reasoning": "Missing summary entirely. Description lacks clarity about required input format (resource name parameter), what specific room details are returned, and the hierarchical resource naming convention. Added input parameter format and output details for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'smartdevicemanagement.enterprises.devices.executeCommand' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Missing summary entirely. Description is too generic and lacks details about request structure, response format, and side effects. Added information about request/response schemas, command parameters, and state change implications for AI agents to understand command execution behavior.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:executeCommand",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "smartdevicemanagement.enterprises.devices.executeCommand",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Executes a command to device managed by the enterprise.",
+      "summary_suggestion": "Execute a command on a managed device",
+      "description_suggestion": "Executes a command on a device managed by the enterprise. Accepts an ExecuteDeviceCommandRequest containing the command name and parameters specific to the device type. Returns an ExecuteDeviceCommandResponse with the command execution result. The command is executed asynchronously and may change the device state based on the command type.",
+      "reasoning": "Missing summary entirely. Description is too generic and lacks details about request structure, response format, and side effects. Added information about request/response schemas, command parameters, and state change implications for AI agents to understand command execution behavior.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:executeCommand",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'smartdevicemanagement.enterprises.devices.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description lacks context about the parent resource parameter format, what device information is returned, and pagination support. Added resource naming convention, response structure details, and pagination capability for improved AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/devices",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "smartdevicemanagement.enterprises.devices.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists devices managed by the enterprise.",
+      "summary_suggestion": "List all managed devices in a structure",
+      "description_suggestion": "Lists all devices managed by the enterprise within a specified structure. Accepts a parent resource identifier in the format: enterprises/{enterprise}/structures/{structure}. Returns a ListDevicesResponse containing an array of Device resources with their properties and parent relationships. Supports pagination through optional parameters.",
+      "reasoning": "Missing summary entirely. Description lacks context about the parent resource parameter format, what device information is returned, and pagination support. Added resource naming convention, response structure details, and pagination capability for improved AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/devices",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'smartdevicemanagement.enterprises.structures.rooms.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description lacks clarity about the parent resource parameter format and what room information is returned. Added resource naming convention and response structure details for better AI agent understanding of the operation's scope and output.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/rooms",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "smartdevicemanagement.enterprises.structures.rooms.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists rooms managed by the enterprise.",
+      "summary_suggestion": "List all rooms in a structure",
+      "description_suggestion": "Lists all rooms within a specified structure managed by the enterprise. Accepts a parent resource identifier in the format: enterprises/{enterprise}/structures/{structure}. Returns a ListRoomsResponse containing an array of Room resources with their identifiers and display names.",
+      "reasoning": "Missing summary entirely. Description lacks clarity about the parent resource parameter format and what room information is returned. Added resource naming convention and response structure details for better AI agent understanding of the operation's scope and output.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/rooms",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'smartdevicemanagement.enterprises.structures.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary entirely. Description lacks context about the parent resource parameter format, what structure information is returned, and pagination support. Added resource naming convention, response structure details, and pagination capability for improved AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/structures",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "smartdevicemanagement.enterprises.structures.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists structures managed by the enterprise.",
+      "summary_suggestion": "List all structures in an enterprise",
+      "description_suggestion": "Lists all structures (homes or hotel rooms) managed by the enterprise. Accepts a parent resource identifier in the format: enterprises/{enterprise}. Returns a ListStructuresResponse containing an array of Structure resources with their identifiers and display names. Supports pagination through optional parameters.",
+      "reasoning": "Missing summary entirely. Description lacks context about the parent resource parameter format, what structure information is returned, and pagination support. Added resource naming convention, response structure details, and pagination capability for improved AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/structures",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 5 operations analyzed, 5 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 5,
+      "total_issues_found": 5,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 65 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 65
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 65 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 65
     }
   }
 ]

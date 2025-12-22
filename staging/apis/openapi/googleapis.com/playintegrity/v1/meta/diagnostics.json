@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -55,24 +55,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -83,25 +92,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+packageName}/deviceRecall:write.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+packageName}/deviceRecall:write",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -112,27 +117,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `packageName` is not used in the path `/v1/{+packageName}/deviceRecall:write`. [path: paths./v1/{+packageName}/deviceRecall:write.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 60",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+packageName}/deviceRecall:write",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 60
     }
   },
   {
@@ -143,14 +142,1264 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+packageName}:decodeIntegrityToken.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 78",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 78
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 88",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 88,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountActivity"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountActivity",
+          "properties",
+          "activityLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountDetails",
+          "properties",
+          "appLicensingVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppAccessRiskVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppAccessRiskVerdict",
+          "properties",
+          "appsDetected"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppAccessRiskVerdict",
+          "properties",
+          "appsDetected",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "appRecognitionVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "certificateSha256Digest"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "certificateSha256Digest",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "packageName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "versionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "DecodeIntegrityTokenRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "DecodeIntegrityTokenRequest",
+          "properties",
+          "integrityToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "DecodeIntegrityTokenResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceAttributes"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceAttributes",
+          "properties",
+          "sdkVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity",
+          "properties",
+          "deviceRecognitionVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity",
+          "properties",
+          "deviceRecognitionVerdict",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity",
+          "properties",
+          "legacyDeviceRecognitionVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity",
+          "properties",
+          "legacyDeviceRecognitionVerdict",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceRecall"
+        ],
+        [
+          "components",
+          "schemas",
+          "EnvironmentDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "EnvironmentDetails",
+          "properties",
+          "playProtectVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "RecentDeviceActivity"
+        ],
+        [
+          "components",
+          "schemas",
+          "RecentDeviceActivity",
+          "properties",
+          "deviceActivityLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "nonce"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "requestHash"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "requestPackageName"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "timestampMillis"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestingDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestingDetails",
+          "properties",
+          "isTestingResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "TokenPayloadExternal"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values",
+          "properties",
+          "bitFirst"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values",
+          "properties",
+          "bitSecond"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values",
+          "properties",
+          "bitThird"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates",
+          "properties",
+          "yyyymmFirst"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates",
+          "properties",
+          "yyyymmSecond"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates",
+          "properties",
+          "yyyymmThird"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDeviceRecallRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDeviceRecallRequest",
+          "properties",
+          "integrityToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDeviceRecallResponse"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 63",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 63,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountActivity"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountActivity",
+          "properties",
+          "activityLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "AccountDetails",
+          "properties",
+          "appLicensingVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppAccessRiskVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppAccessRiskVerdict",
+          "properties",
+          "appsDetected"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "appRecognitionVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "certificateSha256Digest"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "packageName"
+        ],
+        [
+          "components",
+          "schemas",
+          "AppIntegrity",
+          "properties",
+          "versionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "DecodeIntegrityTokenRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "DecodeIntegrityTokenRequest",
+          "properties",
+          "integrityToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "DecodeIntegrityTokenResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceAttributes"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceAttributes",
+          "properties",
+          "sdkVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity",
+          "properties",
+          "deviceRecognitionVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceIntegrity",
+          "properties",
+          "legacyDeviceRecognitionVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "DeviceRecall"
+        ],
+        [
+          "components",
+          "schemas",
+          "EnvironmentDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "EnvironmentDetails",
+          "properties",
+          "playProtectVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "RecentDeviceActivity"
+        ],
+        [
+          "components",
+          "schemas",
+          "RecentDeviceActivity",
+          "properties",
+          "deviceActivityLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "nonce"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "requestHash"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "requestPackageName"
+        ],
+        [
+          "components",
+          "schemas",
+          "RequestDetails",
+          "properties",
+          "timestampMillis"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestingDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestingDetails",
+          "properties",
+          "isTestingResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "TokenPayloadExternal"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values",
+          "properties",
+          "bitFirst"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values",
+          "properties",
+          "bitSecond"
+        ],
+        [
+          "components",
+          "schemas",
+          "Values",
+          "properties",
+          "bitThird"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates",
+          "properties",
+          "yyyymmFirst"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates",
+          "properties",
+          "yyyymmSecond"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDates",
+          "properties",
+          "yyyymmThird"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDeviceRecallRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDeviceRecallRequest",
+          "properties",
+          "integrityToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "WriteDeviceRecallResponse"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 11",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -159,154 +1408,15 @@
         "paths",
         "/v1/{+packageName}:decodeIntegrityToken",
         "post",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `packageName` is not used in the path `/v1/{+packageName}:decodeIntegrityToken`. [path: paths./v1/{+packageName}:decodeIntegrityToken.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+packageName}:decodeIntegrityToken",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+packageName}/deviceRecall:write.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+packageName}/deviceRecall:write",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+packageName}:decodeIntegrityToken.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+packageName}:decodeIntegrityToken",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 11,
+      "paths": []
     }
   },
   {
@@ -334,7 +1444,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 188,
+        "character": 74
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 13
+      },
+      "end": {
+        "line": 102,
+        "character": 71
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+packageName}/deviceRecall:write.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}/deviceRecall:write",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+packageName}/deviceRecall:write.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}/deviceRecall:write",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -364,7 +1558,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 145,
+        "character": 13
+      },
+      "end": {
+        "line": 188,
+        "character": 74
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+packageName}:decodeIntegrityToken.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}:decodeIntegrityToken",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 147,
+        "character": 10
+      },
+      "end": {
+        "line": 153,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+packageName}:decodeIntegrityToken.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}:decodeIntegrityToken",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -394,7 +1646,373 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 198,
+        "character": 16
+      },
+      "end": {
+        "line": 207,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 210,
+        "character": 21
+      },
+      "end": {
+        "line": 215,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 213,
+        "character": 16
+      },
+      "end": {
+        "line": 213,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 218,
+        "character": 12
+      },
+      "end": {
+        "line": 229,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 232,
+        "character": 17
+      },
+      "end": {
+        "line": 237,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 240,
+        "character": 15
+      },
+      "end": {
+        "line": 245,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 248,
+        "character": 12
+      },
+      "end": {
+        "line": 253,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 256,
+        "character": 20
+      },
+      "end": {
+        "line": 261,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 259,
+        "character": 16
+      },
+      "end": {
+        "line": 259,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 264,
+        "character": 20
+      },
+      "end": {
+        "line": 270,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 273,
+        "character": 18
+      },
+      "end": {
+        "line": 278,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 281,
+        "character": 19
+      },
+      "end": {
+        "line": 286,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 289,
+        "character": 24
+      },
+      "end": {
+        "line": 294,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -425,7 +2043,37 @@
         "accountActivity",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 385,
+        "character": 24
+      },
+      "end": {
+        "line": 388,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.AppIntegrity.properties.versionCode]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "AppIntegrity",
+        "properties",
+        "versionCode"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -456,7 +2104,37 @@
         "tokenPayloadExternal",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 416,
+        "character": 23
+      },
+      "end": {
+        "line": 419,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.DeviceAttributes.properties.sdkVersion]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "DeviceAttributes",
+        "properties",
+        "sdkVersion"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -487,7 +2165,7 @@
         "deviceAttributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -518,7 +2196,7 @@
         "deviceRecall",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -549,7 +2227,7 @@
         "recentDeviceActivity",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -580,7 +2258,7 @@
         "values",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -611,7 +2289,7 @@
         "writeDates",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -642,7 +2320,37 @@
         "appAccessRiskVerdict",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 540,
+        "character": 28
+      },
+      "end": {
+        "line": 543,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.RequestDetails.properties.timestampMillis]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RequestDetails",
+        "properties",
+        "timestampMillis"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -673,7 +2381,7 @@
         "accountDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -704,7 +2412,7 @@
         "appIntegrity",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -735,7 +2443,7 @@
         "deviceIntegrity",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -766,7 +2474,7 @@
         "environmentDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -797,7 +2505,7 @@
         "requestDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -828,7 +2536,97 @@
         "testingDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 609,
+        "character": 24
+      },
+      "end": {
+        "line": 612,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WriteDates.properties.yyyymmFirst]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WriteDates",
+        "properties",
+        "yyyymmFirst"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 614,
+        "character": 25
+      },
+      "end": {
+        "line": 617,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WriteDates.properties.yyyymmSecond]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WriteDates",
+        "properties",
+        "yyyymmSecond"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 619,
+        "character": 24
+      },
+      "end": {
+        "line": 622,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.WriteDates.properties.yyyymmThird]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WriteDates",
+        "properties",
+        "yyyymmThird"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -859,7 +2657,507 @@
         "newValues",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `packageName` is not used in the path `/v1/{+packageName}/deviceRecall:write`. [path: paths./v1/{+packageName}/deviceRecall:write.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}/deviceRecall:write",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `packageName` is not used in the path `/v1/{+packageName}:decodeIntegrityToken`. [path: paths./v1/{+packageName}:decodeIntegrityToken.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}:decodeIntegrityToken",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+packageName}/deviceRecall:write.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}/deviceRecall:write",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+packageName}/deviceRecall:write.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}/deviceRecall:write",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+packageName}:decodeIntegrityToken.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}:decodeIntegrityToken",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+packageName}:decodeIntegrityToken.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}:decodeIntegrityToken",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'playintegrity.deviceRecall.write' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Original summary was empty, making it impossible for AI agents to understand the operation's purpose. Description lacked critical details about inputs (WriteDeviceRecallRequest structure), outputs (WriteDeviceRecallResponse), and side effects (persistent state affecting future tokens). Enhanced version clarifies the action, specifies input/output schemas, explains the persistence and impact on integrity assessments, and maintains domain terminology consistency with the API context.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}/deviceRecall:write",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "playintegrity.deviceRecall.write",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Writes recall bits for the device where Play Integrity API token is obtained. The endpoint is available to select Play partners in an early access program (EAP).",
+      "summary_suggestion": "Write device recall bits for integrity verification",
+      "description_suggestion": "Writes recall bits to the device where the Play Integrity API token was generated. This operation allows developers to set custom recall flags for device tracking and integrity assessment. Requires the package name and WriteDeviceRecallRequest containing the recall bit values to write. Returns a WriteDeviceRecallResponse confirming the write operation. Note: This endpoint is available only to select Play partners in the early access program (EAP). The recall bits persist on the device and affect subsequent integrity token evaluations.",
+      "reasoning": "Original summary was empty, making it impossible for AI agents to understand the operation's purpose. Description lacked critical details about inputs (WriteDeviceRecallRequest structure), outputs (WriteDeviceRecallResponse), and side effects (persistent state affecting future tokens). Enhanced version clarifies the action, specifies input/output schemas, explains the persistence and impact on integrity assessments, and maintains domain terminology consistency with the API context.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}/deviceRecall:write",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'playintegrity.decodeIntegrityToken' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original summary was empty, preventing AI agents from understanding the operation's purpose. Description was overly simplistic and lacked context about what the payload contains and when this operation should be used. Enhanced version specifies the input schema (DecodeIntegrityTokenRequest), output schema (DecodeIntegrityTokenResponse with TokenPayloadExternal), explains the payload contents (device attestation, app integrity, account details), and clarifies the server-side verification use case for better AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+packageName}:decodeIntegrityToken",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "playintegrity.decodeIntegrityToken",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Decodes the integrity token and returns the token payload.",
+      "summary_suggestion": "Decode and extract integrity token payload",
+      "description_suggestion": "Decodes a Play Integrity API token and extracts the integrity payload containing app and device attestation signals. Accepts a DecodeIntegrityTokenRequest with the encoded token string. Returns a DecodeIntegrityTokenResponse containing the TokenPayloadExternal with integrity signals including device attestation, app integrity, account details, and device attributes. This operation is used server-side to verify the authenticity of the integrity token generated by the client application.",
+      "reasoning": "Original summary was empty, preventing AI agents from understanding the operation's purpose. Description was overly simplistic and lacked context about what the payload contains and when this operation should be used. Enhanced version specifies the input schema (DecodeIntegrityTokenRequest), output schema (DecodeIntegrityTokenResponse with TokenPayloadExternal), explains the payload contents (device attestation, app integrity, account details), and clarifies the server-side verification use case for better AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+packageName}:decodeIntegrityToken",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 41 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 41
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 41 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 41
     }
   }
 ]

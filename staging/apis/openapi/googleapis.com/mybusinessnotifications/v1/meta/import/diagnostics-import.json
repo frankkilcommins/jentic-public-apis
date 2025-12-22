@@ -1,0 +1,5978 @@
+[
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "{'description': 'A Google Pub/Sub topic where notifications can be published when a location is updated or has a new review. There will be only one notification setting resource per-account.', 'properties': {'name': {'description': 'Required. The resource name this setting is for. This is of the form `accounts/{account_id}/notificationSetting`.', 'type': 'string'}, 'notificationTypes': {'description': 'The types of notifications that will be sent to the Pub/Sub topic. To stop receiving notifications entirely, use NotificationSettings.UpdateNotificationSetting with an empty notification_types or set the pubsub_topic to an empty string.', 'items': {'enum': ['NOTIFICATION_TYPE_UNSPECIFIED', 'GOOGLE_UPDATE', 'NEW_REVIEW', 'UPDATED_REVIEW', 'NEW_CUSTOMER_MEDIA', 'NEW_QUESTION', 'UPDATED_QUESTION', 'NEW_ANSWER', 'UPDATED_ANSWER', 'DUPLICATE_LOCATION', 'LOSS_OF_VOICE_OF_MERCHANT', 'VOICE_OF_MERCHANT_UPDATED'], 'enumDeprecated': [False, False, False, False, False, False, False, False, False, False, True, False], 'type': 'string'}, 'type': 'array'}, 'pubsubTopic': {'description': 'Optional. The Google Pub/Sub topic that will receive notifications when locations managed by this account are updated. If unset, no notifications will be posted. The account mybusiness-api-pubsub@system.gserviceaccount.com must have at least Publish permissions on the Pub/Sub topic.', 'type': 'string'}}, 'type': 'object'} is not valid under any of the given schemas",
+    "severity": 1,
+    "code": "oneOf",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter '+name' for 'get' operation in '/v1/{+name}' was not resolved",
+    "severity": 1,
+    "code": "<unset>",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter '+name' for 'patch' operation in '/v1/{+name}' was not resolved",
+    "severity": 1,
+    "code": "<unset>",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 19",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "schema_count": 19
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 0",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "security_scheme_count": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: []",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "security_scheme_types": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 0 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "security_schemes": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 37",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "expected_examples": 37
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 3",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "summaries_expected": 3,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 43",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "describable_elements": 43,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 23",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "described_elements": 23,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 4",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
+      ],
+      "target": "repair-spec",
+      "max_schema_depth": 4,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 13
+      },
+      "end": {
+        "line": 19,
+        "character": 62
+      }
+    },
+    "message": "Server URL must not have trailing slash. [path: servers.0.url]",
+    "severity": 2,
+    "code": "oas3-server-trailing-slash",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 130,
+        "character": 66
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 12
+      },
+      "end": {
+        "line": 87,
+        "character": 80
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameter \"name\" must be used in path \"/v1/{+name}\". [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 1,
+    "code": "path-params",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 89,
+        "character": 14
+      },
+      "end": {
+        "line": 130,
+        "character": 66
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 91,
+        "character": 10
+      },
+      "end": {
+        "line": 97,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 91,
+        "character": 10
+      },
+      "end": {
+        "line": 97,
+        "character": 30
+      }
+    },
+    "message": "Parameter \"name\" must be used in path \"/v1/{+name}\". [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 1,
+    "code": "path-params",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 100,
+        "character": 10
+      },
+      "end": {
+        "line": 105,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 140,
+        "character": 16
+      },
+      "end": {
+        "line": 149,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 152,
+        "character": 21
+      },
+      "end": {
+        "line": 157,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 16
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 160,
+        "character": 12
+      },
+      "end": {
+        "line": 171,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 174,
+        "character": 17
+      },
+      "end": {
+        "line": 179,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 182,
+        "character": 15
+      },
+      "end": {
+        "line": 187,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 190,
+        "character": 12
+      },
+      "end": {
+        "line": 195,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 198,
+        "character": 20
+      },
+      "end": {
+        "line": 203,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 201,
+        "character": 16
+      },
+      "end": {
+        "line": 201,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 206,
+        "character": 20
+      },
+      "end": {
+        "line": 212,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 215,
+        "character": 18
+      },
+      "end": {
+        "line": 220,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 223,
+        "character": 19
+      },
+      "end": {
+        "line": 228,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 231,
+        "character": 24
+      },
+      "end": {
+        "line": 236,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 265,
+        "character": 31
+      },
+      "end": {
+        "line": 277,
+        "character": 21
+      }
+    },
+    "message": "Property \"enumDeprecated\" is not expected to be here. [path: components.schemas.NotificationSetting.properties.notificationTypes.items.enumDeprecated]",
+    "severity": 1,
+    "code": "oas3-schema",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting",
+        "properties",
+        "notificationTypes",
+        "items",
+        "enumDeprecated"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.NotificationSetting.properties.notificationTypes.items.enumDeprecated]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting",
+        "properties",
+        "notificationTypes",
+        "items",
+        "enumDeprecated"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/{+name}.get]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/{+name}.patch]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "repair-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'mybusinessnotifications.accounts.getNotificationSetting' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_context. Missing summary entirely. Description is too brief and lacks context about required inputs (account name format), what the response contains (notification types, topic), and domain-specific terminology (Pub/Sub, notification types). Enhanced version provides AI agents with clear understanding of prerequisites, expected response structure, and domain context.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "repair-spec",
+      "operation_id": "mybusinessnotifications.accounts.getNotificationSetting",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "Returns the pubsub notification settings for the account.",
+      "summary_suggestion": "Retrieve account notification settings",
+      "description_suggestion": "Retrieves the Pub/Sub notification settings for the specified business account. Returns the current notification setting resource containing the configured Pub/Sub topic and subscribed notification types. Requires the account resource name in the format 'accounts/{accountId}'.",
+      "reasoning": "Missing summary entirely. Description is too brief and lacks context about required inputs (account name format), what the response contains (notification types, topic), and domain-specific terminology (Pub/Sub, notification types). Enhanced version provides AI agents with clear understanding of prerequisites, expected response structure, and domain context.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'mybusinessnotifications.accounts.updateNotificationSetting' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description is verbose and somewhat unclear about inputs/outputs. Reorganized to clarify: what the operation does (updates settings), what inputs are needed (account name, NotificationSetting object), what fields control behavior (notification_types), constraints (one setting per account, one topic), deletion mechanism (empty notification_types), and what is returned. Improved AI agent interpretability by structuring information logically and explicitly stating input/output requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "repair-spec",
+      "operation_id": "mybusinessnotifications.accounts.updateNotificationSetting",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Sets the pubsub notification setting for the account informing Google which topic to send pubsub notifications for. Use the notification_types field within notification_setting to manipulate the events an account wants to subscribe to. An account will only have one notification setting resource, and only one pubsub topic can be set. To delete the setting, update with an empty notification_types",
+      "summary_suggestion": "Update account Pub/Sub notification settings",
+      "description_suggestion": "Updates the Pub/Sub notification settings for the specified business account. Configures which Pub/Sub topic receives notifications and which notification types (events) to subscribe to via the notification_types field. Each account maintains only one notification setting resource with a single Pub/Sub topic. To remove all subscriptions, update with an empty notification_types array. Returns the updated NotificationSetting resource. Requires the account resource name and the updated NotificationSetting object.",
+      "reasoning": "Missing summary. Description is verbose and somewhat unclear about inputs/outputs. Reorganized to clarify: what the operation does (updates settings), what inputs are needed (account name, NotificationSetting object), what fields control behavior (notification_types), constraints (one setting per account, one topic), deletion mechanism (empty notification_types), and what is returned. Improved AI agent interpretability by structuring information logically and explicitly stating input/output requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "{'description': 'A Google Pub/Sub topic where notifications can be published when a location is updated or has a new review. There will be only one notification setting resource per-account.', 'properties': {'name': {'description': 'Required. The resource name this setting is for. This is of the form `accounts/{account_id}/notificationSetting`.', 'type': 'string'}, 'notificationTypes': {'description': 'The types of notifications that will be sent to the Pub/Sub topic. To stop receiving notifications entirely, use NotificationSettings.UpdateNotificationSetting with an empty notification_types or set the pubsub_topic to an empty string.', 'items': {'enum': ['NOTIFICATION_TYPE_UNSPECIFIED', 'GOOGLE_UPDATE', 'NEW_REVIEW', 'UPDATED_REVIEW', 'NEW_CUSTOMER_MEDIA', 'NEW_QUESTION', 'UPDATED_QUESTION', 'NEW_ANSWER', 'UPDATED_ANSWER', 'DUPLICATE_LOCATION', 'LOSS_OF_VOICE_OF_MERCHANT', 'VOICE_OF_MERCHANT_UPDATED'], 'enumDeprecated': [False, False, False, False, False, False, False, False, False, False, True, False], 'type': 'string'}, 'type': 'array'}, 'pubsubTopic': {'description': 'Optional. The Google Pub/Sub topic that will receive notifications when locations managed by this account are updated. If unset, no notifications will be posted. The account mybusiness-api-pubsub@system.gserviceaccount.com must have at least Publish permissions on the Pub/Sub topic.', 'type': 'string'}}, 'type': 'object'} is not valid under any of the given schemas",
+    "severity": 1,
+    "code": "oneOf",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter '+name' for 'get' operation in '/v1/{+name}' was not resolved",
+    "severity": 1,
+    "code": "<unset>",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter '+name' for 'patch' operation in '/v1/{+name}' was not resolved",
+    "severity": 1,
+    "code": "<unset>",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 19",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "schema_count": 19
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 0",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "security_scheme_count": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: []",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "security_scheme_types": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 0 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "security_schemes": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 37",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "expected_examples": 37
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 3",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "summaries_expected": 3,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 43",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "describable_elements": 43,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 23",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "described_elements": 23,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 4",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
+      ],
+      "target": "repair-bundled-spec",
+      "max_schema_depth": 4,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 13
+      },
+      "end": {
+        "line": 19,
+        "character": 62
+      }
+    },
+    "message": "Server URL must not have trailing slash. [path: servers.0.url]",
+    "severity": 2,
+    "code": "oas3-server-trailing-slash",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 130,
+        "character": 66
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 12
+      },
+      "end": {
+        "line": 87,
+        "character": 80
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameter \"name\" must be used in path \"/v1/{+name}\". [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 1,
+    "code": "path-params",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 89,
+        "character": 14
+      },
+      "end": {
+        "line": 130,
+        "character": 66
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 91,
+        "character": 10
+      },
+      "end": {
+        "line": 97,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 91,
+        "character": 10
+      },
+      "end": {
+        "line": 97,
+        "character": 30
+      }
+    },
+    "message": "Parameter \"name\" must be used in path \"/v1/{+name}\". [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 1,
+    "code": "path-params",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 100,
+        "character": 10
+      },
+      "end": {
+        "line": 105,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 140,
+        "character": 16
+      },
+      "end": {
+        "line": 149,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 152,
+        "character": 21
+      },
+      "end": {
+        "line": 157,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 16
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 160,
+        "character": 12
+      },
+      "end": {
+        "line": 171,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 174,
+        "character": 17
+      },
+      "end": {
+        "line": 179,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 182,
+        "character": 15
+      },
+      "end": {
+        "line": 187,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 190,
+        "character": 12
+      },
+      "end": {
+        "line": 195,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 198,
+        "character": 20
+      },
+      "end": {
+        "line": 203,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 201,
+        "character": 16
+      },
+      "end": {
+        "line": 201,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 206,
+        "character": 20
+      },
+      "end": {
+        "line": 212,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 215,
+        "character": 18
+      },
+      "end": {
+        "line": 220,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 223,
+        "character": 19
+      },
+      "end": {
+        "line": 228,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 231,
+        "character": 24
+      },
+      "end": {
+        "line": 236,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 265,
+        "character": 31
+      },
+      "end": {
+        "line": 277,
+        "character": 21
+      }
+    },
+    "message": "Property \"enumDeprecated\" is not expected to be here. [path: components.schemas.NotificationSetting.properties.notificationTypes.items.enumDeprecated]",
+    "severity": 1,
+    "code": "oas3-schema",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting",
+        "properties",
+        "notificationTypes",
+        "items",
+        "enumDeprecated"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.NotificationSetting.properties.notificationTypes.items.enumDeprecated]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting",
+        "properties",
+        "notificationTypes",
+        "items",
+        "enumDeprecated"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/{+name}.get]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/{+name}.patch]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "repair-bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'mybusinessnotifications.accounts.getNotificationSetting' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_context. Missing summary entirely. Description is too brief and lacks context about required inputs (account name format), what the response contains (notification types, topic), and domain-specific terminology (Pub/Sub, notification types). Enhanced version provides AI agents with clear understanding of prerequisites, expected response structure, and domain context.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "repair-bundled-spec",
+      "operation_id": "mybusinessnotifications.accounts.getNotificationSetting",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "Returns the pubsub notification settings for the account.",
+      "summary_suggestion": "Retrieve account notification settings",
+      "description_suggestion": "Retrieves the Pub/Sub notification settings for the specified business account. Returns the current notification setting resource containing the configured Pub/Sub topic and subscribed notification types. Requires the account resource name in the format 'accounts/{accountId}'.",
+      "reasoning": "Missing summary entirely. Description is too brief and lacks context about required inputs (account name format), what the response contains (notification types, topic), and domain-specific terminology (Pub/Sub, notification types). Enhanced version provides AI agents with clear understanding of prerequisites, expected response structure, and domain context.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'mybusinessnotifications.accounts.updateNotificationSetting' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description is verbose and somewhat unclear about inputs/outputs. Reorganized to clarify: what the operation does (updates settings), what inputs are needed (account name, NotificationSetting object), what fields control behavior (notification_types), constraints (one setting per account, one topic), deletion mechanism (empty notification_types), and what is returned. Improved AI agent interpretability by structuring information logically and explicitly stating input/output requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "repair-bundled-spec",
+      "operation_id": "mybusinessnotifications.accounts.updateNotificationSetting",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Sets the pubsub notification setting for the account informing Google which topic to send pubsub notifications for. Use the notification_types field within notification_setting to manipulate the events an account wants to subscribe to. An account will only have one notification setting resource, and only one pubsub topic can be set. To delete the setting, update with an empty notification_types",
+      "summary_suggestion": "Update account Pub/Sub notification settings",
+      "description_suggestion": "Updates the Pub/Sub notification settings for the specified business account. Configures which Pub/Sub topic receives notifications and which notification types (events) to subscribe to via the notification_types field. Each account maintains only one notification setting resource with a single Pub/Sub topic. To remove all subscriptions, update with an empty notification_types array. Returns the updated NotificationSetting resource. Requires the account resource name and the updated NotificationSetting object.",
+      "reasoning": "Missing summary. Description is verbose and somewhat unclear about inputs/outputs. Reorganized to clarify: what the operation does (updates settings), what inputs are needed (account name, NotificationSetting object), what fields control behavior (notification_types), constraints (one setting per account, one topic), deletion mechanism (empty notification_types), and what is returned. Improved AI agent interpretability by structuring information logically and explicitly stating input/output requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "repair-bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "{'description': 'A Google Pub/Sub topic where notifications can be published when a location is updated or has a new review. There will be only one notification setting resource per-account.', 'properties': {'name': {'description': 'Required. The resource name this setting is for. This is of the form `accounts/{account_id}/notificationSetting`.', 'type': 'string'}, 'notificationTypes': {'description': 'The types of notifications that will be sent to the Pub/Sub topic. To stop receiving notifications entirely, use NotificationSettings.UpdateNotificationSetting with an empty notification_types or set the pubsub_topic to an empty string.', 'items': {'enum': ['NOTIFICATION_TYPE_UNSPECIFIED', 'GOOGLE_UPDATE', 'NEW_REVIEW', 'UPDATED_REVIEW', 'NEW_CUSTOMER_MEDIA', 'NEW_QUESTION', 'UPDATED_QUESTION', 'NEW_ANSWER', 'UPDATED_ANSWER', 'DUPLICATE_LOCATION', 'LOSS_OF_VOICE_OF_MERCHANT', 'VOICE_OF_MERCHANT_UPDATED'], 'enumDeprecated': [False, False, False, False, False, False, False, False, False, False, True, False], 'type': 'string'}, 'type': 'array'}, 'pubsubTopic': {'description': 'Optional. The Google Pub/Sub topic that will receive notifications when locations managed by this account are updated. If unset, no notifications will be posted. The account mybusiness-api-pubsub@system.gserviceaccount.com must have at least Publish permissions on the Pub/Sub topic.', 'type': 'string'}}, 'type': 'object'} is not valid under any of the given schemas",
+    "severity": 1,
+    "code": "oneOf",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter '+name' for 'get' operation in '/v1/{+name}' was not resolved",
+    "severity": 1,
+    "code": "<unset>",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter '+name' for 'patch' operation in '/v1/{+name}' was not resolved",
+    "severity": 1,
+    "code": "<unset>",
+    "code_description": null,
+    "source": "openapi-spec-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 19",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 19
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 0",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: []",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 0 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [],
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 37",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 37
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 3",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 3,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 43",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 43,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 23",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 23,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "notificationTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationSetting",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 4",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
+      ],
+      "target": "bundled-spec",
+      "max_schema_depth": 4,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 13
+      },
+      "end": {
+        "line": 19,
+        "character": 62
+      }
+    },
+    "message": "Server URL must not have trailing slash. [path: servers.0.url]",
+    "severity": 2,
+    "code": "oas3-server-trailing-slash",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 130,
+        "character": 66
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 12
+      },
+      "end": {
+        "line": 87,
+        "character": 80
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameter \"name\" must be used in path \"/v1/{+name}\". [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 1,
+    "code": "path-params",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 89,
+        "character": 14
+      },
+      "end": {
+        "line": 130,
+        "character": 66
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 91,
+        "character": 10
+      },
+      "end": {
+        "line": 97,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 91,
+        "character": 10
+      },
+      "end": {
+        "line": 97,
+        "character": 30
+      }
+    },
+    "message": "Parameter \"name\" must be used in path \"/v1/{+name}\". [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 1,
+    "code": "path-params",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 100,
+        "character": 10
+      },
+      "end": {
+        "line": 105,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 140,
+        "character": 16
+      },
+      "end": {
+        "line": 149,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 152,
+        "character": 21
+      },
+      "end": {
+        "line": 157,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 16
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 160,
+        "character": 12
+      },
+      "end": {
+        "line": 171,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 174,
+        "character": 17
+      },
+      "end": {
+        "line": 179,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 182,
+        "character": 15
+      },
+      "end": {
+        "line": 187,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 190,
+        "character": 12
+      },
+      "end": {
+        "line": 195,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 198,
+        "character": 20
+      },
+      "end": {
+        "line": 203,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 201,
+        "character": 16
+      },
+      "end": {
+        "line": 201,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 206,
+        "character": 20
+      },
+      "end": {
+        "line": 212,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 215,
+        "character": 18
+      },
+      "end": {
+        "line": 220,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 223,
+        "character": 19
+      },
+      "end": {
+        "line": 228,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 231,
+        "character": 24
+      },
+      "end": {
+        "line": 236,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 265,
+        "character": 31
+      },
+      "end": {
+        "line": 277,
+        "character": 21
+      }
+    },
+    "message": "Property \"enumDeprecated\" is not expected to be here. [path: components.schemas.NotificationSetting.properties.notificationTypes.items.enumDeprecated]",
+    "severity": 1,
+    "code": "oas3-schema",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting",
+        "properties",
+        "notificationTypes",
+        "items",
+        "enumDeprecated"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.NotificationSetting.properties.notificationTypes.items.enumDeprecated]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "NotificationSetting",
+        "properties",
+        "notificationTypes",
+        "items",
+        "enumDeprecated"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/{+name}.get]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/{+name}.patch]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'mybusinessnotifications.accounts.getNotificationSetting' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_context. Missing summary entirely. Description is too brief and lacks context about required inputs (account name format), what the response contains (notification types, topic), and domain-specific terminology (Pub/Sub, notification types). Enhanced version provides AI agents with clear understanding of prerequisites, expected response structure, and domain context.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "mybusinessnotifications.accounts.getNotificationSetting",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "Returns the pubsub notification settings for the account.",
+      "summary_suggestion": "Retrieve account notification settings",
+      "description_suggestion": "Retrieves the Pub/Sub notification settings for the specified business account. Returns the current notification setting resource containing the configured Pub/Sub topic and subscribed notification types. Requires the account resource name in the format 'accounts/{accountId}'.",
+      "reasoning": "Missing summary entirely. Description is too brief and lacks context about required inputs (account name format), what the response contains (notification types, topic), and domain-specific terminology (Pub/Sub, notification types). Enhanced version provides AI agents with clear understanding of prerequisites, expected response structure, and domain context.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'mybusinessnotifications.accounts.updateNotificationSetting' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description is verbose and somewhat unclear about inputs/outputs. Reorganized to clarify: what the operation does (updates settings), what inputs are needed (account name, NotificationSetting object), what fields control behavior (notification_types), constraints (one setting per account, one topic), deletion mechanism (empty notification_types), and what is returned. Improved AI agent interpretability by structuring information logically and explicitly stating input/output requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "mybusinessnotifications.accounts.updateNotificationSetting",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Sets the pubsub notification setting for the account informing Google which topic to send pubsub notifications for. Use the notification_types field within notification_setting to manipulate the events an account wants to subscribe to. An account will only have one notification setting resource, and only one pubsub topic can be set. To delete the setting, update with an empty notification_types",
+      "summary_suggestion": "Update account Pub/Sub notification settings",
+      "description_suggestion": "Updates the Pub/Sub notification settings for the specified business account. Configures which Pub/Sub topic receives notifications and which notification types (events) to subscribe to via the notification_types field. Each account maintains only one notification setting resource with a single Pub/Sub topic. To remove all subscriptions, update with an empty notification_types array. Returns the updated NotificationSetting resource. Requires the account resource name and the updated NotificationSetting object.",
+      "reasoning": "Missing summary. Description is verbose and somewhat unclear about inputs/outputs. Reorganized to clarify: what the operation does (updates settings), what inputs are needed (account name, NotificationSetting object), what fields control behavior (notification_types), constraints (one setting per account, one topic), deletion mechanism (empty notification_types), and what is returned. Improved AI agent interpretability by structuring information logically and explicitly stating input/output requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  }
+]

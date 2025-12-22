@@ -1,0 +1,554 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "c50172eb45a30fa8300ac4f894c98525",
+    "name": "Twilio - Numbers",
+    "apiDescriptionVersion": "1.0.0",
+    "specification": "openapi",
+    "specificationVersion": "3.0.1",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/twilio.com/twilio_numbers_v1/1.0.0/openapi.json",
+    "vendor": {
+      "name": "twilio.com",
+      "domain": null,
+      "contact": {
+        "name": "Twilio Support",
+        "email": "support@twilio.com"
+      }
+    },
+    "operationCount": 14,
+    "schemaCount": 177,
+    "securitySchemeCount": 1,
+    "securitySchemeTypes": [
+      "http"
+    ],
+    "tagCount": 12
+  },
+  "summary": {
+    "scoringDate": "2025-12-16T17:09:50+00:00",
+    "score": 35.05,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 85.01,
+        "grade": "A"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 55.57,
+        "grade": "C"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 42.65,
+        "grade": "D-"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 49.63,
+        "grade": "D+"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 10.0,
+        "grade": "F"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 57.14,
+        "grade": "C+"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 69.42,
+      "grade": "B+",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 85.01,
+          "grade": "A",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.98,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 0,
+                  "warning": 78,
+                  "info": 32,
+                  "hint": 0
+                },
+                "weighted_cost": 0.227,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 1.0,
+              "metadata": {
+                "failure_reason": null,
+                "diagnostic_counts": {
+                  "error": 0,
+                  "warning": 78,
+                  "information": 32,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.42,
+              "metadata": {
+                "structural_issues": 4,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 4,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 55.57,
+          "grade": "C",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.22,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 45.82,
+      "grade": "D",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 42.65,
+          "grade": "D-",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.5,
+              "metadata": {
+                "described_elements": 167,
+                "undescribed_elements": 165,
+                "describable_elements": 332,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.35,
+              "metadata": {
+                "summaries_present": 14,
+                "missing_summaries": 26,
+                "summaries_expected": 40,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 49.63,
+          "grade": "D+",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.5,
+              "metadata": {
+                "total_operations": 14,
+                "max_schema_depth": 5,
+                "normalised_endpoint_count": 0.28,
+                "normalised_schema_depth": 0.625,
+                "raw_complexity": 0.4525,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 31.43,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 10.0,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.1,
+              "metadata": {
+                "strength_scores": [
+                  0.1
+                ],
+                "schemes_count": 1,
+                "schemes": [
+                  {
+                    "type": "http",
+                    "score": 0.1,
+                    "details": {
+                      "http_scheme": "basic"
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 57.14,
+          "grade": "C+",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.57,
+              "metadata": {
+                "number_of_describable_elements": 14,
+                "operations_with_issues": 14,
+                "operations_without_issues": 0,
+                "sum_of_element_descriptive_scores": 16.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "FetchPortingPortInPhoneNumber",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchPortingPortability",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreatePortingWebhookConfiguration",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchPortingWebhookConfigurationFetch",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeletePortingWebhookConfigurationDelete",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateSigningRequestConfiguration",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListSigningRequestConfiguration",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateBulkEligibility",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchBulkEligibility",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateEligibility",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreatePortingPortIn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "not_actionable",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeletePortingPortIn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "not_actionable",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchPortingPortIn",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeletePortingPortInPhoneNumber",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "not_actionable",
+                      "missing_side_effects"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

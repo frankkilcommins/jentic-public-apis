@@ -1,0 +1,700 @@
+{
+  "metadata": {
+    "version": "1.12.6",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "37c5bc4e6220c95d8cc780978c8b08d4",
+    "name": "Orthanc API",
+    "apiDescriptionVersion": "1.12.6",
+    "specification": "openapi",
+    "specificationVersion": "3.0.0",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/orthanc-server.com/main/1.12.6/openapi.json",
+    "vendor": {
+      "name": "orthanc-server.com",
+      "domain": null,
+      "contact": {
+        "name": "",
+        "email": ""
+      }
+    },
+    "operationCount": 299,
+    "schemaCount": 1509,
+    "securitySchemeCount": 0,
+    "securitySchemeTypes": [],
+    "tagCount": 10
+  },
+  "summary": {
+    "scoringDate": "2025-12-16T18:34:37+00:00",
+    "score": 40.46,
+    "level": "foundational",
+    "grade": "D-",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 41.15,
+        "grade": "D-"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 50.08,
+        "grade": "C-"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 55.6,
+        "grade": "C"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 19.39,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 100.0,
+        "grade": "A+"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 71.43,
+        "grade": "A-"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 45.88,
+      "grade": "D",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 41.15,
+          "grade": "D-",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.65,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 121,
+                  "warning": 2224,
+                  "info": 180,
+                  "hint": 0
+                },
+                "weighted_cost": 78.34,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 0.0,
+              "metadata": {
+                "failure_reason": "validation_errors",
+                "diagnostic_counts": {
+                  "error": 121,
+                  "warning": 2224,
+                  "information": 180,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.0,
+              "metadata": {
+                "structural_issues": 45,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 44,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 1,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 50.08,
+          "grade": "C-",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.03,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 0.97,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 39.14,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 55.6,
+          "grade": "C",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.56,
+              "metadata": {
+                "described_elements": 1712,
+                "undescribed_elements": 1366,
+                "describable_elements": 3078,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.56,
+              "metadata": {
+                "summaries_present": 299,
+                "missing_summaries": 239,
+                "summaries_expected": 538,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 19.39,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.19,
+              "metadata": {
+                "total_operations": 299,
+                "max_schema_depth": 3,
+                "normalised_endpoint_count": 1.0,
+                "normalised_schema_depth": 0.375,
+                "raw_complexity": 0.6875,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 87.01,
+      "grade": "A",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 100.0,
+          "grade": "A+",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 1.0,
+              "metadata": {
+                "strength_scores": [],
+                "schemes_count": 0,
+                "schemes": [],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 71.43,
+          "grade": "A-",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.71,
+              "metadata": {
+                "number_of_describable_elements": 49,
+                "operations_with_issues": 30,
+                "operations_without_issues": 19,
+                "sum_of_element_descriptive_scores": 70.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "get_/patients/{id}/attachments/{name}/is-compressed",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/patients/{id}/attachments/{name}/uncompress",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_side_effects",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/patients/{id}/attachments/{name}/verify-md5",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/patients/{id}/attachments/{name}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "unclear_purpose",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/patients/{id}/attachments/{name}/compress",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/tools/log-level-jobs",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "put_/tools/log-level-jobs",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/tools/log-level-lua",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "put_/tools/log-level-lua",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/tools/log-level-plugins",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "put_/tools/log-level-plugins",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/tools/log-level-sqlite",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/instances/{id}/reconstruct",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}/simplified-tags",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}/statistics",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/patients/{id}/media",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/patients/{id}/metadata",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/patients/{id}/metadata/{name}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/patients/{id}/modify",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/patients/{id}/module",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}/metadata/{name}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "put_/instances/{id}/metadata/{name}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/instances/{id}/modify",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}/module",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}/patient",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}/pdf",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}",
+                    "clarity_score": 0.5,
+                    "depth_score": 1.0,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "vague_summary"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/instances/{id}/anonymize",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "get_/instances/{id}/attachments/{name}",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "unclear_purpose",
+                      "inconsistent_terminology"
+                    ]
+                  },
+                  {
+                    "operation_id": "post_/instances/{id}/attachments/{name}/compress",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

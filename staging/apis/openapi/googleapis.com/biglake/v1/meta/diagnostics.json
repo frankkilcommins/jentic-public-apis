@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -140,7 +140,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -164,7 +164,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -188,7 +188,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -212,7 +212,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -236,7 +236,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -247,24 +247,73 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 10",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 10,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -275,25 +324,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -304,27 +349,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 78",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 78
     }
   },
   {
@@ -335,25 +374,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -364,27 +411,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -395,25 +450,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -424,27 +508,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -455,25 +533,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:rename.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 127",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:rename",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 127
     }
   },
   {
@@ -484,27 +558,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}:rename`. [path: paths./v1/{+name}:rename.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:rename",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -515,25 +583,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/catalogs.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/catalogs",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
     }
   },
   {
@@ -544,27 +608,93 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/catalogs`. [path: paths./v1/{+parent}/catalogs.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Summaries expected: 15",
+    "severity": 3,
+    "code": "summaries_expected",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/catalogs",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 15,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -575,25 +705,22 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/catalogs.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/catalogs",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
     }
   },
   {
@@ -604,27 +731,960 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/catalogs`. [path: paths./v1/{+parent}/catalogs.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Describable elements: 147",
+    "severity": 3,
+    "code": "describable_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/catalogs",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 147,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveDatabaseOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveDatabaseOptions",
+          "properties",
+          "parameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveDatabaseOptions",
+          "properties",
+          "parameters",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveDatabaseOptions",
+          "properties",
+          "locationUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveTableOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveTableOptions",
+          "properties",
+          "parameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveTableOptions",
+          "properties",
+          "parameters",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveTableOptions",
+          "properties",
+          "tableType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCatalogsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCatalogsResponse",
+          "properties",
+          "catalogs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCatalogsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListDatabasesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListDatabasesResponse",
+          "properties",
+          "databases"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListDatabasesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListTablesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListTablesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListTablesResponse",
+          "properties",
+          "tables"
+        ],
+        [
+          "components",
+          "schemas",
+          "RenameTableRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RenameTableRequest",
+          "properties",
+          "newName"
+        ],
+        [
+          "components",
+          "schemas",
+          "SerDeInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "SerDeInfo",
+          "properties",
+          "serializationLib"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor",
+          "properties",
+          "inputFormat"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor",
+          "properties",
+          "locationUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor",
+          "properties",
+          "outputFormat"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "Table"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
     }
   },
   {
@@ -635,25 +1695,644 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/databases.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Described elements: 99",
+    "severity": 3,
+    "code": "described_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/databases",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 99,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Catalog",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Database",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveDatabaseOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveDatabaseOptions",
+          "properties",
+          "parameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveDatabaseOptions",
+          "properties",
+          "locationUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveTableOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveTableOptions",
+          "properties",
+          "parameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "HiveTableOptions",
+          "properties",
+          "tableType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCatalogsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCatalogsResponse",
+          "properties",
+          "catalogs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCatalogsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListDatabasesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListDatabasesResponse",
+          "properties",
+          "databases"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListDatabasesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListTablesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListTablesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListTablesResponse",
+          "properties",
+          "tables"
+        ],
+        [
+          "components",
+          "schemas",
+          "RenameTableRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RenameTableRequest",
+          "properties",
+          "newName"
+        ],
+        [
+          "components",
+          "schemas",
+          "SerDeInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "SerDeInfo",
+          "properties",
+          "serializationLib"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor",
+          "properties",
+          "inputFormat"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor",
+          "properties",
+          "locationUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "StorageDescriptor",
+          "properties",
+          "outputFormat"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "deleteTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Table",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -664,105 +2343,14 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/databases`. [path: paths./v1/{+parent}/databases.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Deepest nesting found across all schemas: 12",
+    "severity": 3,
+    "code": "max_schema_depth",
     "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/databases",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/databases.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/databases",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/databases`. [path: paths./v1/{+parent}/databases.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/databases",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/tables.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -771,446 +2359,15 @@
         "paths",
         "/v1/{+parent}/tables",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/tables`. [path: paths./v1/{+parent}/tables.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/tables",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/tables.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/tables",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/tables`. [path: paths./v1/{+parent}/tables.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/tables",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:rename.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:rename",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/catalogs.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/catalogs",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/catalogs.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/catalogs",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/databases.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/databases",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/databases.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/databases",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/tables.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/tables",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/tables.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/tables",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"Table\" is never used. [path: components.requestBodies.Table]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "requestBodies",
-        "Table"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 12,
+      "paths": []
     }
   },
   {
@@ -1238,7 +2395,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 819,
+        "character": 52
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 15
+      },
+      "end": {
+        "line": 105,
+        "character": 84
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1268,7 +2509,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 107,
+        "character": 12
+      },
+      "end": {
+        "line": 153,
+        "character": 81
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 109,
+        "character": 10
+      },
+      "end": {
+        "line": 115,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1298,7 +2597,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 14
+      },
+      "end": {
+        "line": 214,
+        "character": 52
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 157,
+        "character": 10
+      },
+      "end": {
+        "line": 163,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1328,7 +2685,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 166,
+        "character": 10
+      },
+      "end": {
+        "line": 171,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 257,
+        "character": 13
+      },
+      "end": {
+        "line": 308,
+        "character": 65
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}:rename.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:rename",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 259,
+        "character": 10
+      },
+      "end": {
+        "line": 265,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}:rename.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:rename",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1358,7 +2803,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 351,
+        "character": 12
+      },
+      "end": {
+        "line": 413,
+        "character": 65
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/catalogs.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 353,
+        "character": 10
+      },
+      "end": {
+        "line": 359,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/catalogs.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1388,7 +2891,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 362,
+        "character": 10
+      },
+      "end": {
+        "line": 367,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/catalogs.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 370,
+        "character": 10
+      },
+      "end": {
+        "line": 375,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/catalogs.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 415,
+        "character": 13
+      },
+      "end": {
+        "line": 474,
+        "character": 54
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/catalogs.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 417,
+        "character": 10
+      },
+      "end": {
+        "line": 423,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/catalogs.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1418,7 +3039,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 426,
+        "character": 10
+      },
+      "end": {
+        "line": 431,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/catalogs.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 517,
+        "character": 12
+      },
+      "end": {
+        "line": 579,
+        "character": 75
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/databases.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 519,
+        "character": 10
+      },
+      "end": {
+        "line": 525,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/databases.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1448,7 +3157,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 528,
+        "character": 10
+      },
+      "end": {
+        "line": 533,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/databases.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 536,
+        "character": 10
+      },
+      "end": {
+        "line": 541,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/databases.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 581,
+        "character": 13
+      },
+      "end": {
+        "line": 640,
+        "character": 55
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/databases.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 583,
+        "character": 10
+      },
+      "end": {
+        "line": 589,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/databases.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1478,7 +3305,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 592,
+        "character": 10
+      },
+      "end": {
+        "line": 597,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/databases.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 683,
+        "character": 12
+      },
+      "end": {
+        "line": 758,
+        "character": 82
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/tables.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 685,
+        "character": 10
+      },
+      "end": {
+        "line": 691,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/tables.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1508,7 +3423,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 694,
+        "character": 10
+      },
+      "end": {
+        "line": 699,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/tables.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 702,
+        "character": 10
+      },
+      "end": {
+        "line": 707,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/tables.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 710,
+        "character": 10
+      },
+      "end": {
+        "line": 720,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+parent}/tables.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 760,
+        "character": 13
+      },
+      "end": {
+        "line": 819,
+        "character": 52
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/tables.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 762,
+        "character": 10
+      },
+      "end": {
+        "line": 768,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/tables.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1538,7 +3601,403 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 771,
+        "character": 10
+      },
+      "end": {
+        "line": 776,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/tables.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 829,
+        "character": 16
+      },
+      "end": {
+        "line": 838,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 841,
+        "character": 21
+      },
+      "end": {
+        "line": 846,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 844,
+        "character": 16
+      },
+      "end": {
+        "line": 844,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 849,
+        "character": 12
+      },
+      "end": {
+        "line": 860,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 863,
+        "character": 17
+      },
+      "end": {
+        "line": 868,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 871,
+        "character": 15
+      },
+      "end": {
+        "line": 876,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 879,
+        "character": 12
+      },
+      "end": {
+        "line": 884,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 887,
+        "character": 20
+      },
+      "end": {
+        "line": 892,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 890,
+        "character": 16
+      },
+      "end": {
+        "line": 890,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 895,
+        "character": 20
+      },
+      "end": {
+        "line": 901,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 904,
+        "character": 18
+      },
+      "end": {
+        "line": 909,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 912,
+        "character": 19
+      },
+      "end": {
+        "line": 917,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 920,
+        "character": 24
+      },
+      "end": {
+        "line": 925,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1566,7 +4025,7 @@
         "requestBodies",
         "Table"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1597,7 +4056,69 @@
         "hiveOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1027,
+        "character": 35
+      },
+      "end": {
+        "line": 1028,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing additionalProperties [path: components.schemas.HiveDatabaseOptions.properties.parameters.additionalProperties]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "HiveDatabaseOptions",
+        "properties",
+        "parameters",
+        "additionalProperties"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1044,
+        "character": 35
+      },
+      "end": {
+        "line": 1045,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing additionalProperties [path: components.schemas.HiveTableOptions.properties.parameters.additionalProperties]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "HiveTableOptions",
+        "properties",
+        "parameters",
+        "additionalProperties"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1628,7 +4149,7 @@
         "storageDescriptor",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1659,7 +4180,7 @@
         "serdeInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1690,7 +4211,1657 @@
         "hiveOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}:rename`. [path: paths./v1/{+name}:rename.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:rename",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/catalogs`. [path: paths./v1/{+parent}/catalogs.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/catalogs`. [path: paths./v1/{+parent}/catalogs.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/databases`. [path: paths./v1/{+parent}/databases.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/databases`. [path: paths./v1/{+parent}/databases.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/tables`. [path: paths./v1/{+parent}/tables.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/tables`. [path: paths./v1/{+parent}/tables.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:rename.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:rename",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:rename.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:rename",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/catalogs.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/catalogs.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/catalogs.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/catalogs.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/databases.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/databases.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/databases.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/databases.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/tables.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/tables.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/tables.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/tables.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"Table\" is never used. [path: components.requestBodies.Table]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "Table"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.create' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Original description is too minimal. Missing summary entirely. Added context about database's role as a container, parent catalog requirement, return value details, and error conditions. Improved terminology consistency with API schema (Database, catalog, container). Enhanced AI agent interpretability by clarifying inputs, outputs, and side effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Creates a new database.",
+      "summary_suggestion": "Create a new database in a catalog",
+      "description_suggestion": "Creates a new database within the specified catalog. The database acts as a container for tables and inherits the catalog's configuration. Requires the parent catalog path and database configuration details. Returns the newly created Database object with assigned metadata including creation timestamp and resource name. The operation fails if a database with the same name already exists in the catalog.",
+      "reasoning": "Original description is too minimal. Missing summary entirely. Added context about database's role as a container, parent catalog requirement, return value details, and error conditions. Improved terminology consistency with API schema (Database, catalog, container). Enhanced AI agent interpretability by clarifying inputs, outputs, and side effects.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.tables.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description lacks pagination details and specific path format requirements. Added pagination parameter context, response schema reference (ListTablesResponse), and explicit parent path format to help AI agents construct correct requests. Improved consistency with API response schemas and parameter handling patterns.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.tables.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "List all tables in a specified database.",
+      "summary_suggestion": "List all tables in a database",
+      "description_suggestion": "Retrieves a list of all tables within a specified database. Supports pagination through optional page_size and page_token parameters. Returns a ListTablesResponse containing an array of Table objects and a next_page_token for pagination if additional results exist. Requires the parent database path in the format: projects/{project}/locations/{location}/catalogs/{catalog}/databases/{database}.",
+      "reasoning": "Missing summary. Description lacks pagination details and specific path format requirements. Added pagination parameter context, response schema reference (ListTablesResponse), and explicit parent path format to help AI agents construct correct requests. Improved consistency with API response schemas and parameter handling patterns.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.tables.create' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Missing summary entirely. Description is too vague about inputs and outputs. Added summary and expanded description to include table configuration details (storage descriptor, serialization format, Hive options) based on API schemas. Clarified parent path requirement, return value, and error conditions. Improved domain terminology consistency (Table, StorageDescriptor, SerDeInfo) and AI agent interpretability for understanding when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/tables",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.tables.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Creates a new table.",
+      "summary_suggestion": "Create a new table in a database",
+      "description_suggestion": "Creates a new table within the specified database. The table is configured using the provided Table schema which includes storage descriptor, serialization format, and optional Hive table options. Requires the parent database path and table configuration details. Returns the newly created Table object with assigned metadata including creation timestamp and resource name. The operation fails if a table with the same name already exists in the database.",
+      "reasoning": "Missing summary entirely. Description is too vague about inputs and outputs. Added summary and expanded description to include table configuration details (storage descriptor, serialization format, Hive options) based on API schemas. Clarified parent path requirement, return value, and error conditions. Improved domain terminology consistency (Table, StorageDescriptor, SerDeInfo) and AI agent interpretability for understanding when and how to use this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/tables",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.tables.delete' has semantic quality issues: vague_summary, missing_side_effects, missing_output_details. Missing summary entirely. Description lacks clarity about permanence of deletion, what resource identifier is needed, and what the response contains. Added context about irreversibility and empty response to help AI agents understand the destructive nature of this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.tables.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_side_effects",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes an existing table specified by the table ID.",
+      "summary_suggestion": "Delete a table from the metastore",
+      "description_suggestion": "Deletes an existing table from the BigLake Metastore. Requires the full resource name of the table to be deleted. This operation permanently removes the table metadata and cannot be undone. Returns an empty response on successful deletion.",
+      "reasoning": "Missing summary entirely. Description lacks clarity about permanence of deletion, what resource identifier is needed, and what the response contains. Added context about irreversibility and empty response to help AI agents understand the destructive nature of this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.tables.get' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description is vague about what 'resource name' means and what data is returned. Enhanced to clarify the input requirement and specify that a Table object is returned with its properties.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.tables.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets the table specified by the resource name.",
+      "summary_suggestion": "Retrieve table metadata from metastore",
+      "description_suggestion": "Retrieves the metadata for a specific table from the BigLake Metastore. Requires the full resource name of the table. Returns a Table object containing table properties, storage descriptor, and Hive table options if applicable.",
+      "reasoning": "Missing summary. Description is vague about what 'resource name' means and what data is returned. Enhanced to clarify the input requirement and specify that a Table object is returned with its properties.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.tables.patch' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description lacks detail about what can be updated, whether partial updates are supported, and what is returned. Added clarity about partial update support and return value to help AI agents understand update semantics.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.tables.patch",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Updates an existing table specified by the table ID.",
+      "summary_suggestion": "Update table metadata in metastore",
+      "description_suggestion": "Updates an existing table in the BigLake Metastore. Accepts a Table object with fields to be modified. Supports partial updates - only provided fields will be updated. Returns the updated Table object with all current properties including any modifications made.",
+      "reasoning": "Missing summary. Description lacks detail about what can be updated, whether partial updates are supported, and what is returned. Added clarity about partial update support and return value to help AI agents understand update semantics.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.tables.rename' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description doesn't explain what input is required (RenameTableRequest) or what is returned. Enhanced to clarify the request structure and return value for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:rename",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.tables.rename",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Renames an existing table specified by the table ID.",
+      "summary_suggestion": "Rename a table in the metastore",
+      "description_suggestion": "Renames an existing table in the BigLake Metastore. Requires the current table resource name and a RenameTableRequest containing the new table name. Returns the renamed Table object with updated metadata reflecting the new name.",
+      "reasoning": "Missing summary. Description doesn't explain what input is required (RenameTableRequest) or what is returned. Enhanced to clarify the request structure and return value for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:rename",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.list' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description lacks information about the response structure and pagination support. Added clarity about ListCatalogsResponse and pagination capabilities to help AI agents understand how to retrieve and iterate through results.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "List all catalogs in a specified project.",
+      "summary_suggestion": "List all catalogs in a project",
+      "description_suggestion": "Lists all catalogs in a specified project location. Returns a ListCatalogsResponse containing a collection of Catalog objects. Supports pagination through optional parameters for page size and page token.",
+      "reasoning": "Missing summary. Description lacks information about the response structure and pagination support. Added clarity about ListCatalogsResponse and pagination capabilities to help AI agents understand how to retrieve and iterate through results.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.create' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description is too minimal and doesn't explain what input is required or what is returned. Enhanced to clarify that a Catalog object is the input, the location context, and that the response includes the created catalog with assigned metadata.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/catalogs",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Creates a new catalog.",
+      "summary_suggestion": "Create a new catalog in metastore",
+      "description_suggestion": "Creates a new catalog in the BigLake Metastore within a specified project location. Accepts a Catalog object with catalog configuration. Returns the newly created Catalog object with assigned metadata including creation timestamp and resource name.",
+      "reasoning": "Missing summary. Description is too minimal and doesn't explain what input is required or what is returned. Enhanced to clarify that a Catalog object is the input, the location context, and that the response includes the created catalog with assigned metadata.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/catalogs",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'biglake.projects.locations.catalogs.databases.list' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description lacks information about the response structure and pagination support. Added clarity about ListDatabasesResponse and pagination capabilities to help AI agents understand the response format and how to handle large result sets.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/databases",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "biglake.projects.locations.catalogs.databases.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "List all databases in a specified catalog.",
+      "summary_suggestion": "List all databases in a catalog",
+      "description_suggestion": "Lists all databases in a specified catalog. Returns a ListDatabasesResponse containing a collection of Database objects. Supports pagination through optional parameters for page size and page token.",
+      "reasoning": "Missing summary. Description lacks information about the response structure and pagination support. Added clarity about ListDatabasesResponse and pagination capabilities to help AI agents understand the response format and how to handle large result sets.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/databases",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 10 operations analyzed, 10 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 10,
+      "total_issues_found": 10,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 78 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 78
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 78 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 78
     }
   }
 ]

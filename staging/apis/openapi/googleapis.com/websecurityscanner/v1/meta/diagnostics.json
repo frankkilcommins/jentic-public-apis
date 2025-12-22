@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -140,7 +140,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -164,7 +164,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -188,7 +188,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -212,7 +212,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -236,7 +236,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -260,7 +260,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -271,24 +271,78 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 11",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 11,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -299,25 +353,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -328,27 +378,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 147",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 147
     }
   },
   {
@@ -359,25 +403,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -388,27 +440,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -419,25 +479,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -448,27 +537,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -479,25 +562,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:start.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 196",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:start",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 196
     }
   },
   {
@@ -508,27 +587,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}:start`. [path: paths./v1/{+name}:start.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:start",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -539,25 +612,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:stop.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:stop",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
     }
   },
   {
@@ -568,27 +637,110 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}:stop`. [path: paths./v1/{+name}:stop.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Summaries expected: 19",
+    "severity": 3,
+    "code": "summaries_expected",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:stop",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 19,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -599,25 +751,22 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/crawledUrls.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/crawledUrls",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
     }
   },
   {
@@ -628,27 +777,1428 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/crawledUrls`. [path: paths./v1/{+parent}/crawledUrls.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Describable elements: 220",
+    "severity": 3,
+    "code": "describable_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/crawledUrls",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 220,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Authentication"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl",
+          "properties",
+          "body"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl",
+          "properties",
+          "httpMethod"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount",
+          "properties",
+          "loginUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount",
+          "properties",
+          "password"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "body"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "finalUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "findingType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "frameUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "fuzzedUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "httpMethod"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "reproductionUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "trackingId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindingTypeStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindingTypeStats",
+          "properties",
+          "findingCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindingTypeStats",
+          "properties",
+          "findingType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "actionUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "fields"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "fields",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleAccount",
+          "properties",
+          "password"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleAccount",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "Header"
+        ],
+        [
+          "components",
+          "schemas",
+          "Header",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Header",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "IapCredential"
+        ],
+        [
+          "components",
+          "schemas",
+          "IapTestServiceAccountInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "IapTestServiceAccountInfo",
+          "properties",
+          "targetAudienceClientId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCrawledUrlsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCrawledUrlsResponse",
+          "properties",
+          "crawledUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCrawledUrlsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingTypeStatsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingTypeStatsResponse",
+          "properties",
+          "findingTypeStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingsResponse",
+          "properties",
+          "findings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanConfigsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanConfigsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanConfigsResponse",
+          "properties",
+          "scanConfigs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanRunsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanRunsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanRunsResponse",
+          "properties",
+          "scanRuns"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary",
+          "properties",
+          "learnMoreUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary",
+          "properties",
+          "learnMoreUrls",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary",
+          "properties",
+          "libraryName"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "blacklistPatterns"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "blacklistPatterns",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "exportToSecurityCommandCenter"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "ignoreHttpStatusErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "managedScan"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "maxQps"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "riskLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "startingUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "startingUrls",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "staticIpScan"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "targetPlatforms"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "targetPlatforms",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "userAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfigError"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfigError",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfigError",
+          "properties",
+          "fieldName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "executionState"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "hasVulnerabilities"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "progressPercent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "resultState"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "urlsCrawledCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "urlsTestedCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "warningTraces"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunErrorTrace"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunErrorTrace",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunErrorTrace",
+          "properties",
+          "mostCommonHttpErrorCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunWarningTrace"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunWarningTrace",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Schedule"
+        ],
+        [
+          "components",
+          "schemas",
+          "Schedule",
+          "properties",
+          "intervalDurationDays"
+        ],
+        [
+          "components",
+          "schemas",
+          "Schedule",
+          "properties",
+          "scheduleTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "StartScanRunRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "StopScanRunRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolatingResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolatingResource",
+          "properties",
+          "contentType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolatingResource",
+          "properties",
+          "resourceUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableHeaders"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableHeaders",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableHeaders",
+          "properties",
+          "missingHeaders"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableParameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableParameters",
+          "properties",
+          "parameterNames"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableParameters",
+          "properties",
+          "parameterNames",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "attackVector"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "errorMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "stackTraces"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "stackTraces",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "storedXssSeedingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xxe"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xxe",
+          "properties",
+          "payloadLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xxe",
+          "properties",
+          "payloadValue"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "ScanConfig"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
     }
   },
   {
@@ -659,25 +2209,1066 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/findingTypeStats.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Described elements: 165",
+    "severity": 3,
+    "code": "described_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/findingTypeStats",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 165,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Authentication"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl",
+          "properties",
+          "body"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl",
+          "properties",
+          "httpMethod"
+        ],
+        [
+          "components",
+          "schemas",
+          "CrawledUrl",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount",
+          "properties",
+          "loginUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount",
+          "properties",
+          "password"
+        ],
+        [
+          "components",
+          "schemas",
+          "CustomAccount",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "body"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "finalUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "findingType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "frameUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "fuzzedUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "httpMethod"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "reproductionUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "Finding",
+          "properties",
+          "trackingId"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindingTypeStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindingTypeStats",
+          "properties",
+          "findingCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "FindingTypeStats",
+          "properties",
+          "findingType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "actionUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Form",
+          "properties",
+          "fields"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleAccount",
+          "properties",
+          "password"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleAccount",
+          "properties",
+          "username"
+        ],
+        [
+          "components",
+          "schemas",
+          "Header"
+        ],
+        [
+          "components",
+          "schemas",
+          "Header",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Header",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "IapCredential"
+        ],
+        [
+          "components",
+          "schemas",
+          "IapTestServiceAccountInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "IapTestServiceAccountInfo",
+          "properties",
+          "targetAudienceClientId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCrawledUrlsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCrawledUrlsResponse",
+          "properties",
+          "crawledUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListCrawledUrlsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingTypeStatsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingTypeStatsResponse",
+          "properties",
+          "findingTypeStats"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingsResponse",
+          "properties",
+          "findings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListFindingsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanConfigsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanConfigsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanConfigsResponse",
+          "properties",
+          "scanConfigs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanRunsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanRunsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListScanRunsResponse",
+          "properties",
+          "scanRuns"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary",
+          "properties",
+          "learnMoreUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary",
+          "properties",
+          "libraryName"
+        ],
+        [
+          "components",
+          "schemas",
+          "OutdatedLibrary",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "blacklistPatterns"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "exportToSecurityCommandCenter"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "ignoreHttpStatusErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "managedScan"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "maxQps"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "riskLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "startingUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "staticIpScan"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "targetPlatforms"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfig",
+          "properties",
+          "userAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfigError"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfigError",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanConfigError",
+          "properties",
+          "fieldName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "executionState"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "hasVulnerabilities"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "progressPercent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "resultState"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "urlsCrawledCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "urlsTestedCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRun",
+          "properties",
+          "warningTraces"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunErrorTrace"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunErrorTrace",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunErrorTrace",
+          "properties",
+          "mostCommonHttpErrorCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunWarningTrace"
+        ],
+        [
+          "components",
+          "schemas",
+          "ScanRunWarningTrace",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Schedule"
+        ],
+        [
+          "components",
+          "schemas",
+          "Schedule",
+          "properties",
+          "intervalDurationDays"
+        ],
+        [
+          "components",
+          "schemas",
+          "Schedule",
+          "properties",
+          "scheduleTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "StartScanRunRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "StopScanRunRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolatingResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolatingResource",
+          "properties",
+          "contentType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ViolatingResource",
+          "properties",
+          "resourceUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableHeaders"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableHeaders",
+          "properties",
+          "headers"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableHeaders",
+          "properties",
+          "missingHeaders"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableParameters"
+        ],
+        [
+          "components",
+          "schemas",
+          "VulnerableParameters",
+          "properties",
+          "parameterNames"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "attackVector"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "errorMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "stackTraces"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xss",
+          "properties",
+          "storedXssSeedingUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xxe"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xxe",
+          "properties",
+          "payloadLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Xxe",
+          "properties",
+          "payloadValue"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -688,105 +3279,14 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/findingTypeStats`. [path: paths./v1/{+parent}/findingTypeStats.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Deepest nesting found across all schemas: 12",
+    "severity": 3,
+    "code": "max_schema_depth",
     "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/findingTypeStats",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/findings.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/findings",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/findings`. [path: paths./v1/{+parent}/findings.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/findings",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/scanConfigs.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -795,535 +3295,15 @@
         "paths",
         "/v1/{+parent}/scanConfigs",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/scanConfigs`. [path: paths./v1/{+parent}/scanConfigs.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanConfigs",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/scanConfigs.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanConfigs",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/scanConfigs`. [path: paths./v1/{+parent}/scanConfigs.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanConfigs",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/scanRuns.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanRuns",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/scanRuns`. [path: paths./v1/{+parent}/scanRuns.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanRuns",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:start.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:start",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:stop.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:stop",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/crawledUrls.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/crawledUrls",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/findingTypeStats.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/findingTypeStats",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/findings.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/findings",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/scanConfigs.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanConfigs",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/scanConfigs.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanConfigs",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/scanRuns.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/scanRuns",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"ScanConfig\" is never used. [path: components.requestBodies.ScanConfig]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "requestBodies",
-        "ScanConfig"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 12,
+      "paths": []
     }
   },
   {
@@ -1351,7 +3331,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 872,
+        "character": 78
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 15
+      },
+      "end": {
+        "line": 97,
+        "character": 71
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1381,7 +3445,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 99,
+        "character": 12
+      },
+      "end": {
+        "line": 137,
+        "character": 86
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 101,
+        "character": 10
+      },
+      "end": {
+        "line": 107,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1411,7 +3533,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 139,
+        "character": 14
+      },
+      "end": {
+        "line": 190,
+        "character": 57
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 141,
+        "character": 10
+      },
+      "end": {
+        "line": 147,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1441,7 +3621,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 150,
+        "character": 10
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 233,
+        "character": 13
+      },
+      "end": {
+        "line": 276,
+        "character": 66
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}:start.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:start",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 235,
+        "character": 10
+      },
+      "end": {
+        "line": 241,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}:start.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:start",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1471,7 +3739,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 319,
+        "character": 13
+      },
+      "end": {
+        "line": 362,
+        "character": 65
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}:stop.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:stop",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 321,
+        "character": 10
+      },
+      "end": {
+        "line": 327,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}:stop.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:stop",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1501,7 +3827,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 405,
+        "character": 12
+      },
+      "end": {
+        "line": 459,
+        "character": 90
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/crawledUrls.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 407,
+        "character": 10
+      },
+      "end": {
+        "line": 413,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/crawledUrls.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1531,7 +3915,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 416,
+        "character": 10
+      },
+      "end": {
+        "line": 421,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/crawledUrls.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 424,
+        "character": 10
+      },
+      "end": {
+        "line": 429,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/crawledUrls.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 498,
+        "character": 12
+      },
+      "end": {
+        "line": 536,
+        "character": 95
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/findingTypeStats.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findingTypeStats",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 500,
+        "character": 10
+      },
+      "end": {
+        "line": 506,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/findingTypeStats.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findingTypeStats",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1561,7 +4063,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 575,
+        "character": 12
+      },
+      "end": {
+        "line": 637,
+        "character": 87
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/findings.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 577,
+        "character": 10
+      },
+      "end": {
+        "line": 583,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/findings.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1591,7 +4151,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 586,
+        "character": 10
+      },
+      "end": {
+        "line": 591,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/findings.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 594,
+        "character": 10
+      },
+      "end": {
+        "line": 599,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/findings.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 602,
+        "character": 10
+      },
+      "end": {
+        "line": 607,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+parent}/findings.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 676,
+        "character": 12
+      },
+      "end": {
+        "line": 730,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/scanConfigs.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 678,
+        "character": 10
+      },
+      "end": {
+        "line": 684,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/scanConfigs.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1621,7 +4329,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 687,
+        "character": 10
+      },
+      "end": {
+        "line": 692,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/scanConfigs.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 695,
+        "character": 10
+      },
+      "end": {
+        "line": 700,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/scanConfigs.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 732,
+        "character": 13
+      },
+      "end": {
+        "line": 775,
+        "character": 57
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/scanConfigs.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 734,
+        "character": 10
+      },
+      "end": {
+        "line": 740,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/scanConfigs.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1651,7 +4477,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 818,
+        "character": 12
+      },
+      "end": {
+        "line": 872,
+        "character": 78
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/scanRuns.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 820,
+        "character": 10
+      },
+      "end": {
+        "line": 826,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/scanRuns.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1681,7 +4565,433 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 829,
+        "character": 10
+      },
+      "end": {
+        "line": 834,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/scanRuns.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 837,
+        "character": 10
+      },
+      "end": {
+        "line": 842,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/scanRuns.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 878,
+        "character": 16
+      },
+      "end": {
+        "line": 887,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 890,
+        "character": 21
+      },
+      "end": {
+        "line": 895,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 893,
+        "character": 16
+      },
+      "end": {
+        "line": 893,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 898,
+        "character": 12
+      },
+      "end": {
+        "line": 909,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 912,
+        "character": 17
+      },
+      "end": {
+        "line": 917,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 920,
+        "character": 15
+      },
+      "end": {
+        "line": 925,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 928,
+        "character": 12
+      },
+      "end": {
+        "line": 933,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 936,
+        "character": 20
+      },
+      "end": {
+        "line": 941,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 939,
+        "character": 16
+      },
+      "end": {
+        "line": 939,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 944,
+        "character": 20
+      },
+      "end": {
+        "line": 950,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 953,
+        "character": 18
+      },
+      "end": {
+        "line": 958,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 961,
+        "character": 19
+      },
+      "end": {
+        "line": 966,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 969,
+        "character": 24
+      },
+      "end": {
+        "line": 974,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1709,7 +5019,7 @@
         "requestBodies",
         "ScanConfig"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1740,7 +5050,7 @@
         "customAccount",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1771,7 +5081,7 @@
         "googleAccount",
         "deprecated"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1802,7 +5112,7 @@
         "googleAccount",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1833,7 +5143,7 @@
         "iapCredential",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1864,7 +5174,7 @@
         "form",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1895,7 +5205,7 @@
         "outdatedLibrary",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1926,7 +5236,7 @@
         "violatingResource",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1957,7 +5267,7 @@
         "vulnerableHeaders",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1988,7 +5298,7 @@
         "vulnerableParameters",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2019,7 +5329,7 @@
         "xss",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2050,7 +5360,7 @@
         "xxe",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2081,7 +5391,37 @@
         "xxe",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1140,
+        "character": 25
+      },
+      "end": {
+        "line": 1143,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.FindingTypeStats.properties.findingCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "FindingTypeStats",
+        "properties",
+        "findingCount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2112,7 +5452,7 @@
         "iapTestServiceAccountInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2143,7 +5483,37 @@
         "authentication",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1358,
+        "character": 19
+      },
+      "end": {
+        "line": 1361,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ScanConfig.properties.maxQps]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ScanConfig",
+        "properties",
+        "maxQps"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2174,7 +5544,7 @@
         "schedule",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -2205,7 +5575,127 @@
         "errorTrace",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1507,
+        "character": 28
+      },
+      "end": {
+        "line": 1510,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ScanRun.properties.progressPercent]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ScanRun",
+        "properties",
+        "progressPercent"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1527,
+        "character": 29
+      },
+      "end": {
+        "line": 1530,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.ScanRun.properties.urlsCrawledCount]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ScanRun",
+        "properties",
+        "urlsCrawledCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1532,
+        "character": 28
+      },
+      "end": {
+        "line": 1535,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.ScanRun.properties.urlsTestedCount]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ScanRun",
+        "properties",
+        "urlsTestedCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1564,
+        "character": 36
+      },
+      "end": {
+        "line": 1567,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ScanRunErrorTrace.properties.mostCommonHttpErrorCode]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ScanRunErrorTrace",
+        "properties",
+        "mostCommonHttpErrorCode"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -2236,7 +5726,1835 @@
         "scanConfigError",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1597,
+        "character": 33
+      },
+      "end": {
+        "line": 1600,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Schedule.properties.intervalDurationDays]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Schedule",
+        "properties",
+        "intervalDurationDays"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}:start`. [path: paths./v1/{+name}:start.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:start",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}:stop`. [path: paths./v1/{+name}:stop.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:stop",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/crawledUrls`. [path: paths./v1/{+parent}/crawledUrls.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/findingTypeStats`. [path: paths./v1/{+parent}/findingTypeStats.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findingTypeStats",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/findings`. [path: paths./v1/{+parent}/findings.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/scanConfigs`. [path: paths./v1/{+parent}/scanConfigs.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/scanConfigs`. [path: paths./v1/{+parent}/scanConfigs.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/scanRuns`. [path: paths./v1/{+parent}/scanRuns.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:start.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:start",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:start.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:start",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:stop.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:stop",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:stop.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:stop",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/crawledUrls.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/crawledUrls.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/findingTypeStats.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findingTypeStats",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/findingTypeStats.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findingTypeStats",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/findings.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/findings.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/scanConfigs.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/scanConfigs.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/scanConfigs.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/scanConfigs.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/scanRuns.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/scanRuns.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"ScanConfig\" is never used. [path: components.requestBodies.ScanConfig]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "ScanConfig"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.scanRuns.findings.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, poor_ai_interpretability. Missing summary entirely. Description is too brief and lacks context about what findings represent, expected inputs (parent parameter), pagination support, and response structure. AI agents need clarity on finding types and how to interpret results.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findings",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.scanRuns.findings.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "List Findings under a given ScanRun.",
+      "summary_suggestion": "List vulnerability findings from a scan run",
+      "description_suggestion": "Retrieves all Finding resources (vulnerability instances) discovered during a specific ScanRun. Requires the parent ScanRun resource name. Supports filtering and pagination through query parameters. Returns a ListFindingsResponse containing an array of Finding objects with vulnerability details including type, severity, and remediation guidance.",
+      "reasoning": "Missing summary entirely. Description is too brief and lacks context about what findings represent, expected inputs (parent parameter), pagination support, and response structure. AI agents need clarity on finding types and how to interpret results.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findings",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, poor_ai_interpretability. Missing summary. Description lacks detail about what ScanConfigs represent, the parent project parameter requirement, pagination support, and how the returned configs relate to scan execution. AI agents need to understand ScanConfigs are configuration templates for scans.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Lists ScanConfigs under a given project.",
+      "summary_suggestion": "List scan configurations for a project",
+      "description_suggestion": "Retrieves all ScanConfig resources associated with a specified project. Each ScanConfig contains vulnerability scanning settings and target application details. Supports filtering and pagination through query parameters. Returns a ListScanConfigsResponse containing an array of ScanConfig objects that can be used to start new scan runs.",
+      "reasoning": "Missing summary. Description lacks detail about what ScanConfigs represent, the parent project parameter requirement, pagination support, and how the returned configs relate to scan execution. AI agents need to understand ScanConfigs are configuration templates for scans.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.create' has semantic quality issues: vague_summary, missing_input_details, missing_side_effects, poor_ai_interpretability. Missing summary. Description is minimal and doesn't explain what inputs are required (ScanConfig properties), what the response contains (resource name, created config), or side effects (config becomes available for scanning). AI agents need to understand the relationship between ScanConfig creation and subsequent scan execution.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanConfigs",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Creates a new ScanConfig.",
+      "summary_suggestion": "Create a new vulnerability scan configuration",
+      "description_suggestion": "Creates a new ScanConfig resource within a specified project. Accepts a ScanConfig object in the request body containing scanning parameters such as target URLs, authentication credentials, and vulnerability check types. The created ScanConfig is returned with an auto-generated resource name and can subsequently be used to start ScanRun instances. Requires appropriate project permissions.",
+      "reasoning": "Missing summary. Description is minimal and doesn't explain what inputs are required (ScanConfig properties), what the response contains (resource name, created config), or side effects (config becomes available for scanning). AI agents need to understand the relationship between ScanConfig creation and subsequent scan execution.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanConfigs",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.scanRuns.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, poor_ai_interpretability. Missing summary. While description mentions ordering, it lacks context about what ScanRuns represent (actual scan executions vs configurations), pagination support, and response structure. AI agents need to understand ScanRuns are execution instances with results, distinct from ScanConfigs which are templates.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/scanRuns",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.scanRuns.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.",
+      "summary_suggestion": "List scan execution runs for a configuration",
+      "description_suggestion": "Retrieves all ScanRun resources associated with a specified ScanConfig, ordered by stop time in descending order (most recent first). Each ScanRun represents an actual execution of the vulnerability scan with results and status information. Supports filtering and pagination through query parameters. Returns a ListScanRunsResponse containing an array of ScanRun objects with execution status, timing, and result summaries.",
+      "reasoning": "Missing summary. While description mentions ordering, it lacks context about what ScanRuns represent (actual scan executions vs configurations), pagination support, and response structure. AI agents need to understand ScanRuns are execution instances with results, distinct from ScanConfigs which are templates.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/scanRuns",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.delete' has semantic quality issues: vague_summary, missing_input_details, missing_side_effects. Missing summary entirely. Description lacks clarity about permanence, what child resources are affected, input requirements, and return value. Added these details to help AI agents understand the destructive nature and scope of this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes an existing ScanConfig and its child resources.",
+      "summary_suggestion": "Delete a ScanConfig and its child resources",
+      "description_suggestion": "Deletes an existing ScanConfig and all associated child resources including ScanRuns and Findings. This operation is permanent and cannot be undone. Requires the ScanConfig resource name as input. Returns an empty response on successful deletion.",
+      "reasoning": "Missing summary entirely. Description lacks clarity about permanence, what child resources are affected, input requirements, and return value. Added these details to help AI agents understand the destructive nature and scope of this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.scanRuns.findings.get' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details. Missing summary and extremely vague description. 'Gets a Finding' provides no context about what a Finding represents in this domain. Enhanced to clarify that Findings are vulnerabilities, added input/output details, and domain context for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.scanRuns.findings.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets a Finding.",
+      "summary_suggestion": "Retrieve a specific vulnerability finding",
+      "description_suggestion": "Retrieves a specific Finding resource representing a vulnerability instance identified during a ScanRun. Requires the Finding resource name as input. Returns the complete Finding object with details about the vulnerability including type, severity, and remediation guidance.",
+      "reasoning": "Missing summary and extremely vague description. 'Gets a Finding' provides no context about what a Finding represents in this domain. Enhanced to clarify that Findings are vulnerabilities, added input/output details, and domain context for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.patch' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description mentions partial update but lacks clarity on input requirements, return value, and how partial updates work. Enhanced to clarify the patch semantics and what the operation returns for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.patch",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Updates a ScanConfig. This method support partial update of a ScanConfig.",
+      "summary_suggestion": "Partially update a ScanConfig",
+      "description_suggestion": "Updates an existing ScanConfig with partial update support. Only provided fields in the request body will be modified; omitted fields retain their current values. Requires the ScanConfig resource name and the ScanConfig object with fields to update. Returns the updated ScanConfig resource.",
+      "reasoning": "Missing summary. Description mentions partial update but lacks clarity on input requirements, return value, and how partial updates work. Enhanced to clarify the patch semantics and what the operation returns for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.start' has semantic quality issues: vague_summary, missing_output_details, missing_side_effects. Missing summary. Description lacks clarity about what happens after invocation (asynchronous execution), what is returned, and the side effect of creating a new ScanRun. Added these details to help AI agents understand the operation's scope and timing.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:start",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.start",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Start a ScanRun according to the given ScanConfig.",
+      "summary_suggestion": "Start a security scan run",
+      "description_suggestion": "Initiates a new ScanRun based on the specified ScanConfig. This operation begins the vulnerability scanning process according to the configuration parameters. Requires the ScanConfig resource name and a StartScanRunRequest. Returns the newly created ScanRun resource with initial status and metadata. The scan executes asynchronously.",
+      "reasoning": "Missing summary. Description lacks clarity about what happens after invocation (asynchronous execution), what is returned, and the side effect of creating a new ScanRun. Added these details to help AI agents understand the operation's scope and timing.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:start",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.scanRuns.stop' has semantic quality issues: vague_summary, missing_input_details. Missing summary. Description is minimal and lacks input parameter details. Enhanced to clarify what 'stopped' means, input requirements, and the side effect of halting in-progress activities for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:stop",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.scanRuns.stop",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Stops a ScanRun. The stopped ScanRun is returned.",
+      "summary_suggestion": "Stop an active security scan run",
+      "description_suggestion": "Stops an active ScanRun, terminating the ongoing vulnerability scan. Requires the ScanRun resource name and a StopScanRunRequest. Returns the stopped ScanRun resource with updated status reflecting the termination. Any in-progress scanning activities are halted.",
+      "reasoning": "Missing summary. Description is minimal and lacks input parameter details. Enhanced to clarify what 'stopped' means, input requirements, and the side effect of halting in-progress activities for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:stop",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.scanRuns.crawledUrls.list' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description lacks clarity about what CrawledUrls represent, pagination support, and return value structure. Enhanced to clarify the operation's purpose and output for AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/crawledUrls",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.scanRuns.crawledUrls.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "List CrawledUrls under a given ScanRun.",
+      "summary_suggestion": "List URLs crawled during a scan run",
+      "description_suggestion": "Lists all CrawledUrls discovered and visited during a specific ScanRun. Requires the ScanRun resource name as parent. Supports pagination via optional page size and token parameters. Returns a ListCrawledUrlsResponse containing the list of crawled URLs and pagination information.",
+      "reasoning": "Missing summary. Description lacks clarity about what CrawledUrls represent, pagination support, and return value structure. Enhanced to clarify the operation's purpose and output for AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/crawledUrls",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'websecurityscanner.projects.scanConfigs.scanRuns.findingTypeStats.list' has semantic quality issues: vague_summary, missing_output_details, missing_context. Missing summary. Description lacks context about what FindingTypeStats represent (aggregated statistics) and what the response contains. Enhanced to clarify that this provides summary statistics rather than individual findings, and added return value details for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/findingTypeStats",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "websecurityscanner.projects.scanConfigs.scanRuns.findingTypeStats.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "List all FindingTypeStats under a given ScanRun.",
+      "summary_suggestion": "List vulnerability statistics by type",
+      "description_suggestion": "Lists aggregated statistics of vulnerabilities grouped by finding type for a specific ScanRun. Provides a summary view of vulnerability distribution and counts by category. Requires the ScanRun resource name as parent. Returns a ListFindingTypeStatsResponse containing vulnerability statistics organized by type.",
+      "reasoning": "Missing summary. Description lacks context about what FindingTypeStats represent (aggregated statistics) and what the response contains. Enhanced to clarify that this provides summary statistics rather than individual findings, and added return value details for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/findingTypeStats",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 11 operations analyzed, 11 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 11,
+      "total_issues_found": 11,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 128 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 128
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 128 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 128
     }
   }
 ]

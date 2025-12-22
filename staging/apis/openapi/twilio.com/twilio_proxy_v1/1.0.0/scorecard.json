@@ -1,0 +1,658 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "ce8eaf3bcab1c2af30f22e35a627c11c",
+    "name": "Twilio - Proxy",
+    "apiDescriptionVersion": "1.0.0",
+    "specification": "openapi",
+    "specificationVersion": "3.0.1",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/twilio.com/twilio_proxy_v1/1.0.0/openapi.json",
+    "vendor": {
+      "name": "twilio.com",
+      "domain": null,
+      "contact": {
+        "name": "Twilio Support",
+        "email": "support@twilio.com"
+      }
+    },
+    "operationCount": 30,
+    "schemaCount": 425,
+    "securitySchemeCount": 1,
+    "securitySchemeTypes": [
+      "http"
+    ],
+    "tagCount": 9
+  },
+  "summary": {
+    "scoringDate": "2025-12-16T17:37:08+00:00",
+    "score": 29.11,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 84.82,
+        "grade": "A"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 54.58,
+        "grade": "C"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 42.35,
+        "grade": "D-"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 20.59,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 10.0,
+        "grade": "F"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 55.83,
+        "grade": "C"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 68.81,
+      "grade": "B+",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 84.82,
+          "grade": "A",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.97,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 0,
+                  "warning": 154,
+                  "info": 66,
+                  "hint": 0
+                },
+                "weighted_cost": 0.451,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 1.0,
+              "metadata": {
+                "failure_reason": null,
+                "diagnostic_counts": {
+                  "error": 0,
+                  "warning": 154,
+                  "information": 66,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.42,
+              "metadata": {
+                "structural_issues": 4,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 4,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 54.58,
+          "grade": "C",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.2,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 0.98,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 32.46,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 42.35,
+          "grade": "D-",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.5,
+              "metadata": {
+                "described_elements": 385,
+                "undescribed_elements": 383,
+                "describable_elements": 768,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.35,
+              "metadata": {
+                "summaries_present": 28,
+                "missing_summaries": 53,
+                "summaries_expected": 81,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 20.59,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.21,
+              "metadata": {
+                "total_operations": 30,
+                "max_schema_depth": 6,
+                "normalised_endpoint_count": 0.6,
+                "normalised_schema_depth": 0.75,
+                "raw_complexity": 0.675,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 30.83,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 10.0,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.1,
+              "metadata": {
+                "strength_scores": [
+                  0.1
+                ],
+                "schemes_count": 1,
+                "schemes": [
+                  {
+                    "type": "http",
+                    "score": 0.1,
+                    "details": {
+                      "http_scheme": "basic"
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 55.83,
+          "grade": "C",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.56,
+              "metadata": {
+                "number_of_describable_elements": 30,
+                "operations_with_issues": 23,
+                "operations_without_issues": 7,
+                "sum_of_element_descriptive_scores": 33.5,
+                "operations_scored": [
+                  {
+                    "operation_id": "FetchShortCode",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateShortCode",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListParticipant",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateParticipant",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreatePhoneNumber",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeletePhoneNumber",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchPhoneNumber",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdatePhoneNumber",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchSession",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteSession",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSession",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateSession",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteShortCode",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchInteraction",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteInteraction",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateMessageInteraction",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListMessageInteraction",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchMessageInteraction",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchParticipant",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

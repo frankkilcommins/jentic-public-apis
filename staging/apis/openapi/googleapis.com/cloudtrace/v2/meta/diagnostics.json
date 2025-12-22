@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -55,24 +55,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 2",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 2,
+      "paths": [
+        [
+          "paths",
+          "/v2/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -83,25 +92,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2/{+name}.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2/{+name}",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -112,27 +117,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v2/{+name}`. [path: paths./v2/{+name}.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 68",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2/{+name}",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 68
     }
   },
   {
@@ -143,14 +142,1398 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2/{+name}/traces:batchWrite.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 86",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 86
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 4",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 4,
+      "paths": [
+        [
+          "paths",
+          "/v2/{+name}"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 95",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 95,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v2/{+name}"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Annotation"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeValue",
+          "properties",
+          "boolValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeValue",
+          "properties",
+          "intValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "attributeMap"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "droppedAttributesCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchWriteSpansRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchWriteSpansRequest",
+          "properties",
+          "spans"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "spanId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "traceId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "droppedLinksCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "compressedSizeBytes"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "uncompressedSizeBytes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Module"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "childSpanCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "parentSpanId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "sameProcessAsParentSpan"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "spanId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "spanKind"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrame"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrame",
+          "properties",
+          "columnNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrame",
+          "properties",
+          "lineNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrames"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrames",
+          "properties",
+          "droppedFramesCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrames",
+          "properties",
+          "frame"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackTrace"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackTrace",
+          "properties",
+          "stackTraceHashId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvent",
+          "properties",
+          "time"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents",
+          "properties",
+          "droppedAnnotationsCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents",
+          "properties",
+          "droppedMessageEventsCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents",
+          "properties",
+          "timeEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "TruncatableString"
+        ],
+        [
+          "components",
+          "schemas",
+          "TruncatableString",
+          "properties",
+          "truncatedByteCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "TruncatableString",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 74",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 74,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Annotation"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeValue",
+          "properties",
+          "boolValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "AttributeValue",
+          "properties",
+          "intValue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "attributeMap"
+        ],
+        [
+          "components",
+          "schemas",
+          "Attributes",
+          "properties",
+          "droppedAttributesCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchWriteSpansRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchWriteSpansRequest",
+          "properties",
+          "spans"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "spanId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "traceId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Link",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "droppedLinksCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Links",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "compressedSizeBytes"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "MessageEvent",
+          "properties",
+          "uncompressedSizeBytes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Module"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "childSpanCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "parentSpanId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "sameProcessAsParentSpan"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "spanId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "spanKind"
+        ],
+        [
+          "components",
+          "schemas",
+          "Span",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrame"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrame",
+          "properties",
+          "columnNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrame",
+          "properties",
+          "lineNumber"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrames"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrames",
+          "properties",
+          "droppedFramesCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackFrames",
+          "properties",
+          "frame"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackTrace"
+        ],
+        [
+          "components",
+          "schemas",
+          "StackTrace",
+          "properties",
+          "stackTraceHashId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvent",
+          "properties",
+          "time"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents",
+          "properties",
+          "droppedAnnotationsCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents",
+          "properties",
+          "droppedMessageEventsCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "TimeEvents",
+          "properties",
+          "timeEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "TruncatableString"
+        ],
+        [
+          "components",
+          "schemas",
+          "TruncatableString",
+          "properties",
+          "truncatedByteCount"
+        ],
+        [
+          "components",
+          "schemas",
+          "TruncatableString",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 20",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -159,126 +1542,14 @@
         "paths",
         "/v2/{+name}/traces:batchWrite",
         "post",
-        "summary"
+        "requestBody",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v2/{+name}/traces:batchWrite`. [path: paths./v2/{+name}/traces:batchWrite.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/{+name}/traces:batchWrite",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/{+name}.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/{+name}",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2/{+name}/traces:batchWrite.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2/{+name}/traces:batchWrite",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 20,
+      "paths": []
     }
   },
   {
@@ -306,7 +1577,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 204,
+        "character": 69
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 13
+      },
+      "end": {
+        "line": 110,
+        "character": 51
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2/{+name}.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/{+name}.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -336,7 +1691,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 153,
+        "character": 13
+      },
+      "end": {
+        "line": 204,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2/{+name}/traces:batchWrite.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}/traces:batchWrite",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 10
+      },
+      "end": {
+        "line": 161,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2/{+name}/traces:batchWrite.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}/traces:batchWrite",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -366,7 +1779,373 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 214,
+        "character": 16
+      },
+      "end": {
+        "line": 223,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 226,
+        "character": 21
+      },
+      "end": {
+        "line": 231,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 229,
+        "character": 16
+      },
+      "end": {
+        "line": 229,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 234,
+        "character": 12
+      },
+      "end": {
+        "line": 245,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 248,
+        "character": 17
+      },
+      "end": {
+        "line": 253,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 256,
+        "character": 15
+      },
+      "end": {
+        "line": 261,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 264,
+        "character": 12
+      },
+      "end": {
+        "line": 269,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 272,
+        "character": 20
+      },
+      "end": {
+        "line": 277,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 275,
+        "character": 16
+      },
+      "end": {
+        "line": 275,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 280,
+        "character": 20
+      },
+      "end": {
+        "line": 286,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 289,
+        "character": 18
+      },
+      "end": {
+        "line": 294,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 297,
+        "character": 19
+      },
+      "end": {
+        "line": 302,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 305,
+        "character": 24
+      },
+      "end": {
+        "line": 310,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -397,7 +2176,7 @@
         "attributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -428,7 +2207,37 @@
         "description",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 336,
+        "character": 21
+      },
+      "end": {
+        "line": 339,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.AttributeValue.properties.intValue]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "AttributeValue",
+        "properties",
+        "intValue"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -459,7 +2268,37 @@
         "stringValue",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 358,
+        "character": 35
+      },
+      "end": {
+        "line": 361,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Attributes.properties.droppedAttributesCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Attributes",
+        "properties",
+        "droppedAttributesCount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -490,7 +2329,127 @@
         "attributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 414,
+        "character": 30
+      },
+      "end": {
+        "line": 417,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Links.properties.droppedLinksCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Links",
+        "properties",
+        "droppedLinksCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 432,
+        "character": 32
+      },
+      "end": {
+        "line": 435,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.MessageEvent.properties.compressedSizeBytes]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "MessageEvent",
+        "properties",
+        "compressedSizeBytes"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 437,
+        "character": 15
+      },
+      "end": {
+        "line": 440,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.MessageEvent.properties.id]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "MessageEvent",
+        "properties",
+        "id"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 451,
+        "character": 34
+      },
+      "end": {
+        "line": 454,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.MessageEvent.properties.uncompressedSizeBytes]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "MessageEvent",
+        "properties",
+        "uncompressedSizeBytes"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -521,7 +2480,7 @@
         "buildId",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -552,7 +2511,7 @@
         "module",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -583,7 +2542,37 @@
         "attributes",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 480,
+        "character": 27
+      },
+      "end": {
+        "line": 483,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Span.properties.childSpanCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Span",
+        "properties",
+        "childSpanCount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -614,7 +2603,7 @@
         "displayName",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -645,7 +2634,7 @@
         "links",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -676,7 +2665,7 @@
         "stackTrace",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -707,7 +2696,7 @@
         "status",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -738,7 +2727,37 @@
         "timeEvents",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 549,
+        "character": 25
+      },
+      "end": {
+        "line": 552,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.StackFrame.properties.columnNumber]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "StackFrame",
+        "properties",
+        "columnNumber"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -769,7 +2788,7 @@
         "fileName",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -800,7 +2819,37 @@
         "functionName",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 562,
+        "character": 23
+      },
+      "end": {
+        "line": 565,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.StackFrame.properties.lineNumber]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "StackFrame",
+        "properties",
+        "lineNumber"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -831,7 +2880,7 @@
         "loadModule",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -862,7 +2911,7 @@
         "originalFunctionName",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -893,7 +2942,37 @@
         "sourceVersion",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 585,
+        "character": 31
+      },
+      "end": {
+        "line": 588,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.StackFrames.properties.droppedFramesCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "StackFrames",
+        "properties",
+        "droppedFramesCount"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -924,7 +3003,67 @@
         "stackFrames",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 607,
+        "character": 29
+      },
+      "end": {
+        "line": 610,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.StackTrace.properties.stackTraceHashId]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "StackTrace",
+        "properties",
+        "stackTraceHashId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 618,
+        "character": 17
+      },
+      "end": {
+        "line": 621,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Status.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Status",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -955,7 +3094,7 @@
         "annotation",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -986,7 +3125,573 @@
         "messageEvent",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 662,
+        "character": 36
+      },
+      "end": {
+        "line": 665,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.TimeEvents.properties.droppedAnnotationsCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "TimeEvents",
+        "properties",
+        "droppedAnnotationsCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 667,
+        "character": 38
+      },
+      "end": {
+        "line": 670,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.TimeEvents.properties.droppedMessageEventsCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "TimeEvents",
+        "properties",
+        "droppedMessageEventsCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 685,
+        "character": 31
+      },
+      "end": {
+        "line": 688,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.TruncatableString.properties.truncatedByteCount]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "TruncatableString",
+        "properties",
+        "truncatedByteCount"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v2/{+name}`. [path: paths./v2/{+name}.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v2/{+name}/traces:batchWrite`. [path: paths./v2/{+name}/traces:batchWrite.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}/traces:batchWrite",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2/{+name}.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/{+name}.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2/{+name}/traces:batchWrite.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}/traces:batchWrite",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2/{+name}/traces:batchWrite.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}/traces:batchWrite",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'cloudtrace.projects.traces.spans.createSpan' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, missing_side_effects, not_actionable, poor_ai_interpretability. Original description is too minimal. Missing: summary entirely, clarity on what a span is in this domain context, input requirements (Span object structure), output details (returns created Span), and side effects (span added to trace). Added domain context about span nesting, operation details, and trace visibility. Improved AI agent interpretability by clarifying when to use this operation and what to expect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "cloudtrace.projects.traces.spans.createSpan",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "not_actionable",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Creates a new span.",
+      "summary_suggestion": "Create a new span in a trace",
+      "description_suggestion": "Creates a new span within an existing trace. A span represents a single operation and can be nested to form a trace tree. Accepts a Span object containing operation details such as display name, start/end times, attributes, events, links, and status. Returns the created Span object with server-assigned identifiers. This operation adds the span to the specified trace and makes it available for viewing in Cloud Trace.",
+      "reasoning": "Original description is too minimal. Missing: summary entirely, clarity on what a span is in this domain context, input requirements (Span object structure), output details (returns created Span), and side effects (span added to trace). Added domain context about span nesting, operation details, and trace visibility. Improved AI agent interpretability by clarifying when to use this operation and what to expect.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/{+name}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'cloudtrace.projects.traces.batchWrite' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects. Original summary is missing entirely. Description lacks input details (BatchWriteSpansRequest structure), output details (returns Empty response), and side effects clarity (spans are immutable after creation). Added context about batch optimization, use case (high-volume ingestion), and clarified the immutability constraint. Improved AI agent interpretability by explaining when to use batch vs. single span creation and what the operation returns.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2/{+name}/traces:batchWrite",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "cloudtrace.projects.traces.batchWrite",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Batch writes new spans to new or existing traces. You cannot update existing spans.",
+      "summary_suggestion": "Batch write spans to traces",
+      "description_suggestion": "Batch writes multiple new spans to new or existing traces in a single request. Accepts a BatchWriteSpansRequest containing a collection of spans to be written. Each span is added to its specified trace; spans cannot be updated after creation. Returns an Empty response on success. This operation is optimized for high-volume span ingestion and is useful for applications sending trace data in batches. Note: Existing spans cannot be modified; only new spans can be added.",
+      "reasoning": "Original summary is missing entirely. Description lacks input details (BatchWriteSpansRequest structure), output details (returns Empty response), and side effects clarity (spans are immutable after creation). Added context about batch optimization, use case (high-volume ingestion), and clarified the immutability constraint. Improved AI agent interpretability by explaining when to use batch vs. single span creation and what the operation returns.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2/{+name}/traces:batchWrite",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 2 operations analyzed, 2 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 2,
+      "total_issues_found": 2,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 51 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 51
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 51 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 51
     }
   }
 ]

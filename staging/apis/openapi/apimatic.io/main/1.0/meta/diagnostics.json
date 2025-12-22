@@ -10,7 +10,7 @@
         "character": 0
       }
     },
-    "message": "Security scheme 'api-key' is defined in components.securitySchemes but not used in any security requirement.",
+    "message": "Security scheme 'basic' is defined in components.securitySchemes but not used in any security requirement.",
     "severity": 2,
     "code": "UNUSED_SECURITY_SCHEME_DEFINED",
     "code_description": null,
@@ -21,9 +21,10 @@
       "fixable": true,
       "path": [
         "components",
-        "securitySchemes"
+        "securitySchemes",
+        "basic"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -37,7 +38,7 @@
         "character": 0
       }
     },
-    "message": "Security scheme 'basic' is defined in components.securitySchemes but not used in any security requirement.",
+    "message": "Security scheme 'api-key' is defined in components.securitySchemes but not used in any security requirement.",
     "severity": 2,
     "code": "UNUSED_SECURITY_SCHEME_DEFINED",
     "code_description": null,
@@ -48,9 +49,636 @@
       "fixable": true,
       "path": [
         "components",
-        "securitySchemes"
+        "securitySchemes",
+        "api-key"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total Operations count: 1",
+    "severity": 3,
+    "code": "total_operations",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 1,
+      "paths": [
+        [
+          "paths",
+          "/transform",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 5",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 5
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "basic"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey', 'http']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey",
+        "http"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "basic"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "apikey",
+          "oauth2_flows": []
+        },
+        {
+          "type": "http",
+          "http_scheme": "basic",
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "basic"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 0",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 10",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 10
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 2",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 2,
+      "paths": [
+        [
+          "paths",
+          "/transform"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 1",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 1,
+      "paths": [
+        [
+          "paths",
+          "/transform",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 16",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 16,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/transform"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "url"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/x-yaml",
+          "schema"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api-key"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "basic"
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 5",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 5,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "responses",
+          "429"
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 2",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/transform",
+        "post",
+        "requestBody",
+        "content",
+        "multipart/form-data",
+        "schema",
+        "properties",
+        "url"
+      ],
+      "target": "bundled-spec",
+      "max_schema_depth": 2,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 27,
+        "character": 10
+      },
+      "end": {
+        "line": 86,
+        "character": 71
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -78,7 +706,345 @@
         "/transform",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 31,
+        "character": 10
+      },
+      "end": {
+        "line": 45,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./transform.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/transform",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 53,
+        "character": 25
+      },
+      "end": {
+        "line": 54,
+        "character": 34
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: paths./transform.post.responses.200.content.application/json.schema]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/transform",
+        "post",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 58,
+        "character": 25
+      },
+      "end": {
+        "line": 59,
+        "character": 34
+      }
+    },
+    "message": "Schemas with type: object should define properties, composition, or allow (un)evaluated properties. [path: paths./transform.post.responses.200.content.application/x-yaml.schema]",
+    "severity": 2,
+    "code": "jentic-object-should-have-shape",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/transform",
+        "post",
+        "responses",
+        "200",
+        "content",
+        "application/x-yaml",
+        "schema"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 65,
+        "character": 16
+      },
+      "end": {
+        "line": 66,
+        "character": 48
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./transform.post.responses.429]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/transform",
+        "post",
+        "responses",
+        "429"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 98,
+        "character": 18
+      },
+      "end": {
+        "line": 98,
+        "character": 25
+      }
+    },
+    "message": "Please consider a more secure alternative to HTTP Basic. [path: components.securitySchemes.basic.scheme]",
+    "severity": 2,
+    "code": "no-http-basic",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "securitySchemes",
+        "basic",
+        "scheme"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'ConvertAPI' has semantic quality issues: missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. The current description is repetitive and lacks critical details for AI agent decision-making. The improved version specifies: (1) what the operation does (converts between formats), (2) comprehensive input requirements (source description and target format parameter), (3) clear output (converted description in target format), (4) important operational context (bidirectional support, validation behavior), and (5) error handling. This enables AI agents to understand when to invoke this operation, what data to provide, and what to expect in return.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/transform",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "ConvertAPI",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "Transform API Descriptions from/to various formats",
+      "current_description": "Transform API Descriptions from/to various formats e.g., Swagger, API Blueprint, RAML, WADL, Google Discovery, I/O Docs.",
+      "summary_suggestion": "Convert API descriptions between multiple format standards",
+      "description_suggestion": "Converts API descriptions from one format to another, supporting multiple industry-standard formats including Swagger/OpenAPI, API Blueprint, RAML, WADL, Google Discovery, Postman Collections, and others. Accepts the source API description and target format as inputs. Returns the converted API description in the requested format. Supports bidirectional conversion between compatible formats. Validates input format and returns error details if conversion fails.",
+      "reasoning": "The current description is repetitive and lacks critical details for AI agent decision-making. The improved version specifies: (1) what the operation does (converts between formats), (2) comprehensive input requirements (source description and target format parameter), (3) clear output (converted description in target format), (4) important operational context (bidirectional support, validation behavior), and (5) error handling. This enables AI agents to understand when to invoke this operation, what data to provide, and what to expect in return.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/transform",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/transform",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 1 operations analyzed, 1 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 1,
+      "total_issues_found": 1,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 0
     }
   }
 ]

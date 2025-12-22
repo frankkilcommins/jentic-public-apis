@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -140,7 +140,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -164,7 +164,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -188,7 +188,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -199,24 +199,63 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 8",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 8,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -227,25 +266,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -256,27 +291,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}`. [path: paths./v1alpha2/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 84",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 84
     }
   },
   {
@@ -287,25 +316,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -316,27 +353,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}`. [path: paths./v1alpha2/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -347,25 +392,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}/locations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}/locations",
-        "get",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -376,27 +450,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}/locations`. [path: paths./v1alpha2/{+name}/locations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}/locations",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -407,25 +475,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}/operations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 122",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}/operations",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 122
     }
   },
   {
@@ -436,27 +500,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}/operations`. [path: paths./v1alpha2/{+name}/operations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}/operations",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -467,25 +525,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}:cancel.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}:cancel",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
     }
   },
   {
@@ -496,27 +550,91 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}:cancel`. [path: paths./v1alpha2/{+name}:cancel.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Summaries expected: 15",
+    "severity": 3,
+    "code": "summaries_expected",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}:cancel",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 15,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -527,25 +645,22 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+resource}:getIamPolicy.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:getIamPolicy",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
     }
   },
   {
@@ -556,27 +671,922 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `resource` is not used in the path `/v1alpha2/{+resource}:getIamPolicy`. [path: paths./v1alpha2/{+resource}:getIamPolicy.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Describable elements: 142",
+    "severity": 3,
+    "code": "describable_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:getIamPolicy",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 142,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditConfig",
+          "properties",
+          "auditLogConfigs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditConfig",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditLogConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditLogConfig",
+          "properties",
+          "exemptedMembers"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditLogConfig",
+          "properties",
+          "exemptedMembers",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditLogConfig",
+          "properties",
+          "logType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayBinding"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayBinding",
+          "properties",
+          "members"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayBinding",
+          "properties",
+          "members",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayBinding",
+          "properties",
+          "role"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayCancelOperationRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "expression"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "auditConfigs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "bindings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewaySetIamPolicyRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewaySetIamPolicyRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "details",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsRequest",
+          "properties",
+          "permissions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsRequest",
+          "properties",
+          "permissions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsResponse",
+          "properties",
+          "permissions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsResponse",
+          "properties",
+          "permissions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
     }
   },
   {
@@ -587,14 +1597,646 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+resource}:setIamPolicy.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Described elements: 96",
+    "severity": 3,
+    "code": "described_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 96,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditConfig",
+          "properties",
+          "auditLogConfigs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditConfig",
+          "properties",
+          "service"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditLogConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditLogConfig",
+          "properties",
+          "exemptedMembers"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayAuditLogConfig",
+          "properties",
+          "logType"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayBinding"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayBinding",
+          "properties",
+          "members"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayBinding",
+          "properties",
+          "role"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayCancelOperationRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "expression"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayExpr",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayLocation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayOperation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "auditConfigs"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "bindings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayPolicy",
+          "properties",
+          "version"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewaySetIamPolicyRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewaySetIamPolicyRequest",
+          "properties",
+          "updateMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayStatus",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsRequest",
+          "properties",
+          "permissions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApigatewayTestIamPermissionsResponse",
+          "properties",
+          "permissions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 12",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -603,360 +2245,14 @@
         "paths",
         "/v1alpha2/{+resource}:setIamPolicy",
         "post",
-        "summary"
+        "requestBody",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `resource` is not used in the path `/v1alpha2/{+resource}:setIamPolicy`. [path: paths./v1alpha2/{+resource}:setIamPolicy.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:setIamPolicy",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+resource}:testIamPermissions.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:testIamPermissions",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `resource` is not used in the path `/v1alpha2/{+resource}:testIamPermissions`. [path: paths./v1alpha2/{+resource}:testIamPermissions.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:testIamPermissions",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}/locations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}/locations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}/operations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}/operations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}:cancel.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+name}:cancel",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+resource}:getIamPolicy.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:getIamPolicy",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+resource}:setIamPolicy.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:setIamPolicy",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+resource}:testIamPermissions.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1alpha2/{+resource}:testIamPermissions",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 12,
+      "paths": []
     }
   },
   {
@@ -983,7 +2279,7 @@
         "info",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1011,7 +2307,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 678,
+        "character": 82
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 15
+      },
+      "end": {
+        "line": 97,
+        "character": 72
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1041,7 +2421,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 99,
+        "character": 12
+      },
+      "end": {
+        "line": 137,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 101,
+        "character": 10
+      },
+      "end": {
+        "line": 107,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1071,7 +2509,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 176,
+        "character": 12
+      },
+      "end": {
+        "line": 238,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+name}/locations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 178,
+        "character": 10
+      },
+      "end": {
+        "line": 184,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+name}/locations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1101,7 +2597,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 187,
+        "character": 10
+      },
+      "end": {
+        "line": 192,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1alpha2/{+name}/locations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 195,
+        "character": 10
+      },
+      "end": {
+        "line": 200,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1alpha2/{+name}/locations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 203,
+        "character": 10
+      },
+      "end": {
+        "line": 208,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1alpha2/{+name}/locations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 277,
+        "character": 12
+      },
+      "end": {
+        "line": 339,
+        "character": 70
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+name}/operations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 279,
+        "character": 10
+      },
+      "end": {
+        "line": 285,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+name}/operations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1131,7 +2775,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 288,
+        "character": 10
+      },
+      "end": {
+        "line": 293,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1alpha2/{+name}/operations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 296,
+        "character": 10
+      },
+      "end": {
+        "line": 301,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1alpha2/{+name}/operations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 304,
+        "character": 10
+      },
+      "end": {
+        "line": 309,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1alpha2/{+name}/operations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 378,
+        "character": 13
+      },
+      "end": {
+        "line": 421,
+        "character": 79
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+name}:cancel.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}:cancel",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 380,
+        "character": 10
+      },
+      "end": {
+        "line": 386,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+name}:cancel.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}:cancel",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1161,7 +2953,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 464,
+        "character": 12
+      },
+      "end": {
+        "line": 510,
+        "character": 80
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+resource}:getIamPolicy.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:getIamPolicy",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 466,
+        "character": 10
+      },
+      "end": {
+        "line": 472,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+resource}:getIamPolicy.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:getIamPolicy",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1191,7 +3041,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 475,
+        "character": 10
+      },
+      "end": {
+        "line": 480,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1alpha2/{+resource}:getIamPolicy.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:getIamPolicy",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 549,
+        "character": 13
+      },
+      "end": {
+        "line": 592,
+        "character": 76
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+resource}:setIamPolicy.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:setIamPolicy",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 551,
+        "character": 10
+      },
+      "end": {
+        "line": 557,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+resource}:setIamPolicy.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:setIamPolicy",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1221,7 +3159,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 635,
+        "character": 13
+      },
+      "end": {
+        "line": 678,
+        "character": 82
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1alpha2/{+resource}:testIamPermissions.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:testIamPermissions",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 637,
+        "character": 10
+      },
+      "end": {
+        "line": 643,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1alpha2/{+resource}:testIamPermissions.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:testIamPermissions",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1251,7 +3247,373 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 688,
+        "character": 16
+      },
+      "end": {
+        "line": 697,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 700,
+        "character": 21
+      },
+      "end": {
+        "line": 705,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 703,
+        "character": 16
+      },
+      "end": {
+        "line": 703,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 708,
+        "character": 12
+      },
+      "end": {
+        "line": 719,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 722,
+        "character": 17
+      },
+      "end": {
+        "line": 727,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 730,
+        "character": 15
+      },
+      "end": {
+        "line": 735,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 738,
+        "character": 12
+      },
+      "end": {
+        "line": 743,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 746,
+        "character": 20
+      },
+      "end": {
+        "line": 751,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 749,
+        "character": 16
+      },
+      "end": {
+        "line": 749,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 754,
+        "character": 20
+      },
+      "end": {
+        "line": 760,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 763,
+        "character": 18
+      },
+      "end": {
+        "line": 768,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 771,
+        "character": 19
+      },
+      "end": {
+        "line": 776,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 779,
+        "character": 24
+      },
+      "end": {
+        "line": 784,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1282,7 +3644,7 @@
         "condition",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1313,7 +3675,37 @@
         "error",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 997,
+        "character": 20
+      },
+      "end": {
+        "line": 1000,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApigatewayPolicy.properties.version]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApigatewayPolicy",
+        "properties",
+        "version"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1344,7 +3736,1368 @@
         "policy",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1023,
+        "character": 17
+      },
+      "end": {
+        "line": 1026,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApigatewayStatus.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApigatewayStatus",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}`. [path: paths./v1alpha2/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}`. [path: paths./v1alpha2/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}/locations`. [path: paths./v1alpha2/{+name}/locations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}/operations`. [path: paths./v1alpha2/{+name}/operations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1alpha2/{+name}:cancel`. [path: paths./v1alpha2/{+name}:cancel.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}:cancel",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `resource` is not used in the path `/v1alpha2/{+resource}:getIamPolicy`. [path: paths./v1alpha2/{+resource}:getIamPolicy.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:getIamPolicy",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `resource` is not used in the path `/v1alpha2/{+resource}:setIamPolicy`. [path: paths./v1alpha2/{+resource}:setIamPolicy.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:setIamPolicy",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `resource` is not used in the path `/v1alpha2/{+resource}:testIamPermissions`. [path: paths./v1alpha2/{+resource}:testIamPermissions.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:testIamPermissions",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}/locations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}/locations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}/operations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}/operations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+name}:cancel.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}:cancel",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+name}:cancel.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}:cancel",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+resource}:getIamPolicy.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:getIamPolicy",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+resource}:getIamPolicy.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:getIamPolicy",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+resource}:setIamPolicy.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:setIamPolicy",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+resource}:setIamPolicy.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:setIamPolicy",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1alpha2/{+resource}:testIamPermissions.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:testIamPermissions",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1alpha2/{+resource}:testIamPermissions.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:testIamPermissions",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.apis.configs.testIamPermissions' has semantic quality issues: vague_summary, missing_output_details, missing_context. Original had no summary and incomplete description. Added domain-specific summary referencing 'API Gateway resource' for consistency with API context. Enhanced description to clarify: (1) what the operation tests (IAM permissions), (2) expected input (TestIamPermissionsRequest with resource and permissions), (3) expected output (TestIamPermissionsResponse with permitted subset), (4) behavior on missing resources, and (5) use case limitations. This improves AI agent interpretability by making clear when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:testIamPermissions",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.apis.configs.testIamPermissions",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may \"fail open\" without warning.",
+      "summary_suggestion": "Test IAM permissions on API Gateway resource",
+      "description_suggestion": "Tests which IAM permissions the authenticated caller has on the specified API Gateway resource. Returns a list of permissions the caller possesses. If the resource does not exist, returns an empty permission set rather than a NOT_FOUND error. Accepts a TestIamPermissionsRequest containing the resource name and permissions to test. Returns a TestIamPermissionsResponse with the subset of requested permissions the caller has. Note: This operation is designed for building permission-aware UIs and command-line tools, not for authorization checking. This operation may fail open without warning.",
+      "reasoning": "Original had no summary and incomplete description. Added domain-specific summary referencing 'API Gateway resource' for consistency with API context. Enhanced description to clarify: (1) what the operation tests (IAM permissions), (2) expected input (TestIamPermissionsRequest with resource and permissions), (3) expected output (TestIamPermissionsResponse with permitted subset), (4) behavior on missing resources, and (5) use case limitations. This improves AI agent interpretability by making clear when and how to use this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:testIamPermissions",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.operations.delete' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original had no summary and lacked clarity on inputs/outputs. Added action-oriented summary, clarified the distinction from cancellation, specified the required input parameter (operation name), and explicitly stated the return value (empty response) for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.operations.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
+      "summary_suggestion": "Delete a long-running operation",
+      "description_suggestion": "Deletes a long-running operation by name, indicating the client is no longer interested in the result. This method does not cancel the operation; use the cancel method to request cancellation. Requires the operation name as input. Returns an empty response on success. Note: If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
+      "reasoning": "Original had no summary and lacked clarity on inputs/outputs. Added action-oriented summary, clarified the distinction from cancellation, specified the required input parameter (operation name), and explicitly stated the return value (empty response) for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.operations.get' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original had no summary and was incomplete. Added concise action-oriented summary, specified the required input (operation name), clarified the return value (Operation object with status/progress/results), and emphasized polling use case for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.operations.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.",
+      "summary_suggestion": "Get the latest state of an operation",
+      "description_suggestion": "Retrieves the latest state of a long-running operation by name. Returns the current Operation object including status, progress, and any results or errors. Clients can poll this method at intervals to monitor operation completion. Requires the operation name as input.",
+      "reasoning": "Original had no summary and was incomplete. Added concise action-oriented summary, specified the required input (operation name), clarified the return value (Operation object with status/progress/results), and emphasized polling use case for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.list' has semantic quality issues: vague_summary, missing_input_details. Original had no summary and lacked specificity about what locations are returned and pagination support. Added action-oriented summary, clarified that these are Google Cloud locations for API Gateway deployment, specified the return type (Location objects), and mentioned pagination support for AI agent usability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/locations",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists information about the supported locations for this service.",
+      "summary_suggestion": "List supported locations for the service",
+      "description_suggestion": "Lists all supported Google Cloud locations where API Gateway resources can be deployed. Returns a paginated list of Location objects with region information and available capabilities. Supports filtering and pagination via optional parameters.",
+      "reasoning": "Original had no summary and lacked specificity about what locations are returned and pagination support. Added action-oriented summary, clarified that these are Google Cloud locations for API Gateway deployment, specified the return type (Location objects), and mentioned pagination support for AI agent usability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/locations",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.operations.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original had no summary and was vague about inputs and outputs. Added action-oriented summary, clarified that it returns Operation objects in paginated format, specified that filtering is supported via parameters, and retained the error handling note for completeness.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.operations.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.",
+      "summary_suggestion": "List long-running operations with filtering",
+      "description_suggestion": "Lists long-running operations matching the specified filter criteria. Returns a paginated list of Operation objects with their current status and progress. Supports filtering by operation status, name patterns, and other criteria via optional parameters. If the server doesn't support this method, it returns `UNIMPLEMENTED`.",
+      "reasoning": "Original had no summary and was vague about inputs and outputs. Added action-oriented summary, clarified that it returns Operation objects in paginated format, specified that filtering is supported via parameters, and retained the error handling note for completeness.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}/operations",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.operations.cancel' has semantic quality issues: vague_summary, missing_output_details. Original had no summary and was verbose about outcomes. Added concise action-oriented summary, clarified the return value (empty response), emphasized the need to poll GetOperation for actual status, and reorganized information for better AI agent understanding of the asynchronous nature and non-guaranteed outcome.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+name}:cancel",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.operations.cancel",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.",
+      "summary_suggestion": "Request cancellation of a long-running operation",
+      "description_suggestion": "Requests asynchronous cancellation of a long-running operation. The server makes a best effort to cancel but success is not guaranteed. Requires the operation name as input. Returns an empty response immediately; use GetOperation to poll the actual cancellation status. On successful cancellation, the operation transitions to a CANCELLED state with an error status code of 1. Note: Cancellation is not guaranteed; the operation may complete despite the cancellation request. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.",
+      "reasoning": "Original had no summary and was verbose about outcomes. Added concise action-oriented summary, clarified the return value (empty response), emphasized the need to poll GetOperation for actual status, and reorganized information for better AI agent understanding of the asynchronous nature and non-guaranteed outcome.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+name}:cancel",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.apis.configs.getIamPolicy' has semantic quality issues: vague_summary, missing_input_details. Original had no summary and lacked input specification. Added action-oriented summary using domain terminology (IAM), specified the required input (resource name), clarified the return type (ApigatewayPolicy object), and retained the empty policy behavior for completeness.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:getIamPolicy",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.apis.configs.getIamPolicy",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.",
+      "summary_suggestion": "Get the IAM access control policy",
+      "description_suggestion": "Retrieves the Identity and Access Management (IAM) policy for an API Gateway resource. Requires the resource name as input. Returns an ApigatewayPolicy object containing role bindings and access rules. Returns an empty policy if the resource exists but has no policy set.",
+      "reasoning": "Original had no summary and lacked input specification. Added action-oriented summary using domain terminology (IAM), specified the required input (resource name), clarified the return type (ApigatewayPolicy object), and retained the empty policy behavior for completeness.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:getIamPolicy",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'apigateway.projects.locations.apis.configs.setIamPolicy' has semantic quality issues: vague_summary, missing_output_details. Original had no summary and lacked output specification. Added action-oriented summary using domain terminology (IAM), clarified the request schema requirement, specified the return type (ApigatewayPolicy), emphasized the replacement behavior, and reorganized error information for better AI agent understanding of failure scenarios.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1alpha2/{+resource}:setIamPolicy",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "apigateway.projects.locations.apis.configs.setIamPolicy",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.",
+      "summary_suggestion": "Set the IAM access control policy",
+      "description_suggestion": "Sets or replaces the Identity and Access Management (IAM) policy for an API Gateway resource. Requires the resource name and an ApigatewaySetIamPolicyRequest containing the new policy. Completely replaces any existing policy. Returns the updated ApigatewayPolicy object. May return `NOT_FOUND`, `INVALID_ARGUMENT`, or `PERMISSION_DENIED` errors if the resource doesn't exist, the policy is invalid, or the caller lacks permissions.",
+      "reasoning": "Original had no summary and lacked output specification. Added action-oriented summary using domain terminology (IAM), clarified the request schema requirement, specified the return type (ApigatewayPolicy), emphasized the replacement behavior, and reorganized error information for better AI agent understanding of failure scenarios.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1alpha2/{+resource}:setIamPolicy",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 8 operations analyzed, 8 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 8,
+      "total_issues_found": 8,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 96 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 96
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 96 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 96
     }
   }
 ]

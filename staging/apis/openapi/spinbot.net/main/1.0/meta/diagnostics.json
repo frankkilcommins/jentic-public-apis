@@ -7,23 +7,48 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'key' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 5",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 5,
+      "paths": [
+        [
+          "paths",
+          "/api/acc",
+          "get"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -34,24 +59,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -62,22 +84,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Schemas count: 22",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 22
     }
   },
   {
@@ -88,25 +109,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/acc.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/api/acc",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "key"
+        ]
+      ]
     }
   },
   {
@@ -117,14 +141,947 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/article.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "query",
+          "apikey_name": "key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 33",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 33
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 10",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 10,
+      "paths": [
+        [
+          "paths",
+          "/api/acc"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get"
+        ],
+        [
+          "paths",
+          "/api/article"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spinner"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spintax"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 5",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 5,
+      "paths": [
+        [
+          "paths",
+          "/api/acc",
+          "get"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 50",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 50,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/api/acc"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "*/*",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/article"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "faster_mode"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "url"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "responses",
+          "default",
+          "content",
+          "*/*",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "accuracy"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "keep"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "responses",
+          "default",
+          "content",
+          "*/*",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/spinner"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "responses",
+          "default",
+          "content",
+          "*/*",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/spintax"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "full_mode"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "responses",
+          "default",
+          "content",
+          "*/*",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "key"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          0,
+          "externalDocs"
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "tags",
+          1,
+          "externalDocs"
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 26",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 26,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "faster_mode"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "url"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "accuracy"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "keep"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "full_mode"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "key"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "responses",
+          "default"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 2",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -133,96 +1090,16 @@
         "paths",
         "/api/article",
         "post",
-        "responses"
+        "requestBody",
+        "content",
+        "multipart/form-data",
+        "schema",
+        "properties",
+        "faster_mode"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/pretty-spinner.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/pretty-spinner",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/spinner.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/spinner",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/spintax.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/spintax",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 2,
+      "paths": []
     }
   },
   {
@@ -250,7 +1127,33 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 19,
+        "character": 10
+      },
+      "end": {
+        "line": 217,
+        "character": 66
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -278,7 +1181,37 @@
         "/api/acc",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 23,
+        "character": 10
+      },
+      "end": {
+        "line": 29,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./api/acc.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/acc",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -306,7 +1239,7 @@
         "/api/article",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -335,7 +1268,7 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -363,7 +1296,7 @@
         "/api/pretty-spinner",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -392,7 +1325,7 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -420,7 +1353,7 @@
         "/api/spinner",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -449,7 +1382,7 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -477,7 +1410,7 @@
         "/api/spintax",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -506,7 +1439,595 @@
         "post",
         "responses"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/acc.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/acc",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/article.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/article",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/pretty-spinner.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/pretty-spinner",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/spinner.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/spinner",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/spintax.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/spintax",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'getInfo' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_context. Original description is repetitive and lacks essential details. Improved version clarifies authentication requirement, specifies what credit information is returned, and indicates JSON response format. This helps AI agents understand when to use this operation and what to expect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/acc",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "getInfo",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Return the user credit information.",
+      "current_description": "Return the user credit information.",
+      "summary_suggestion": "Retrieve user account credit information",
+      "description_suggestion": "Retrieves the authenticated user's current credit balance and usage information. Requires API key authentication. Returns account credit details including available credits, used credits, and subscription status in JSON format.",
+      "reasoning": "Original description is repetitive and lacks essential details. Improved version clarifies authentication requirement, specifies what credit information is returned, and indicates JSON response format. This helps AI agents understand when to use this operation and what to expect.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api/acc",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'postArticle' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Original summary uses gerund form which is less action-oriented. Description lacks input parameter details and specific output fields. Enhanced version clarifies the input requirement (URL), explains the extraction method (ML algorithms), specifies output structure, and provides context about use cases for better AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/article",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "postArticle",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Extracting the main article of the given URL.",
+      "current_description": "Extracting the main article of the given URL. The response is in JSON format.",
+      "summary_suggestion": "Extract main article content from URL",
+      "description_suggestion": "Extracts the main article content from a provided URL using machine learning algorithms to identify and isolate the primary content. Accepts a URL as input and returns the extracted article text, title, and metadata in JSON format. Useful for automated content collection and data aggregation.",
+      "reasoning": "Original summary uses gerund form which is less action-oriented. Description lacks input parameter details and specific output fields. Enhanced version clarifies the input requirement (URL), explains the extraction method (ML algorithms), specifies output structure, and provides context about use cases for better AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api/article",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'postPrettySpinner' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, unclear_purpose. Original summary is unclear about the distinction from standard spinner. Description lacks input/output details and doesn't explain the 'pretty' aspect. Improved version clarifies that this is a readability-focused variant of article rewriting, specifies input/output format, and helps AI agents understand when to choose this over standard spinner based on readability requirements.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/pretty-spinner",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "postPrettySpinner",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "unclear_purpose"
+      ],
+      "current_summary": "Human readable auto rewrite your article.",
+      "current_description": "Human readable auto rewrite your article. The response is in JSON format.",
+      "summary_suggestion": "Rewrite article with human-readable output",
+      "description_suggestion": "Rewrites the input article by replacing words with synonyms while maintaining human readability and natural flow. Accepts article text as input and returns the rewritten version in JSON format with improved readability compared to standard spinner output. Optimized for content that prioritizes natural language quality over maximum word replacement.",
+      "reasoning": "Original summary is unclear about the distinction from standard spinner. Description lacks input/output details and doesn't explain the 'pretty' aspect. Improved version clarifies that this is a readability-focused variant of article rewriting, specifies input/output format, and helps AI agents understand when to choose this over standard spinner based on readability requirements.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api/pretty-spinner",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'postSpinner' has semantic quality issues: missing_input_details, missing_output_details, inconsistent_terminology. Summary is adequate and action-oriented. Description has a typo ('you' should be 'your') and lacks important details about what the operation does and its purpose. Enhanced description clarifies the synonym replacement mechanism, specifies input/output format, and explains the plagiarism avoidance use case consistent with the API's tag description.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/spinner",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "postSpinner",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details",
+        "inconsistent_terminology"
+      ],
+      "current_summary": "Rewriting (spinning) your input article.",
+      "current_description": "Rewriting (spinning) you input article. The response is in JSON format.",
+      "description_suggestion": "Rewrites the input article by replacing terms and words with their synonyms to create unique content while maintaining meaning. Accepts article text as input and returns the rewritten article in JSON format. Designed to help avoid plagiarism detection by maximizing word replacement across the content.",
+      "reasoning": "Summary is adequate and action-oriented. Description has a typo ('you' should be 'your') and lacks important details about what the operation does and its purpose. Enhanced description clarifies the synonym replacement mechanism, specifies input/output format, and explains the plagiarism avoidance use case consistent with the API's tag description.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/spinner",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'postSpintax' has semantic quality issues: missing_input_details, missing_output_details. Summary is clear and action-oriented. Description lacks specificity about input format, output structure, and Spintax syntax details. Enhanced version clarifies the input requirement, explains the Spintax format with examples, specifies JSON response, and describes the manual customization workflow. This helps AI agents understand the operation's purpose and when to use it versus automatic spinner operations.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/spintax",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "postSpintax",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Generate Spintax format for the input article",
+      "current_description": "Generate Spintax format for the input article, so you can rewrite it yourself. The response is in JSON format.",
+      "description_suggestion": "Generates Spintax-formatted output from the input article, enabling manual rewriting with synonym alternatives. Accepts article text as input and returns the article with synonym options marked in Spintax syntax (e.g., {word1|word2|word3}) in JSON format. Allows users to customize article rewriting by selecting preferred synonyms before final output generation.",
+      "reasoning": "Summary is clear and action-oriented. Description lacks specificity about input format, output structure, and Spintax syntax details. Enhanced version clarifies the input requirement, explains the Spintax format with examples, specifies JSON response, and describes the manual customization workflow. This helps AI agents understand the operation's purpose and when to use it versus automatic spinner operations.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/spintax",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 5 operations analyzed, 5 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 5,
+      "total_issues_found": 5,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 0
     }
   }
 ]

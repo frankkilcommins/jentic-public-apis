@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -103,24 +103,53 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 6",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 6,
+      "paths": [
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -131,14 +160,1609 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/subscriptions.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 61",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 61
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 95",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 95
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 9",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 9,
+      "paths": [
+        [
+          "paths",
+          "/v1/subscriptions"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 110",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 110,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/subscriptions"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListSubscriptionsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListSubscriptionsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListSubscriptionsResponse",
+          "properties",
+          "subscriptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationEndpoint",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "PayloadOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "PayloadOptions",
+          "properties",
+          "fieldMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "PayloadOptions",
+          "properties",
+          "includeResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReactivateSubscriptionRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "authority"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "eventTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "eventTypes",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "reconciling"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "suspensionReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "targetResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "ttl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "uid"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "Subscription"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 74",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 74,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListSubscriptionsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListSubscriptionsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListSubscriptionsResponse",
+          "properties",
+          "subscriptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "NotificationEndpoint",
+          "properties",
+          "pubsubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "PayloadOptions"
+        ],
+        [
+          "components",
+          "schemas",
+          "PayloadOptions",
+          "properties",
+          "fieldMask"
+        ],
+        [
+          "components",
+          "schemas",
+          "PayloadOptions",
+          "properties",
+          "includeResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "ReactivateSubscriptionRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "authority"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "etag"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "eventTypes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "expireTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "reconciling"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "suspensionReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "targetResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "ttl"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "uid"
+        ],
+        [
+          "components",
+          "schemas",
+          "Subscription",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 8",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -147,508 +1771,15 @@
         "paths",
         "/v1/subscriptions",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/subscriptions.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/subscriptions",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:reactivate.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:reactivate",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}:reactivate`. [path: paths./v1/{+name}:reactivate.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:reactivate",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/subscriptions.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/subscriptions",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/subscriptions.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/subscriptions",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:reactivate.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:reactivate",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 8,
+      "paths": []
     }
   },
   {
@@ -676,7 +1807,267 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 1138,
+        "character": 76
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 12
+      },
+      "end": {
+        "line": 232,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/subscriptions.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 66,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/subscriptions.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 69,
+        "character": 10
+      },
+      "end": {
+        "line": 74,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/subscriptions.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 77,
+        "character": 10
+      },
+      "end": {
+        "line": 82,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/subscriptions.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 234,
+        "character": 13
+      },
+      "end": {
+        "line": 385,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/subscriptions.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 236,
+        "character": 10
+      },
+      "end": {
+        "line": 241,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/subscriptions.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 425,
+        "character": 15
+      },
+      "end": {
+        "line": 607,
+        "character": 61
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 427,
+        "character": 10
+      },
+      "end": {
+        "line": 433,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -706,7 +2097,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 436,
+        "character": 10
+      },
+      "end": {
+        "line": 441,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.delete.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 444,
+        "character": 10
+      },
+      "end": {
+        "line": 449,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+name}.delete.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 452,
+        "character": 10
+      },
+      "end": {
+        "line": 457,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+name}.delete.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 609,
+        "character": 12
+      },
+      "end": {
+        "line": 767,
+        "character": 58
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 611,
+        "character": 10
+      },
+      "end": {
+        "line": 617,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -736,7 +2275,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 769,
+        "character": 14
+      },
+      "end": {
+        "line": 940,
+        "character": 59
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 771,
+        "character": 10
+      },
+      "end": {
+        "line": 777,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -766,7 +2363,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 780,
+        "character": 10
+      },
+      "end": {
+        "line": 785,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 788,
+        "character": 10
+      },
+      "end": {
+        "line": 793,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+name}.patch.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 983,
+        "character": 13
+      },
+      "end": {
+        "line": 1138,
+        "character": 76
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}:reactivate.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:reactivate",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 985,
+        "character": 10
+      },
+      "end": {
+        "line": 991,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}:reactivate.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:reactivate",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -796,7 +2511,373 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1148,
+        "character": 16
+      },
+      "end": {
+        "line": 1157,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1160,
+        "character": 21
+      },
+      "end": {
+        "line": 1165,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1163,
+        "character": 16
+      },
+      "end": {
+        "line": 1163,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1168,
+        "character": 12
+      },
+      "end": {
+        "line": 1179,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1182,
+        "character": 17
+      },
+      "end": {
+        "line": 1187,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1190,
+        "character": 15
+      },
+      "end": {
+        "line": 1195,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1198,
+        "character": 12
+      },
+      "end": {
+        "line": 1203,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1206,
+        "character": 20
+      },
+      "end": {
+        "line": 1211,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1209,
+        "character": 16
+      },
+      "end": {
+        "line": 1209,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1214,
+        "character": 20
+      },
+      "end": {
+        "line": 1220,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1223,
+        "character": 18
+      },
+      "end": {
+        "line": 1228,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1231,
+        "character": 19
+      },
+      "end": {
+        "line": 1236,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1239,
+        "character": 24
+      },
+      "end": {
+        "line": 1244,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -827,7 +2908,37 @@
         "error",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1342,
+        "character": 17
+      },
+      "end": {
+        "line": 1345,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Status.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Status",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -858,7 +2969,7 @@
         "notificationEndpoint",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -889,7 +3000,1027 @@
         "payloadOptions",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}:reactivate`. [path: paths./v1/{+name}:reactivate.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:reactivate",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/subscriptions.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/subscriptions.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/subscriptions.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/subscriptions.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:reactivate.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:reactivate",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:reactivate.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:reactivate",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workspaceevents.subscriptions.list' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, poor_ai_interpretability. Original description lacks a summary entirely and provides minimal context about inputs/outputs. Added summary for clarity, expanded description to explain pagination support, return type, and use cases for AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workspaceevents.subscriptions.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "[Developer Preview](https://developers.google.com/workspace/preview): Lists Google Workspace subscriptions. To learn how to use this method, see [List Google Workspace subscriptions](https://developers.google.com/workspace/events/guides/list-subscriptions).",
+      "summary_suggestion": "List all Google Workspace subscriptions",
+      "description_suggestion": "Retrieves a list of all Google Workspace subscriptions for the authenticated user or organization. Supports pagination through optional parameters. Returns a ListSubscriptionsResponse containing subscription objects with their current state, notification endpoints, and event types. Useful for discovering existing subscriptions and their configurations.",
+      "reasoning": "Original description lacks a summary entirely and provides minimal context about inputs/outputs. Added summary for clarity, expanded description to explain pagination support, return type, and use cases for AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workspaceevents.subscriptions.create' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Original lacks summary and provides insufficient detail about required inputs and outputs. Added summary, clarified that a Subscription object is required, specified return value includes subscription ID and state, and noted the immediate activation side effect for AI agents to understand the operation's full impact.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/subscriptions",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workspaceevents.subscriptions.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "[Developer Preview](https://developers.google.com/workspace/preview): Creates a Google Workspace subscription. To learn how to use this method, see [Create a Google Workspace subscription](https://developers.google.com/workspace/events/guides/create-subscription).",
+      "summary_suggestion": "Create a new Google Workspace subscription",
+      "description_suggestion": "Creates a new subscription to receive events from a Google Workspace resource. Requires a Subscription object in the request body specifying the target resource, event types, and notification endpoint. Returns the created Subscription object with a unique subscription ID and initial state of ACTIVE. The subscription will begin delivering events to the specified endpoint immediately upon creation.",
+      "reasoning": "Original lacks summary and provides insufficient detail about required inputs and outputs. Added summary, clarified that a Subscription object is required, specified return value includes subscription ID and state, and noted the immediate activation side effect for AI agents to understand the operation's full impact.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/subscriptions",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workspaceevents.subscriptions.delete' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Original lacks summary and omits critical details about the required name parameter and permanent nature of deletion. Added summary, clarified the required path parameter, specified the empty response, and emphasized the irreversible side effects and event loss for AI agents to understand the destructive nature of this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workspaceevents.subscriptions.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "[Developer Preview](https://developers.google.com/workspace/preview): Deletes a Google Workspace subscription. To learn how to use this method, see [Delete a Google Workspace subscription](https://developers.google.com/workspace/events/guides/delete-subscription).",
+      "summary_suggestion": "Delete a Google Workspace subscription",
+      "description_suggestion": "Permanently deletes a Google Workspace subscription identified by its resource name. Requires the subscription name parameter in the path. Returns an empty response on successful deletion. Once deleted, the subscription will no longer deliver events and cannot be recovered. Any pending events for this subscription will be discarded.",
+      "reasoning": "Original lacks summary and omits critical details about the required name parameter and permanent nature of deletion. Added summary, clarified the required path parameter, specified the empty response, and emphasized the irreversible side effects and event loss for AI agents to understand the destructive nature of this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workspaceevents.subscriptions.get' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, poor_ai_interpretability. Original lacks summary and provides minimal context about inputs and outputs. Added summary, clarified the required name parameter, specified the returned Subscription object and its key fields, and provided use case context for AI agents to understand when to invoke this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workspaceevents.subscriptions.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "[Developer Preview](https://developers.google.com/workspace/preview): Gets details about a Google Workspace subscription. To learn how to use this method, see [Get details about a Google Workspace subscription](https://developers.google.com/workspace/events/guides/get-subscription).",
+      "summary_suggestion": "Get details about a subscription",
+      "description_suggestion": "Retrieves detailed information about a specific Google Workspace subscription by its resource name. Requires the subscription name as a path parameter. Returns a Subscription object containing the subscription's configuration, current state, notification endpoint, event types, and other metadata. Use this to verify subscription settings or monitor subscription health.",
+      "reasoning": "Original lacks summary and provides minimal context about inputs and outputs. Added summary, clarified the required name parameter, specified the returned Subscription object and its key fields, and provided use case context for AI agents to understand when to invoke this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workspaceevents.subscriptions.patch' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, poor_ai_interpretability. Original lacks summary and is vague about update mechanics. Added summary, clarified the required name parameter and Subscription request body, explained partial update support, specified the returned object, and provided use cases for AI agents to understand when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workspaceevents.subscriptions.patch",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "[Developer Preview](https://developers.google.com/workspace/preview): Updates or renews a Google Workspace subscription. To learn how to use this method, see [Update or renew a Google Workspace subscription](https://developers.google.com/workspace/events/guides/update-subscription).",
+      "summary_suggestion": "Update or renew a subscription",
+      "description_suggestion": "Updates an existing Google Workspace subscription or renews its expiration. Requires the subscription name as a path parameter and a Subscription object in the request body with the fields to update. Supports partial updates - only specified fields will be modified. Returns the updated Subscription object. Use this to modify notification endpoints, event types, or extend subscription lifetime.",
+      "reasoning": "Original lacks summary and is vague about update mechanics. Added summary, clarified the required name parameter and Subscription request body, explained partial update support, specified the returned object, and provided use cases for AI agents to understand when and how to use this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'workspaceevents.subscriptions.reactivate' has semantic quality issues: vague_summary, missing_input_details, poor_ai_interpretability. Original lacks summary and while description is detailed, it could be more structured for AI agent clarity. Added concise summary, reorganized description to clearly state prerequisites, required parameters, state validation, and the immediate side effect of event delivery resumption for better AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:reactivate",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "workspaceevents.subscriptions.reactivate",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "[Developer Preview](https://developers.google.com/workspace/preview): Reactivates a suspended Google Workspace subscription. This method resets your subscription's `State` field to `ACTIVE`. Before you use this method, you must fix the error that suspended the subscription. This method will ignore or reject any subscription that isn't currently in a suspended state. To learn how to use this method, see [Reactivate a Google Workspace subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).",
+      "summary_suggestion": "Reactivate a suspended subscription",
+      "description_suggestion": "Reactivates a suspended Google Workspace subscription by resetting its state to ACTIVE. Requires the subscription name as a path parameter and a ReactivateSubscriptionRequest object. The subscription must be in a SUSPENDED state; the operation will reject subscriptions in other states. Prerequisites: the underlying error that caused suspension must be resolved first. Returns the reactivated Subscription object with state set to ACTIVE. Event delivery resumes immediately upon successful reactivation.",
+      "reasoning": "Original lacks summary and while description is detailed, it could be more structured for AI agent clarity. Added concise summary, reorganized description to clearly state prerequisites, required parameters, state validation, and the immediate side effect of event delivery resumption for better AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:reactivate",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 6 operations analyzed, 6 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 6,
+      "total_issues_found": 6,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 47 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 47
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 47 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 47
     }
   }
 ]

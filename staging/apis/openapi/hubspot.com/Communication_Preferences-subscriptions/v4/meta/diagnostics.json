@@ -7,25 +7,68 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Total Operations count: 9",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 9,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -36,25 +79,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -65,25 +104,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.get.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Schemas count: 204",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 204
     }
   },
   {
@@ -94,25 +129,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.post.operationId]",
-    "severity": 1,
-    "code": "operation-operationId-url-safe",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps"
+        ]
+      ]
     }
   },
   {
@@ -123,22 +166,36 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Security scheme types: ['apiKey', 'oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey",
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps"
+        ]
+      ]
     }
   },
   {
@@ -149,24 +206,52 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        },
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "private-app",
+          "oauth2_flows": []
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps"
+        ]
+      ]
     }
   },
   {
@@ -177,24 +262,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Tags count: 2",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 2
     }
   },
   {
@@ -205,14 +287,2496 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/write.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Expected examples: 243",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 243
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 5",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 5
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 5",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 5
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 16",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 16,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 9",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 9,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 264",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 264,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "responses",
+          "207"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "responses",
+          "207"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "numErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicWideStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchInputString"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchInputString",
+          "properties",
+          "inputs"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchInputString",
+          "properties",
+          "inputs",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusBulkResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusBulkResponse",
+          "properties",
+          "subscriberIdString"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusBulkResponse",
+          "properties",
+          "statuses"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "StandardError",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicSubscriptionTranslation"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicSubscriptionTranslation",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicSubscriptionTranslation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicSubscriptionTranslation",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicSubscriptionTranslation",
+          "properties",
+          "subscriptionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicSubscriptionTranslation",
+          "properties",
+          "languageCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicSubscriptionTranslation",
+          "properties",
+          "updatedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartialPublicStatusRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartialPublicStatusRequest",
+          "properties",
+          "statusState"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartialPublicStatusRequest",
+          "properties",
+          "channel"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartialPublicStatusRequest",
+          "properties",
+          "legalBasis"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartialPublicStatusRequest",
+          "properties",
+          "subscriptionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PartialPublicStatusRequest",
+          "properties",
+          "legalBasisExplanation"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "subscriptionName"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "channel"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "subscriberIdString"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "legalBasis"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "setStatusSuccessReason"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "source"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "subscriptionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "legalBasisExplanation"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "businessUnitId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatus",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "numErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "numErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponseWithErrors",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "statusState"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "channel"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "subscriberIdString"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "legalBasis"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "subscriptionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "legalBasisExplanation"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatusBulkResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatusBulkResponse",
+          "properties",
+          "wideStatuses"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatusBulkResponse",
+          "properties",
+          "subscriberIdString"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicStatusBulkResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "numErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsPublicStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatus",
+          "properties",
+          "wideStatusType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatus",
+          "properties",
+          "subscriberIdString"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatus",
+          "properties",
+          "channel"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatus",
+          "properties",
+          "businessUnitId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicWideStatus",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "numErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "ActionResponseWithResultsSubscriptionDefinition",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchInputPublicStatusRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchInputPublicStatusRequest",
+          "properties",
+          "inputs"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "isInternal"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "isDefault"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "communicationMethod"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "purpose"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "isActive"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "businessUnitId"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "subscriptionTranslations"
+        ],
+        [
+          "components",
+          "schemas",
+          "SubscriptionDefinition",
+          "properties",
+          "updatedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "numErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicWideStatusBulkResponseWithErrors",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "completedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "numErrors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "requestedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "startedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "BatchResponsePublicBulkOptOutFromAllResponse",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicBulkOptOutFromAllResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicBulkOptOutFromAllResponse",
+          "properties",
+          "subscriberIdString"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicBulkOptOutFromAllResponse",
+          "properties",
+          "statuses"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 60",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 60,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "responses",
+          "207"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/definitions",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "responses",
+          "207"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "statusState"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "channel"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "subscriberIdString"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "legalBasis"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "subscriptionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicStatusRequest",
+          "properties",
+          "legalBasisExplanation"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 11",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -221,241 +2785,15 @@
         "paths",
         "/communication-preferences/v4/statuses/batch/write",
         "post",
-        "responses"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/read.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/batch/read",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/batch/unsubscribe-all",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/definitions.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/definitions",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all/read.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/communication-preferences/v4/statuses/{subscriberIdString}",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 11,
+      "paths": []
     }
   },
   {
@@ -481,7 +2819,7 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -507,7 +2845,33 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 26,
+        "character": 10
+      },
+      "end": {
+        "line": 746,
+        "character": 52
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -539,7 +2903,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -568,7 +2932,127 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 84,
+        "character": 10
+      },
+      "end": {
+        "line": 92,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 95,
+        "character": 10
+      },
+      "end": {
+        "line": 104,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 107,
+        "character": 10
+      },
+      "end": {
+        "line": 116,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 119,
+        "character": 10
+      },
+      "end": {
+        "line": 129,
+        "character": 23
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -600,7 +3084,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -632,7 +3116,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -661,7 +3145,127 @@
         "post",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 180,
+        "character": 10
+      },
+      "end": {
+        "line": 188,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 191,
+        "character": 10
+      },
+      "end": {
+        "line": 200,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 203,
+        "character": 10
+      },
+      "end": {
+        "line": 212,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "post",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 215,
+        "character": 10
+      },
+      "end": {
+        "line": 225,
+        "character": 23
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "post",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -693,7 +3297,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -725,7 +3329,67 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 278,
+        "character": 10
+      },
+      "end": {
+        "line": 287,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/statuses/batch/read.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/read",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 290,
+        "character": 10
+      },
+      "end": {
+        "line": 300,
+        "character": 23
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./communication-preferences/v4/statuses/batch/read.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/read",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -757,7 +3421,97 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 363,
+        "character": 10
+      },
+      "end": {
+        "line": 372,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 375,
+        "character": 10
+      },
+      "end": {
+        "line": 384,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 387,
+        "character": 10
+      },
+      "end": {
+        "line": 397,
+        "character": 23
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all.post.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+        "post",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -789,7 +3543,67 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 450,
+        "character": 10
+      },
+      "end": {
+        "line": 459,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/definitions.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/definitions",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 462,
+        "character": 10
+      },
+      "end": {
+        "line": 470,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./communication-preferences/v4/definitions.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/definitions",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -821,7 +3635,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -853,7 +3667,67 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 522,
+        "character": 10
+      },
+      "end": {
+        "line": 531,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all/read.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 534,
+        "character": 10
+      },
+      "end": {
+        "line": 544,
+        "character": 23
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all/read.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -885,7 +3759,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -914,7 +3788,97 @@
         "get",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 607,
+        "character": 10
+      },
+      "end": {
+        "line": 615,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 618,
+        "character": 10
+      },
+      "end": {
+        "line": 627,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 630,
+        "character": 10
+      },
+      "end": {
+        "line": 640,
+        "character": 23
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -946,7 +3910,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -978,7 +3942,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1007,7 +3971,37 @@
         "post",
         "operationId"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 691,
+        "character": 10
+      },
+      "end": {
+        "line": 699,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1039,7 +4033,7 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1071,7 +4065,1442 @@
         "private_apps",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 768,
+        "character": 22
+      },
+      "end": {
+        "line": 770,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ActionResponseWithResultsPublicWideStatus.properties.numErrors]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ActionResponseWithResultsPublicWideStatus",
+        "properties",
+        "numErrors"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 902,
+        "character": 22
+      },
+      "end": {
+        "line": 904,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicSubscriptionTranslation.properties.createdAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicSubscriptionTranslation",
+        "properties",
+        "createdAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 912,
+        "character": 27
+      },
+      "end": {
+        "line": 914,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicSubscriptionTranslation.properties.subscriptionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicSubscriptionTranslation",
+        "properties",
+        "subscriptionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 919,
+        "character": 22
+      },
+      "end": {
+        "line": 921,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicSubscriptionTranslation.properties.updatedAt]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicSubscriptionTranslation",
+        "properties",
+        "updatedAt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 959,
+        "character": 27
+      },
+      "end": {
+        "line": 961,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PartialPublicStatusRequest.properties.subscriptionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PartialPublicStatusRequest",
+        "properties",
+        "subscriptionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1015,
+        "character": 27
+      },
+      "end": {
+        "line": 1017,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicStatus.properties.subscriptionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicStatus",
+        "properties",
+        "subscriptionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1022,
+        "character": 27
+      },
+      "end": {
+        "line": 1024,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicStatus.properties.businessUnitId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicStatus",
+        "properties",
+        "businessUnitId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1053,
+        "character": 22
+      },
+      "end": {
+        "line": 1055,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BatchResponsePublicStatus.properties.numErrors]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BatchResponsePublicStatus",
+        "properties",
+        "numErrors"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1107,
+        "character": 22
+      },
+      "end": {
+        "line": 1109,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BatchResponsePublicStatusBulkResponseWithErrors.properties.numErrors]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BatchResponsePublicStatusBulkResponseWithErrors",
+        "properties",
+        "numErrors"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1260,
+        "character": 27
+      },
+      "end": {
+        "line": 1263,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicStatusRequest.properties.subscriptionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicStatusRequest",
+        "properties",
+        "subscriptionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1346,
+        "character": 22
+      },
+      "end": {
+        "line": 1348,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ActionResponseWithResultsPublicStatus.properties.numErrors]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ActionResponseWithResultsPublicStatus",
+        "properties",
+        "numErrors"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1497,
+        "character": 27
+      },
+      "end": {
+        "line": 1499,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicWideStatus.properties.businessUnitId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicWideStatus",
+        "properties",
+        "businessUnitId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1528,
+        "character": 22
+      },
+      "end": {
+        "line": 1530,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ActionResponseWithResultsSubscriptionDefinition.properties.numErrors]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ActionResponseWithResultsSubscriptionDefinition",
+        "properties",
+        "numErrors"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1596,
+        "character": 23
+      },
+      "end": {
+        "line": 1597,
+        "character": 29
+      }
+    },
+    "message": "Potentially exposing internals (words \"private\" or \"internal\" spotted) [path: components.schemas.SubscriptionDefinition.properties.isInternal]",
+    "severity": 2,
+    "code": "monite-general-exposing-internals",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SubscriptionDefinition",
+        "properties",
+        "isInternal"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1624,
+        "character": 27
+      },
+      "end": {
+        "line": 1626,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SubscriptionDefinition.properties.businessUnitId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SubscriptionDefinition",
+        "properties",
+        "businessUnitId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1653,
+        "character": 22
+      },
+      "end": {
+        "line": 1655,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BatchResponsePublicWideStatusBulkResponseWithErrors.properties.numErrors]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BatchResponsePublicWideStatusBulkResponseWithErrors",
+        "properties",
+        "numErrors"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1707,
+        "character": 22
+      },
+      "end": {
+        "line": 1709,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BatchResponsePublicBulkOptOutFromAllResponse.properties.numErrors]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BatchResponsePublicBulkOptOutFromAllResponse",
+        "properties",
+        "numErrors"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.get.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation `operationId` should not have URL invalid characters. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.post.operationId]",
+    "severity": 1,
+    "code": "operation-operationId-url-safe",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/write.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/write",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/read.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/read",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/definitions.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/definitions",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/batch/unsubscribe-all/read.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./communication-preferences/v4/statuses/{subscriberIdString}.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get-/communication-preferences/v4/statuses/{subscriberIdString}' has semantic quality issues: vague_description, missing_output_details, missing_context. The current description is too brief and lacks important details. It doesn't explain what 'subscription preferences' includes, what the subscriberIdString parameter represents, or what the response contains. Added clarity about the return value structure, the purpose of the operation in context of subscription management, and guidance for AI agents on when to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get-/communication-preferences/v4/statuses/{subscriberIdString}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Get subscription preferences for a specific contact",
+      "current_description": "Retrieve a contact's current email subscription preferences.",
+      "description_suggestion": "Retrieves the current subscription status and preferences for a specific contact identified by subscriberIdString. Returns detailed subscription information including all communication channel preferences and opt-out status. Use this operation to check a contact's current communication preferences before updating or to display their subscription settings.",
+      "reasoning": "The current description is too brief and lacks important details. It doesn't explain what 'subscription preferences' includes, what the subscriberIdString parameter represents, or what the response contains. Added clarity about the return value structure, the purpose of the operation in context of subscription management, and guidance for AI agents on when to use this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post-/communication-preferences/v4/statuses/{subscriberIdString}' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_side_effects. The current description lacks critical details for AI agent usability. It doesn't specify what request body is expected, what fields can be modified, what the response contains, or what side effects occur (i.e., that this changes which communications a contact receives). Added information about the request schema, the nature of updates supported, the response content, and the side effect of modifying communication delivery.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post-/communication-preferences/v4/statuses/{subscriberIdString}",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Update a contact's subscription status",
+      "current_description": "Set the subscription status of a specific contact.",
+      "description_suggestion": "Updates the subscription status and communication preferences for a specific contact identified by subscriberIdString. Accepts a PartialPublicStatusRequest body to modify subscription settings for one or more communication channels. Returns the updated subscription status reflecting all changes. This operation modifies the contact's communication preferences and may affect which communications they receive.",
+      "reasoning": "The current description lacks critical details for AI agent usability. It doesn't specify what request body is expected, what fields can be modified, what the response contains, or what side effects occur (i.e., that this changes which communications a contact receives). Added information about the request schema, the nature of updates supported, the response content, and the side effect of modifying communication delivery.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post-/communication-preferences/v4/statuses/batch/write' has semantic quality issues: missing_input_details, missing_output_details, missing_side_effects. Description lacks detail about what inputs are expected (batch format), what the response contains, and clarification that this modifies subscription state. Added specificity about batch processing, return values, and side effects for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/write",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post-/communication-preferences/v4/statuses/batch/write",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Batch update subscription status",
+      "current_description": "Update the subscription status for a set of contacts.",
+      "description_suggestion": "Update subscription status for multiple contacts in a single request. Accepts a batch of contact identifiers with their desired subscription status changes. Returns confirmation of updates applied and any errors encountered. Modifies subscription preferences for all specified contacts.",
+      "reasoning": "Description lacks detail about what inputs are expected (batch format), what the response contains, and clarification that this modifies subscription state. Added specificity about batch processing, return values, and side effects for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/write",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post-/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all' has semantic quality issues: missing_output_details, missing_side_effects. Description is too minimal. Missing information about what the operation returns and clarification that this is a state-changing operation with permanent effects. Added return value details and side effect information for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post-/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Unsubscribe a contact from all subscriptions",
+      "current_description": "Unsubscribe a contact from all email subscriptions.",
+      "description_suggestion": "Unsubscribe a contact from all email subscriptions. Requires the contact's subscriber ID. Returns confirmation of the opt-out action and the updated subscription status. This operation permanently modifies the contact's communication preferences across all subscription types.",
+      "reasoning": "Description is too minimal. Missing information about what the operation returns and clarification that this is a state-changing operation with permanent effects. Added return value details and side effect information for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/{subscriberIdString}/unsubscribe-all",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post-/communication-preferences/v4/statuses/batch/read' has semantic quality issues: missing_output_details. Description lacks clarity about what data is returned and doesn't explain the dual response codes (200 vs 207). Added information about return values and the partial success scenario to help AI agents understand possible outcomes.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/read",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post-/communication-preferences/v4/statuses/batch/read",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details"
+      ],
+      "current_summary": "Batch retrieve subscription statuses",
+      "current_description": "Batch retrieve subscription statuses for a set of contacts.",
+      "description_suggestion": "Retrieve subscription statuses for multiple contacts in a single request. Accepts a batch of contact identifiers and returns their current subscription status for each subscription type. Supports partial success with 207 response indicating some contacts may have failed.",
+      "reasoning": "Description lacks clarity about what data is returned and doesn't explain the dual response codes (200 vs 207). Added information about return values and the partial success scenario to help AI agents understand possible outcomes.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/read",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post-/communication-preferences/v4/statuses/batch/unsubscribe-all' has semantic quality issues: missing_output_details, missing_side_effects. Description is incomplete. Missing details about return values and clarification that this is a state-changing operation affecting multiple contacts. Added information about batch processing results and permanent side effects.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post-/communication-preferences/v4/statuses/batch/unsubscribe-all",
+      "has_quality_issues": true,
+      "issues_found": [
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Batch unsubscribe contacts from all subscriptions",
+      "current_description": "Unsubscribe a set of contacts from all email subscriptions.",
+      "description_suggestion": "Unsubscribe multiple contacts from all email subscriptions in a single batch operation. Accepts a batch of contact identifiers and opts them out of all communications. Returns confirmation of opt-outs applied and any processing errors. Permanently modifies communication preferences for all specified contacts.",
+      "reasoning": "Description is incomplete. Missing details about return values and clarification that this is a state-changing operation affecting multiple contacts. Added information about batch processing results and permanent side effects.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post-/communication-preferences/v4/statuses/batch/unsubscribe-all/read' has semantic quality issues: vague_summary, missing_output_details. Summary is awkwardly phrased and unclear about the read/check nature. Description lacks clarity about return values and doesn't explain the dual response codes. Improved summary to be more concise and action-oriented, and enhanced description with return value details and partial success handling.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post-/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "Batch retrieve contacts who have opted out of all communications",
+      "current_description": "Checks whether a set of contacts have opted out of all communications.",
+      "summary_suggestion": "Check opt-out status for multiple contacts",
+      "description_suggestion": "Check whether multiple contacts have opted out of all communications in a batch operation. Accepts a batch of contact identifiers and returns their opt-out status for each contact. Returns empty results for contacts who have not opted out of all communications. Supports partial success with 207 response.",
+      "reasoning": "Summary is awkwardly phrased and unclear about the read/check nature. Description lacks clarity about return values and doesn't explain the dual response codes. Improved summary to be more concise and action-oriented, and enhanced description with return value details and partial success handling.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/communication-preferences/v4/statuses/batch/unsubscribe-all/read",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 9 operations analyzed, 7 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 9,
+      "total_issues_found": 7,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 49 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 49
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 49 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 49
     }
   }
 ]

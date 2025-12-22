@@ -1,0 +1,889 @@
+{
+  "metadata": {
+    "version": "1.2.0",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "b426485521c1f9eec601ea451611eec0",
+    "name": "Data API",
+    "apiDescriptionVersion": "1.2.0",
+    "specification": "openapi",
+    "specificationVersion": "3.0.0",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/clever.com/main/1.2.0/openapi.json",
+    "vendor": {
+      "name": "clever.com",
+      "domain": null,
+      "contact": {
+        "name": "",
+        "email": ""
+      }
+    },
+    "operationCount": 44,
+    "schemaCount": 278,
+    "securitySchemeCount": 1,
+    "securitySchemeTypes": [
+      "oauth2"
+    ],
+    "tagCount": 8
+  },
+  "summary": {
+    "scoringDate": "2025-12-15T22:38:11+00:00",
+    "score": 13.04,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 73.07,
+        "grade": "A-"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 50.0,
+        "grade": "C-"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 8.65,
+        "grade": "F"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 5.02,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 90.0,
+        "grade": "A+"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 50.0,
+        "grade": "C-"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 60.86,
+      "grade": "B-",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 73.07,
+          "grade": "A-",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.92,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 5,
+                  "warning": 265,
+                  "info": 64,
+                  "hint": 0
+                },
+                "weighted_cost": 3.7265,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 0.0,
+              "metadata": {
+                "failure_reason": "validation_errors",
+                "diagnostic_counts": {
+                  "error": 5,
+                  "warning": 265,
+                  "information": 64,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 1.0,
+              "metadata": {
+                "structural_issues": 0,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 0,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 50.0,
+          "grade": "C-",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 7.0,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 8.65,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.17,
+              "metadata": {
+                "described_elements": 92,
+                "undescribed_elements": 440,
+                "describable_elements": 532,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.0,
+              "metadata": {
+                "summaries_present": 0,
+                "missing_summaries": 88,
+                "summaries_expected": 88,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 5.02,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.05,
+              "metadata": {
+                "total_operations": 44,
+                "max_schema_depth": 10,
+                "normalised_endpoint_count": 0.88,
+                "normalised_schema_depth": 1.0,
+                "raw_complexity": 0.94,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 71.82,
+      "grade": "A-",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 90.0,
+          "grade": "A+",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.9,
+              "metadata": {
+                "strength_scores": [
+                  0.9
+                ],
+                "schemes_count": 1,
+                "schemes": [
+                  {
+                    "type": "oauth2",
+                    "score": 0.9,
+                    "details": {
+                      "flows": [
+                        "authorizationCode"
+                      ]
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 50.0,
+          "grade": "C-",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.5,
+              "metadata": {
+                "number_of_describable_elements": 44,
+                "operations_with_issues": 44,
+                "operations_without_issues": 0,
+                "sum_of_element_descriptive_scores": 44.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "getSectionsForTeacher",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getStudentsForTeacher",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getTeacherForSection",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getTeachersForSection",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getStudents",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getStudent",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getContactsForStudent",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictForStudent",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchoolForStudent",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getContacts",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getContact",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictForStudentContact",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getStudentForContact",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictAdmins",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictAdmin",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistricts",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getStudentsForSchool",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getTeachersForSchool",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSections",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSection",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictForSection",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchoolForSection",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getStudentsForSection",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchoolAdmins",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchoolAdmin",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchoolsForSchoolAdmin",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchools",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchool",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictForSchool",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSectionsForSchool",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSectionsForStudent",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getTeachersForStudent",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getTeachers",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getTeacher",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictForTeacher",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getGradeLevelsForTeacher",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchoolForTeacher",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details",
+                      "inconsistent_terminology"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrict",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAdminsForDistrict",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSchoolsForDistrict",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getSectionsForDistrict",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getDistrictStatus",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getStudentsForDistrict",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getTeachersForDistrict",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_input_details"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -7,23 +7,43 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'api_key' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 4",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 4,
+      "paths": [
+        [
+          "paths",
+          "/contentpro-search",
+          "get"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post"
+        ],
+        [
+          "paths",
+          "/search",
+          "get"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -34,24 +54,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -62,25 +79,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./contentpro-search.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Schemas count: 87",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/contentpro-search",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 87
     }
   },
   {
@@ -91,29 +104,28 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Required property 'terms' is undefined. [path: paths./contentpro-search.get.parameters.0.schema.required.0]",
-    "severity": 2,
-    "code": "no-required-schema-properties-undefined",
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/contentpro-search",
-        "get",
-        "parameters",
-        0,
-        "schema",
-        "required",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ]
+      ]
     }
   },
   {
@@ -124,25 +136,30 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./contentpro-similar-text.post.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/contentpro-similar-text",
-        "post",
-        "operationId"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ]
+      ]
     }
   },
   {
@@ -153,14 +170,1479 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `operationId` field. [path: paths./search.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "x-api-key",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 4",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 4
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 98",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 98
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 8",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 8,
+      "paths": [
+        [
+          "paths",
+          "/contentpro-search"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post"
+        ],
+        [
+          "paths",
+          "/search"
+        ],
+        [
+          "paths",
+          "/search",
+          "get"
+        ],
+        [
+          "paths",
+          "/similar"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 4",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 4,
+      "paths": [
+        [
+          "paths",
+          "/contentpro-search",
+          "get"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post"
+        ],
+        [
+          "paths",
+          "/search",
+          "get"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 121",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 121,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/contentpro-search"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "parameters",
+          0,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "calls_per_month"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "count_remaining"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "data"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "data",
+          "items"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "renewal_date"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "501"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "calls_per_month"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "count_remaining"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "data"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "data",
+          "items"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "renewal_date"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "501"
+        ],
+        [
+          "paths",
+          "/search"
+        ],
+        [
+          "paths",
+          "/search",
+          "get"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          0,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          1,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "calls_per_month"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "companies"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "count_remaining"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "renewal_date"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "501"
+        ],
+        [
+          "paths",
+          "/similar"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          0,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          1,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "calls_per_month"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "companies"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "count_remaining"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "renewal_date"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "501"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "pubdate"
+        ],
+        [
+          "components",
+          "schemas",
+          "Article",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany",
+          "properties",
+          "companyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany",
+          "properties",
+          "employee"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany",
+          "properties",
+          "industry"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany",
+          "properties",
+          "linkedin"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany",
+          "properties",
+          "twitter"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProCompany",
+          "properties",
+          "website"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProSnippets"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProSnippets",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProSnippets",
+          "properties",
+          "description",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProSnippets",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProSnippets",
+          "properties",
+          "text",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProSnippets",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContentProSnippets",
+          "properties",
+          "title",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany",
+          "properties",
+          "companyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany",
+          "properties",
+          "country"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany",
+          "properties",
+          "employee"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany",
+          "properties",
+          "industry"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany",
+          "properties",
+          "linkedin"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany",
+          "properties",
+          "twitter"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputCompany",
+          "properties",
+          "website"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "companyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "employee"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "industry"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "linkedin"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "twitter"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompany",
+          "properties",
+          "website"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "companyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "employee"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "industry"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "linkedin"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "snippets"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "twitter"
+        ],
+        [
+          "components",
+          "schemas",
+          "SimilarCompanySearch",
+          "properties",
+          "website"
+        ],
+        [
+          "components",
+          "schemas",
+          "Snippet"
+        ],
+        [
+          "components",
+          "schemas",
+          "Snippet",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Snippet",
+          "properties",
+          "description",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Snippet",
+          "properties",
+          "text"
+        ],
+        [
+          "components",
+          "schemas",
+          "Snippet",
+          "properties",
+          "text",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Snippet",
+          "properties",
+          "title"
+        ],
+        [
+          "components",
+          "schemas",
+          "Snippet",
+          "properties",
+          "title",
+          "items"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 31",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 31,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "parameters",
+          0,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "responses",
+          "501"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "requestBody",
+          "content",
+          "application/json",
+          "schema",
+          "properties",
+          "text"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "responses",
+          "501"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          0,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "parameters",
+          1,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "responses",
+          "501"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          0,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "parameters",
+          1,
+          "schema",
+          "properties",
+          "link"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "400"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "403"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "responses",
+          "501"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "api_key"
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 9",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -169,137 +1651,18 @@
         "paths",
         "/search",
         "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Required property 'terms' is undefined. [path: paths./search.get.parameters.0.schema.required.0]",
-    "severity": 2,
-    "code": "no-required-schema-properties-undefined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/search",
-        "get",
-        "parameters",
-        0,
+        "responses",
+        "200",
+        "content",
+        "application/json",
         "schema",
-        "required",
-        0
+        "properties",
+        "companies",
+        "items"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Required property 'page' is undefined. [path: paths./search.get.parameters.1.schema.required.0]",
-    "severity": 2,
-    "code": "no-required-schema-properties-undefined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/search",
-        "get",
-        "parameters",
-        1,
-        "schema",
-        "required",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./similar.get.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/similar",
-        "get",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Required property 'page' is undefined. [path: paths./similar.get.parameters.1.schema.required.0]",
-    "severity": 2,
-    "code": "no-required-schema-properties-undefined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/similar",
-        "get",
-        "parameters",
-        1,
-        "schema",
-        "required",
-        0
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 9,
+      "paths": []
     }
   },
   {
@@ -327,7 +1690,33 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 24,
+        "character": 10
+      },
+      "end": {
+        "line": 440,
+        "character": 220
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -355,7 +1744,7 @@
         "/contentpro-search",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -383,7 +1772,127 @@
         "/contentpro-search",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 28,
+        "character": 10
+      },
+      "end": {
+        "line": 43,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./contentpro-search.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-search",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 86,
+        "character": 16
+      },
+      "end": {
+        "line": 87,
+        "character": 127
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./contentpro-search.get.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-search",
+        "get",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 89,
+        "character": 16
+      },
+      "end": {
+        "line": 90,
+        "character": 116
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./contentpro-search.get.responses.403]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-search",
+        "get",
+        "responses",
+        "403"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 92,
+        "character": 16
+      },
+      "end": {
+        "line": 93,
+        "character": 110
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./contentpro-search.get.responses.501]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-search",
+        "get",
+        "responses",
+        "501"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -413,7 +1922,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -441,7 +1950,7 @@
         "/contentpro-similar-text",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -469,7 +1978,97 @@
         "/contentpro-similar-text",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 166,
+        "character": 16
+      },
+      "end": {
+        "line": 167,
+        "character": 127
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./contentpro-similar-text.post.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-similar-text",
+        "post",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 169,
+        "character": 16
+      },
+      "end": {
+        "line": 170,
+        "character": 116
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./contentpro-similar-text.post.responses.403]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-similar-text",
+        "post",
+        "responses",
+        "403"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 172,
+        "character": 16
+      },
+      "end": {
+        "line": 173,
+        "character": 110
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./contentpro-similar-text.post.responses.501]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-similar-text",
+        "post",
+        "responses",
+        "501"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -499,7 +2098,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -527,7 +2126,7 @@
         "/search",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -555,7 +2154,157 @@
         "/search",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 228,
+        "character": 10
+      },
+      "end": {
+        "line": 243,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./search.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 246,
+        "character": 10
+      },
+      "end": {
+        "line": 262,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./search.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 294,
+        "character": 16
+      },
+      "end": {
+        "line": 295,
+        "character": 127
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./search.get.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 297,
+        "character": 16
+      },
+      "end": {
+        "line": 298,
+        "character": 116
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./search.get.responses.403]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "responses",
+        "403"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 300,
+        "character": 16
+      },
+      "end": {
+        "line": 301,
+        "character": 110
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./search.get.responses.501]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "responses",
+        "501"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -585,7 +2334,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -613,7 +2362,7 @@
         "/similar",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -641,7 +2390,67 @@
         "/similar",
         "get"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 336,
+        "character": 10
+      },
+      "end": {
+        "line": 351,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./similar.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 354,
+        "character": 10
+      },
+      "end": {
+        "line": 370,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./similar.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -677,7 +2486,97 @@
         "input_company",
         "type"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 406,
+        "character": 16
+      },
+      "end": {
+        "line": 407,
+        "character": 127
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./similar.get.responses.400]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get",
+        "responses",
+        "400"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 409,
+        "character": 16
+      },
+      "end": {
+        "line": 410,
+        "character": 116
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./similar.get.responses.403]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get",
+        "responses",
+        "403"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 412,
+        "character": 16
+      },
+      "end": {
+        "line": 413,
+        "character": 110
+      }
+    },
+    "message": "Error responses MUST describe the error [path: paths./similar.get.responses.501]",
+    "severity": 2,
+    "code": "no-errors-without-content",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get",
+        "responses",
+        "501"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -707,7 +2606,633 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./contentpro-search.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-search",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Required property 'terms' is undefined. [path: paths./contentpro-search.get.parameters.0.schema.required.0]",
+    "severity": 2,
+    "code": "no-required-schema-properties-undefined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-search",
+        "get",
+        "parameters",
+        "0",
+        "schema",
+        "required",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./contentpro-similar-text.post.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-similar-text",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./search.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Required property 'terms' is undefined. [path: paths./search.get.parameters.0.schema.required.0]",
+    "severity": 2,
+    "code": "no-required-schema-properties-undefined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "parameters",
+        "0",
+        "schema",
+        "required",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Required property 'page' is undefined. [path: paths./search.get.parameters.1.schema.required.0]",
+    "severity": 2,
+    "code": "no-required-schema-properties-undefined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get",
+        "parameters",
+        "1",
+        "schema",
+        "required",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./similar.get.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Required property 'page' is undefined. [path: paths./similar.get.parameters.1.schema.required.0]",
+    "severity": 2,
+    "code": "no-required-schema-properties-undefined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get",
+        "parameters",
+        "1",
+        "schema",
+        "required",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/contentpro-search' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_context. Original summary is somewhat vague about the search mechanism. Description is completely missing, which severely impacts AI agent interpretability. Added details about input requirements (search query parameter), output structure (articles with company info and snippets), and important context about ContentPro access restrictions mentioned in the API documentation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-search",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/contentpro-search",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Send search terms to receive the most relevant articles and companies.",
+      "current_description": "",
+      "summary_suggestion": "Search for articles and companies by keywords",
+      "description_suggestion": "Searches for articles and companies matching the provided search terms. Returns the most relevant articles with company information and content snippets. Requires a search query parameter. Note: This endpoint is part of the ContentPro feature set and may require special access - contact support@byautomata.io if unavailable.",
+      "reasoning": "Original summary is somewhat vague about the search mechanism. Description is completely missing, which severely impacts AI agent interpretability. Added details about input requirements (search query parameter), output structure (articles with company info and snippets), and important context about ContentPro access restrictions mentioned in the API documentation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/contentpro-search",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post_/contentpro-similar-text' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, missing_context. Summary has a typo ('and arbitrary' should be 'an arbitrary') and is awkwardly phrased. Description is missing entirely. Added clarity about input format (request body), output structure (articles with company attribution), use cases for AI agents, and important ContentPro access context. Improved summary to be more concise and action-oriented.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/contentpro-similar-text",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post_/contentpro-similar-text",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.",
+      "current_description": "",
+      "summary_suggestion": "Find similar articles and blogs by text content",
+      "description_suggestion": "Accepts arbitrary text content and returns similar articles and blog posts written by companies. Useful for finding related content or competitive intelligence. Requires text input in the request body. Returns matching articles with company attribution and content snippets. Note: This endpoint is part of the ContentPro feature set and may require special access - contact support@byautomata.io if unavailable.",
+      "reasoning": "Summary has a typo ('and arbitrary' should be 'an arbitrary') and is awkwardly phrased. Description is missing entirely. Added clarity about input format (request body), output structure (articles with company attribution), use cases for AI agents, and important ContentPro access context. Improved summary to be more concise and action-oriented.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/contentpro-similar-text",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/search' has semantic quality issues: vague_description, missing_input_details, missing_output_details. Summary is clear but description is completely missing. Added details about input parameters (search query and optional filters), output structure (company list with snippets), and use cases to help AI agents understand when to use this operation. Improved summary slightly for consistency with other search operations.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/search",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/search",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Send search terms to receive the most relevant companies along with text snippets.",
+      "current_description": "",
+      "summary_suggestion": "Search for companies by keywords with text snippets",
+      "description_suggestion": "Searches for companies matching the provided search terms and returns the most relevant results with text snippets from related content. Accepts search query and optional filter parameters. Returns a list of companies with contextual snippets showing relevance to the search terms. Useful for market research and competitive intelligence.",
+      "reasoning": "Summary is clear but description is completely missing. Added details about input parameters (search query and optional filters), output structure (company list with snippets), and use cases to help AI agents understand when to use this operation. Improved summary slightly for consistency with other search operations.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/search",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/search",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get_/similar' has semantic quality issues: vague_description, missing_input_details, missing_output_details. Summary is clear but vague about the mechanism ('related to them' is imprecise). Description is completely missing. Added details about input requirements (website URL or identifier), output structure (ranked list with relevance scores), and practical use cases. Improved summary to be more specific about the similarity matching function.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/similar",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get_/similar",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "Send a company website to receive a list of companies related to them.",
+      "current_description": "",
+      "summary_suggestion": "Find companies similar to a specified company",
+      "description_suggestion": "Identifies and returns a list of companies similar to a specified company based on website analysis and business characteristics. Accepts a company website URL or identifier as input along with optional parameters. Returns a ranked list of similar companies with relevance scores and company details. Useful for competitive analysis, market mapping, and identifying industry peers.",
+      "reasoning": "Summary is clear but vague about the mechanism ('related to them' is imprecise). Description is completely missing. Added details about input requirements (website URL or identifier), output structure (ranked list with relevance scores), and practical use cases. Improved summary to be more specific about the similarity matching function.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/similar",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/similar",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 4 operations analyzed, 4 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 4,
+      "total_issues_found": 4,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 10 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 10
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 10 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 10
     }
   }
 ]

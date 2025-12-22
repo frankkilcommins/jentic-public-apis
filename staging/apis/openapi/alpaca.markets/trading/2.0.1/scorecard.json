@@ -1,0 +1,798 @@
+{
+  "metadata": {
+    "version": "2.0.1",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "382222a98649990fdf7240bc79b3d68a",
+    "name": "Trading API",
+    "apiDescriptionVersion": "2.0.1",
+    "specification": "openapi",
+    "specificationVersion": "3.0.0",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/alpaca.markets/trading/2.0.1/openapi.json",
+    "vendor": {
+      "name": "alpaca.markets",
+      "domain": null,
+      "contact": {
+        "name": "Alpaca Support",
+        "email": "support@alpaca.markets"
+      }
+    },
+    "operationCount": 44,
+    "schemaCount": 436,
+    "securitySchemeCount": 2,
+    "securitySchemeTypes": [
+      "apiKey"
+    ],
+    "tagCount": 12
+  },
+  "summary": {
+    "scoringDate": "2025-12-16T18:23:59+00:00",
+    "score": 18.82,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 84.74,
+        "grade": "A"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 53.93,
+        "grade": "C"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 59.8,
+        "grade": "C+"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 5.02,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 50.0,
+        "grade": "C-"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 60.23,
+        "grade": "B-"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 68.43,
+      "grade": "B+",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 84.74,
+          "grade": "A",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.97,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 0,
+                  "warning": 211,
+                  "info": 36,
+                  "hint": 0
+                },
+                "weighted_cost": 0.5635,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 1.0,
+              "metadata": {
+                "failure_reason": null,
+                "diagnostic_counts": {
+                  "error": 0,
+                  "warning": 211,
+                  "information": 36,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.42,
+              "metadata": {
+                "structural_issues": 4,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 3,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 1,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 53.93,
+          "grade": "C",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.16,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 34.9,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 59.8,
+          "grade": "C+",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.63,
+              "metadata": {
+                "described_elements": 433,
+                "undescribed_elements": 253,
+                "describable_elements": 686,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.56,
+              "metadata": {
+                "summaries_present": 48,
+                "missing_summaries": 37,
+                "summaries_expected": 85,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 5.02,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.05,
+              "metadata": {
+                "total_operations": 44,
+                "max_schema_depth": 10,
+                "normalised_endpoint_count": 0.88,
+                "normalised_schema_depth": 1.0,
+                "raw_complexity": 0.94,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 54.65,
+      "grade": "C",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 50.0,
+          "grade": "C-",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.5,
+              "metadata": {
+                "strength_scores": [
+                  0.5,
+                  0.5
+                ],
+                "schemes_count": 2,
+                "schemes": [
+                  {
+                    "type": "apiKey",
+                    "score": 0.5,
+                    "details": {
+                      "in": "header",
+                      "name": "APCA-API-KEY-ID"
+                    }
+                  },
+                  {
+                    "type": "apiKey",
+                    "score": 0.5,
+                    "details": {
+                      "in": "header",
+                      "name": "APCA-API-SECRET-KEY"
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 60.23,
+          "grade": "B-",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.6,
+              "metadata": {
+                "number_of_describable_elements": 44,
+                "operations_with_issues": 36,
+                "operations_without_issues": 8,
+                "sum_of_element_descriptive_scores": 53.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "deleteWhitelistedAddress",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "getCryptoTransferEstimate",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getWatchlistById",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "updateWatchlistById",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "addAssetToWatchlist",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "deleteWatchlistById",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "getWatchlistByName",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "updateWatchlistByName",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get-v2-corporate_actions-announcements",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "unclear_purpose",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "listCryptoFundingTransfers",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "createCryptoTransferForAccount",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "getCryptoFundingTransfer",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "listWhitelistedAddress",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "createWhitelistedAddress",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "addAssetToWatchlistByName",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "deleteWatchlistByName",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "removeAssetFromWatchlist",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAccountConfig",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "patchAccountConfig",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAccountActivities",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAccountActivitiesByActivityType",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "get-v2-assets",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get-options-contracts",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "get-v2-corporate_actions-announcements-id",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "unclear_purpose",
+                      "missing_context",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAccount",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "postOrder",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAllOrders",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "deleteAllOrders",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "vague_description"
+                    ]
+                  },
+                  {
+                    "operation_id": "getOrderByOrderID",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "patchOrderByOrderId",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "inconsistent_terminology",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "deleteOrderByOrderID",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAllOpenPositions",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "deleteAllOpenPositions",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "deleteOpenPosition",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "optionExercise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "getAccountPortfolioHistory",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

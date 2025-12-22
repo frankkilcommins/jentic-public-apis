@@ -7,22 +7,43 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Total Operations count: 4",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 4,
+      "paths": [
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get"
+        ]
+      ]
     }
   },
   {
@@ -33,24 +54,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -61,24 +79,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Schemas count: 77",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 77
     }
   },
   {
@@ -89,24 +104,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Tag object should contain `description` field. [path: tags.2.description]",
-    "severity": 2,
-    "code": "tag-description",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "tags",
-        2,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ]
+      ]
     }
   },
   {
@@ -117,25 +141,36 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/activity/login.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security scheme types: ['apiKey', 'oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/account-info/v3/activity/login",
-        "get",
-        "responses"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey",
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ]
+      ]
     }
   },
   {
@@ -146,25 +181,52 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/api-usage/daily.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/account-info/v3/api-usage/daily",
-        "get",
-        "responses"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        },
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "private-app-legacy",
+          "oauth2_flows": []
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ]
+      ]
     }
   },
   {
@@ -175,25 +237,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/details.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
+    "message": "Tags count: 3",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/account-info/v3/details",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 3
     }
   },
   {
@@ -204,58 +262,1326 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Example value must conform to the schema: must have required property 'accountType'. [path: paths./account-info/v3/details.get.responses.200.content.application/json.example]",
-    "severity": 2,
-    "code": "no-invalid-media-type-examples",
+    "message": "Expected examples: 90",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 90
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 30",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 30
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 30",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 30
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 8",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 8,
+      "paths": [
+        [
+          "paths",
+          "/account-info/v3/activity/login"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 4",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 4,
+      "paths": [
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 104",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 104,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponsePublicLoginAuditForwardPaging"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponsePublicLoginAuditForwardPaging",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "collectedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "usageLimit"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "fetchStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "currentUsage"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "resetsAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "regionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "ipAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "userAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "loginAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "userId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "loginSucceeded"
+        ],
+        [
+          "components",
+          "schemas",
+          "ForwardPaging"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "actingUser"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "regionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "infoUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "ipAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "location"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "userId"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "objectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "additionalCurrencies"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "additionalCurrencies",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "utcOffset"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "companyCurrency"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "portalId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "accountType"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "uiDomain"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "timeZone"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "dataHostingLocation"
+        ],
+        [
+          "components",
+          "schemas",
+          "PortalInformationResponse",
+          "properties",
+          "utcOffsetMilliseconds"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context",
+          "additionalProperties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponseHydratedCriticalActionForwardPaging"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponseHydratedCriticalActionForwardPaging",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "schemas",
+          "NextPage"
+        ],
+        [
+          "components",
+          "schemas",
+          "NextPage",
+          "properties",
+          "link"
+        ],
+        [
+          "components",
+          "schemas",
+          "NextPage",
+          "properties",
+          "after"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponseApiUsageNoPaging"
+        ],
+        [
+          "components",
+          "schemas",
+          "CollectionResponseApiUsageNoPaging",
+          "properties",
+          "results"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "oauth2_legacy"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "private_apps_legacy"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "tags",
+          2
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 57",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 57,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get"
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "in"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "ErrorDetail",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "collectedAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "usageLimit"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "fetchStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "currentUsage"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiUsage",
+          "properties",
+          "resetsAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "regionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "ipAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "userAgent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "loginAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "userId"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "PublicLoginAudit",
+          "properties",
+          "loginSucceeded"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "createdAt"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "actingUser"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "regionCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "infoUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "countryCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "ipAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "id"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "userId"
+        ],
+        [
+          "components",
+          "schemas",
+          "HydratedCriticalAction",
+          "properties",
+          "objectId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "subCategory"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "context"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "correlationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "links"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "category"
+        ],
+        [
+          "components",
+          "schemas",
+          "Error",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "responses",
+          "Error"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 8",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "paths",
-        "/account-info/v3/details",
-        "get",
+        "components",
         "responses",
-        200,
+        "Error",
         "content",
-        "application/json",
-        "example"
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/activity/security.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/account-info/v3/activity/security",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 8,
+      "paths": []
     }
   },
   {
@@ -281,7 +1607,123 @@
       "path": [
         "info"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 20,
+        "character": 10
+      },
+      "end": {
+        "line": 266,
+        "character": 42
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 30,
+        "character": 10
+      },
+      "end": {
+        "line": 38,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./account-info/v3/activity/login.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/login",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 41,
+        "character": 10
+      },
+      "end": {
+        "line": 50,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./account-info/v3/activity/login.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/login",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 53,
+        "character": 10
+      },
+      "end": {
+        "line": 62,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./account-info/v3/activity/login.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/login",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -313,7 +1755,7 @@
         "private_apps_legacy",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -328,7 +1770,7 @@
       }
     },
     "message": "\"example\" property must have required property \"accountType\" [path: paths./account-info/v3/details.get.responses.200.content.application/json.example]",
-    "severity": 1,
+    "severity": 2,
     "code": "oas3-valid-media-example",
     "code_description": null,
     "source": "spectral-validator",
@@ -346,7 +1788,7 @@
         "application/json",
         "example"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -378,7 +1820,127 @@
         "private_apps_legacy",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 195,
+        "character": 10
+      },
+      "end": {
+        "line": 203,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./account-info/v3/activity/security.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/security",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 206,
+        "character": 10
+      },
+      "end": {
+        "line": 215,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./account-info/v3/activity/security.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/security",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 218,
+        "character": 10
+      },
+      "end": {
+        "line": 227,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./account-info/v3/activity/security.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/security",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 230,
+        "character": 10
+      },
+      "end": {
+        "line": 239,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./account-info/v3/activity/security.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/security",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -410,7 +1972,764 @@
         "private_apps_legacy",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 347,
+        "character": 23
+      },
+      "end": {
+        "line": 350,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApiUsage.properties.usageLimit]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApiUsage",
+        "properties",
+        "usageLimit"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 367,
+        "character": 25
+      },
+      "end": {
+        "line": 370,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApiUsage.properties.currentUsage]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApiUsage",
+        "properties",
+        "currentUsage"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 422,
+        "character": 19
+      },
+      "end": {
+        "line": 426,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PublicLoginAudit.properties.userId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PublicLoginAudit",
+        "properties",
+        "userId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 513,
+        "character": 19
+      },
+      "end": {
+        "line": 517,
+        "character": 26
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.HydratedCriticalAction.properties.userId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "HydratedCriticalAction",
+        "properties",
+        "userId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 565,
+        "character": 21
+      },
+      "end": {
+        "line": 567,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PortalInformationResponse.properties.portalId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PortalInformationResponse",
+        "properties",
+        "portalId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 587,
+        "character": 34
+      },
+      "end": {
+        "line": 589,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PortalInformationResponse.properties.utcOffsetMilliseconds]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PortalInformationResponse",
+        "properties",
+        "utcOffsetMilliseconds"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.2.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "2",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/activity/login.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/login",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/api-usage/daily.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/api-usage/daily",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/details.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/details",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Example value must conform to the schema: must have required property 'accountType'. [path: paths./account-info/v3/details.get.responses.200.content.application/json.example]",
+    "severity": 2,
+    "code": "no-invalid-media-type-examples",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/details",
+        "get",
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "example"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./account-info/v3/activity/security.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/security",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get-/account-info/v3/activity/login' has semantic quality issues: vague_description, missing_output_details, missing_input_details. Current description is too minimal. Enhanced version explains what data is returned (PublicLoginAudit objects), the response structure (paginated collection), and clarifies that parameters control filtering/pagination. This helps AI agents understand the operation's capabilities and how to use parameters effectively.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/login",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get-/account-info/v3/activity/login",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_input_details"
+      ],
+      "current_summary": "Get login activity for a HubSpot account.",
+      "current_description": "Get login activity.",
+      "description_suggestion": "Retrieves login activity records for a HubSpot account. Returns a paginated collection of PublicLoginAudit objects containing details about each login event including timestamp, user, and IP address. Supports filtering and pagination parameters to control the scope and volume of results returned.",
+      "reasoning": "Current description is too minimal. Enhanced version explains what data is returned (PublicLoginAudit objects), the response structure (paginated collection), and clarifies that parameters control filtering/pagination. This helps AI agents understand the operation's capabilities and how to use parameters effectively.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/account-info/v3/activity/login",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get-/account-info/v3/api-usage/daily' has semantic quality issues: vague_description, missing_output_details. Current description lacks specificity about return value and purpose. Enhanced version specifies the ApiUsage schema, explains what metrics are included, and clarifies the operational value (monitoring and planning). This enables AI agents to understand when this operation is useful and what data to expect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/api-usage/daily",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get-/account-info/v3/api-usage/daily",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "Get the daily API usage and limits for a HubSpot account.",
+      "current_description": "Get daily API usage",
+      "description_suggestion": "Retrieves daily API usage statistics and limits for a HubSpot account. Returns an ApiUsage object containing current usage metrics, rate limits, and remaining quota information. Provides insights into API consumption patterns to help monitor account health and plan API usage accordingly.",
+      "reasoning": "Current description lacks specificity about return value and purpose. Enhanced version specifies the ApiUsage schema, explains what metrics are included, and clarifies the operational value (monitoring and planning). This enables AI agents to understand when this operation is useful and what data to expect.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/account-info/v3/api-usage/daily",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get-/account-info/v3/details' has semantic quality issues: vague_description, missing_output_details, missing_context. Current description is insufficient. Enhanced version specifies the response schema (PortalInformationResponse), lists example fields returned, and provides context about use cases. This helps AI agents understand the scope of account information available and when to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/details",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get-/account-info/v3/details",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_context"
+      ],
+      "current_summary": "Get account details for a HubSpot account.",
+      "current_description": "Get account details",
+      "description_suggestion": "Retrieves comprehensive account information for a HubSpot portal. Returns a PortalInformationResponse object containing account metadata such as portal ID, account name, tier, and configuration details. Use this operation to obtain foundational account information for administrative or reporting purposes.",
+      "reasoning": "Current description is insufficient. Enhanced version specifies the response schema (PortalInformationResponse), lists example fields returned, and provides context about use cases. This helps AI agents understand the scope of account information available and when to use this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/account-info/v3/details",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'get-/account-info/v3/activity/security' has semantic quality issues: vague_description, missing_output_details, missing_input_details. Current description is too vague. Enhanced version specifies the response structure (HydratedCriticalAction objects in paginated collection), provides examples of security events tracked, and clarifies parameter usage. This enables AI agents to understand the security monitoring capabilities and how to retrieve relevant security events.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/account-info/v3/activity/security",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "get-/account-info/v3/activity/security",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_output_details",
+        "missing_input_details"
+      ],
+      "current_summary": "Get security activity for a HubSpot account",
+      "current_description": "Get security activity",
+      "description_suggestion": "Retrieves security activity records for a HubSpot account. Returns a paginated collection of HydratedCriticalAction objects containing details about security events such as permission changes, authentication modifications, and other critical account actions. Supports filtering and pagination parameters to control the scope of security events returned.",
+      "reasoning": "Current description is too vague. Enhanced version specifies the response structure (HydratedCriticalAction objects in paginated collection), provides examples of security events tracked, and clarifies parameter usage. This enables AI agents to understand the security monitoring capabilities and how to retrieve relevant security events.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/account-info/v3/activity/security",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 4 operations analyzed, 4 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 4,
+      "total_issues_found": 4,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 16 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 16
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 16 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 16
     }
   }
 ]

@@ -1,0 +1,765 @@
+{
+  "metadata": {
+    "version": "1.1.4",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "",
+    "name": "GitHub v3 REST API",
+    "apiDescriptionVersion": "1.1.4",
+    "specification": "openapi",
+    "specificationVersion": "3.0.3",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/github.com/ghec/1.1.4/openapi.json",
+    "vendor": {
+      "name": "github.com",
+      "domain": null,
+      "contact": {
+        "name": "Support",
+        "email": ""
+      }
+    },
+    "operationCount": 1176,
+    "schemaCount": 36936,
+    "securitySchemeCount": 1,
+    "securitySchemeTypes": [
+      "http"
+    ],
+    "tagCount": 45
+  },
+  "summary": {
+    "scoringDate": "2025-12-17T12:50:24+00:00",
+    "score": 13.59,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 45.03,
+        "grade": "D"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 48.15,
+        "grade": "D+"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 35.56,
+        "grade": "F"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 3.56,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 60.0,
+        "grade": "B-"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 74.49,
+        "grade": "A-"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 46.68,
+      "grade": "D",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 45.03,
+          "grade": "D",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.8,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 9,
+                  "warning": 5983,
+                  "info": 4231,
+                  "hint": 0
+                },
+                "weighted_cost": 24.588499999999996,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 0.0,
+              "metadata": {
+                "failure_reason": "validation_errors",
+                "diagnostic_counts": {
+                  "error": 9,
+                  "warning": 5983,
+                  "information": 4231,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.0,
+              "metadata": {
+                "structural_issues": 149,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 66,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 83,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 48.15,
+          "grade": "D+",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.1,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 0.83,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 21.01,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 35.56,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.25,
+              "metadata": {
+                "described_elements": 10950,
+                "undescribed_elements": 32287,
+                "describable_elements": 43237,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.46,
+              "metadata": {
+                "summaries_present": 1312,
+                "missing_summaries": 1553,
+                "summaries_expected": 2865,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 3.56,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.04,
+              "metadata": {
+                "total_operations": 1176,
+                "max_schema_depth": 15,
+                "normalised_endpoint_count": 1.0,
+                "normalised_schema_depth": 1.0,
+                "raw_complexity": 1.0,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 66.59,
+      "grade": "B",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 60.0,
+          "grade": "B-",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.6,
+              "metadata": {
+                "strength_scores": [
+                  0.6
+                ],
+                "schemes_count": 1,
+                "schemes": [
+                  {
+                    "type": "http",
+                    "score": 0.6,
+                    "details": {
+                      "http_scheme": "bearer",
+                      "bearer_format": "token"
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 74.49,
+          "grade": "A-",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.74,
+              "metadata": {
+                "number_of_describable_elements": 49,
+                "operations_with_issues": 36,
+                "operations_without_issues": 13,
+                "sum_of_element_descriptive_scores": 73.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "actions/get-hosted-runner-for-org",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/update-hosted-runner-for-org",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/delete-hosted-runner-for-org",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "oidc/get-oidc-custom-sub-template-for-org",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/set-selected-repos-for-org-secret",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/create-org-variable",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/get-org-variable",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/update-hosted-runner-for-enterprise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/delete-hosted-runner-for-enterprise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "actions/set-actions-oidc-custom-issuer-policy-for-enterprise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "enterprise-admin/get-github-actions-permissions-enterprise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "enterprise-admin/set-github-actions-permissions-enterprise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "enterprise-admin/list-selected-organizations-enabled-github-actions-enterprise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "enterprise-admin/set-selected-organizations-enabled-github-actions-enterprise",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "repos/create-org-ruleset",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "repos/get-org-rule-suites",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_context",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "repos/get-org-rule-suite",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "repos/get-org-ruleset",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "repos/update-org-ruleset",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "repos/delete-org-ruleset",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "orgs/get-org-ruleset-history",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "packages/get-all-package-versions-for-package-owned-by-org",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "packages/get-package-version-for-organization",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "packages/delete-package-version-for-org",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "packages/restore-package-version-for-org",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "orgs/list-pat-grant-requests",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "orgs/review-pat-grant-requests-in-bulk",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "orgs/review-pat-grant-request",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "users/list-attestations",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_input_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "packages/list-docker-migration-conflicting-packages-for-user",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "activity/list-events-for-authenticated-user",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "activity/list-org-events-for-authenticated-user",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "activity/list-public-events-for-user",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "teams/add-or-update-project-permissions-in-org",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "teams/remove-project-in-org",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "teams/list-idp-groups-in-org",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

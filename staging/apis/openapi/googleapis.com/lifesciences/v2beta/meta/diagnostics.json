@@ -20,7 +20,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -44,7 +44,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -68,7 +68,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -92,7 +92,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -116,7 +116,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -127,24 +127,48 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 5",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 5,
+      "paths": [
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -155,25 +179,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -184,27 +204,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}`. [path: paths./v2beta/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 181",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 181
     }
   },
   {
@@ -215,25 +229,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}/locations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}/locations",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -244,27 +266,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}/locations`. [path: paths./v2beta/{+name}/locations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}/locations",
-        "get",
-        "parameters",
-        0,
-        "name"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -275,25 +305,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}/operations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}/operations",
-        "get",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -304,27 +363,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}/operations`. [path: paths./v2beta/{+name}/operations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}/operations",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -335,25 +388,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}:cancel.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 211",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}:cancel",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 211
     }
   },
   {
@@ -364,27 +413,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}:cancel`. [path: paths./v2beta/{+name}:cancel.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}:cancel",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -395,14 +438,2798 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+parent}/pipelines:run.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 10",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 10,
+      "paths": [
+        [
+          "paths",
+          "/v2beta/{+name}"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 226",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 226,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Accelerator"
+        ],
+        [
+          "components",
+          "schemas",
+          "Accelerator",
+          "properties",
+          "count"
+        ],
+        [
+          "components",
+          "schemas",
+          "Accelerator",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "alwaysRun"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "blockExternalNetwork"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "commands"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "commands",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "containerName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "disableImagePrefetch"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "disableStandardErrorCapture"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "enableFuse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "entrypoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "environment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "environment",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "ignoreExitStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "imageUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "mounts"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "pidNamespace"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "portMappings"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "portMappings",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "publishExposedPorts"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "runInBackground"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "timeout"
+        ],
+        [
+          "components",
+          "schemas",
+          "CancelOperationRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerKilledEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerKilledEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent",
+          "properties",
+          "ipAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent",
+          "properties",
+          "portMappings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent",
+          "properties",
+          "portMappings",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent",
+          "properties",
+          "exitStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent",
+          "properties",
+          "stderr"
+        ],
+        [
+          "components",
+          "schemas",
+          "DelayedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "DelayedEvent",
+          "properties",
+          "cause"
+        ],
+        [
+          "components",
+          "schemas",
+          "DelayedEvent",
+          "properties",
+          "metrics"
+        ],
+        [
+          "components",
+          "schemas",
+          "DelayedEvent",
+          "properties",
+          "metrics",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "sizeGb"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "sourceImage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "Event"
+        ],
+        [
+          "components",
+          "schemas",
+          "Event",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Event",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExistingDisk"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExistingDisk",
+          "properties",
+          "disk"
+        ],
+        [
+          "components",
+          "schemas",
+          "FailedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "FailedEvent",
+          "properties",
+          "cause"
+        ],
+        [
+          "components",
+          "schemas",
+          "FailedEvent",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "pubSubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount",
+          "properties",
+          "disk"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount",
+          "properties",
+          "readOnly"
+        ],
+        [
+          "components",
+          "schemas",
+          "NFSMount"
+        ],
+        [
+          "components",
+          "schemas",
+          "NFSMount",
+          "properties",
+          "target"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network",
+          "properties",
+          "network"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network",
+          "properties",
+          "subnetwork"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network",
+          "properties",
+          "usePrivateAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk",
+          "properties",
+          "sizeGb"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk",
+          "properties",
+          "sourceImage"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline",
+          "properties",
+          "actions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline",
+          "properties",
+          "environment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline",
+          "properties",
+          "environment",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline",
+          "properties",
+          "timeout"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStartedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStartedEvent",
+          "properties",
+          "imageUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStoppedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStoppedEvent",
+          "properties",
+          "imageUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources",
+          "properties",
+          "regions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources",
+          "properties",
+          "regions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources",
+          "properties",
+          "zones"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources",
+          "properties",
+          "zones",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineRequest",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineRequest",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineRequest",
+          "properties",
+          "pubSubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Secret"
+        ],
+        [
+          "components",
+          "schemas",
+          "Secret",
+          "properties",
+          "cipherText"
+        ],
+        [
+          "components",
+          "schemas",
+          "Secret",
+          "properties",
+          "keyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccount",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccount",
+          "properties",
+          "scopes"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccount",
+          "properties",
+          "scopes",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedExitStatusEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedExitStatusEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedExitStatusEvent",
+          "properties",
+          "exitStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "accelerators"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "bootDiskSizeGb"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "bootImage"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "cpuPlatform"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "disks"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "dockerCacheImages"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "dockerCacheImages",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "enableStackdriverMonitoring"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "machineType"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "nvidiaDriverVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "preemptible"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "reservation"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "volumes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Volume"
+        ],
+        [
+          "components",
+          "schemas",
+          "Volume",
+          "properties",
+          "volume"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent",
+          "properties",
+          "instance"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent",
+          "properties",
+          "machineType"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent",
+          "properties",
+          "zone"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerReleasedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerReleasedEvent",
+          "properties",
+          "instance"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerReleasedEvent",
+          "properties",
+          "zone"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 178",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 178,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}:cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "Accelerator"
+        ],
+        [
+          "components",
+          "schemas",
+          "Accelerator",
+          "properties",
+          "count"
+        ],
+        [
+          "components",
+          "schemas",
+          "Accelerator",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "alwaysRun"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "blockExternalNetwork"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "commands"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "containerName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "disableImagePrefetch"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "disableStandardErrorCapture"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "enableFuse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "entrypoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "environment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "ignoreExitStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "imageUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "mounts"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "pidNamespace"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "portMappings"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "publishExposedPorts"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "runInBackground"
+        ],
+        [
+          "components",
+          "schemas",
+          "Action",
+          "properties",
+          "timeout"
+        ],
+        [
+          "components",
+          "schemas",
+          "CancelOperationRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerKilledEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerKilledEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent",
+          "properties",
+          "ipAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStartedEvent",
+          "properties",
+          "portMappings"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent",
+          "properties",
+          "exitStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "ContainerStoppedEvent",
+          "properties",
+          "stderr"
+        ],
+        [
+          "components",
+          "schemas",
+          "DelayedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "DelayedEvent",
+          "properties",
+          "cause"
+        ],
+        [
+          "components",
+          "schemas",
+          "DelayedEvent",
+          "properties",
+          "metrics"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "sizeGb"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "sourceImage"
+        ],
+        [
+          "components",
+          "schemas",
+          "Disk",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Empty"
+        ],
+        [
+          "components",
+          "schemas",
+          "Event"
+        ],
+        [
+          "components",
+          "schemas",
+          "Event",
+          "properties",
+          "description"
+        ],
+        [
+          "components",
+          "schemas",
+          "Event",
+          "properties",
+          "timestamp"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExistingDisk"
+        ],
+        [
+          "components",
+          "schemas",
+          "ExistingDisk",
+          "properties",
+          "disk"
+        ],
+        [
+          "components",
+          "schemas",
+          "FailedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "FailedEvent",
+          "properties",
+          "cause"
+        ],
+        [
+          "components",
+          "schemas",
+          "FailedEvent",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "events"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "pubSubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "Metadata",
+          "properties",
+          "startTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount",
+          "properties",
+          "disk"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "Mount",
+          "properties",
+          "readOnly"
+        ],
+        [
+          "components",
+          "schemas",
+          "NFSMount"
+        ],
+        [
+          "components",
+          "schemas",
+          "NFSMount",
+          "properties",
+          "target"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network",
+          "properties",
+          "network"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network",
+          "properties",
+          "subnetwork"
+        ],
+        [
+          "components",
+          "schemas",
+          "Network",
+          "properties",
+          "usePrivateAddress"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk",
+          "properties",
+          "sizeGb"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk",
+          "properties",
+          "sourceImage"
+        ],
+        [
+          "components",
+          "schemas",
+          "PersistentDisk",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline",
+          "properties",
+          "actions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline",
+          "properties",
+          "environment"
+        ],
+        [
+          "components",
+          "schemas",
+          "Pipeline",
+          "properties",
+          "timeout"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStartedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStartedEvent",
+          "properties",
+          "imageUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStoppedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "PullStoppedEvent",
+          "properties",
+          "imageUri"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources",
+          "properties",
+          "regions"
+        ],
+        [
+          "components",
+          "schemas",
+          "Resources",
+          "properties",
+          "zones"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineRequest",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineRequest",
+          "properties",
+          "pubSubTopic"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunPipelineResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Secret"
+        ],
+        [
+          "components",
+          "schemas",
+          "Secret",
+          "properties",
+          "cipherText"
+        ],
+        [
+          "components",
+          "schemas",
+          "Secret",
+          "properties",
+          "keyName"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccount"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccount",
+          "properties",
+          "email"
+        ],
+        [
+          "components",
+          "schemas",
+          "ServiceAccount",
+          "properties",
+          "scopes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedExitStatusEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedExitStatusEvent",
+          "properties",
+          "actionId"
+        ],
+        [
+          "components",
+          "schemas",
+          "UnexpectedExitStatusEvent",
+          "properties",
+          "exitStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "accelerators"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "bootDiskSizeGb"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "bootImage"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "cpuPlatform"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "disks"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "dockerCacheImages"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "enableStackdriverMonitoring"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "machineType"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "nvidiaDriverVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "preemptible"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "reservation"
+        ],
+        [
+          "components",
+          "schemas",
+          "VirtualMachine",
+          "properties",
+          "volumes"
+        ],
+        [
+          "components",
+          "schemas",
+          "Volume"
+        ],
+        [
+          "components",
+          "schemas",
+          "Volume",
+          "properties",
+          "volume"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent",
+          "properties",
+          "instance"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent",
+          "properties",
+          "machineType"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerAssignedEvent",
+          "properties",
+          "zone"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerReleasedEvent"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerReleasedEvent",
+          "properties",
+          "instance"
+        ],
+        [
+          "components",
+          "schemas",
+          "WorkerReleasedEvent",
+          "properties",
+          "zone"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 14",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -411,269 +3238,14 @@
         "paths",
         "/v2beta/{+parent}/pipelines:run",
         "post",
-        "summary"
+        "requestBody",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v2beta/{+parent}/pipelines:run`. [path: paths./v2beta/{+parent}/pipelines:run.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+parent}/pipelines:run",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}/locations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}/locations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}/operations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}/operations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}:cancel.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+name}:cancel",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+parent}/pipelines:run.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v2beta/{+parent}/pipelines:run",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"Metadata\" is never used. [path: components.schemas.Metadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "Metadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"RunPipelineResponse\" is never used. [path: components.schemas.RunPipelineResponse]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "RunPipelineResponse"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 14,
+      "paths": []
     }
   },
   {
@@ -701,7 +3273,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 467,
+        "character": 65
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 12
+      },
+      "end": {
+        "line": 97,
+        "character": 71
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2beta/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2beta/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -731,7 +3387,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 136,
+        "character": 12
+      },
+      "end": {
+        "line": 198,
+        "character": 61
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2beta/{+name}/locations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 138,
+        "character": 10
+      },
+      "end": {
+        "line": 144,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2beta/{+name}/locations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -761,7 +3475,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 147,
+        "character": 10
+      },
+      "end": {
+        "line": 152,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v2beta/{+name}/locations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 155,
+        "character": 10
+      },
+      "end": {
+        "line": 160,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v2beta/{+name}/locations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 163,
+        "character": 10
+      },
+      "end": {
+        "line": 168,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v2beta/{+name}/locations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 237,
+        "character": 12
+      },
+      "end": {
+        "line": 299,
+        "character": 72
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2beta/{+name}/operations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 239,
+        "character": 10
+      },
+      "end": {
+        "line": 245,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2beta/{+name}/operations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -791,7 +3653,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 248,
+        "character": 10
+      },
+      "end": {
+        "line": 253,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v2beta/{+name}/operations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 256,
+        "character": 10
+      },
+      "end": {
+        "line": 261,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v2beta/{+name}/operations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 264,
+        "character": 10
+      },
+      "end": {
+        "line": 269,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v2beta/{+name}/operations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 338,
+        "character": 13
+      },
+      "end": {
+        "line": 381,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2beta/{+name}:cancel.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}:cancel",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 340,
+        "character": 10
+      },
+      "end": {
+        "line": 346,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2beta/{+name}:cancel.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}:cancel",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -821,7 +3831,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 424,
+        "character": 13
+      },
+      "end": {
+        "line": 467,
+        "character": 65
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v2beta/{+parent}/pipelines:run.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+parent}/pipelines:run",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 426,
+        "character": 10
+      },
+      "end": {
+        "line": 432,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v2beta/{+parent}/pipelines:run.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+parent}/pipelines:run",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -851,7 +3919,403 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 477,
+        "character": 16
+      },
+      "end": {
+        "line": 486,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 489,
+        "character": 21
+      },
+      "end": {
+        "line": 494,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 492,
+        "character": 16
+      },
+      "end": {
+        "line": 492,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 497,
+        "character": 12
+      },
+      "end": {
+        "line": 508,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 511,
+        "character": 17
+      },
+      "end": {
+        "line": 516,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 519,
+        "character": 15
+      },
+      "end": {
+        "line": 524,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 527,
+        "character": 12
+      },
+      "end": {
+        "line": 532,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 535,
+        "character": 20
+      },
+      "end": {
+        "line": 540,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 538,
+        "character": 16
+      },
+      "end": {
+        "line": 538,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 543,
+        "character": 20
+      },
+      "end": {
+        "line": 549,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 552,
+        "character": 18
+      },
+      "end": {
+        "line": 557,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 560,
+        "character": 19
+      },
+      "end": {
+        "line": 565,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 568,
+        "character": 24
+      },
+      "end": {
+        "line": 573,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 581,
+        "character": 18
+      },
+      "end": {
+        "line": 584,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.Accelerator.properties.count]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Accelerator",
+        "properties",
+        "count"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -882,7 +4346,7 @@
         "credentials",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -913,7 +4377,157 @@
         "encryptedEnvironment",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 704,
+        "character": 21
+      },
+      "end": {
+        "line": 707,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ContainerKilledEvent.properties.actionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ContainerKilledEvent",
+        "properties",
+        "actionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 715,
+        "character": 21
+      },
+      "end": {
+        "line": 718,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ContainerStartedEvent.properties.actionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ContainerStartedEvent",
+        "properties",
+        "actionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 738,
+        "character": 21
+      },
+      "end": {
+        "line": 741,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ContainerStoppedEvent.properties.actionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ContainerStoppedEvent",
+        "properties",
+        "actionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 743,
+        "character": 23
+      },
+      "end": {
+        "line": 746,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ContainerStoppedEvent.properties.exitStatus]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ContainerStoppedEvent",
+        "properties",
+        "exitStatus"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 779,
+        "character": 19
+      },
+      "end": {
+        "line": 782,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Disk.properties.sizeGb]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Disk",
+        "properties",
+        "sizeGb"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -944,7 +4558,7 @@
         "containerKilled",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -975,7 +4589,7 @@
         "containerStarted",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1006,7 +4620,7 @@
         "containerStopped",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1037,7 +4651,7 @@
         "delayed",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1068,7 +4682,7 @@
         "failed",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1099,7 +4713,7 @@
         "pullStarted",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1130,7 +4744,7 @@
         "pullStopped",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1161,7 +4775,7 @@
         "unexpectedExitStatus",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1192,7 +4806,7 @@
         "workerAssigned",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1223,7 +4837,7 @@
         "workerReleased",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1251,7 +4865,7 @@
         "schemas",
         "Metadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1282,7 +4896,37 @@
         "pipeline",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1046,
+        "character": 30
+      },
+      "end": {
+        "line": 1048,
+        "character": 29
+      }
+    },
+    "message": "Potentially exposing internals (words \"private\" or \"internal\" spotted) [path: components.schemas.Network.properties.usePrivateAddress]",
+    "severity": 2,
+    "code": "monite-general-exposing-internals",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Network",
+        "properties",
+        "usePrivateAddress"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1313,7 +4957,37 @@
         "error",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1088,
+        "character": 19
+      },
+      "end": {
+        "line": 1091,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.PersistentDisk.properties.sizeGb]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "PersistentDisk",
+        "properties",
+        "sizeGb"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1344,7 +5018,7 @@
         "encryptedEnvironment",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1375,7 +5049,7 @@
         "resources",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1406,7 +5080,7 @@
         "virtualMachine",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1437,7 +5111,7 @@
         "pipeline",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1465,7 +5139,127 @@
         "schemas",
         "RunPipelineResponse"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1241,
+        "character": 17
+      },
+      "end": {
+        "line": 1244,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Status.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Status",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1266,
+        "character": 21
+      },
+      "end": {
+        "line": 1269,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.UnexpectedExitStatusEvent.properties.actionId]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnexpectedExitStatusEvent",
+        "properties",
+        "actionId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1271,
+        "character": 23
+      },
+      "end": {
+        "line": 1274,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.UnexpectedExitStatusEvent.properties.exitStatus]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "UnexpectedExitStatusEvent",
+        "properties",
+        "exitStatus"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1289,
+        "character": 27
+      },
+      "end": {
+        "line": 1292,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.VirtualMachine.properties.bootDiskSizeGb]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "VirtualMachine",
+        "properties",
+        "bootDiskSizeGb"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1496,7 +5290,7 @@
         "network",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1527,7 +5321,7 @@
         "serviceAccount",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1558,7 +5352,7 @@
         "existingDisk",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1589,7 +5383,7 @@
         "nfsMount",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1620,7 +5414,908 @@
         "persistentDisk",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}`. [path: paths./v2beta/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}/locations`. [path: paths./v2beta/{+name}/locations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}/operations`. [path: paths./v2beta/{+name}/operations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v2beta/{+name}:cancel`. [path: paths./v2beta/{+name}:cancel.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}:cancel",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v2beta/{+parent}/pipelines:run`. [path: paths./v2beta/{+parent}/pipelines:run.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+parent}/pipelines:run",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}/locations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}/locations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}/operations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}/operations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+name}:cancel.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}:cancel",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+name}:cancel.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}:cancel",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v2beta/{+parent}/pipelines:run.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+parent}/pipelines:run",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v2beta/{+parent}/pipelines:run.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+parent}/pipelines:run",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"Metadata\" is never used. [path: components.schemas.Metadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Metadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"RunPipelineResponse\" is never used. [path: components.schemas.RunPipelineResponse]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "RunPipelineResponse"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'lifesciences.projects.locations.operations.get' has semantic quality issues: vague_summary, missing_output_details. Missing summary entirely. Description lacks clarity about what is returned (Operation object) and doesn't explicitly state the input parameter requirement (operation name). Improved version clarifies the return type and consolidates IAM permission information for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "lifesciences.projects.locations.operations.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.get`",
+      "summary_suggestion": "Retrieve the current state of a long-running operation",
+      "description_suggestion": "Retrieves the latest state of a long-running operation by name. This method is used to poll operation results at intervals as recommended by the API service. Returns an Operation resource containing the current status, metadata, and results if available. Authorization requires the `lifesciences.operations.get` IAM permission.",
+      "reasoning": "Missing summary entirely. Description lacks clarity about what is returned (Operation object) and doesn't explicitly state the input parameter requirement (operation name). Improved version clarifies the return type and consolidates IAM permission information for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'lifesciences.projects.locations.list' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description is too generic and doesn't specify the return type (ListLocationsResponse) or mention pagination support. Enhanced version clarifies what information is returned and indicates pagination capability for AI agents.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/locations",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "lifesciences.projects.locations.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists information about the supported locations for this service.",
+      "summary_suggestion": "List supported locations for Cloud Life Sciences",
+      "description_suggestion": "Lists all supported locations where Cloud Life Sciences operations can be executed. Returns a ListLocationsResponse containing available locations and their capabilities. Supports pagination through optional parameters.",
+      "reasoning": "Missing summary. Description is too generic and doesn't specify the return type (ListLocationsResponse) or mention pagination support. Enhanced version clarifies what information is returned and indicates pagination capability for AI agents.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/locations",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'lifesciences.projects.locations.operations.list' has semantic quality issues: vague_summary, missing_output_details, missing_input_details. Missing summary. Description lacks specificity about input parameters (filter, pagination) and return type (ListOperationsResponse). Improved version clarifies expected inputs, output structure, and pagination support for better AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "lifesciences.projects.locations.operations.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists operations that match the specified filter in the request. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.list`",
+      "summary_suggestion": "List long-running operations matching filter criteria",
+      "description_suggestion": "Lists long-running operations that match the specified filter criteria. Accepts filter, page size, and page token parameters to control results. Returns a ListOperationsResponse containing matching Operation resources and pagination information. Authorization requires the `lifesciences.operations.list` IAM permission.",
+      "reasoning": "Missing summary. Description lacks specificity about input parameters (filter, pagination) and return type (ListOperationsResponse). Improved version clarifies expected inputs, output structure, and pagination support for better AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2beta/{+name}/operations",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'lifesciences.projects.locations.pipelines.run' has semantic quality issues: vague_summary, missing_input_details. Missing summary. Description is verbose and unclear about input requirements. Improved version clarifies that input is a RunPipelineRequest, simplifies the service agent prerequisite explanation, and makes the return structure more explicit for AI agents to understand the asynchronous execution model.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v2beta/{+parent}/pipelines:run",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "lifesciences.projects.locations.pipelines.run",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Runs a pipeline. The returned Operation's metadata field will contain a google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline execution. The response field will contain a google.cloud.lifesciences.v2beta.RunPipelineResponse object if the pipeline completes successfully. **Note:** Before you can use this method, the *Life Sciences Service Agent* must have access to your project. This is done automatically when the Cloud Life Sciences API is first enabled, but if you delete this permission you must disable and re-enable the API to grant the Life Sciences Service Agent the required permissions. Authorization requires the following [Google IAM](https://cloud.google.com/iam/) permission: * `lifesciences.workflows.run`",
+      "summary_suggestion": "Execute a pipeline and monitor its long-running operation",
+      "description_suggestion": "Executes a pipeline specified in the RunPipelineRequest. Returns a long-running Operation whose metadata contains execution status and whose response contains RunPipelineResponse upon successful completion. The Life Sciences Service Agent must have project access (automatically granted when API is enabled). Authorization requires the `lifesciences.workflows.run` IAM permission.",
+      "reasoning": "Missing summary. Description is verbose and unclear about input requirements. Improved version clarifies that input is a RunPipelineRequest, simplifies the service agent prerequisite explanation, and makes the return structure more explicit for AI agents to understand the asynchronous execution model.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v2beta/{+parent}/pipelines:run",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 5 operations analyzed, 4 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 5,
+      "total_issues_found": 4,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 93 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 93
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 93 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 93
     }
   }
 ]

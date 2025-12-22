@@ -1,0 +1,757 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "3545e86bbbf71817ab7b190c366df505",
+    "name": "Twilio - Preview",
+    "apiDescriptionVersion": "1.0.0",
+    "specification": "openapi",
+    "specificationVersion": "3.0.1",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/twilio.com/twilio_preview/1.0.0/openapi.json",
+    "vendor": {
+      "name": "twilio.com",
+      "domain": null,
+      "contact": {
+        "name": "Twilio Support",
+        "email": "support@twilio.com"
+      }
+    },
+    "operationCount": 34,
+    "schemaCount": 591,
+    "securitySchemeCount": 1,
+    "securitySchemeTypes": [
+      "http"
+    ],
+    "tagCount": 11
+  },
+  "summary": {
+    "scoringDate": "2025-12-16T17:39:43+00:00",
+    "score": 24.84,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 75.41,
+        "grade": "A-"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 54.55,
+        "grade": "C"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 27.19,
+        "grade": "F"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 16.94,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 10.0,
+        "grade": "F"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 45.59,
+        "grade": "D"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 64.37,
+      "grade": "B",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 75.41,
+          "grade": "A-",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.97,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 0,
+                  "warning": 213,
+                  "info": 98,
+                  "hint": 0
+                },
+                "weighted_cost": 0.6305,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 1.0,
+              "metadata": {
+                "failure_reason": null,
+                "diagnostic_counts": {
+                  "error": 0,
+                  "warning": 213,
+                  "information": 98,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.05,
+              "metadata": {
+                "structural_issues": 13,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 13,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 54.55,
+          "grade": "C",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.22,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 0.97,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 22.53,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 27.19,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.38,
+              "metadata": {
+                "described_elements": 397,
+                "undescribed_elements": 636,
+                "describable_elements": 1033,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.16,
+              "metadata": {
+                "summaries_present": 22,
+                "missing_summaries": 116,
+                "summaries_expected": 138,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 16.94,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.17,
+              "metadata": {
+                "total_operations": 34,
+                "max_schema_depth": 6,
+                "normalised_endpoint_count": 0.68,
+                "normalised_schema_depth": 0.75,
+                "raw_complexity": 0.7150000000000001,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 26.18,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 10.0,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.1,
+              "metadata": {
+                "strength_scores": [
+                  0.1
+                ],
+                "schemes_count": 1,
+                "schemes": [
+                  {
+                    "type": "http",
+                    "score": 0.1,
+                    "details": {
+                      "http_scheme": "basic"
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 45.59,
+          "grade": "D",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.46,
+              "metadata": {
+                "number_of_describable_elements": 34,
+                "operations_with_issues": 29,
+                "operations_without_issues": 5,
+                "sum_of_element_descriptive_scores": 31.0,
+                "operations_scored": [
+                  {
+                    "operation_id": "UpdateWirelessRatePlan",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteWirelessRatePlan",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchWirelessSim",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateWirelessSim",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListWirelessSim",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchWirelessUsage",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details",
+                      "not_actionable",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListMarketplaceInstalledAddOnExtension",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchWirelessCommand",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListWirelessCommand",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateWirelessCommand",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListWirelessRatePlan",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateWirelessRatePlan",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchWirelessRatePlan",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchHostedNumbersAuthorizationDocument",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateHostedNumbersAuthorizationDocument",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateHostedNumbersAuthorizationDocument",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListHostedNumbersDependentHostedNumberOrder",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchHostedNumbersHostedNumberOrder",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteHostedNumbersHostedNumberOrder",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateMarketplaceInstalledAddOn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListMarketplaceInstalledAddOn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteMarketplaceInstalledAddOn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateMarketplaceInstalledAddOn",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchMarketplaceInstalledAddOnExtension",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateMarketplaceInstalledAddOnExtension",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateHostedNumbersHostedNumberOrder",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "not_actionable"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateHostedNumbersHostedNumberOrder",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchMarketplaceAvailableAddOnExtension",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListMarketplaceAvailableAddOnExtension",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_context"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

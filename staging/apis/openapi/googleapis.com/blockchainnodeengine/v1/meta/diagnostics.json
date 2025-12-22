@@ -24,7 +24,7 @@
         "schemas",
         "EthereumDetails"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -48,7 +48,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -72,7 +72,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -96,7 +96,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -120,7 +120,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -144,7 +144,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -168,7 +168,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -192,7 +192,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -216,7 +216,7 @@
     "data": {
       "fixable": true,
       "path": [],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -227,24 +227,63 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 8",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 8,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -255,25 +294,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
     }
   },
   {
@@ -284,27 +319,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Schemas count: 108",
+    "severity": 3,
+    "code": "schema_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 108
     }
   },
   {
@@ -315,27 +344,33 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.EthereumDetails.properties.consensusClient.enumDeprecated]",
-    "severity": 1,
-    "code": "struct",
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "EthereumDetails",
-        "properties",
-        "consensusClient",
-        "enumDeprecated"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -346,27 +381,35 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.EthereumDetails.properties.network.enumDeprecated]",
-    "severity": 1,
-    "code": "struct",
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "EthereumDetails",
-        "properties",
-        "network",
-        "enumDeprecated"
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -377,25 +420,54 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "summary"
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
       ],
-      "target": "final-spec_bundled-spec"
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -406,27 +478,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
     }
   },
   {
@@ -437,25 +503,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Expected examples: 155",
+    "severity": 3,
+    "code": "expected_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 155
     }
   },
   {
@@ -466,27 +528,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
     }
   },
   {
@@ -497,25 +553,21 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}/locations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/locations",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
     }
   },
   {
@@ -526,27 +578,83 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}/locations`. [path: paths./v1/{+name}/locations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Summaries expected: 13",
+    "severity": 3,
+    "code": "summaries_expected",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/locations",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 13,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -557,25 +665,22 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}/operations.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/operations",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
     }
   },
   {
@@ -586,27 +691,1148 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}/operations`. [path: paths./v1/{+name}/operations.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Describable elements: 173",
+    "severity": 3,
+    "code": "describable_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/operations",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 173,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          3,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          4,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          2,
+          "schema"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "blockchainType"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "privateServiceConnectEnabled"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "CancelOperationRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ConnectionInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ConnectionInfo",
+          "properties",
+          "serviceAttachment"
+        ],
+        [
+          "components",
+          "schemas",
+          "EndpointInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "EndpointInfo",
+          "properties",
+          "jsonRpcApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EndpointInfo",
+          "properties",
+          "websocketsApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "apiEnableAdmin"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "apiEnableDebug"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "consensusClient"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "executionClient"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "network"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "nodeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints",
+          "properties",
+          "beaconApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints",
+          "properties",
+          "beaconPrometheusMetricsApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints",
+          "properties",
+          "executionClientPrometheusMetricsApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "GethDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "GethDetails",
+          "properties",
+          "garbageCollectionMode"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleProtobufEmpty"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse",
+          "properties",
+          "blockchainNodes"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse",
+          "properties",
+          "unreachable"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse",
+          "properties",
+          "unreachable",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "apiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "requestedCancellation"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "statusMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "target"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "verb"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig",
+          "properties",
+          "beaconFeeRecipient"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig",
+          "properties",
+          "managedValidatorClient"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig",
+          "properties",
+          "mevRelayUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig",
+          "properties",
+          "mevRelayUrls",
+          "items"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "requestBodies",
+          "BlockchainNode"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
     }
   },
   {
@@ -617,25 +1843,801 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:cancel.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Described elements: 121",
+    "severity": 3,
+    "code": "described_elements",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:cancel",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 121,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+name}/locations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          3
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "parameters",
+          4
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "parameters",
+          2
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "blockchainType"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "privateServiceConnectEnabled"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "state"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockchainNode",
+          "properties",
+          "updateTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "CancelOperationRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "ConnectionInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "ConnectionInfo",
+          "properties",
+          "serviceAttachment"
+        ],
+        [
+          "components",
+          "schemas",
+          "EndpointInfo"
+        ],
+        [
+          "components",
+          "schemas",
+          "EndpointInfo",
+          "properties",
+          "jsonRpcApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EndpointInfo",
+          "properties",
+          "websocketsApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "apiEnableAdmin"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "apiEnableDebug"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "consensusClient"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "executionClient"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "network"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumDetails",
+          "properties",
+          "nodeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints",
+          "properties",
+          "beaconApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints",
+          "properties",
+          "beaconPrometheusMetricsApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "EthereumEndpoints",
+          "properties",
+          "executionClientPrometheusMetricsApiEndpoint"
+        ],
+        [
+          "components",
+          "schemas",
+          "GethDetails"
+        ],
+        [
+          "components",
+          "schemas",
+          "GethDetails",
+          "properties",
+          "garbageCollectionMode"
+        ],
+        [
+          "components",
+          "schemas",
+          "GoogleProtobufEmpty"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse",
+          "properties",
+          "blockchainNodes"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListBlockchainNodesResponse",
+          "properties",
+          "unreachable"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "locations"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListLocationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "nextPageToken"
+        ],
+        [
+          "components",
+          "schemas",
+          "ListOperationsResponse",
+          "properties",
+          "operations"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "displayName"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "labels"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "locationId"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Location",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "done"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "metadata",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response"
+        ],
+        [
+          "components",
+          "schemas",
+          "Operation",
+          "properties",
+          "response",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "apiVersion"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "createTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "endTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "requestedCancellation"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "statusMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "target"
+        ],
+        [
+          "components",
+          "schemas",
+          "OperationMetadata",
+          "properties",
+          "verb"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "details",
+          "items",
+          "additionalProperties"
+        ],
+        [
+          "components",
+          "schemas",
+          "Status",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig",
+          "properties",
+          "beaconFeeRecipient"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig",
+          "properties",
+          "managedValidatorClient"
+        ],
+        [
+          "components",
+          "schemas",
+          "ValidatorConfig",
+          "properties",
+          "mevRelayUrls"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
     }
   },
   {
@@ -646,45 +2648,14 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Path parameter `name` is not used in the path `/v1/{+name}:cancel`. [path: paths./v1/{+name}:cancel.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
+    "message": "Deepest nesting found across all schemas: 11",
+    "severity": 3,
+    "code": "max_schema_depth",
     "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:cancel",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/blockchainNodes.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -693,416 +2664,15 @@
         "paths",
         "/v1/{+parent}/blockchainNodes",
         "get",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/blockchainNodes`. [path: paths./v1/{+parent}/blockchainNodes.get.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/blockchainNodes",
-        "get",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/blockchainNodes.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/blockchainNodes",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/blockchainNodes`. [path: paths./v1/{+parent}/blockchainNodes.post.parameters.0.name]",
-    "severity": 1,
-    "code": "path-parameters-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/blockchainNodes",
-        "post",
-        "parameters",
-        0,
-        "name"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}",
-        "patch",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}/locations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/locations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}/operations.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}/operations",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:cancel.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+name}:cancel",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/blockchainNodes.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/blockchainNodes",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/blockchainNodes.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/{+parent}/blockchainNodes",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"OperationMetadata\" is never used. [path: components.schemas.OperationMetadata]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "OperationMetadata"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Component: \"BlockchainNode\" is never used. [path: components.requestBodies.BlockchainNode]",
-    "severity": 2,
-    "code": "no-unused-components",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "requestBodies",
-        "BlockchainNode"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 11,
+      "paths": []
     }
   },
   {
@@ -1129,7 +2699,7 @@
         "info",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1157,7 +2727,91 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 668,
+        "character": 61
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 15
+      },
+      "end": {
+        "line": 105,
+        "character": 87
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 61,
+        "character": 10
+      },
+      "end": {
+        "line": 67,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1187,7 +2841,95 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 70,
+        "character": 10
+      },
+      "end": {
+        "line": 75,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.delete.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 107,
+        "character": 12
+      },
+      "end": {
+        "line": 145,
+        "character": 84
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 109,
+        "character": 10
+      },
+      "end": {
+        "line": 115,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1217,7 +2959,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 147,
+        "character": 14
+      },
+      "end": {
+        "line": 206,
+        "character": 61
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}.patch]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 149,
+        "character": 10
+      },
+      "end": {
+        "line": 155,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}.patch.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1247,7 +3047,125 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 158,
+        "character": 10
+      },
+      "end": {
+        "line": 163,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}.patch.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 166,
+        "character": 10
+      },
+      "end": {
+        "line": 171,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+name}.patch.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 249,
+        "character": 12
+      },
+      "end": {
+        "line": 311,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}/locations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 251,
+        "character": 10
+      },
+      "end": {
+        "line": 257,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}/locations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1277,7 +3195,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 260,
+        "character": 10
+      },
+      "end": {
+        "line": 265,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}/locations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 268,
+        "character": 10
+      },
+      "end": {
+        "line": 273,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+name}/locations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 276,
+        "character": 10
+      },
+      "end": {
+        "line": 281,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+name}/locations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 350,
+        "character": 12
+      },
+      "end": {
+        "line": 412,
+        "character": 80
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}/operations.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 352,
+        "character": 10
+      },
+      "end": {
+        "line": 358,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}/operations.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1307,7 +3373,155 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 361,
+        "character": 10
+      },
+      "end": {
+        "line": 366,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+name}/operations.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 369,
+        "character": 10
+      },
+      "end": {
+        "line": 374,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+name}/operations.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 377,
+        "character": 10
+      },
+      "end": {
+        "line": 382,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+name}/operations.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 451,
+        "character": 13
+      },
+      "end": {
+        "line": 494,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+name}:cancel.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:cancel",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 453,
+        "character": 10
+      },
+      "end": {
+        "line": 459,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+name}:cancel.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:cancel",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1337,7 +3551,65 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 537,
+        "character": 12
+      },
+      "end": {
+        "line": 607,
+        "character": 85
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/blockchainNodes.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 539,
+        "character": 10
+      },
+      "end": {
+        "line": 545,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/blockchainNodes.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1367,7 +3639,185 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 548,
+        "character": 10
+      },
+      "end": {
+        "line": 553,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/blockchainNodes.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 556,
+        "character": 10
+      },
+      "end": {
+        "line": 561,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/blockchainNodes.get.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 564,
+        "character": 10
+      },
+      "end": {
+        "line": 569,
+        "character": 31
+      }
+    },
+    "message": "Parameters must include examples; missing 3 [path: paths./v1/{+parent}/blockchainNodes.get.parameters.3]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "parameters",
+        "3"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 572,
+        "character": 10
+      },
+      "end": {
+        "line": 577,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 4 [path: paths./v1/{+parent}/blockchainNodes.get.parameters.4]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "parameters",
+        "4"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 609,
+        "character": 13
+      },
+      "end": {
+        "line": 668,
+        "character": 61
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/{+parent}/blockchainNodes.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 611,
+        "character": 10
+      },
+      "end": {
+        "line": 617,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./v1/{+parent}/blockchainNodes.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1397,7 +3847,433 @@
         "parameters",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 620,
+        "character": 10
+      },
+      "end": {
+        "line": 625,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./v1/{+parent}/blockchainNodes.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 628,
+        "character": 10
+      },
+      "end": {
+        "line": 633,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 2 [path: paths./v1/{+parent}/blockchainNodes.post.parameters.2]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post",
+        "parameters",
+        "2"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 678,
+        "character": 16
+      },
+      "end": {
+        "line": 687,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 690,
+        "character": 21
+      },
+      "end": {
+        "line": 695,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 693,
+        "character": 16
+      },
+      "end": {
+        "line": 693,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 698,
+        "character": 12
+      },
+      "end": {
+        "line": 709,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 712,
+        "character": 17
+      },
+      "end": {
+        "line": 717,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 720,
+        "character": 15
+      },
+      "end": {
+        "line": 725,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 728,
+        "character": 12
+      },
+      "end": {
+        "line": 733,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 736,
+        "character": 20
+      },
+      "end": {
+        "line": 741,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 739,
+        "character": 16
+      },
+      "end": {
+        "line": 739,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 744,
+        "character": 20
+      },
+      "end": {
+        "line": 750,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 753,
+        "character": 18
+      },
+      "end": {
+        "line": 758,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 761,
+        "character": 19
+      },
+      "end": {
+        "line": 766,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 769,
+        "character": 24
+      },
+      "end": {
+        "line": 774,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1425,7 +4301,7 @@
         "requestBodies",
         "BlockchainNode"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1456,7 +4332,7 @@
         "connectionInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1487,7 +4363,7 @@
         "connectionInfo",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1518,7 +4394,37 @@
         "ethereumDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 828,
+        "character": 41
+      },
+      "end": {
+        "line": 830,
+        "character": 29
+      }
+    },
+    "message": "Potentially exposing internals (words \"private\" or \"internal\" spotted) [path: components.schemas.BlockchainNode.properties.privateServiceConnectEnabled]",
+    "severity": 2,
+    "code": "monite-general-exposing-internals",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BlockchainNode",
+        "properties",
+        "privateServiceConnectEnabled"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1549,7 +4455,7 @@
         "endpointInfo",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1580,7 +4486,7 @@
         "endpointInfo",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1611,7 +4517,7 @@
         "additionalEndpoints",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1642,7 +4548,7 @@
         "additionalEndpoints",
         "readOnly"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1673,7 +4579,7 @@
         "consensusClient",
         "enumDeprecated"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1704,7 +4610,7 @@
         "gethDetails",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1735,7 +4641,7 @@
         "network",
         "enumDeprecated"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1766,7 +4672,7 @@
         "validatorConfig",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1797,7 +4703,7 @@
         "error",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1825,7 +4731,1434 @@
         "schemas",
         "OperationMetadata"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1181,
+        "character": 17
+      },
+      "end": {
+        "line": 1184,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Status.properties.code]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Status",
+        "properties",
+        "code"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.EthereumDetails.properties.consensusClient.enumDeprecated]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "EthereumDetails",
+        "properties",
+        "consensusClient",
+        "enumDeprecated"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.EthereumDetails.properties.network.enumDeprecated]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "EthereumDetails",
+        "properties",
+        "network",
+        "enumDeprecated"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.delete.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}`. [path: paths./v1/{+name}.patch.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}/locations`. [path: paths./v1/{+name}/locations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}/operations`. [path: paths./v1/{+name}/operations.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `name` is not used in the path `/v1/{+name}:cancel`. [path: paths./v1/{+name}:cancel.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:cancel",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/blockchainNodes`. [path: paths./v1/{+parent}/blockchainNodes.get.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Path parameter `parent` is not used in the path `/v1/{+parent}/blockchainNodes`. [path: paths./v1/{+parent}/blockchainNodes.post.parameters.0.name]",
+    "severity": 1,
+    "code": "path-parameters-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post",
+        "parameters",
+        "0",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}.patch.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}.patch.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}/locations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}/locations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/locations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}/operations.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}/operations.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+name}:cancel.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:cancel",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+name}:cancel.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:cancel",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/blockchainNodes.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/blockchainNodes.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/{+parent}/blockchainNodes.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/{+parent}/blockchainNodes.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"OperationMetadata\" is never used. [path: components.schemas.OperationMetadata]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "OperationMetadata"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Component: \"BlockchainNode\" is never used. [path: components.requestBodies.BlockchainNode]",
+    "severity": 2,
+    "code": "no-unused-components",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "requestBodies",
+        "BlockchainNode"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'blockchainnodeengine.projects.locations.blockchainNodes.create' has semantic quality issues: vague_summary, missing_input_details, missing_output_details, missing_side_effects, poor_ai_interpretability. Original summary is empty, making it impossible for AI agents to quickly understand the operation's purpose. Description lacks critical details about: (1) what inputs are expected (BlockchainNode schema structure), (2) what is returned (Operation object for async tracking), (3) the asynchronous nature of the operation, (4) authentication/authorization requirements, and (5) how to track completion. Enhanced version provides complete context for AI agent decision-making about when and how to invoke this operation, including the long-running operation pattern used throughout this API.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "blockchainnodeengine.projects.locations.blockchainNodes.create",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Creates a new blockchain node in a given project and location.",
+      "summary_suggestion": "Create a new blockchain node in a project",
+      "description_suggestion": "Creates a new blockchain node resource within a specified Google Cloud project and location. Accepts a BlockchainNode configuration object specifying node type (e.g., Ethereum), network parameters, and validator configuration if applicable. Returns an Operation resource representing the long-running creation process. The operation completes asynchronously; use the operation ID to poll for completion status. Requires OAuth 2.0 authentication and appropriate IAM permissions on the target project.",
+      "reasoning": "Original summary is empty, making it impossible for AI agents to quickly understand the operation's purpose. Description lacks critical details about: (1) what inputs are expected (BlockchainNode schema structure), (2) what is returned (Operation object for async tracking), (3) the asynchronous nature of the operation, (4) authentication/authorization requirements, and (5) how to track completion. Enhanced version provides complete context for AI agent decision-making about when and how to invoke this operation, including the long-running operation pattern used throughout this API.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'blockchainnodeengine.projects.locations.blockchainNodes.delete' has semantic quality issues: vague_summary, missing_side_effects, missing_context. Missing summary entirely. Description lacks context about permanence, side effects (service termination), and return value. Added details about irreversibility and state requirements to help AI agents understand the destructive nature of this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "blockchainnodeengine.projects.locations.blockchainNodes.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_side_effects",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes a single blockchain node.",
+      "summary_suggestion": "Delete a blockchain node",
+      "description_suggestion": "Deletes a single blockchain node and terminates all associated services. This operation is permanent and cannot be undone. The node must exist and be in a deletable state. Returns an empty response on successful deletion.",
+      "reasoning": "Missing summary entirely. Description lacks context about permanence, side effects (service termination), and return value. Added details about irreversibility and state requirements to help AI agents understand the destructive nature of this operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'blockchainnodeengine.projects.locations.blockchainNodes.get' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description is minimal and doesn't specify what details are returned or the schema of the response. Enhanced to clarify return type and key information available (configuration, status, endpoints).",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "blockchainnodeengine.projects.locations.blockchainNodes.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Gets details of a single blockchain node.",
+      "summary_suggestion": "Retrieve blockchain node details",
+      "description_suggestion": "Retrieves detailed information about a single blockchain node, including its configuration, status, and connection endpoints. Returns a BlockchainNode object containing all node properties and current state.",
+      "reasoning": "Missing summary. Description is minimal and doesn't specify what details are returned or the schema of the response. Enhanced to clarify return type and key information available (configuration, status, endpoints).",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'blockchainnodeengine.projects.locations.blockchainNodes.patch' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description lacks clarity about partial update support, field mask requirement, and return value. Added details about update semantics and response schema to improve AI agent understanding of how to use this operation correctly.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}",
+        "patch"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "blockchainnodeengine.projects.locations.blockchainNodes.patch",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Updates the parameters of a single blockchain node.",
+      "summary_suggestion": "Update blockchain node parameters",
+      "description_suggestion": "Updates specified parameters of a single blockchain node. Supports partial updates - only provided fields in the BlockchainNode request body will be modified. Requires a field mask to specify which parameters to update. Returns the updated BlockchainNode object with all current properties.",
+      "reasoning": "Missing summary. Description lacks clarity about partial update support, field mask requirement, and return value. Added details about update semantics and response schema to improve AI agent understanding of how to use this operation correctly.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}",
+          "patch",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'blockchainnodeengine.projects.locations.operations.list' has semantic quality issues: vague_summary, missing_context, missing_output_details. Missing summary. Description mentions filter support but lacks specificity about what can be filtered, what is returned, and the response schema. Added context about Operation objects and ListOperationsResponse to clarify the return value for AI agents.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}/operations",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "blockchainnodeengine.projects.locations.operations.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.",
+      "summary_suggestion": "List long-running operations",
+      "description_suggestion": "Lists long-running operations that match the specified filter criteria. Supports filtering by operation status, name, and other criteria. Returns a ListOperationsResponse containing Operation objects matching the filter. If the server doesn't support this method, it returns `UNIMPLEMENTED`.",
+      "reasoning": "Missing summary. Description mentions filter support but lacks specificity about what can be filtered, what is returned, and the response schema. Added context about Operation objects and ListOperationsResponse to clarify the return value for AI agents.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}/operations",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'blockchainnodeengine.projects.locations.operations.cancel' has semantic quality issues: vague_summary, poor_ai_interpretability. Missing summary. Description is overly verbose and difficult for AI agents to parse. Reorganized to clarify: the action (request cancellation), the best-effort nature, the state transition behavior, how to verify success, and the return value. Removed redundant technical details while preserving essential information.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+name}:cancel",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "blockchainnodeengine.projects.locations.operations.cancel",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.",
+      "summary_suggestion": "Request cancellation of long-running operation",
+      "description_suggestion": "Requests asynchronous cancellation of a long-running operation. Cancellation is best-effort and not guaranteed to succeed. The operation is not deleted after cancellation; instead, it transitions to a CANCELLED state with an Operation.error containing status code 1. Use Operations.GetOperation to verify cancellation status. Returns an empty response. If the server doesn't support this method, it returns `UNIMPLEMENTED`.",
+      "reasoning": "Missing summary. Description is overly verbose and difficult for AI agents to parse. Reorganized to clarify: the action (request cancellation), the best-effort nature, the state transition behavior, how to verify success, and the return value. Removed redundant technical details while preserving essential information.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+name}:cancel",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'blockchainnodeengine.projects.locations.blockchainNodes.list' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description is minimal and doesn't specify pagination support, filtering capabilities, or the response schema. Enhanced to clarify return type (ListBlockchainNodesResponse) and key features (pagination, filtering) to help AI agents understand how to retrieve and iterate through nodes.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/{+parent}/blockchainNodes",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "blockchainnodeengine.projects.locations.blockchainNodes.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists blockchain nodes in a given project and location.",
+      "summary_suggestion": "List blockchain nodes in location",
+      "description_suggestion": "Lists all blockchain nodes in a specified project and location. Supports pagination and filtering. Returns a ListBlockchainNodesResponse containing BlockchainNode objects matching the criteria, including node configuration, status, and connection information.",
+      "reasoning": "Missing summary. Description is minimal and doesn't specify pagination support, filtering capabilities, or the response schema. Enhanced to clarify return type (ListBlockchainNodesResponse) and key features (pagination, filtering) to help AI agents understand how to retrieve and iterate through nodes.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/{+parent}/blockchainNodes",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 8 operations analyzed, 7 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 8,
+      "total_issues_found": 7,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 77 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 77
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 77 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 77
     }
   }
 ]

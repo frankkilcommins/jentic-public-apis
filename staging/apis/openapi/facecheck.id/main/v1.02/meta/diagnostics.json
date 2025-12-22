@@ -7,23 +7,43 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Security scheme 'Bearer' is defined in components.securitySchemes but not used in any security requirement.",
-    "severity": 2,
-    "code": "UNUSED_SECURITY_SCHEME_DEFINED",
+    "message": "Total Operations count: 4",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "default-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "components",
-        "securitySchemes"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 4,
+      "paths": [
+        [
+          "paths",
+          "/api/upload_pic",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/info",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/search",
+          "post"
+        ]
+      ]
     }
   },
   {
@@ -34,14 +54,1016 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./api/upload_pic.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 60",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 60
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 1",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 1,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['apiKey']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "apiKey"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 1 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "apiKey",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": "header",
+          "apikey_name": "Authorization",
+          "oauth2_flows": []
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 1",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 71",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 71
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 8",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 8
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 8",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 8
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 8",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 8,
+      "paths": [
+        [
+          "paths",
+          "/api/upload_pic"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/delete_pic"
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/info"
+        ],
+        [
+          "paths",
+          "/api/info",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/search"
+        ],
+        [
+          "paths",
+          "/api/search",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 2",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 2,
+      "paths": [
+        [
+          "paths",
+          "/api/delete_pic",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/info",
+          "post"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 79",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 79,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/api/upload_pic"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "images"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "images",
+          "items"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "id_search"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "requestBody",
+          "content",
+          "multipart/form-data",
+          "schema",
+          "properties",
+          "reset_prev_images"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/delete_pic"
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/info"
+        ],
+        [
+          "paths",
+          "/api/info",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/info",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/search"
+        ],
+        [
+          "paths",
+          "/api/search",
+          "post"
+        ],
+        [
+          "paths",
+          "/api/search",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/api/search",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "id_search"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "progress"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "error"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "code"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "input"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "facemon_status"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "facemon_last_scann"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "was_updated"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "hasEmptyImages"
+        ],
+        [
+          "components",
+          "schemas",
+          "BrowserJsonResponse",
+          "properties",
+          "new_seen_count"
+        ],
+        [
+          "components",
+          "schemas",
+          "InfoResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "InfoResponse",
+          "properties",
+          "faces"
+        ],
+        [
+          "components",
+          "schemas",
+          "InfoResponse",
+          "properties",
+          "is_online"
+        ],
+        [
+          "components",
+          "schemas",
+          "InfoResponse",
+          "properties",
+          "remaining_credits"
+        ],
+        [
+          "components",
+          "schemas",
+          "InfoResponse",
+          "properties",
+          "has_credits_to_search"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputImage"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputImage",
+          "properties",
+          "base64"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputImage",
+          "properties",
+          "id_pic"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputImage",
+          "properties",
+          "url_source"
+        ],
+        [
+          "components",
+          "schemas",
+          "InputImage",
+          "properties",
+          "svg_anim"
+        ],
+        [
+          "components",
+          "schemas",
+          "MaskedUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "MaskedUrl",
+          "properties",
+          "value"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "id_search"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "with_progress"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "id_captcha"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "status_only"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "demo"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "shady_only"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem",
+          "properties",
+          "guid"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem",
+          "properties",
+          "score"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem",
+          "properties",
+          "group"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem",
+          "properties",
+          "base64"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem",
+          "properties",
+          "index"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem",
+          "properties",
+          "indexDB"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchItem",
+          "properties",
+          "seen"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "tookSeconds"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "tookSecondsDownload"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "tookSecondsQueue"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "searchedFaces"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "freeRam"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "demo"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "face_per_sec"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "performance"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "max_score"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "images_in_bundle"
+        ],
+        [
+          "components",
+          "schemas",
+          "Search_Results",
+          "properties",
+          "scaned_till_index"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 10",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 10,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/delete_pic",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/info",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/api/search",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "with_progress"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "id_captcha"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "status_only"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchData",
+          "properties",
+          "demo"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Bearer"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 10",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -50,82 +1072,59 @@
         "paths",
         "/api/upload_pic",
         "post",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "application/json",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 10,
+      "paths": []
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 16,
+        "character": 10
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 157,
+        "character": 68
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./api/search.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
       "path": [
-        "paths",
-        "/api/search",
-        "post",
-        "summary"
+        "paths"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
     "range": {
       "start": {
-        "line": 0,
-        "character": 0
+        "line": 18,
+        "character": 13
       },
       "end": {
-        "line": 0,
-        "character": 0
+        "line": 63,
+        "character": 68
       }
     },
-    "message": "Info object should contain `license` field. [path: info]",
-    "severity": 2,
-    "code": "info-license",
+    "message": "Each operation should have a summary [path: paths./api/upload_pic.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
     "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "info"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./api/upload_pic.post.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
+    "source": "spectral-validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -133,213 +1132,9 @@
       "path": [
         "paths",
         "/api/upload_pic",
-        "post",
-        "operationId"
+        "post"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/upload_pic.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/upload_pic",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./api/delete_pic.post.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/delete_pic",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/delete_pic.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/delete_pic",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./api/info.post.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/info",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/info.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/info",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `operationId` field. [path: paths./api/search.post.operationId]",
-    "severity": 2,
-    "code": "operation-operationId",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/search",
-        "post",
-        "operationId"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./api/search.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/api/search",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -367,7 +1162,7 @@
         "/api/upload_pic",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -395,7 +1190,7 @@
         "/api/upload_pic",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -425,7 +1220,7 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -453,7 +1248,7 @@
         "/api/delete_pic",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -481,7 +1276,7 @@
         "/api/delete_pic",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -511,7 +1306,67 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 78,
+        "character": 10
+      },
+      "end": {
+        "line": 82,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./api/delete_pic.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/delete_pic",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 85,
+        "character": 10
+      },
+      "end": {
+        "line": 89,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./api/delete_pic.post.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/delete_pic",
+        "post",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -539,7 +1394,7 @@
         "/api/info",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -567,7 +1422,7 @@
         "/api/info",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -597,7 +1452,35 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 128,
+        "character": 13
+      },
+      "end": {
+        "line": 157,
+        "character": 68
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./api/search.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/search",
+        "post"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -625,7 +1508,7 @@
         "/api/search",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -653,7 +1536,7 @@
         "/api/search",
         "post"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -683,7 +1566,1213 @@
         "tags",
         "0"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 179,
+        "character": 21
+      },
+      "end": {
+        "line": 182,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BrowserJsonResponse.properties.progress]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BrowserJsonResponse",
+        "properties",
+        "progress"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 206,
+        "character": 31
+      },
+      "end": {
+        "line": 209,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BrowserJsonResponse.properties.facemon_last_scann]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BrowserJsonResponse",
+        "properties",
+        "facemon_last_scann"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 218,
+        "character": 27
+      },
+      "end": {
+        "line": 220,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.BrowserJsonResponse.properties.new_seen_count]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "BrowserJsonResponse",
+        "properties",
+        "new_seen_count"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 228,
+        "character": 18
+      },
+      "end": {
+        "line": 232,
+        "character": 32
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.InfoResponse.properties.faces]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "InfoResponse",
+        "properties",
+        "faces"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 238,
+        "character": 30
+      },
+      "end": {
+        "line": 241,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.InfoResponse.properties.remaining_credits]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "InfoResponse",
+        "properties",
+        "remaining_credits"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 328,
+        "character": 18
+      },
+      "end": {
+        "line": 330,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchItem.properties.score]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchItem",
+        "properties",
+        "score"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 332,
+        "character": 18
+      },
+      "end": {
+        "line": 334,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchItem.properties.group]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchItem",
+        "properties",
+        "group"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 343,
+        "character": 18
+      },
+      "end": {
+        "line": 345,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchItem.properties.index]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchItem",
+        "properties",
+        "index"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 347,
+        "character": 20
+      },
+      "end": {
+        "line": 349,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchItem.properties.indexDB]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchItem",
+        "properties",
+        "indexDB"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 351,
+        "character": 17
+      },
+      "end": {
+        "line": 354,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchItem.properties.seen]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchItem",
+        "properties",
+        "seen"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 359,
+        "character": 19
+      },
+      "end": {
+        "line": 366,
+        "character": 25
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchType]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 378,
+        "character": 24
+      },
+      "end": {
+        "line": 381,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.tookSeconds]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "tookSeconds"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 383,
+        "character": 32
+      },
+      "end": {
+        "line": 386,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.tookSecondsDownload]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "tookSecondsDownload"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 388,
+        "character": 29
+      },
+      "end": {
+        "line": 391,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.tookSecondsQueue]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "tookSecondsQueue"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 393,
+        "character": 26
+      },
+      "end": {
+        "line": 396,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.searchedFaces]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "searchedFaces"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 398,
+        "character": 20
+      },
+      "end": {
+        "line": 401,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.freeRam]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "freeRam"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 407,
+        "character": 25
+      },
+      "end": {
+        "line": 411,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.face_per_sec]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "face_per_sec"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 418,
+        "character": 22
+      },
+      "end": {
+        "line": 421,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.max_score]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "max_score"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 423,
+        "character": 29
+      },
+      "end": {
+        "line": 425,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.images_in_bundle]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "images_in_bundle"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 427,
+        "character": 30
+      },
+      "end": {
+        "line": 429,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.Search_Results.properties.scaned_till_index]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "Search_Results",
+        "properties",
+        "scaned_till_index"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Info object should contain `license` field. [path: info]",
+    "severity": 2,
+    "code": "info-license",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "info"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./api/upload_pic.post.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/upload_pic",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./api/upload_pic.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/upload_pic",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/upload_pic.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/upload_pic",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./api/delete_pic.post.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/delete_pic",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/delete_pic.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/delete_pic",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./api/info.post.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/info",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/info.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/info",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `operationId` field. [path: paths./api/search.post.operationId]",
+    "severity": 2,
+    "code": "operation-operationId",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/search",
+        "post",
+        "operationId"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./api/search.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/search",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./api/search.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/search",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post_/api/upload_pic' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_input_details, missing_output_details, poor_ai_interpretability. Operation has no summary or description, making it impossible for AI agents to understand its purpose. Added clear action verb, domain context about facial recognition, input format expectations, and output details including the image identifier needed for search operations.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/upload_pic",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post_/api/upload_pic",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Upload an image for facial recognition search",
+      "description_suggestion": "Uploads an image file to be used for facial recognition searching. The image should contain a face to be recognized. Accepts common image formats (JPEG, PNG, etc.). Returns an image identifier and upload status that can be used in subsequent search operations. The uploaded image is temporarily stored for processing.",
+      "reasoning": "Operation has no summary or description, making it impossible for AI agents to understand its purpose. Added clear action verb, domain context about facial recognition, input format expectations, and output details including the image identifier needed for search operations.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api/upload_pic",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post_/api/delete_pic' has semantic quality issues: vague_description, missing_input_details, missing_output_details, missing_side_effects. Summary is clear and actionable, but description is missing. Added details about required parameters (image identifier), side effects (data deletion, resource cleanup), return value, and operational context about preventing future searches. This helps AI agents understand the full lifecycle impact.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/delete_pic",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post_/api/delete_pic",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "missing_side_effects"
+      ],
+      "current_summary": "Remove an image from a search request",
+      "current_description": "",
+      "description_suggestion": "Removes a previously uploaded image from the facial recognition search system. Requires the image identifier obtained during upload. Deletes the image data and any associated temporary search state. Returns confirmation of successful deletion. This operation frees up resources and prevents the image from being used in future searches.",
+      "reasoning": "Summary is clear and actionable, but description is missing. Added details about required parameters (image identifier), side effects (data deletion, resource cleanup), return value, and operational context about preventing future searches. This helps AI agents understand the full lifecycle impact.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/delete_pic",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'post_/api/search' has semantic quality issues: vague_summary, vague_description, unclear_purpose, missing_input_details, missing_output_details, poor_ai_interpretability. Operation has no summary or description, creating critical ambiguity for AI agents. Added clear action verb, domain context about internet-wide facial search, input requirements (image identifier, search type), output structure (results list with confidence scores), and operational constraints (authentication, credits). This enables AI agents to understand when and how to invoke this core operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/api/search",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "post_/api/search",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "unclear_purpose",
+        "missing_input_details",
+        "missing_output_details",
+        "poor_ai_interpretability"
+      ],
+      "current_summary": "",
+      "current_description": "",
+      "summary_suggestion": "Search the internet for matching faces",
+      "description_suggestion": "Performs a facial recognition search across indexed internet content to find matching faces. Accepts search parameters including uploaded image identifier, search type, and optional filters. Returns a list of search results containing matched faces with URLs, confidence scores, and metadata. Search results are ranked by relevance. Requires valid authentication and available search credits.",
+      "reasoning": "Operation has no summary or description, creating critical ambiguity for AI agents. Added clear action verb, domain context about internet-wide facial search, input requirements (image identifier, search type), output structure (results list with confidence scores), and operational constraints (authentication, credits). This enables AI agents to understand when and how to invoke this core operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/api/search",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/api/search",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 4 operations analyzed, 3 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 4,
+      "total_issues_found": 3,
+      "batches_processed": 1
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 12 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 12
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 12 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 12
     }
   }
 ]

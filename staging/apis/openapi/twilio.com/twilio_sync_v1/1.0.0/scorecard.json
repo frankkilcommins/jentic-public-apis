@@ -1,0 +1,899 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "releaseDate": null,
+    "engine": {
+      "name": "Jentic API Scoring Framework",
+      "version": "0.1.4+jairf.0.2.0"
+    },
+    "disclaimer": "Scores are indicative and opinion biased based on Jentic's view of what is important to deliver APIs which higher levels of interpretability for AI systems."
+  },
+  "apiMetadata": {
+    "apiId": "7e9dd534a228482ee70dd806f2cc5e51",
+    "name": "Twilio - Sync",
+    "apiDescriptionVersion": "1.0.0",
+    "specification": "openapi",
+    "specificationVersion": "3.0.1",
+    "sourceUrl": "https://raw.githubusercontent.com/jentic/jentic-public-apis/refs/heads/main/apis/openapi/twilio.com/twilio_sync_v1/1.0.0/openapi.json",
+    "vendor": {
+      "name": "twilio.com",
+      "domain": null,
+      "contact": {
+        "name": "Twilio Support",
+        "email": "support@twilio.com"
+      }
+    },
+    "operationCount": 48,
+    "schemaCount": 630,
+    "securitySchemeCount": 1,
+    "securitySchemeTypes": [
+      "http"
+    ],
+    "tagCount": 11
+  },
+  "summary": {
+    "scoringDate": "2025-12-16T17:38:16+00:00",
+    "score": 21.91,
+    "level": "non-ready",
+    "grade": "F",
+    "dimensions": [
+      {
+        "kind": "FC",
+        "name": "Foundational Compliance",
+        "intention": "Base layer of spec validity and structural soundness.",
+        "score": 73.99,
+        "grade": "A-"
+      },
+      {
+        "kind": "DXJ",
+        "name": "Developer Experience & Jentic Compatibility",
+        "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+        "score": 54.14,
+        "grade": "C"
+      },
+      {
+        "kind": "ARAX",
+        "name": "AI-Readiness & Agent Experience",
+        "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+        "score": 29.8,
+        "grade": "F"
+      },
+      {
+        "kind": "AU",
+        "name": "Agent Usability",
+        "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+        "score": 11.35,
+        "grade": "F"
+      },
+      {
+        "kind": "SEC",
+        "name": "Security",
+        "intention": "Trust, risk posture, and security compliance.",
+        "score": 10.0,
+        "grade": "F"
+      },
+      {
+        "kind": "AID",
+        "name": "AI Discoverability",
+        "intention": "Findability, semantic richness, and reasoning readiness.",
+        "score": 40.1,
+        "grade": "D-"
+      }
+    ]
+  },
+  "details": [
+    {
+      "kind": "FDX",
+      "name": "Foundational & DX",
+      "description": "Human-oriented and tooling alignment - standards compliance, linting, and developer usability.",
+      "score": 63.48,
+      "grade": "B",
+      "dimensions": [
+        {
+          "kind": "FC",
+          "name": "Foundational Compliance",
+          "intention": "Base layer of spec validity and structural soundness.",
+          "score": 73.99,
+          "grade": "A-",
+          "signals": [
+            {
+              "kind": "lint_results",
+              "name": "Lint Results",
+              "description": "Aggregated quality score from linter diagnostics, weighted by severity.",
+              "score": 0.96,
+              "metadata": {
+                "severity_counts": {
+                  "critical": 0,
+                  "error": 0,
+                  "warning": 335,
+                  "info": 176,
+                  "hint": 0
+                },
+                "weighted_cost": 1.0135,
+                "max_cost": 25.0,
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1,
+                      2,
+                      3,
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "resolution_completeness",
+              "name": "Resolution Completeness",
+              "description": "Percentage of `$ref` references that resolve successfully.",
+              "score": 1.0,
+              "metadata": {}
+            },
+            {
+              "kind": "spec_validity",
+              "name": "Specification Validity",
+              "description": "Checks whether the API description parses successfully and conforms to its declared specification (e.g., OpenAPI).",
+              "score": 1.0,
+              "metadata": {
+                "failure_reason": null,
+                "diagnostic_counts": {
+                  "error": 0,
+                  "warning": 335,
+                  "information": 176,
+                  "hint": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "severity": [
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "structural_integrity",
+              "name": "Structural Integrity",
+              "description": "Structural correctness score based on schema issues using logarithmic dampening.",
+              "score": 0.0,
+              "metadata": {
+                "structural_issues": 16,
+                "structural_issue_threshold": 15.0,
+                "category_counts": {
+                  "invalid_model_shape": 16,
+                  "contradictory_typing": 0,
+                  "impossible_constraints": 0,
+                  "broken_polymorphism": 0,
+                  "request_response_undefined": 0,
+                  "non_evaluable_example": 0,
+                  "unresolvable_or_circular_schema": 0
+                },
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "jentic-object-should-have-shape",
+                      "jentic-format-must-match-type-numeric",
+                      "jentic-format-must-match-type-stringy",
+                      "jentic-oneof-requires-discriminator-for-objects",
+                      "jentic-request-body-must-have-schema",
+                      "jentic-response-content-should-have-schema",
+                      "schema_invalid_min_max"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "DXJ",
+          "name": "Developer Experience & Jentic Compatibility",
+          "intention": "Clarity, completeness, and ingestion readiness for developers and tooling.",
+          "score": 54.14,
+          "grade": "C",
+          "signals": [
+            {
+              "kind": "example_density",
+              "name": "Example Density",
+              "description": "How richly the API is illustrated with examples.",
+              "score": 0.21,
+              "metadata": {}
+            },
+            {
+              "kind": "example_validity",
+              "name": "Example Validity",
+              "description": "Percentage of examples that conform to their schemas.",
+              "score": 0.96,
+              "metadata": {}
+            },
+            {
+              "kind": "response_coverage",
+              "name": "Response Coverage",
+              "description": "Percentage of operations that define both success and error responses with realistic examples.",
+              "score": 0.0,
+              "metadata": {}
+            },
+            {
+              "kind": "tooling_readiness",
+              "name": "Tooling Readiness",
+              "description": "Health of API ingestion, bundling, and resolution within Jentic pipelines.",
+              "score": 1.0,
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "AIRU",
+      "name": "AI-Readiness & Usability",
+      "description": "Machine-oriented semantic clarity - interpretability, structure, and AI agent comprehension.",
+      "score": 21.42,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "ARAX",
+          "name": "AI-Readiness & Agent Experience",
+          "intention": "Semantic breadth, depth, and agent comprehension for AI systems.",
+          "score": 29.8,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "description_coverage",
+              "name": "Description Coverage",
+              "description": "Coverage of descriptions across API elements.",
+              "score": 0.47,
+              "metadata": {
+                "described_elements": 575,
+                "undescribed_elements": 639,
+                "describable_elements": 1214,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "described_elements",
+                      "describable_elements"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "kind": "summary_coverage",
+              "name": "Summary Coverage",
+              "description": "Coverage of summaries across operations/tags/info.",
+              "score": 0.12,
+              "metadata": {
+                "summaries_present": 18,
+                "missing_summaries": 129,
+                "summaries_expected": 147,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "summaries_present",
+                      "summaries_expected"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AU",
+          "name": "Agent Usability",
+          "intention": "Functional utility, complexity comfort, and AI orchestration readiness.",
+          "score": 11.35,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "complexity_comfort",
+              "name": "Complexity Comfort",
+              "description": "Agent comfort level based on API operational and structural complexity.",
+              "score": 0.11,
+              "metadata": {
+                "total_operations": 48,
+                "max_schema_depth": 5,
+                "normalised_endpoint_count": 0.96,
+                "normalised_schema_depth": 0.625,
+                "raw_complexity": 0.7925,
+                "endpoint_baseline": 50.0,
+                "depth_baseline": 8.0,
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "total_operations",
+                      "max_schema_depth"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "TSD",
+      "name": "Trust/Safety & Discoverability",
+      "description": "Ecosystem-oriented governance - security, findability, and safe AI agent interaction.",
+      "score": 23.68,
+      "grade": "F",
+      "dimensions": [
+        {
+          "kind": "SEC",
+          "name": "Security",
+          "intention": "Trust, risk posture, and security compliance.",
+          "score": 10.0,
+          "grade": "F",
+          "signals": [
+            {
+              "kind": "auth_strength",
+              "name": "Authentication Strength",
+              "description": "Average quality of security schemes based on authentication method strength (weakest link for OAuth2).",
+              "score": 0.1,
+              "metadata": {
+                "strength_scores": [
+                  0.1
+                ],
+                "schemes_count": 1,
+                "schemes": [
+                  {
+                    "type": "http",
+                    "score": 0.1,
+                    "details": {
+                      "http_scheme": "basic"
+                    }
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "security_schemes"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "AID",
+          "name": "AI Discoverability",
+          "intention": "Findability, semantic richness, and reasoning readiness.",
+          "score": 40.1,
+          "grade": "D-",
+          "signals": [
+            {
+              "kind": "descriptive_richness",
+              "name": "Descriptive Richness",
+              "description": "Clarity and depth of descriptions across API elements.",
+              "score": 0.4,
+              "metadata": {
+                "number_of_describable_elements": 48,
+                "operations_with_issues": 41,
+                "operations_without_issues": 7,
+                "sum_of_element_descriptive_scores": 38.5,
+                "operations_scored": [
+                  {
+                    "operation_id": "FetchService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListService",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteSyncListItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSyncListItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateSyncListItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListSyncListItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSyncListPermission",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteSyncMapItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_context",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSyncMapItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateSyncMapItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListSyncMapItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSyncMapPermission",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchDocument",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteDocument",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateDocument",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateDocument",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListDocument",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchDocumentPermission",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_output_details",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteDocumentPermission",
+                    "clarity_score": 1.0,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.5,
+                    "issues_found": [
+                      "missing_side_effects",
+                      "missing_context"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListSyncMapPermission",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchSyncStream",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteSyncStream",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSyncStream",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateSyncStream",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListSyncStream",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_context",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateStreamMessage",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.5,
+                    "element_descriptive_score": 1.0,
+                    "issues_found": [
+                      "vague_description",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchSyncList",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteSyncList",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_side_effects"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSyncList",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateSyncList",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListSyncList",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchSyncListItem",
+                    "clarity_score": 0.5,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.5,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchSyncMap",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "DeleteSyncMap",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "UpdateSyncMap",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "missing_side_effects",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "CreateSyncMap",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_input_details",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "ListSyncMap",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  },
+                  {
+                    "operation_id": "FetchSyncMapItem",
+                    "clarity_score": 0.0,
+                    "depth_score": 0.0,
+                    "element_descriptive_score": 0.0,
+                    "issues_found": [
+                      "vague_summary",
+                      "vague_description",
+                      "unclear_purpose",
+                      "missing_output_details",
+                      "poor_ai_interpretability"
+                    ]
+                  }
+                ],
+                "provenance": {
+                  "diagnostics": {
+                    "code": [
+                      "semantic-analysis-summary",
+                      "POOR_OPERATION_SEMANTICS"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -24,7 +24,7 @@
         "schemas",
         "WmxSitemap"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -52,7 +52,7 @@
         "schemas",
         "WmxSitemapContent"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -63,24 +63,78 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
-    "severity": 1,
-    "code": "no-server-trailing-slash",
+    "message": "Total Operations count: 11",
+    "severity": 3,
+    "code": "total_operations",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
       "fixable": true,
-      "path": [
-        "servers",
-        0,
-        "url"
-      ],
-      "target": "final-spec_bundled-spec"
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations": 11,
+      "paths": [
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete"
+        ]
+      ]
     }
   },
   {
@@ -91,14 +145,2751 @@
       },
       "end": {
         "line": 0,
-        "character": 0
+        "character": 12
       }
     },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/urlInspection/index:inspect.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
+    "message": "Meaningful responses count: 0",
+    "severity": 3,
+    "code": "operations_with_meaningful_responses",
     "code_description": null,
-    "source": "redocly-validator",
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "operations_with_meaningful_responses": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Schemas count: 143",
+    "severity": 3,
+    "code": "schema_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "schema_count": 143
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security Schemes count: 2",
+    "severity": 3,
+    "code": "security_scheme_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_count": 2,
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security scheme types: ['oauth2']",
+    "severity": 3,
+    "code": "security_scheme_types",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_scheme_types": [
+        "oauth2"
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Security schemes: 2 Security Schemes",
+    "severity": 3,
+    "code": "security_schemes",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "security_schemes": [
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "implicit"
+          ]
+        },
+        {
+          "type": "oauth2",
+          "http_scheme": null,
+          "bearer_format": null,
+          "apikey_in": null,
+          "apikey_name": null,
+          "oauth2_flows": [
+            "authorizationCode"
+          ]
+        }
+      ],
+      "paths": [
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Tags count: 5",
+    "severity": 3,
+    "code": "tag_count",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "tag_count": 5
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Expected examples: 177",
+    "severity": 3,
+    "code": "expected_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "expected_examples": 177
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Present examples: 0",
+    "severity": 3,
+    "code": "present_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "present_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Total examples: 0",
+    "severity": 3,
+    "code": "total_examples",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_examples": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries expected: 18",
+    "severity": 3,
+    "code": "summaries_expected",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_expected": 18,
+      "paths": [
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect"
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Summaries present: 0",
+    "severity": 3,
+    "code": "summaries_present",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "summaries_present": 0,
+      "paths": []
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Describable elements: 208",
+    "severity": 3,
+    "code": "describable_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "describable_elements": 208,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "servers",
+          0
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect"
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "requestBody"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "parameters",
+          0,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "parameters",
+          1,
+          "schema"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "ampIndexStatusVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "ampUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "indexingState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "lastCrawlTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "pageFetchState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "robotsTxtState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpIssue",
+          "properties",
+          "issueMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpIssue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDataRow"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDataRow",
+          "properties",
+          "clicks"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDataRow",
+          "properties",
+          "ctr"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDataRow",
+          "properties",
+          "impressions"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDataRow",
+          "properties",
+          "keys"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDataRow",
+          "properties",
+          "keys",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDataRow",
+          "properties",
+          "position"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilter",
+          "properties",
+          "dimension"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilter",
+          "properties",
+          "expression"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilter",
+          "properties",
+          "operator"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilterGroup"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilterGroup",
+          "properties",
+          "filters"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilterGroup",
+          "properties",
+          "groupType"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockedResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockedResource",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "DetectedItems"
+        ],
+        [
+          "components",
+          "schemas",
+          "DetectedItems",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "DetectedItems",
+          "properties",
+          "richResultType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "data"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "mimeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "coverageState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "crawledAs"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "googleCanonical"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "indexingState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "lastCrawlTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "pageFetchState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "referringUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "referringUrls",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "robotsTxtState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "sitemap"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "sitemap",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "userCanonical"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest",
+          "properties",
+          "inspectionUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest",
+          "properties",
+          "languageCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest",
+          "properties",
+          "siteUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileFriendlyIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileFriendlyIssue",
+          "properties",
+          "rule"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityInspectionResult",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue",
+          "properties",
+          "issueType"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsInspectionResult",
+          "properties",
+          "detectedItems"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsIssue",
+          "properties",
+          "issueMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsIssue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestRequest",
+          "properties",
+          "requestScreenshot"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestRequest",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse",
+          "properties",
+          "mobileFriendliness"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse",
+          "properties",
+          "mobileFriendlyIssues"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse",
+          "properties",
+          "resourceIssues"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "aggregationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "dataState"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "dimensionFilterGroups"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "dimensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "dimensions",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "endDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "rowLimit"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "searchType"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "startDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "startRow"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryResponse",
+          "properties",
+          "responseAggregationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryResponse",
+          "properties",
+          "rows"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitemapsListResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitemapsListResponse",
+          "properties",
+          "sitemap"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitesListResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitesListResponse",
+          "properties",
+          "siteEntry"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestStatus",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "UrlInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "UrlInspectionResult",
+          "properties",
+          "inspectionResultLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSite"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSite",
+          "properties",
+          "permissionLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSite",
+          "properties",
+          "siteUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "contents"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "isPending"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "isSitemapsIndex"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "lastDownloaded"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "lastSubmitted"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "warnings"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent",
+          "properties",
+          "indexed"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent",
+          "properties",
+          "submitted"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "key",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType",
+          "schema"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol",
+          "schema"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ],
+        [
+          "tags",
+          0
+        ],
+        [
+          "tags",
+          1
+        ],
+        [
+          "tags",
+          2
+        ],
+        [
+          "tags",
+          3
+        ],
+        [
+          "tags",
+          4
+        ],
+        [
+          "externalDocs"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Described elements: 152",
+    "severity": 3,
+    "code": "described_elements",
+    "code_description": null,
+    "source": "scoring_validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "described_elements": 152,
+      "paths": [
+        [
+          "info"
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "responses",
+          "200"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "parameters",
+          0
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "parameters",
+          1
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "responses",
+          "200"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "ampIndexStatusVerdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "ampUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "indexingState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "lastCrawlTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "pageFetchState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "robotsTxtState"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpIssue",
+          "properties",
+          "issueMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "AmpIssue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilter"
+        ],
+        [
+          "components",
+          "schemas",
+          "ApiDimensionFilterGroup"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockedResource"
+        ],
+        [
+          "components",
+          "schemas",
+          "BlockedResource",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "DetectedItems"
+        ],
+        [
+          "components",
+          "schemas",
+          "DetectedItems",
+          "properties",
+          "items"
+        ],
+        [
+          "components",
+          "schemas",
+          "DetectedItems",
+          "properties",
+          "richResultType"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "data"
+        ],
+        [
+          "components",
+          "schemas",
+          "Image",
+          "properties",
+          "mimeType"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "coverageState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "crawledAs"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "googleCanonical"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "indexingState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "lastCrawlTime"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "pageFetchState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "referringUrls"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "robotsTxtState"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "sitemap"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "userCanonical"
+        ],
+        [
+          "components",
+          "schemas",
+          "IndexStatusInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest",
+          "properties",
+          "inspectionUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest",
+          "properties",
+          "languageCode"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexRequest",
+          "properties",
+          "siteUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "InspectUrlIndexResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "Item",
+          "properties",
+          "name"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileFriendlyIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileFriendlyIssue",
+          "properties",
+          "rule"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityInspectionResult",
+          "properties",
+          "issues"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue",
+          "properties",
+          "issueType"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue",
+          "properties",
+          "message"
+        ],
+        [
+          "components",
+          "schemas",
+          "MobileUsabilityIssue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "ResourceIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsInspectionResult",
+          "properties",
+          "detectedItems"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsInspectionResult",
+          "properties",
+          "verdict"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsIssue"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsIssue",
+          "properties",
+          "issueMessage"
+        ],
+        [
+          "components",
+          "schemas",
+          "RichResultsIssue",
+          "properties",
+          "severity"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestRequest"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestRequest",
+          "properties",
+          "requestScreenshot"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestRequest",
+          "properties",
+          "url"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse",
+          "properties",
+          "mobileFriendliness"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse",
+          "properties",
+          "mobileFriendlyIssues"
+        ],
+        [
+          "components",
+          "schemas",
+          "RunMobileFriendlyTestResponse",
+          "properties",
+          "resourceIssues"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "aggregationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "dataState"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "dimensionFilterGroups"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "dimensions"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "endDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "rowLimit"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "searchType"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "startDate"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "startRow"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryRequest",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryResponse",
+          "properties",
+          "responseAggregationType"
+        ],
+        [
+          "components",
+          "schemas",
+          "SearchAnalyticsQueryResponse",
+          "properties",
+          "rows"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitemapsListResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitemapsListResponse",
+          "properties",
+          "sitemap"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitesListResponse"
+        ],
+        [
+          "components",
+          "schemas",
+          "SitesListResponse",
+          "properties",
+          "siteEntry"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestStatus"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestStatus",
+          "properties",
+          "details"
+        ],
+        [
+          "components",
+          "schemas",
+          "TestStatus",
+          "properties",
+          "status"
+        ],
+        [
+          "components",
+          "schemas",
+          "UrlInspectionResult"
+        ],
+        [
+          "components",
+          "schemas",
+          "UrlInspectionResult",
+          "properties",
+          "inspectionResultLink"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSite"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSite",
+          "properties",
+          "permissionLevel"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSite",
+          "properties",
+          "siteUrl"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "contents"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "errors"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "isPending"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "isSitemapsIndex"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "lastDownloaded"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "lastSubmitted"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "path"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemap",
+          "properties",
+          "warnings"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent",
+          "properties",
+          "indexed"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent",
+          "properties",
+          "submitted"
+        ],
+        [
+          "components",
+          "schemas",
+          "WmxSitemapContent",
+          "properties",
+          "type"
+        ],
+        [
+          "components",
+          "parameters",
+          "_.xgafv"
+        ],
+        [
+          "components",
+          "parameters",
+          "access_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "alt"
+        ],
+        [
+          "components",
+          "parameters",
+          "callback"
+        ],
+        [
+          "components",
+          "parameters",
+          "fields"
+        ],
+        [
+          "components",
+          "parameters",
+          "key"
+        ],
+        [
+          "components",
+          "parameters",
+          "oauth_token"
+        ],
+        [
+          "components",
+          "parameters",
+          "prettyPrint"
+        ],
+        [
+          "components",
+          "parameters",
+          "quotaUser"
+        ],
+        [
+          "components",
+          "parameters",
+          "uploadType"
+        ],
+        [
+          "components",
+          "parameters",
+          "upload_protocol"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2"
+        ],
+        [
+          "components",
+          "securitySchemes",
+          "Oauth2c"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Deepest nesting found across all schemas: 16",
+    "severity": 3,
+    "code": "max_schema_depth",
+    "code_description": null,
+    "source": "scoring_validator",
     "tags": null,
     "related_information": null,
     "data": {
@@ -107,848 +2898,15 @@
         "paths",
         "/v1/urlInspection/index:inspect",
         "post",
-        "summary"
+        "responses",
+        "200",
+        "content",
+        "*/*",
+        "schema"
       ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./v1/urlTestingTools/mobileFriendlyTest:run.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/urlTestingTools/mobileFriendlyTest:run",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}.put.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}",
-        "put",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/searchAnalytics/query.post.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
-        "post",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.WmxSitemapContent.properties.type.enumDeprecated]",
-    "severity": 1,
-    "code": "struct",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "WmxSitemapContent",
-        "properties",
-        "type",
-        "enumDeprecated"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.WmxSitemap.properties.type.enumDeprecated]",
-    "severity": 1,
-    "code": "struct",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "components",
-        "schemas",
-        "WmxSitemap",
-        "properties",
-        "type",
-        "enumDeprecated"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.get.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
-        "get",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.put.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
-        "put",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.delete.summary]",
-    "severity": 1,
-    "code": "operation-summary",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
-        "delete",
-        "summary"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/urlTestingTools/mobileFriendlyTest:run.post]",
-    "severity": 1,
-    "code": "security-defined",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/urlTestingTools/mobileFriendlyTest:run",
-        "post"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.0.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        0,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.1.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        1,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.2.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        2,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.3.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        3,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Tag object should contain `description` field. [path: tags.4.description]",
-    "severity": 2,
-    "code": "tag-description",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "tags",
-        4,
-        "description"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/urlInspection/index:inspect.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/urlInspection/index:inspect",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./v1/urlTestingTools/mobileFriendlyTest:run.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/v1/urlTestingTools/mobileFriendlyTest:run",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}.put.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}",
-        "put",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/searchAnalytics/query.post.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
-        "post",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.get.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
-        "get",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.put.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
-        "put",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
-    }
-  },
-  {
-    "range": {
-      "start": {
-        "line": 0,
-        "character": 0
-      },
-      "end": {
-        "line": 0,
-        "character": 0
-      }
-    },
-    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.delete.responses]",
-    "severity": 2,
-    "code": "operation-4xx-response",
-    "code_description": null,
-    "source": "redocly-validator",
-    "tags": null,
-    "related_information": null,
-    "data": {
-      "fixable": true,
-      "path": [
-        "paths",
-        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
-        "delete",
-        "responses"
-      ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec",
+      "max_schema_depth": 16,
+      "paths": []
     }
   },
   {
@@ -976,7 +2934,1187 @@
         "0",
         "url"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 22,
+        "character": 10
+      },
+      "end": {
+        "line": 758,
+        "character": 51
+      }
+    },
+    "message": "APIs MUST have a health path (`/health`) defined. [path: paths]",
+    "severity": 2,
+    "code": "api-health",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 59,
+        "character": 13
+      },
+      "end": {
+        "line": 99,
+        "character": 69
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/urlInspection/index:inspect.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlInspection/index:inspect",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 142,
+        "character": 13
+      },
+      "end": {
+        "line": 164,
+        "character": 75
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./v1/urlTestingTools/mobileFriendlyTest:run.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlTestingTools/mobileFriendlyTest:run",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 207,
+        "character": 12
+      },
+      "end": {
+        "line": 242,
+        "character": 46
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 281,
+        "character": 15
+      },
+      "end": {
+        "line": 312,
+        "character": 48
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 283,
+        "character": 10
+      },
+      "end": {
+        "line": 289,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 314,
+        "character": 12
+      },
+      "end": {
+        "line": 360,
+        "character": 45
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 316,
+        "character": 10
+      },
+      "end": {
+        "line": 322,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 362,
+        "character": 12
+      },
+      "end": {
+        "line": 393,
+        "character": 45
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}.put]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "put"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 364,
+        "character": 10
+      },
+      "end": {
+        "line": 370,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}.put.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "put",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 432,
+        "character": 13
+      },
+      "end": {
+        "line": 483,
+        "character": 74
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}/searchAnalytics/query.post]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 434,
+        "character": 10
+      },
+      "end": {
+        "line": 440,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}/searchAnalytics/query.post.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+        "post",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 526,
+        "character": 12
+      },
+      "end": {
+        "line": 580,
+        "character": 49
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 528,
+        "character": 10
+      },
+      "end": {
+        "line": 534,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 537,
+        "character": 10
+      },
+      "end": {
+        "line": 542,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 619,
+        "character": 15
+      },
+      "end": {
+        "line": 659,
+        "character": 51
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.delete]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "delete"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 621,
+        "character": 10
+      },
+      "end": {
+        "line": 627,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.delete.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "delete",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 630,
+        "character": 10
+      },
+      "end": {
+        "line": 636,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.delete.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "delete",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 661,
+        "character": 12
+      },
+      "end": {
+        "line": 716,
+        "character": 48
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.get]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "get"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 663,
+        "character": 10
+      },
+      "end": {
+        "line": 669,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.get.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "get",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 672,
+        "character": 10
+      },
+      "end": {
+        "line": 678,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.get.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "get",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 718,
+        "character": 12
+      },
+      "end": {
+        "line": 758,
+        "character": 51
+      }
+    },
+    "message": "Each operation should have a summary [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.put]",
+    "severity": 3,
+    "code": "monite-openapi-operation-summary",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "put"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 720,
+        "character": 10
+      },
+      "end": {
+        "line": 726,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 0 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.put.parameters.0]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "put",
+        "parameters",
+        "0"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 729,
+        "character": 10
+      },
+      "end": {
+        "line": 735,
+        "character": 30
+      }
+    },
+    "message": "Parameters must include examples; missing 1 [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.put.parameters.1]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "put",
+        "parameters",
+        "1"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 764,
+        "character": 16
+      },
+      "end": {
+        "line": 773,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing _.xgafv [path: components.parameters._.xgafv]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "_.xgafv"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 776,
+        "character": 21
+      },
+      "end": {
+        "line": 781,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing access_token [path: components.parameters.access_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 779,
+        "character": 16
+      },
+      "end": {
+        "line": 779,
+        "character": 30
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.access_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "access_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 784,
+        "character": 12
+      },
+      "end": {
+        "line": 795,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing alt [path: components.parameters.alt]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "alt"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 798,
+        "character": 17
+      },
+      "end": {
+        "line": 803,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing callback [path: components.parameters.callback]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "callback"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 806,
+        "character": 15
+      },
+      "end": {
+        "line": 811,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing fields [path: components.parameters.fields]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "fields"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 814,
+        "character": 12
+      },
+      "end": {
+        "line": 819,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing key [path: components.parameters.key]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "key"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 822,
+        "character": 20
+      },
+      "end": {
+        "line": 827,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing oauth_token [path: components.parameters.oauth_token]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 825,
+        "character": 16
+      },
+      "end": {
+        "line": 825,
+        "character": 29
+      }
+    },
+    "message": "Secrets, tokens, passwords and api keys must be passed in headers, not in path or query parameters [path: components.parameters.oauth_token.name]",
+    "severity": 2,
+    "code": "monite-security-no-secrets-in-path-or-query-parameters",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "oauth_token",
+        "name"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 830,
+        "character": 20
+      },
+      "end": {
+        "line": 836,
+        "character": 27
+      }
+    },
+    "message": "Parameters must include examples; missing prettyPrint [path: components.parameters.prettyPrint]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "prettyPrint"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 839,
+        "character": 18
+      },
+      "end": {
+        "line": 844,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing quotaUser [path: components.parameters.quotaUser]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "quotaUser"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 847,
+        "character": 19
+      },
+      "end": {
+        "line": 852,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing uploadType [path: components.parameters.uploadType]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "uploadType"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 855,
+        "character": 24
+      },
+      "end": {
+        "line": 860,
+        "character": 26
+      }
+    },
+    "message": "Parameters must include examples; missing upload_protocol [path: components.parameters.upload_protocol]",
+    "severity": 2,
+    "code": "params-must-include-examples",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "parameters",
+        "upload_protocol"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 967,
+        "character": 19
+      },
+      "end": {
+        "line": 969,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApiDataRow.properties.clicks]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApiDataRow",
+        "properties",
+        "clicks"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 971,
+        "character": 16
+      },
+      "end": {
+        "line": 973,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApiDataRow.properties.ctr]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApiDataRow",
+        "properties",
+        "ctr"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 975,
+        "character": 24
+      },
+      "end": {
+        "line": 977,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApiDataRow.properties.impressions]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApiDataRow",
+        "properties",
+        "impressions"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 985,
+        "character": 21
+      },
+      "end": {
+        "line": 987,
+        "character": 28
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.ApiDataRow.properties.position]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "ApiDataRow",
+        "properties",
+        "position"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1007,7 +4145,7 @@
         "inspectionResult",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1038,7 +4176,7 @@
         "blockedResource",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1069,7 +4207,7 @@
         "screenshot",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1100,7 +4238,67 @@
         "testStatus",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1448,
+        "character": 21
+      },
+      "end": {
+        "line": 1451,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchAnalyticsQueryRequest.properties.rowLimit]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchAnalyticsQueryRequest",
+        "properties",
+        "rowLimit"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1469,
+        "character": 21
+      },
+      "end": {
+        "line": 1472,
+        "character": 29
+      }
+    },
+    "message": "Numeric types need to have their minimum and maximum defined [path: components.schemas.SearchAnalyticsQueryRequest.properties.startRow]",
+    "severity": 3,
+    "code": "monite-openapi-number-boundaries",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "SearchAnalyticsQueryRequest",
+        "properties",
+        "startRow"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1131,7 +4329,7 @@
         "ampResult",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1162,7 +4360,7 @@
         "indexStatusResult",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1193,7 +4391,7 @@
         "mobileUsabilityResult",
         "deprecated"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1224,7 +4422,7 @@
         "mobileUsabilityResult",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
     }
   },
   {
@@ -1255,7 +4453,37 @@
         "richResultsResult",
         "description"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1616,
+        "character": 19
+      },
+      "end": {
+        "line": 1619,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.WmxSitemap.properties.errors]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WmxSitemap",
+        "properties",
+        "errors"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1286,7 +4514,97 @@
         "type",
         "enumDeprecated"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1665,
+        "character": 21
+      },
+      "end": {
+        "line": 1668,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.WmxSitemap.properties.warnings]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WmxSitemap",
+        "properties",
+        "warnings"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1676,
+        "character": 20
+      },
+      "end": {
+        "line": 1680,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.WmxSitemapContent.properties.indexed]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WmxSitemapContent",
+        "properties",
+        "indexed"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 1682,
+        "character": 22
+      },
+      "end": {
+        "line": 1685,
+        "character": 28
+      }
+    },
+    "message": "Numeric formats (int32,int64,float,double) must use type: integer/number. [path: components.schemas.WmxSitemapContent.properties.submitted]",
+    "severity": 2,
+    "code": "jentic-format-must-match-type-numeric",
+    "code_description": null,
+    "source": "spectral-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WmxSitemapContent",
+        "properties",
+        "submitted"
+      ],
+      "target": "bundled-spec"
     }
   },
   {
@@ -1317,7 +4635,1632 @@
         "type",
         "enumDeprecated"
       ],
-      "target": "final-spec_bundled-spec"
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Server `url` should not have a trailing slash. [path: servers.0.url]",
+    "severity": 1,
+    "code": "no-server-trailing-slash",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "servers",
+        "0",
+        "url"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.WmxSitemapContent.properties.type.enumDeprecated]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WmxSitemapContent",
+        "properties",
+        "type",
+        "enumDeprecated"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Property `enumDeprecated` is not expected here. [path: components.schemas.WmxSitemap.properties.type.enumDeprecated]",
+    "severity": 1,
+    "code": "struct",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "components",
+        "schemas",
+        "WmxSitemap",
+        "properties",
+        "type",
+        "enumDeprecated"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.0.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "0",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.1.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "1",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.2.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "2",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.3.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "3",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Tag object should contain `description` field. [path: tags.4.description]",
+    "severity": 2,
+    "code": "tag-description",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "tags",
+        "4",
+        "description"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/urlInspection/index:inspect.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlInspection/index:inspect",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/urlInspection/index:inspect.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlInspection/index:inspect",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./v1/urlTestingTools/mobileFriendlyTest:run.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlTestingTools/mobileFriendlyTest:run",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./v1/urlTestingTools/mobileFriendlyTest:run.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlTestingTools/mobileFriendlyTest:run",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}.put.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "put",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}.put.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "put",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/searchAnalytics/query.post.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+        "post",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/searchAnalytics/query.post.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+        "post",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.get.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "get",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.get.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "get",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.put.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "put",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.put.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "put",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation object should contain `summary` field. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.delete.summary]",
+    "severity": 2,
+    "code": "operation-summary",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "delete",
+        "summary"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation must have at least one `4XX` response. [path: paths./webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}.delete.responses]",
+    "severity": 2,
+    "code": "operation-4xx-response",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "delete",
+        "responses"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Every operation should have security defined on it or on the root level. [path: paths./v1/urlTestingTools/mobileFriendlyTest:run.post]",
+    "severity": 2,
+    "code": "security-defined",
+    "code_description": null,
+    "source": "redocly-validator",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlTestingTools/mobileFriendlyTest:run",
+        "post"
+      ],
+      "target": "bundled-spec"
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sitemaps.list' has semantic quality issues: vague_summary, missing_context. Missing summary entirely. Description has unclear reference syntax and lacks context about authentication requirements and parameter usage. Enhanced version clarifies the operation's purpose, explains both submission methods, clarifies the sitemapIndex parameter usage, and notes authentication requirement for AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sitemaps.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context"
+      ],
+      "current_summary": "",
+      "current_description": "Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included in the sitemap index file (if `sitemapIndex` is specified in the request).",
+      "summary_suggestion": "List submitted sitemaps for a site",
+      "description_suggestion": "Retrieves a list of all sitemaps submitted for the specified site. Returns sitemaps directly submitted or included in a sitemap index file. Use the optional `sitemapIndex` parameter to filter results to sitemaps within a specific index. Requires site ownership verification.",
+      "reasoning": "Missing summary entirely. Description has unclear reference syntax and lacks context about authentication requirements and parameter usage. Enhanced version clarifies the operation's purpose, explains both submission methods, clarifies the sitemapIndex parameter usage, and notes authentication requirement for AI agent understanding.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sitemaps.delete' has semantic quality issues: vague_summary, missing_context, missing_side_effects. Missing summary. Description is incomplete regarding side effects and context. Enhanced version clarifies what is actually deleted (from Search Console, not from the web), explains the distinction between removal from reporting vs. crawling behavior, adds authentication context, and clarifies the persistence of indexed URLs for better AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sitemaps.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_context",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or the URLs that were previously crawled in the deleted sitemap.",
+      "summary_suggestion": "Delete a sitemap from Search Console",
+      "description_suggestion": "Removes a sitemap from the Search Console Sitemaps report for the specified site. This operation only removes the sitemap from your Search Console account and does not prevent Google from crawling the sitemap URL or previously discovered URLs. Requires site ownership verification. The sitemap data remains in Google's index until naturally refreshed.",
+      "reasoning": "Missing summary. Description is incomplete regarding side effects and context. Enhanced version clarifies what is actually deleted (from Search Console, not from the web), explains the distinction between removal from reporting vs. crawling behavior, adds authentication context, and clarifies the persistence of indexed URLs for better AI agent decision-making.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sitemaps.get' has semantic quality issues: vague_summary, vague_description, missing_output_details. Missing summary and description is too generic. Enhanced version specifies what information is returned (status, fetch time, entry count, issues), references the appropriate schema (WmxSitemap), and adds authentication context. This helps AI agents understand the operation's value and what data they can expect.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sitemaps.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Retrieves information about a specific sitemap.",
+      "summary_suggestion": "Get detailed sitemap information",
+      "description_suggestion": "Retrieves detailed information about a specific sitemap submitted to the site, including submission status, last fetch time, entry count, and any associated issues. Returns a WmxSitemap object containing metadata about the sitemap's processing and indexing status. Requires site ownership verification.",
+      "reasoning": "Missing summary and description is too generic. Enhanced version specifies what information is returned (status, fetch time, entry count, issues), references the appropriate schema (WmxSitemap), and adds authentication context. This helps AI agents understand the operation's value and what data they can expect.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sitemaps.submit' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details. Missing summary and description is overly simplistic. Enhanced version clarifies the dual nature (new or update), specifies the feedpath parameter usage, explains the expected outcome (URL discovery and indexing), adds authentication requirement, and sets expectations about processing time. This provides AI agents with clear understanding of when and how to use this operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+        "put"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sitemaps.submit",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Submits a sitemap for a site.",
+      "summary_suggestion": "Submit a sitemap to Search Console",
+      "description_suggestion": "Submits a new sitemap or updates an existing sitemap for the specified site. The sitemap URL should be provided in the `feedpath` parameter. Google will fetch and process the sitemap to discover and index URLs. Returns confirmation of the submission. Requires site ownership verification. Processing may take several days.",
+      "reasoning": "Missing summary and description is overly simplistic. Enhanced version clarifies the dual nature (new or update), specifies the feedpath parameter usage, explains the expected outcome (URL discovery and indexing), adds authentication requirement, and sets expectations about processing time. This provides AI agents with clear understanding of when and how to use this operation.",
+      "batch_index": 1,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}",
+          "put",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'searchconsole.urlInspection.index.inspect' has semantic quality issues: vague_summary, vague_description, missing_input_details, missing_output_details, not_actionable. Original description is extremely vague. Missing summary entirely. Added clarity about what the operation does (inspects indexing status), what inputs it expects (URL and parameters), what it returns (index-status information), and authentication requirements. This helps AI agents understand when to use this operation for URL indexing diagnostics.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlInspection/index:inspect",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "searchconsole.urlInspection.index.inspect",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "vague_description",
+        "missing_input_details",
+        "missing_output_details",
+        "not_actionable"
+      ],
+      "current_summary": "",
+      "current_description": "Index inspection.",
+      "summary_suggestion": "Inspect URL indexing status in Google Search",
+      "description_suggestion": "Inspects the indexing status of a specified URL in Google Search. Accepts a URL and optional inspection parameters. Returns detailed index-status information including whether the URL is indexed, last crawl date, and any indexing issues. Requires authentication and site verification.",
+      "reasoning": "Original description is extremely vague. Missing summary entirely. Added clarity about what the operation does (inspects indexing status), what inputs it expects (URL and parameters), what it returns (index-status information), and authentication requirements. This helps AI agents understand when to use this operation for URL indexing diagnostics.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/urlInspection/index:inspect",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'searchconsole.urlTestingTools.mobileFriendlyTest.run' has semantic quality issues: vague_summary, missing_input_details, missing_output_details. Missing summary. Description is incomplete - doesn't explain what outputs are returned or whether authentication is needed. Enhanced to specify return values (test results, issues, resource errors) and clarify that public URLs don't require authentication, improving AI agent decision-making.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/v1/urlTestingTools/mobileFriendlyTest:run",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "searchconsole.urlTestingTools.mobileFriendlyTest.run",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Runs Mobile-Friendly Test for a given URL.",
+      "summary_suggestion": "Test URL mobile-friendliness and identify issues",
+      "description_suggestion": "Runs a mobile-friendly test on a specified URL to identify mobile usability issues. Accepts a URL and optional test parameters. Returns mobile-friendly test results including detected issues, resource errors, and mobile-friendliness status. No authentication required for public URLs.",
+      "reasoning": "Missing summary. Description is incomplete - doesn't explain what outputs are returned or whether authentication is needed. Enhanced to specify return values (test results, issues, resource errors) and clarify that public URLs don't require authentication, improving AI agent decision-making.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/v1/urlTestingTools/mobileFriendlyTest:run",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sites.list' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description lacks detail about return value structure and authentication requirement. Added clarity about what is returned (list with permission levels) and authentication requirement for better AI agent understanding.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sites.list",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Lists the user's Search Console sites.",
+      "summary_suggestion": "List all verified Search Console sites",
+      "description_suggestion": "Lists all Search Console sites accessible to the authenticated user. Returns a list of verified sites with their permission levels and access information. Requires authentication.",
+      "reasoning": "Missing summary. Description lacks detail about return value structure and authentication requirement. Added clarity about what is returned (list with permission levels) and authentication requirement for better AI agent understanding.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sites.delete' has semantic quality issues: vague_summary, missing_side_effects. Missing summary. Description doesn't clarify side effects or permanence of the action. Added summary and enhanced description to explain that this is a permanent removal that revokes data access, helping AI agents understand the consequences of this destructive operation.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "delete"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sites.delete",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_side_effects"
+      ],
+      "current_summary": "",
+      "current_description": "Removes a site from the set of the user's Search Console sites.",
+      "summary_suggestion": "Remove site from Search Console",
+      "description_suggestion": "Removes a site from the authenticated user's Search Console account. Accepts a site URL parameter. This operation permanently removes the site association and revokes access to its Search Console data. Requires authentication and site ownership verification.",
+      "reasoning": "Missing summary. Description doesn't clarify side effects or permanence of the action. Added summary and enhanced description to explain that this is a permanent removal that revokes data access, helping AI agents understand the consequences of this destructive operation.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "delete",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sites.get' has semantic quality issues: vague_summary, missing_output_details. Missing summary and has grammatical error ('specific site' should be 'a specific site'). Description lacks detail about return values. Added summary and clarified what information is returned (permission level, verification status, access details) for better AI agent interpretability.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "get"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sites.get",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Retrieves information about specific site.",
+      "summary_suggestion": "Retrieve site information and permissions",
+      "description_suggestion": "Retrieves detailed information about a specific Search Console site. Accepts a site URL parameter. Returns site information including permission level, verification status, and access details. Requires authentication.",
+      "reasoning": "Missing summary and has grammatical error ('specific site' should be 'a specific site'). Description lacks detail about return values. Added summary and clarified what information is returned (permission level, verification status, access details) for better AI agent interpretability.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "get",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.sites.add' has semantic quality issues: vague_summary, missing_output_details. Missing summary. Description doesn't explain return value or verification requirements. Added summary and clarified what is returned and that site ownership verification is required, helping AI agents understand the prerequisites and outcomes.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}",
+        "put"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.sites.add",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_output_details"
+      ],
+      "current_summary": "",
+      "current_description": "Adds a site to the set of the user's sites in Search Console.",
+      "summary_suggestion": "Add site to Search Console",
+      "description_suggestion": "Adds a site to the authenticated user's Search Console account. Accepts a site URL parameter. Returns the newly added site information including permission level and verification status. Requires authentication and site ownership verification.",
+      "reasoning": "Missing summary. Description doesn't explain return value or verification requirements. Added summary and clarified what is returned and that site ownership verification is required, helping AI agents understand the prerequisites and outcomes.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}",
+          "put",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "Operation 'webmasters.searchanalytics.query' has semantic quality issues: vague_summary, missing_input_details. Missing summary. Description is verbose and user-focused rather than API-focused. Reorganized to clearly specify required inputs (date range, dimensions, metrics), optional parameters (filters), and return structure. Added authentication requirement and site access context for AI agent clarity.",
+    "severity": 2,
+    "code": "POOR_OPERATION_SEMANTICS",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [
+        "paths",
+        "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+        "post"
+      ],
+      "target": "bundled-spec",
+      "operation_id": "webmasters.searchanalytics.query",
+      "has_quality_issues": true,
+      "issues_found": [
+        "vague_summary",
+        "missing_input_details"
+      ],
+      "current_summary": "",
+      "current_description": "Query your data with filters and parameters that you define. Returns zero or more rows grouped by the row keys that you define. You must define a date range of one or more days. When date is one of the group by values, any days without data are omitted from the result list. If you need to know which days have data, issue a broad date range query grouped by date for any metric, and see which day rows are returned.",
+      "summary_suggestion": "Query search analytics with filters and grouping",
+      "description_suggestion": "Queries Search Console search analytics data for a site with custom filters, dimensions, and metrics. Accepts a site URL parameter and SearchAnalyticsQueryRequest containing date range (required, minimum 1 day), dimensions for grouping (e.g., query, page, country), metrics (impressions, clicks, CTR, position), and optional filters. Returns aggregated rows grouped by specified dimensions, with days lacking data omitted. Requires authentication and site access.",
+      "reasoning": "Missing summary. Description is verbose and user-focused rather than API-focused. Reorganized to clearly specify required inputs (date range, dimensions, metrics), optional parameters (filters), and return structure. Added authentication requirement and site access context for AI agent clarity.",
+      "batch_index": 0,
+      "paths": [
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "summary"
+        ],
+        [
+          "paths",
+          "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query",
+          "post",
+          "description"
+        ]
+      ]
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 12
+      }
+    },
+    "message": "Semantic analysis completed: 11 operations analyzed, 11 quality issues found",
+    "severity": 3,
+    "code": "semantic-analysis-summary",
+    "code_description": null,
+    "source": "semantic_analyzer",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_operations_analyzed": 11,
+      "total_issues_found": 11,
+      "batches_processed": 2
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 relative references",
+    "severity": 3,
+    "code": "relative_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "relative_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 0 http absolute references",
+    "severity": 3,
+    "code": "absolute_http_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "absolute_http_refs": 0
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 108 total references",
+    "severity": 3,
+    "code": "total_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "total_refs": 108
+    }
+  },
+  {
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 0
+      },
+      "end": {
+        "line": 0,
+        "character": 0
+      }
+    },
+    "message": "API has 108 resolved references",
+    "severity": 3,
+    "code": "resolved_refs",
+    "code_description": null,
+    "source": "loader",
+    "tags": null,
+    "related_information": null,
+    "data": {
+      "fixable": true,
+      "path": [],
+      "target": "bundled-spec",
+      "resolved_refs": 108
     }
   }
 ]
